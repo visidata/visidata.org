@@ -1,125 +1,94 @@
-#!/bin/zsh
+#!/bin/bash
 
-# Stop the execution of a script if there is an error
-set -e
+set -e  # stop script on error
 
-# Set up variables
-VD=~/git/visidata
-DEV=$VD/dev
-WWW=$VD/www
-BUILD=$VD/_build
-BUILDWWW=$BUILD/www
-MAN=$VD/visidata/man
-DOCS=$WWW/docs
+### config env vars
 
+# SRC is already cloned visidata repo, with no modifications (other tags/branches will be checked out)
+SRC=~/git/visidata
 
-# Build directories
-mkdir -p $BUILD
+# WWWSRC is already cloned visidata.org repo, with desired branch to build checked out
+WWWSRC=~/git/www/visidata.org
+
+# BUILDWWW is output directory (corresponding to webroot)
+BUILDWWW=$WWWSRC/_build
+
+# VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
+#    /docs itself will be branch already checked out
+VERSIONS="v1.0 v1.1 v1.2 v1.3 develop"   # should be populated from tags/releases
+
+### internal env vars
+
+TMPDIR=`mktemp -d`
+BINDIR=$WWWSRC/bin
+export PYTHONPATH=$SRC:$SRC/visidata
+
 mkdir -p $BUILDWWW
-mkdir -p $BUILDWWW/man
-mkdir -p $BUILDWWW/docs
-mkdir -p $BUILDWWW/install
-mkdir -p $BUILDWWW/about
-mkdir -p $BUILDWWW/releases
-mkdir -p $BUILDWWW/contributing
-mkdir -p $BUILDWWW/support
 
-# Set up python and shell environment
-export PYTHONPATH=$VD:$VD/visidata
-export PATH=$VD/bin:$PATH
+# STATICFILES=404.html robots.txt main.css devotees.gpg.key vdlogo.png screenshot.png
+cp -R $WWWSRC/static/* $BUILDWWW/
 
-
-# make_subfolder () {
-# }
-
-### Build manpage
-cp $MAN/* $BUILD/
-$MAN/parse_options.py $BUILD/vd-cli.inc $BUILD/vd-opts.inc
-
-soelim -rt -I $BUILD $BUILD/vd.inc > $BUILD/vd-pre.1
-preconv -r -e utf8 $BUILD/vd-pre.1 > $MAN/vd.1   # checked in
-
-# build front page of visidata.org
-for i in 404.html robots.txt main.css ; do
-    cp $WWW/$i $BUILDWWW/
-done
-
-# Build /
-pandoc -r markdown -w html -o $BUILDWWW/index.body $WWW/index.md
-$DEV/strformat.py body=$BUILDWWW/index.body title="VisiData" head="" < $WWW/template.html > $BUILDWWW/index.html
-
-function make_page () {
-    # $1 -> name of page
-    # $2 -> title of page
-    pandoc -r markdown -w html -o $BUILDWWW/$1/index.body $WWW/$1.md
-    $DEV/strformat.py body=$BUILDWWW/$1/index.body title=$2 head="" < $WWW/template.html > $BUILDWWW/$1/index.html
+function build_page () {
+    # $1 -> dest dir, relative to $BUILDWWW (webroot), without leading /
+    # $2 -> source md, full path
+    # $3 -> page title (quoted for shell to give as single arg)
+    mkdir -p $BUILDWWW/$1
+    fnbody=`mktemp`
+#    pandoc -r markdown -w html -o $fnbody $2
+    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks -w html -o $fnbody $2
+    $BINDIR/strformat.py body=$fnbody title="$3" head="" < $WWWSRC/template.html > $BUILDWWW/$1/index.html
+    rm $fnbody
 }
 
-# Build /about
-make_page "about" "About Visidata"
+function build_docs() {
+    # $1 -> dest dir, relative to $BUILDWWW (webroot), without leading /
+    docdir=$BUILDWWW/$1
 
-# Build /man
-echo '<section><pre id="manpage">' > $BUILD/vd-man-inc.html
-# <pre> max-width in main.css should be half of COLUMNS=###
-MAN_KEEP_FORMATTING=1 COLUMNS=120 man $MAN/vd.1 | ul | aha --no-header >> $BUILD/vd-man-inc.html
-echo '</pre></section>' >> $BUILD/vd-man-inc.html
-#  Properties of columns on the source sheet can be changed with standard editing commands (e
-$DEV/strformat.py body=$BUILD/vd-man-inc.html title="VisiData Quick Reference" head="" < $WWW/template.html > $BUILDWWW/man/index.html
+    # build manpage
+    mkdir -p $docdir/man
+    manhtml=$TMPDIR/vd-man-inc.html
+    echo '<section><pre id="manpage">' > $manhtml
+    # <pre> max-width in main.css should be half of COLUMNS=###
+    MAN_KEEP_FORMATTING=1 COLUMNS=120 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
+    echo '</pre></section>' >> $manhtml
+    $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $docdir/man/index.html
 
-# Create /man/#loaders
-sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $BUILDWWW/man/index.html
-# Create /man#edit for editing commands
-sed -i -e "s#<span style=\"font-weight:bold;\">Editing</span> <span style=\"font-weight:bold;\">Rows</span> <span style=\"font-weight:bold;\">and</span> <span style=\"font-weight:bold;\">Cells</span>#<span style=\"font-weight:bold;\"><a name=\"edit\">Editing Rows and Cells</a></span>#g" $BUILDWWW/man/index.html
-# Create /man#options
-sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $BUILDWWW/man/index.html
-# Create /man#columns for columns sheet
-sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $BUILDWWW/man/index.html
+    # build kblayout
+    mkdir -p $docdir/kblayout
+    $BINDIR/mklayout.py $WWWSRC/template.html $SRC/visidata/commands.tsv > $docdir/kblayout/index.html
+    cp $WWWSRC/static/kblayout.css $docdir/kblayout/
 
-# Build /contributing
-pandoc -r markdown -w html -o $BUILDWWW/contributing/index.body $VD/CONTRIBUTING.md
-$DEV/strformat.py body=$BUILDWWW/contributing/index.body title="Contributing to VisiData" head="" < $WWW/template.html > $BUILDWWW/contributing/index.html
+    # build index
+    for postpath in `find $SRC/docs -name '*.md'`; do
+        post=${postpath##$SRC/docs/}
+        postname=${post%.md}
+        build_page $1/$postname $postpath "$postname"
+    done
 
-# Build /install
-make_page "install" "Quick Install"
+    mkdir -p $docdir/casts
+    cp $SRC/docs/casts/* $docdir/casts
 
-# Build /support
-make_page "support" "Support for VisiData"
+    build_page $1 $SRC/docs/index.md "VisiData Documentation"
+}
 
-# build /docs index
-make_page "docs" "VisiData documentation"
-rm -f $BUILDWWW/docs/index.body
+build_page . $WWWSRC/index.md "VisiData"
+build_page install $WWWSRC/install.md "Installation Instructions"
+build_page releases $WWWSRC/releases.md "Releases"
 
-# Build /docs/*
-for postpath in `find $DOCS -name '*.md'`; do
-    post=${postpath##$DOCS/}
-    postname=${post%.md}
-    mkdir -p $BUILDWWW/docs/$postname
-    posthtml=$BUILDWWW/docs/$postname/index
-    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks -w html -o $posthtml.body $postpath
-    $DEV/strformat.py body=$posthtml.body title=$postname head="" < $WWW/template.html > $posthtml.html
-    rm -f $posthtml.body
-done
-mkdir -p $BUILDWWW/docs/casts
-cp $DOCS/casts/* $BUILDWWW/docs/casts
-cp $WWW/asciinema-player.* $BUILDWWW
+set +e
 
-# Build /kblayout
+# /docs itself is built from current $SRC checkout
+build_docs docs
 
-mkdir -p $BUILDWWW/docs/kblayout
-$DEV/mklayout.py $VD/visidata/commands.tsv > $BUILDWWW/docs/kblayout/index.html
-cp $WWW/kblayout.css $BUILDWWW/docs/kblayout/
+for ver in $VERSIONS ; do
+    echo "Building /docs/$ver"
 
-# Build /releases
-make_page "releases" "Releases"
-rm -f $BUILDWWW/releases/index.body
-
-# Add other toplevel static files
-for fn in devotees.gpg.key vdlogo.png screenshot.png ; do
-    cp $WWW/$fn $BUILDWWW/
+    cd $SRC && git checkout $ver
+    build_docs docs/$ver
 done
 
 #### At the end
 # add analytics to .html files
 for fn in `find $BUILDWWW -name '*.html'` ; do
-    sed -i -e "/<head>/I{r $VD/www/analytics.thtml" -e 'd}' $fn
+    sed -i -e "/<head>/I{r $WWWSRC/analytics.thtml" -e 'd}' $fn
 done

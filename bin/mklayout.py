@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-'Usage: $0 visidata/commands.tsv > www/layout.html'
+'Usage: $0 template.html visidata/commands.tsv > www/layout.html'
 
 import sys
 import unicodedata
 
-html_template = open('www/template.html').read()
+html_template = open(sys.argv[1]).read()
 
 cmds = {}
 
@@ -156,7 +156,7 @@ def get_shift(k):
 
 
 def main():
-    for cmd in load_tsv(sys.argv[1]):
+    for cmd in load_tsv(sys.argv[2]):
         cmds[(cmd['sheet'], cmd['prefix'], get_shift(cmd['key']), cmd['key'])] = cmd
 
     body = '<h1>VisiData Commands Chart</h1>'

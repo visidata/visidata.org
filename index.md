@@ -97,3 +97,11 @@ VisiData is an open-source tool that can be installed and used for free (under t
 The core VisiData utility and rendering library will always be free as in both beer and speech.
 
 If you have questions, issues, or suggestions, please [create an issue on Github](https://github.com/saulpw/visidata/issues).
+
+Or email:
+- [Saul Pwanson](mailto:vd@saul.pw) (author)
+- [Anja Kefala](mailto:anja.kefala@gmail.com) (package maintainer)
+
+# Contributing
+
+See [CONTRIBUTING.md]().
