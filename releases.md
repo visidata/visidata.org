@@ -1,3 +1,15 @@
+# [v1.4](https://github.com/saulpw/visidata/releases/tag/v1.4) (2018-09-24)
+
+This is largely a bugfix and performance release.  It was originally planned as a patch release (v1.3.2), but some features and interface changes crept in, so it is officially v1.4.
+
+- [pyobj] `visidata.view(obj)` and `visidata.view_pandas(df)`
+- [pandas] `-f pandas` loads file with `pandas.read_<ext>`
+- [date] date minus date now gives float number of days instead of seconds
+- [vdtui] internal colorizer API changed significantly
+
+As usual, a more complete list of changes and features is in the [CHANGELOG](https://github.com/saulpw/visidata/blob/stable/CHANGELOG.md).
+
+See the [ROADMAP](https://github.com/saulpw/visidata/blob/stable/dev/ROADMAP.md) for the planned future direction of VisiData.
 
 # [v1.3.1](https://github.com/saulpw/visidata/releases/tag/v1.3.1) (2018-08-19)
 
