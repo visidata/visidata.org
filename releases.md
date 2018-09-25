@@ -6,6 +6,7 @@ This is largely a bugfix and performance release.  It was originally planned as 
 - [pandas] `-f pandas` loads file with `pandas.read_<ext>`
 - [date] date minus date now gives float number of days instead of seconds
 - [vdtui] internal colorizer API changed significantly
+- [vdtui] timeout and redraw only if other threads active
 
 As usual, a more complete list of changes and features is in the [CHANGELOG](https://github.com/saulpw/visidata/blob/stable/CHANGELOG.md).
 
