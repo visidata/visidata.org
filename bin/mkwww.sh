@@ -73,6 +73,7 @@ function build_docs() {
 
 build_page . $WWWSRC/index.md "VisiData"
 build_page install $WWWSRC/install.md "Installation Instructions"
+build_page privacy $WWWSRC/privacy.md "Privacy Policy"
 build_page releases $WWWSRC/releases.md "Releases"
 
 set +e
