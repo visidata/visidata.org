@@ -59,16 +59,23 @@ function build_docs() {
     cp $WWWSRC/static/kblayout.css $docdir/kblayout/
 
     # build index
-    for postpath in `find $SRC/docs -name '*.md'`; do
-        post=${postpath##$SRC/docs/}
+    if [ -d "$SRC/docs" ]; then
+        SRCDOCS=$SRC/docs
+        build_page $1 $SRCDOCS/index.md "VisiData Documentation"
+    else
+        # up until v1.4 docs were located in $SRC/www/docs
+        SRCDOCS=$SRC/www/docs
+        build_page $1 $SRC/www/docs.md "VisiData Documentation"
+    fi
+
+    for postpath in `find $SRCDOCS -name '*.md'`; do
+        post=${postpath##$SRCDOCS}
         postname=${post%.md}
         build_page $1/$postname $postpath "$postname"
     done
 
     mkdir -p $docdir/casts
-    cp $SRC/docs/casts/* $docdir/casts
-
-    build_page $1 $SRC/docs/index.md "VisiData Documentation"
+    cp $SRCDOCS/casts/* $docdir/casts
 }
 
 build_page . $WWWSRC/index.md "VisiData"
