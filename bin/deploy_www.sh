@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# BUILDWWW corresponds to webroot
-BUILDWWW=~/git/www/visidata.org/_build
+# BUILD corresponds to webroot
+BUILD="${BUILD:-_build/www}"
 
 # indicates which site to build
 SITE="${SITE:-beta.visidata.org}"
@@ -9,8 +9,8 @@ SITE="${SITE:-beta.visidata.org}"
 # aws user profile
 PROFILE="${PROFILE:-default}"
 
-# syncs the current state of BUILDWWW to $SITE
-aws s3 sync --acl public-read --profile $PROFILE $BUILDWWW s3://$SITE
+# syncs the current state of BUILD to $SITE
+aws s3 sync --acl public-read --profile $PROFILE $BUILD s3://$SITE
 
 # redirects the survey url to visidata.org/survey
 REDIR_URL='https://www.surveymonkey.com/r/8JBN8BM'
