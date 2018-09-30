@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # BUILD corresponds to webroot
-BUILD="${BUILD:-_build/www}"
+BUILD="${BUILD:-_build}"
 
 # indicates which site to build
 SITE="${SITE:-beta.visidata.org}"
