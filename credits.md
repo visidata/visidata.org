@@ -2,7 +2,7 @@
 
 ## Maintainers
 
-- [Saul Pwanson](http://saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData
+- [Saul Pwanson](http://saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData.
 - [Anja Kefala](http://kefala.info) ([@anjakefala](https://github.com/anjakefala)) maintains the documentation and packages for all platforms.
 
 ## Patrons

@@ -28,7 +28,7 @@ body {
 a {
    cursor: pointer;
    text-decoration: underline;
-   color: #4fc7ef;
+/*   color: #4fc7ef; */
 }
 
 a:visited {
@@ -77,7 +77,7 @@ iframe.video {
 
 h1, h2, h3, h4 {
   display: block;
-  text-align: center;
+  text-align: left;
   font-family: Trebuchet MS;
 }
 

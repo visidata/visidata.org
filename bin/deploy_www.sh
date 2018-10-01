@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # BUILD corresponds to webroot
 BUILD="${BUILD:-_build}"
 
