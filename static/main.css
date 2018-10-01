@@ -13,7 +13,7 @@ body {
   padding-left: 1em;
   padding-right: 1em;
   background: white;
-  font-family: Inconsolata, Consolas, monospace;
+  font-family: Georgia;
   font-size: 1em;
 }
 
@@ -78,6 +78,7 @@ iframe.video {
 h1, h2, h3, h4 {
   display: block;
   text-align: center;
+  font-family: Trebuchet MS;
 }
 
 h6 {

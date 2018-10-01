@@ -9,6 +9,12 @@ SITE="${SITE:-beta.visidata.org}"
 # aws user profile
 PROFILE="${PROFILE:-default}"
 
+DISTRIBUTION_ID=`aws cloudfront --profile $PROFILE list-distributions | jq -r ".DistributionList.Items | select(.[0].Aliases.Items[0] == \"$SITE\") | .[0].Id"`
+
+echo DISTRIBUTION_ID=$DISTRIBUTION_ID
+
+## TODO: if empty DIST_ID, bail
+
 # syncs the current state of BUILD to $SITE
 aws s3 sync --acl public-read --profile $PROFILE $BUILD s3://$SITE
 

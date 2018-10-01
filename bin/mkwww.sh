@@ -5,17 +5,17 @@ set -e  # stop script on error
 ### config env vars
 
 # SRC is already cloned visidata repo, with no modifications (other tags/branches will be checked out)
-SRC=~/git/visidata
+SRC=`pwd`/visidata
 
 # WWWSRC is already cloned visidata.org repo, with desired branch to build checked out
-WWWSRC=~/git/www/visidata.org
+WWWSRC=`pwd`
 
 # BUILDWWW is output directory (corresponding to webroot)
 BUILDWWW=$WWWSRC/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
-VERSIONS="v1.0 v1.1 v1.2 v1.3 develop"   # should be populated from tags/releases
+VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 develop"   # should be populated from tags/releases
 
 ### internal env vars
 
@@ -81,7 +81,8 @@ function build_docs() {
 build_page . $WWWSRC/index.md "VisiData"
 build_page install $WWWSRC/install.md "Installation Instructions"
 build_page privacy $WWWSRC/privacy.md "Privacy Policy"
-build_page releases $WWWSRC/releases.md "Releases"
+build_page releases $WWWSRC/releases.md "Release History"
+build_page credits $WWWSRC/credits.md "Credits and Contributions"
 
 set +e
 
