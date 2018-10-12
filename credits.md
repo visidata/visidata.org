@@ -18,7 +18,7 @@ Many thanks also to the following people for their contributions to VisiData:
 - [azag0](https://github.com/azag0)
 - [brannerchinese](https://github.com/brannerchinese)
 - [chocolateboy](https://github.com/chocolateboy)
-- [deinspanjer](https://github.com/@deinspanjer)
+- [deinspanjer](https://github.com/deinspanjer)
 - [eliasdorneles](https://github.com/eliasdorneles)
 - [jamesroutley](https://github.com/jamesroutley)
 - [khughitt](https://github.com/khughitt)
