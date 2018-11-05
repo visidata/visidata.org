@@ -15,7 +15,7 @@ BUILDWWW=$WWWSRC/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
-VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 develop"   # should be populated from tags/releases
+VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop"   # should be populated from tags/releases
 
 ### internal env vars
 
@@ -35,7 +35,7 @@ function build_page () {
     mkdir -p $BUILDWWW/$1
     fnbody=`mktemp`
 #    pandoc -r markdown -w html -o $fnbody $2
-    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks -w html -o $fnbody $2
+    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks+pipe_tables -w html -o $fnbody $2
     $BINDIR/strformat.py body=$fnbody title="$3" head="" < $WWWSRC/template.html > $BUILDWWW/$1/index.html
     rm $fnbody
 }
