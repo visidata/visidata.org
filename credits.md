@@ -25,6 +25,7 @@ Many thanks also to the following people for their contributions to VisiData:
 - [jkiely](https://github.com/jkiely)
 - [jpgrayson](https://github.com/jpgrayson)
 - [jsvine](https://github.com/jsvine)
+- [Katee](https://github.com/Katee)
 - [layertwo](https://github.com/layertwo)
 - [repjarms](https://github.com/repjarms)
 - [robcarrington](https://github.com/robcarrington)
