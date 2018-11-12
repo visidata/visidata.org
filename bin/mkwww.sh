@@ -35,7 +35,7 @@ function build_page () {
     mkdir -p $BUILDWWW/$1
     fnbody=`mktemp`
 #    pandoc -r markdown -w html -o $fnbody $2
-    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks+pipe_tables -w html -o $fnbody $2
+    pandoc --from markdown_strict+table_captions+header_attributes+implicit_header_references+simple_tables+fenced_code_blocks+pipe_tables -w html -o $fnbody $2
     $BINDIR/strformat.py body=$fnbody title="$3" head="" < $WWWSRC/template.html > $BUILDWWW/$1/index.html
     rm $fnbody
 }
