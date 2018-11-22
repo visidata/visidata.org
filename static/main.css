@@ -5,16 +5,19 @@ html {
   line-height: 1.15; /* Correct the line height in all browsers */
   -ms-text-size-adjust: 100%; /* Prevent adjustment of font size after orientation changes */
   -webkit-text-size-adjust: 100%; 
-  background: black;
+  background: #abcdef;
 }
 
 body {
   margin: auto;
-  padding-left: 1em;
-  padding-right: 1em;
   background: white;
   font-family: Georgia;
   font-size: 1em;
+}
+
+section#body {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -53,7 +56,7 @@ nav a {
    text-decoration: none;
    font-weight: bold;
    font-size: 125%;
-   margin: 1em auto 1em;
+   margin: 1em auto 0;
    display: block;
 }
 
@@ -69,16 +72,20 @@ footer {
 }
 
 iframe.video {
-    margin: auto;
+    margin: 0 auto;
     display: block;
     max-width: 100%;
     max-height: 100%;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   display: block;
-  text-align: left;
+  text-align: center;
   font-family: Trebuchet MS;
+}
+
+h2, h3 {
+    padding-top: 1em;
 }
 
 h6 {
@@ -104,9 +111,11 @@ h6 {
 }
 
 /* --- Code block ---- */
+pre {
+    background: #ffedcb;
+}
 
 pre, code {
-    background: #dddddd;
     font-family: Inconsolata, monospace; /* Correct the inheritance and scaling of font size in all browsers */
     font-size: 1em; /* Correct the odd `em` font sizing in all browsers */
     padding: 0.1em 0.25em 0.1em 0.25em;
@@ -154,10 +163,13 @@ hr {
 }
 
 /* --- Bullets and Lists --- */
-ul li {
-  display: list-item;
+ul {
   list-style-type: disc;
   margin: 0px auto;
+}
+
+ul li, ol li {
+  display: list-item;
   text-align: -webkit-match-parent;
 }
 
@@ -165,13 +177,17 @@ ul,
 ol {
     display: block;
     max-width: 50em;
-    margin: 0px auto;
     line-height: 1.5;
 }
 
 ol {
+    margin: .5em auto;
+}
+
+ol li {
     list-style-type: decimal;
 }
+
 
 #TOC {
     text-align: left;
@@ -235,8 +251,14 @@ table td, .table .cell {
 
 .screenshot {
     margin: auto;
-    width: 70%;
+    width: 80%;
     max-width: 500px;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    background: #000000;
+    border-radius: 3px;
 }
 
 .screenshot img {
@@ -297,4 +319,9 @@ pre#manpage {
 
 .asciicast {
     max-width: 100%;
+}
+
+table#front td {
+    height: 300px;
+    width: 400px;
 }

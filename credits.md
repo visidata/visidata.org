@@ -1,5 +1,3 @@
-# Credits
-
 ## Maintainers
 
 - [Saul Pwanson](http://saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData.
@@ -7,9 +5,12 @@
 
 ## Patrons
 
-Thanks to the following people who have contributed financial support via [Patreon](https://www.patreon.com/saulpw).
+Thanks to the following people who contribute via [Patreon](https://www.patreon.com/saulpw).
 
-- Mike E
+- Mike E.
+- Andrea B.
+- Tara H.
+- Michael T.
 
 ## Contributors
 
@@ -25,6 +26,7 @@ Many thanks also to the following people for their contributions to VisiData:
 - [jkiely](https://github.com/jkiely)
 - [jpgrayson](https://github.com/jpgrayson)
 - [jsvine](https://github.com/jsvine)
+- [Katee](https://github.com/Katee)
 - [layertwo](https://github.com/layertwo)
 - [repjarms](https://github.com/repjarms)
 - [robcarrington](https://github.com/robcarrington)

@@ -15,7 +15,7 @@ BUILDWWW=$WWWSRC/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
-VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 develop"   # should be populated from tags/releases
+VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop"   # should be populated from tags/releases
 
 ### internal env vars
 
@@ -35,7 +35,7 @@ function build_page () {
     mkdir -p $BUILDWWW/$1
     fnbody=`mktemp`
 #    pandoc -r markdown -w html -o $fnbody $2
-    pandoc --from markdown_strict+table_captions+simple_tables+fenced_code_blocks -w html -o $fnbody $2
+    pandoc --from markdown_strict+table_captions+header_attributes+implicit_header_references+simple_tables+fenced_code_blocks+pipe_tables -w html -o $fnbody $2
     $BINDIR/strformat.py body=$fnbody title="$3" head="" < $WWWSRC/template.html > $BUILDWWW/$1/index.html
     rm $fnbody
 }
@@ -52,6 +52,15 @@ function build_docs() {
     MAN_KEEP_FORMATTING=1 COLUMNS=120 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
     echo '</pre></section>' >> $manhtml
     $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $docdir/man/index.html
+
+    # Create /man/#loaders
+    sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $docdir/man/index.html
+    # Create /man#edit for editing commands
+    sed -i -e "s#<span style=\"font-weight:bold;\">Editing</span> <span style=\"font-weight:bold;\">Rows</span> <span style=\"font-weight:bold;\">and</span> <span style=\"font-weight:bold;\">Cells</span>#<span style=\"font-weight:bold;\"><a name=\"edit\">Editing Rows and Cells</a></span>#g" $docdir/man/index.html
+    # Create /man#options
+    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $docdir/man/index.html
+    # Create /man#columns for columns sheet
+    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $docdir/man/index.html
 
     # build kblayout
     mkdir -p $docdir/kblayout
