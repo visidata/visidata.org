@@ -14,6 +14,7 @@ This guide will cover the steps for installing VisiData and provide troubleshoot
 |Linux (Debian/Ubuntu)|[dpkg](#dpkg)      |`dpkg -i visidata_ver_all.deb` | Base, http, html, xls(x)   |
 |Windows    |[WSL](#wsl)    |Windows is not yet directly supported (use WSL)   | N/A |
 |Python3.4+ |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git@develop`| Base |
+|Linux (NixOS)|[nix](#nix) |`nix-env -i visidata`|Base, yaml, xls(x), hdf5, html, pandas, shp |
 
 If the one-line install commands above do not work, see below for detailed instructions and troubleshooting.
 
@@ -224,3 +225,30 @@ $ pip3 install git+https://github.com/saulpw/visidata.git@develop
 ~~~
 
 See [pip3](#pip3) above for further information on loaders and dependency management.
+
+## [nix-env](#nix)
+
+This package is maintained by the wonderful folks at [nixpkgs](https://github.com/NixOS/nixpkgs/issues/48852). Please refer all questions and requests for troubleshooting assistance [to them](https://github.com/NixOS/nixpkgs/issues/new).
+
+Requires:
+
+* Linux distribution
+* [nix](https://nixos.org/releases/nix/nix-1.9/manual/#chap-quick-start)
+
+To install VisiData:
+
+~~~
+$ nix-env -i visidata
+~~~
+
+To upgrade VisiData:
+
+~~~
+$ nix-env -u visidata
+~~~
+
+To uninstall VisiData:
+
+~~~
+$ nix-env -e visidata
+~~~
