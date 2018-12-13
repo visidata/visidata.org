@@ -13,7 +13,7 @@ This guide will cover the steps for installing VisiData and provide troubleshoot
 |Linux (Debian/Ubuntu)|[apt](#apt)      |`apt install visidata`            | Base, http, html, xls(x)  |
 |Linux (Debian/Ubuntu)|[dpkg](#dpkg)      |`dpkg -i visidata_ver_all.deb` | Base, http, html, xls(x)   |
 |Windows    |[WSL](#wsl)    |Windows is not yet directly supported (use WSL)   | N/A |
-|Python3.4+ |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git@develop`| Base |
+|Python3.4+ |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git`| Base |
 |Linux (NixOS)|[nix](#nix) |`nix-env -i visidata`|Base, yaml, xls(x), hdf5, html, pandas, shp |
 
 If the one-line install commands above do not work, see below for detailed instructions and troubleshooting.
@@ -26,9 +26,9 @@ Each package contains the full loader suite but differs in which loader dependen
 
 When we mention the base VisiData package, we are referring to the VisiData loaders whose dependencies are covered by the Python3 standard library. Currently these include the loaders for tsv, csv, fixed width text, json, and sqlite. Additionally, .zip, .gz, .bz2, and .xz files can be decompressed on the fly.
 
-## Comprehensive installation guide
+# Comprehensive installation guide
 
-### [pip3](#pip3)
+## pip3 {#pip3}
 
 Requires:
 
@@ -40,13 +40,13 @@ To verify that both python3 and pip3 are installed, type `python3 -m pip help` i
 To install VisiData:
 
 ~~~
-$ pip3 install visidata
+pip3 install visidata
 ~~~
 
 To update VisiData:
 
 ~~~
-$ pip3 install --upgrade visidata
+pip3 install --upgrade visidata
 ~~~
 
 VisiData supports [many sources](http://visidata.org/man/#loaders), but not all dependencies are installed automatically.
@@ -56,17 +56,17 @@ Out-of-box, you can load all file formats supported by the Python3 standard libr
 To install any of one the dependencies:
 
 ~~~
-$ pip3 install <package>
+pip3 install <package>
 ~~~
 
 To install dependencies for all loaders (which might take some time and disk space): 
 
 ~~~
-$ wget https://raw.githubusercontent.com/saulpw/visidata/stable/requirements.txt
-$ pip3 install -r requirements.txt
+wget https://raw.githubusercontent.com/saulpw/visidata/stable/requirements.txt
+pip3 install -r requirements.txt
 ~~~
 
-### [conda](#conda)
+## conda {#conda}
 
 Requires:
 
@@ -76,19 +76,19 @@ Requires:
 Add the [conda-forge](https://conda-forge.org/) channel:
 
 ~~~
-$ conda config --add channels conda-forge
+conda config --add channels conda-forge
 ~~~
 
 To install VisiData:
 
 ~~~
-$ conda install visidata
+conda install visidata
 ~~~
 
 To update VisiData:
 
 ~~~
-$ conda update visidata
+conda update visidata
 ~~~
 
 Note, that the VisiData feedstock comes preloaded with additional dependencies.
@@ -100,10 +100,10 @@ Additional Python packages will be required for opening other [supported data so
 If these packages are included in the conda environment, they can be installed with
 
 ~~~
-$ conda install <package>
+conda install <package>
 ~~~
 
-### [brew](#brew)
+## brew {#brew}
 
 Requires:
 
@@ -113,20 +113,20 @@ Requires:
 Add the [the vd tap](https://github.com/saulpw/homebrew-vd):
 
 ~~~
-$ brew tap saulpw/vd
+brew tap saulpw/vd
 ~~~
 
 To install VisiData:
 
 ~~~
-$ brew install visidata
+brew install visidata
 ~~~
 
 To update VisiData:
 
 ~~~
-$ brew update
-$ brew upgrade visidata
+brew update
+brew upgrade visidata
 ~~~
 
 Note, that the VisiData formula comes preloaded with additional dependencies.
@@ -135,7 +135,7 @@ Out-of-box, you can load csv, tsv, fixed-width text, json, sqlite, http, html, .
 
 NOTE: There is no method, which is known to the package maintainer, to install additional dependencies for a brewed Python package. If anyone does know of one please, please [let us know](https://github.com/saulpw/homebrew-vd/issues/new).
 
-### [apt](#apt)
+## apt {#apt}
 
 Requires:
 
@@ -145,20 +145,20 @@ Requires:
 Install `apt-transport-https`, which `apt` requires to communicate with a repository using https:
 
 ~~~
-$ sudo apt install apt-transport-https
+sudo apt install apt-transport-https
 ~~~
 
 Grab our public key:
 
 ~~~
-$ wget https://visidata.org/devotees.gpg.key
-$ sudo apt-key add devotees.gpg.key
+wget https://visidata.org/devotees.gpg.key
+sudo apt-key add devotees.gpg.key
 ~~~
 
 Add our repository to `apt`'s search list:
 
 ~~~
-$ sudo add-apt-repository \
+sudo add-apt-repository \
     "deb [arch=amd64] https://raw.githubusercontent.com/saulpw/deb-vd/master \
     sid \
     main"
@@ -167,22 +167,22 @@ $ sudo add-apt-repository \
 To install VisiData:
 
 ~~~
-$ sudo apt update
-$ sudo apt install visidata
+sudo apt update
+sudo apt install visidata
 ~~~
 
 To update VisiData:
 
 ~~~
-$ sudo apt update
-$ sudo apt install visidata
+sudo apt update
+sudo apt install visidata
 ~~~
 
 Note, that the VisiData `.deb` comes preloaded with additional dependencies.
 
 Out-of-box, you can load csv, tsv, fixed-width text, json, sqlite, http, html, .xls, and .xlsx (Microsoft Excel).
 
-### [dpkg](#dpkg)
+## dpkg {#dpkg}
 
 Requires:
 
@@ -196,32 +196,32 @@ First, go to our [repository](https://github.com/saulpw/deb-vd/tree/master/pool/
 To install VisiData:
 
 ~~~
-$ sudo dpkg -i /path/to/visidata_version_all.deb
+sudo dpkg -i /path/to/visidata_version_all.deb
 ~~~
 
 To uninstall VisiData:
 
 ~~~
-$ sudo dpkg -r visidata
+sudo dpkg -r visidata
 ~~~
 
 Note, that the VisiData `.deb` comes preloaded with additional dependencies.
 
 Out-of-box, you can load csv, tsv, fixed-width text, json, sqlite, http, html, .xls, and .xlsx (Microsoft Excel).
 
-### [wsl](#wsl)
+## wsl {#wsl}
 
 Windows is not yet directly supported. We recommend trying to use [ConEmu](https://conemu.github.io/) as your terminal on [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (Windows Subsystem for Linux).
 You can find discussion on this topic [here](https://github.com/saulpw/visidata/issues/117).
 
-### [Build from source](#git)
+## source code {#git}
 
 If you want to use bleeding edge unreleased features (which may not always work), you can do so by installing from the development branch on git.
 
 To install VisiData:
 
 ~~~
-$ pip3 install git+https://github.com/saulpw/visidata.git@develop
+pip3 install git+https://github.com/saulpw/visidata.git@develop
 ~~~
 
 See [pip3](#pip3) above for further information on loaders and dependency management.

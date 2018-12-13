@@ -32,7 +32,7 @@ This is largely a bugfix and performance release.  It was originally planned as 
 
 As usual, a more complete list of changes and features is in the [CHANGELOG](https://github.com/saulpw/visidata/blob/stable/CHANGELOG.md).
 
-See the [ROADMAP](https://github.com/saulpw/visidata/blob/stable/dev/ROADMAP.md) for the planned future direction of VisiData.
+See the [ROADMAP](https://github.com/saulpw/visidata/blob/stable/dev/ROADMAP) for the planned future direction of VisiData.
 
 # [v1.3.1](https://github.com/saulpw/visidata/releases/tag/v1.3.1) (2018-08-19)
 
