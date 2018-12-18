@@ -51,6 +51,6 @@ Remember, **if you can `cd`, you can `vd`.**
 
 My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [armchair data journalist](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
 
-I am building an ecosystem of textpunk powertools, and ideally a community of people to appreciate them.  If you love VisiData, please [send me an email](mailto:vd@saul.pw); or if that's too much work, you can just [support me on Patreon](https://www.patreon.com/saulpw).
+I am building an ecosystem and community for textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
 
 Share and enjoy!
