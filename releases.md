@@ -9,19 +9,19 @@ So thanks for all of your ongoing engagement and for continuing to share VisiDat
 A brief overview:
 
 1. Improvements to the pandas loader.
-- thanks to @nickray for the bughunting
+    - thanks to @nickray for the bughunting
 
 2. When set to True `options.bulk_select_clear` bulk select commands (`|`, `g|`, `,`, etc) will clear the previously selected rows.
-- the default is set to False and exhibits the current behaviour of retaining the already selected rows
-- thanks to @aborruso for the suggestion
+    - the default is set to False and exhibits the current behaviour of retaining the already selected rows
+    - thanks to @aborruso for the suggestion
 
 3. `Shift+O` once again pushes the global options sheet. You can find the sheet options by pressing `zO`. `gO` now opens the `.visidatarc` which can be edited and saved from within the VisiData interface.
 
 4. Sorting is now asynchronous, per user request. Please let us know how you find it.
-- thanks to @apnewberry for starting that conversation
+    - thanks to @apnewberry for starting that conversation
 
 5. `gz^` now renames all visible columns to contents of selected rows and `gz*` substitutes over all visible columns
-- thanks, once again, to @aborruso for both suggestions
+    - thanks, once again, to @aborruso for both suggestions
 
 As usual, the complete list of changes can be found in the [Changelog](https://github.com/saulpw/visidata/blob/stable/CHANGELOG.md#v151-2018-12-17).
 

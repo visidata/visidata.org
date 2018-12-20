@@ -188,6 +188,10 @@ ol li {
     list-style-type: decimal;
 }
 
+li li {
+    list-style-type: circle;
+}
+
 
 #TOC {
     text-align: left;
