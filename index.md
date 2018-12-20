@@ -49,7 +49,7 @@ Remember, **if you can `cd`, you can `vd`.**
 
 ## About the Author
 
-My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [armchair data journalist](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
+My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data journalist](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
 
 I am building an ecosystem and community for textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
 

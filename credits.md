@@ -7,10 +7,13 @@
 
 Thanks to the following people who contribute via [Patreon](https://www.patreon.com/saulpw).
 
+- Walrus P-H
+- Paul M.
 - Mike E.
 - Andrea B.
 - Tara H.
 - Michael T.
+- Mohit M.
 
 ## Contributors
 
