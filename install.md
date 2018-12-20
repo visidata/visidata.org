@@ -226,7 +226,7 @@ pip3 install git+https://github.com/saulpw/visidata.git@develop
 
 See [pip3](#pip3) above for further information on loaders and dependency management.
 
-## [nix-env](#nix)
+## nix-env {#nix}
 
 This package is maintained by the wonderful folks at [nixpkgs](https://github.com/NixOS/nixpkgs/issues/48852). Please refer all questions and requests for troubleshooting assistance [to them](https://github.com/NixOS/nixpkgs/issues/new).
 
