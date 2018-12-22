@@ -13,8 +13,8 @@ It combines the clarity of a spreadsheet, the efficiency of the terminal, and th
 
 1. explore new datasets effortlessly, no matter the format: `vd foo.json bar.csv baz.xls`
 2. open a Frequency Analysis for any column: move to that column and press `Shift+F`
-3. convert from any input format into any output format: `vd -b input.csv output.json`
-4. as an interactive replacement for grep, awk, sed, cut, sort, uniq: just pipe into `|vd`
+3. convert from any input format into any output format: `vd -b input.csv -o output.json`
+4. as an interactive replacement for grep, awk, sed, cut, sort, uniq: pipe into `|vd`
 5. scrape HTML table data from a webpage: `vd https://html.com/tables`
 6. see a visual diff of two sheets with the same structure: `vd --diff foo1.csv foo2.csv`
 7. explore an object from the Python REPL: `import visidata as vd; vd.view(obj)`
@@ -37,7 +37,7 @@ VisiData works on Linux and MacOS systems entirely within a terminal, and contin
     $ ls         # and you're not sure what to do with that data
     $ vd .       # it's time to VisiData
 
-Remember, **if you can `cd`, you can `vd`.**
+You can use VisiData from within any terminal-based shell or Python REPL.  Remember, **if you can `cd`, you can `vd`.**
 
 ## Become a VisiData Wizard
 

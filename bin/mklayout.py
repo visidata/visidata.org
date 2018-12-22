@@ -156,8 +156,11 @@ def get_shift(k):
 
 
 def main():
-    for cmd in load_tsv(sys.argv[2]):
-        cmds[(cmd['sheet'], cmd['prefix'], get_shift(cmd['key']), cmd['key'])] = cmd
+    try:
+        for cmd in load_tsv(sys.argv[2]):
+            cmds[(cmd['sheet'], cmd['prefix'], get_shift(cmd['key']), cmd['key'])] = cmd
+    except FileNotFoundError:
+        return
 
     body = '<h1>VisiData Commands Chart</h1>'
 
