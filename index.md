@@ -1,6 +1,6 @@
 # A Swiss Army Chainsaw for Data
 
-VisiData is an [open source](https://github.com/saulpw/visidata) supertool for exploring and manipulating data.
+VisiData is an [open source](https://github.com/saulpw/visidata) powertool for exploring and manipulating data.
 It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.
 
 #### Latest Version: [1.5.1](/releases) (2018-12-17)
