@@ -128,7 +128,7 @@ code {
 }
 
 pre, pre code {
-    white-space: pre;
+    white-space: pre-wrap;
     word-wrap: normal;
     overflow: auto;
     border: none;
@@ -317,7 +317,7 @@ table div.cell.step, table td.step {
 
 pre#manpage {
    font-size: 75%;
-   width: 100%;
+   /*width: 100%;*/
    max-width: 71em;
 }
 
