@@ -151,7 +151,7 @@ sudo apt install apt-transport-https
 Grab our public key:
 
 ~~~
-wget https://visidata.org/devotees.gpg.key
+wget https://raw.githubusercontent.com/saulpw/deb-vd/master/devotees.gpg.key
 sudo apt-key add devotees.gpg.key
 ~~~
 
