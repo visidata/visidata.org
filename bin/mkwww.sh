@@ -45,22 +45,22 @@ function build_docs() {
     docdir=$BUILDWWW/$1
 
     # build manpage
-    mkdir -p $docdir/man
+    mkdir -p $BUILDWWW/man
     manhtml=$TMPDIR/vd-man-inc.html
     echo '<section><pre id="manpage">' > $manhtml
     # <pre> max-width in main.css should be half of COLUMNS=###
     MAN_KEEP_FORMATTING=1 COLUMNS=120 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
     echo '</pre></section>' >> $manhtml
-    $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $docdir/man/index.html
+    $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $BUILDWWW/man/index.html
 
     # Create /man/#loaders
-    sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $docdir/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $BUILDWWW/man/index.html
     # Create /man#edit for editing commands
     sed -i -e "s#<span style=\"font-weight:bold;\">Editing</span> <span style=\"font-weight:bold;\">Rows</span> <span style=\"font-weight:bold;\">and</span> <span style=\"font-weight:bold;\">Cells</span>#<span style=\"font-weight:bold;\"><a name=\"edit\">Editing Rows and Cells</a></span>#g" $docdir/man/index.html
     # Create /man#options
-    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $docdir/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $BUILDWWW/man/index.html
     # Create /man#columns for columns sheet
-    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $docdir/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $BUILDWWW/man/index.html
 
     # build kblayout
     mkdir -p $docdir/kblayout
