@@ -49,7 +49,7 @@ function build_docs() {
     manhtml=$TMPDIR/vd-man-inc.html
     echo '<section><pre id="manpage">' > $manhtml
     # <pre> max-width in main.css should be half of COLUMNS=###
-    MAN_KEEP_FORMATTING=1 COLUMNS=120 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
+    MAN_KEEP_FORMATTING=1 COLUMNS=1000 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
     echo '</pre></section>' >> $manhtml
     $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $BUILDWWW/man/index.html
 

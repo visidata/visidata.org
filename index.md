@@ -42,6 +42,7 @@ You can use VisiData from within any terminal-based shell or Python REPL.  Remem
 ## Become a VisiData Wizard
 
 * read [An Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html), a tutorial by [Jeremy Singer-Vine](https://www.jsvine.com/).
+   - [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://medium.com/tantotanto/visidata-il-coltellino-svizzero-per-i-dati-che-probabilmente-non-conosci-2209ffd4fa39), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso).
 * browse [the quick reference manual](/man) (also available with `man vd` or with `Ctrl+H` from inside VisiData).
 * refer to [the VisiData documentation](/docs).
 * watch [the video case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
