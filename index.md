@@ -31,7 +31,7 @@ New loaders are included in every release, and [other data formats can be suppor
 
 ## Any Terminal
 
-VisiData works on Linux and MacOS systems entirely within a terminal, and continues to work seamlessly over ssh and within tmux.  It supports modern terminal features like wide Unicode characters, 256-colors, and even some mouse commands.  Scatterplots are drawn with the Unicode braille character set.
+VisiData works on Linux and MacOS systems entirely within a terminal, and continues to work seamlessly over ssh or [mosh](https://mosh.org/) and within [tmux](https://tmate.io/).  It supports modern terminal features like wide Unicode characters, 256-colors, and even some mouse commands.  Scatterplots are drawn with the Unicode braille character set.
 
     $ cd data    # if you have some data
     $ ls         # and you're not sure what to do with that data
@@ -49,8 +49,8 @@ You can use VisiData from within any terminal-based shell or Python REPL.  Remem
 
 ## About the Author
 
-My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data journalist](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
+My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
 
-I am building an ecosystem and community for textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
+I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
 
 Share and enjoy!
