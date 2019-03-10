@@ -78,6 +78,12 @@ iframe.video {
     max-height: 100%;
 }
 
+img {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   display: block;
   text-align: center;

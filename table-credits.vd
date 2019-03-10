@@ -1,0 +1,9 @@
+sheet	col	row	longname	input	keystrokes	comment
+			open-file	contributors.tsv	o	
+			open-file	patrons.tsv	o	
+patrons			sheets		S	
+sheets		キpatrons	open-row		^J	
+patrons			save-sheet	patrons.md	^S	
+patrons			sheets		S	
+sheets		キcontributors	open-row		^J	
+contributors			save-sheet	contributors.md	^S	

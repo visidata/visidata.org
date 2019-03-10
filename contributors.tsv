@@ -1,21 +1,21 @@
 author	github	most recent commit	contribution
 Saul Pwanson	saulpw	2019-03-05	
 Anja Kefala	anjakefala	2019-03-05	maintainer
-Andrea Borruso		2018-12-17	tutorial in italian
-Stefan Siegel		2018-08-21	bugfix
-Lucas Messenger		2018-08-20	pcapng
-Vivian Brown		2018-07-17	various; pcap
-Daniel Einspanjer		2018-06-14	kblayout, favicon
-chocolateboy		2018-05-13	clipboard
-Peter Grayson		2018-03-07	.bz2 and .xz
-David Branner		2017-07-02	first pass at documentation
-Keith Hughitt		2017-06-30	.gz support
-Jeff Arn		2017-06-08	first website design
-Jan Hermann		2017-06-02	-f filetype
-Elias Dorneles			svg
-James Routley			option name design
-John Kiely			
-Rob Carrington			
+Andrea Borruso	aborruso	2018-12-17	tutorial in italian
+Stefan Siegel	ssiegel	2018-08-21	bugfix
+Lucas Messenger	layertwo	2018-08-20	pcapng
+Vivian Brown	vbrown608	2018-07-17	various; pcap
+Daniel Einspanjer	deinspanjer	2018-06-14	kblayout, favicon
+chocolateboy	chocolateboy	2018-05-13	clipboard
+Peter Grayson	jpgrayson	2018-03-07	.bz2 and .xz
+David Branner	databranner	2017-07-02	first pass at documentation
+Keith Hughitt	khughitt	2017-06-30	.gz support
+Jeff Arn	repjarms	2017-06-08	first website design
+Jan Hermann	azag0	2017-06-02	-f filetype
+Elias Dorneles	eliasdorneles		svg
+James Routley	jamesroutley		option name design
+John Kiely	jkiely		
+Rob Carrington	robcarrington		
 Jeremy Singer-Vine	jsvine		english tutorial
 Kate Murphy	Katee		various; search parity with vim
 Trent Gill	trentgill		picked great colors

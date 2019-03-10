@@ -55,3 +55,7 @@ My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https:/
 I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
 
 Share and enjoy!
+
+## Corporate Sponsors
+
+![October Swimmer](/sponsors/october-swimmer.png)
