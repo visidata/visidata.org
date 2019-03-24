@@ -1,43 +1,77 @@
-# A Swiss Army Chainsaw for Data
+# Data science without the drudgery
 
-VisiData is an [open source](https://github.com/saulpw/visidata) powertool for exploring and manipulating data.
-It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.
+VisiData is an interactive multitool for tabular data.  It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.
+
+# [Install Now](/install)
 
 #### Latest Version: [1.5.2](/releases) (2019-01-12)
 
+<table>
+<tr>
+
+<td>
+<a class="" href="/formats">
+Any data format!
 <div class="screenshot">
-<a href="/basic-screenshot.png"><img src="/basic-screenshot.png" alt="screenshot of VisiData in action"/></a>
+<img src="/basic-screenshot.png" alt="screenshot of VisiData in action"/>
 </div>
+Open 1m+ rows in the blink of an eye!
+</a>
+</td>
 
-## 10 Ways to Use VisiData
+<td>
+<a class="" href="/docs/freqtbl">
+Instant histogram with Shift+F!
+<div class="screenshot">
+<a href="/freq-move-row.gif"><img src="/freq-move-row.gif" alt="Frequency Table loading, with cursor movement"/></a>
+</div>
+Press Enter for instant filtering!
+</td>
+</tr>
 
-1. explore new datasets effortlessly, no matter the format: `vd foo.json bar.csv baz.xls`
-2. open a Frequency Analysis for any column: move to that column and press `Shift+F`
-3. convert from any input format into any output format: `vd -b input.csv -o output.json`
-4. as an interactive replacement for grep, awk, sed, cut, sort, uniq: pipe into `|vd`
-5. scrape HTML table data from a webpage: `vd https://html.com/tables`
-6. see a visual diff of two sheets with the same structure: `vd --diff foo1.csv foo2.csv`
-7. explore an object from the Python REPL: `import visidata as vd; vd.view(obj)`
-8. take a random sample from a large .csv: `Shift+R` and give the sample size
-9. create an adhoc data pipeline: `Ctrl+D foo.vd` to save the cmdlog, then `vd -b -p foo.vd`
-10. rename files: `vd`, [edit the filenames](/docs/edit), then `Ctrl+S` to commit (see [video #4](https://www.youtube.com/watch?v=l2Bpmm0yAGw))
+<tr>
+<td>
+<a href="https://www.youtube.com/watch?v=N1CBDTgGtOU&t=134">
+Scatterplots in the terminal!
+<div class="screenshot">
+<img src="/map-colours.png" alt="Plotting a map with colours"/>
+</div>
+8-color maps!
+</a>
+</td>
 
-There are hundreds of other uses for VisiData.  The only limit is your imagination!
+<td>
+<a href="/docs/save-restore">
+Save sessions for replay later!
+<div class="screenshot">
+<a href="/scatterplot-usage.png"><img src="/scatterplot-usage.png" alt=""/></a>
+</div>
+Adhoc data pipelines in batch mode!
+<!--pre>vd --batch input.csv -o output.json</pre-->
+</a>
+</td>
+</tr>
 
-## Any Format
+<!--tr>
+<td>
+Search, sort, filter with regex!
+<div class="screenshot">
+<a href=""><img src="" alt=""/></a>
+</div>
+Bulk transform with Python!
+</td>
 
-VisiData loads data from [many different sources](/man#loaders), including json, csv, sqlite, shp, and html.
-New loaders are included in every release, and [other data formats can be supported easily](/docs/loaders).
+<td>
+Includes pandas DataFrame adapter!
+<pre>vd.view_pandas(obj)</pre>
+<div class="screenshot">
+<a href=""><img src="" alt=""/></a>
+</div>
+Extensible with Python!
+</td>
+</tr-->
 
-## Any Terminal
-
-VisiData works on Linux and MacOS systems entirely within a terminal, and continues to work seamlessly over ssh or [mosh](https://mosh.org/) and within [tmux](https://tmate.io/).  It supports modern terminal features like wide Unicode characters, 256-colors, and even some mouse commands.  Scatterplots are drawn with the Unicode braille character set.
-
-    $ cd data    # if you have some data
-    $ ls         # and you're not sure what to do with that data
-    $ vd .       # it's time to VisiData
-
-You can use VisiData from within any terminal-based shell or Python REPL.  Remember, **if you can `cd`, you can `vd`.**
+</table>
 
 ## Become a VisiData Wizard
 
@@ -46,7 +80,72 @@ You can use VisiData from within any terminal-based shell or Python REPL.  Remem
 * browse [the quick reference manual](/man) (also available with `man vd` or with `Ctrl+H` from inside VisiData).
 * refer to [the VisiData documentation](/docs).
 * watch [the video case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
-* follow [`@VisiData_`](https://twitter.com/visidata_) on Twitter.
+* follow [`@VisiData`](https://twitter.com/visidata) on Twitter.
+
+---
+
+
+## 10 Ways to Use VisiData
+
+### 1. explore datasets effortlessly, no matter the format
+
+    $ vd albums.json dropbox/*.xls* agents.sqlite
+
+Use the arrow keys to move around and `q` to quit.
+
+VisiData loads data from [many different sources and formats](/formats), including [anything pandas can load](https://pandas.pydata.org/pandas-docs/stable/reference/io.html)!
+
+New loaders are included in every release, and [you can create one yourself easily](/docs/loaders).
+
+### 2. See the list of available options and commands.
+
+Press `Ctrl+H` to see the [manpage](/man), or `z Ctrl+H` to see the full list of commands available on the current sheet.
+
+### 3. convert from any input format into any output format
+
+Within VisiData, press `Ctrl+S` to save the file in the format specified by the extension.
+
+Convert directly from the command-line with:
+
+    $ vd -b input.csv -o output.json
+
+### 4. as an interactive replacement for grep, awk, sed, cut, sort, uniq
+
+    $ netstat -an | vd -f fixed -o used-ports.txt
+
+Press `Ctrl+Q` to exit VisiData and save to the given output file.
+
+### 5. scrape HTML table data from a webpage:
+
+    $ vd https://en.wikipedia.org/wiki/List_of_largest_cities
+
+### 6. see a visual diff of two sheets with the same structure
+
+    $ vd --diff foo1.csv foo2.csv
+
+### 7. explore an object from the Python REPL
+
+    >>> visidata.view(obj)
+
+### 8. explore any pandas DataFrame
+
+    >>> vd.view_pandas(obj)
+
+### 9. create an adhoc data pipeline
+
+VisiData can also be used in batch mode with [scripts](/docs/save-restore/) without requiring any interaction.
+
+Save the cmdlog to a .vd file with `Ctrl+D foo.vd`, then replay the saved .vd file:
+
+    $ vd -b -p foo.vd
+
+### 10. rename a bunch of files
+
+1. Launch `vd` in the directory with the files
+2. Edit the filenames [(documentation on editing commands)](/docs/edit)
+3. `Ctrl+S` to commit (see [this video showing how to use the directory browser](https://www.youtube.com/watch?v=l2Bpmm0yAGw))
+
+---
 
 ## About the Author
 
@@ -56,6 +155,3 @@ I am building an ecosystem of textpunk powertools. If you love the design of Vis
 
 Share and enjoy!
 
-## Corporate Sponsors
-
-![October Swimmer](/sponsors/october-swimmer.png)

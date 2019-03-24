@@ -335,3 +335,8 @@ table#front td {
     height: 300px;
     width: 400px;
 }
+
+.left { float: left; }
+.clear { float: none; }
+.patrons img { width: 240px; }
+.patrons { margin: auto; }
