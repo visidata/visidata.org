@@ -11,7 +11,8 @@ SITE="${SITE:-beta.visidata.org}"
 # aws user profile
 PROFILE="${PROFILE:-default}"
 
-DISTRIBUTION_ID=`aws cloudfront --profile $PROFILE list-distributions | jq -r ".DistributionList.Items | select(.[0].Aliases.Items[0] == \"$SITE\") | .[0].Id"`
+COMPUTED_DISTID=`aws cloudfront --profile $PROFILE list-distributions | jq -r ".DistributionList.Items | select(.[0].Aliases.Items[0] == \"$SITE\") | .[0].Id"`
+DISTRIBUTION_ID="${DISTRIBUTION_ID:-$COMPUTED_DISTID}"
 
 echo DISTRIBUTION_ID=$DISTRIBUTION_ID
 
