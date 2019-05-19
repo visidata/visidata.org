@@ -1,5 +1,6 @@
 author	github	contribution
 Andrea Borruso	aborruso	italian tutorial
+azjps	azjps	pandas improvements
 Chocolateboy	chocolateboy	clipboard
 Daniel Einspanjer	deinspanjer	kblayout, favicon
 David Branner	databranner	docs
@@ -11,7 +12,9 @@ Jeremy Singer-Vine	jsvine	english tutorial
 John Kiely	jkiely	yaml
 Kate Murphy	Katee	search feel
 Keith Hughitt	khughitt	.gz support
+Kovas Palunas	kovasap	sys clipboard paste
 Lucas Messenger	layertwo	pcapng
+Paul O'Leary McCann	polm	bugfix
 Peter Grayson	jpgrayson	.bz2 and .xz
 Rob Carrington	robcarrington	yaml
 Stefan Siegel	ssiegel	bugfix
