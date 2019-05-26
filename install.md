@@ -7,13 +7,13 @@ This guide will cover the steps for installing VisiData and provide troubleshoot
 
 |Platform   |Package Manager|Command                                       | Out-of-box Loaders       |
 |-----------+---------------+:---------------------------------------------+--------------------------|
-|Python3.4+ |[pip3](#pip3)   |`pip3 install visidata`                       | Base                     |
-|Python3.4+ |[conda](#conda)|`conda install --channel conda-forge visidata`| Base, http, html, xls(x) |
+|all |[pip3](#pip3)   |`pip3 install visidata`                       | Base                     |
+|all |[conda](#conda)|`conda install --channel conda-forge visidata`| Base, http, html, xls(x) |
 |MacOS      |[Homebrew](#brew)|`brew install saulpw/vd/visidata`           | Base, http, html, xls(x)  |
 |Linux (Debian/Ubuntu)|[apt](#apt)      |`apt install visidata`            | Base, http, html, xls(x)  |
 |Linux (Debian/Ubuntu)|[dpkg](#dpkg)      |`dpkg -i visidata_ver_all.deb` | Base, http, html, xls(x)   |
 |Windows    |[WSL](#wsl)    |Windows is not yet directly supported (use WSL)   | N/A |
-|Python3.4+ |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git`| Base |
+|all |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git`| Base |
 |Linux (NixOS)|[nix](#nix) |`nix-env -i visidata`|Base, yaml, xls(x), hdf5, html, pandas, shp |
 
 If the one-line install commands above do not work, see below for detailed instructions and troubleshooting.
