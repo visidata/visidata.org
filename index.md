@@ -148,7 +148,7 @@ There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see
 
 ## About the Author
 
-My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://fivethirtyeight.com/features/a-plagiarism-scandal-is-unfolding-in-the-crossword-world/).  I live in Seattle but the terminal is my home.
+My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg).  I live in Seattle but the terminal is my home.
 
 I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
 
