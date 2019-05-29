@@ -23,9 +23,6 @@ These are the currently supported sources:
     - `v` show only columns in current row attributes
     - `za` add column for xml attributes
 
-- **npy** (requires `numpy`)
-    - For NumPy explorers that are working in the terminal and yearn for visibility into their data.
-
 - **pcap** (requires `xpkt`, `dnslib`)
     - View and investigate captured network traffic in a tabular format.
 
@@ -39,11 +36,11 @@ The following URL schemes are supported:
 
 The following sources may include multiple tables. The initial sheet is the table directory; `Enter` loads the entire table into memory.
 
-- **sqlite**/**sqlite3**
+- **sqlite**
     - supports saving for CREATE/INSERT (not wholesale updates)
     - `^S` to commit any `add-row`/`edit-cell`/`delete-row`
 
-- **xls**/**xlsx**/**xlsb** (requires `openpyxl`)
+- **xls**/**xlsx** (requires `openpyxl`)
 
 - **hdf5** (requires `h5py`)
 
@@ -88,7 +85,6 @@ These are the supported savers:
 - **htm**/**html** (requires `lxml`)
 - **png** (requires `pypng`)
 - **xml** (requires `lxml`)
-- **npy** (requires `numpy`)
 - **vd**
     - Command history log format for a VisiData session.
     - `^D` to save the current session's CommandLog.
