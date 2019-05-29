@@ -39,26 +39,29 @@ Thanks also to the following people for their contributions, whether in code, pr
 
 ## Contributors
 
-|author              |github           |contribution           |
-|--------------------+-----------------+-----------------------|
-|Andrea Borruso      |aborruso         |italian tutorial       |
-|Chocolateboy        |chocolateboy     |clipboard              |
-|Daniel Einspanjer   |deinspanjer      |kblayout, favicon      |
-|David Branner       |databranner      |docs                   |
-|Elias Dorneles      |eliasdorneles    |svg                    |
-|James Routley       |jamesroutley     |option name design     |
-|Jan Hermann         |azag0            |\-f filetype           |
-|Jeff Arn            |repjarms         |website                |
-|Jeremy Singer\-Vine |jsvine           |english tutorial       |
-|John Kiely          |jkiely           |yaml                   |
-|Kate Murphy         |Katee            |search feel            |
-|Keith Hughitt       |khughitt         |\.gz support           |
-|Lucas Messenger     |layertwo         |pcapng                 |
-|Peter Grayson       |jpgrayson        |\.bz2 and \.xz         |
-|Rob Carrington      |robcarrington    |yaml                   |
-|Stefan Siegel       |ssiegel          |bugfix                 |
-|Trent Gill          |trentgill        |picked great colors    |
-|Vivian Brown        |vbrown608        |various; pcap          |
+|author              |github              |contribution        |
+|--------------------+--------------------+--------------------|
+|Andrea Borruso      |aborruso            |italian tutorial    |
+|azjps               |azjps               |pandas improvements |
+|Chocolateboy        |chocolateboy        |clipboard           |
+|Daniel Einspanjer   |deinspanjer         |kblayout, favicon   |
+|David Branner       |databranner         |docs                |
+|Elias Dorneles      |eliasdorneles       |svg                 |
+|James Routley       |jamesroutley        |option name design  |
+|Jan Hermann         |azag0               |\-f filetype        |
+|Jeff Arn            |repjarms            |website             |
+|Jeremy Singer\-Vine |jsvine              |english tutorial    |
+|John Kiely          |jkiely              |yaml                |
+|Kate Murphy         |Katee               |search feel         |
+|Keith Hughitt       |khughitt            |\.gz support        |
+|Kovas Palunas       |kovasap             |sys clipboard paste |
+|Lucas Messenger     |layertwo            |pcapng              |
+|Paul O'Leary McCann |polm                |bugfix              |
+|Peter Grayson       |jpgrayson           |\.bz2 and \.xz      |
+|Rob Carrington      |robcarrington       |yaml                |
+|Stefan Siegel       |ssiegel             |bugfix              |
+|Trent Gill          |trentgill           |picked great colors |
+|Vivian Brown        |vbrown608           |various; pcap       |
 
 
 :::
