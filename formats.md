@@ -69,9 +69,15 @@ In addition, **.zip**, **.gz**, **.bz2**, and **xz** files are decompressed on t
 
 VisiData has an adapter for **pandas**. To load a file format which is supported by **pandas**, pass `-f pandas data.foo`. This will call `pandas.read_foo()`.
 
-For example, `vd -f pandas data.parquet` loads a parquet file. Note that when using the **pandas** loader, the `.fileformat` file extension is mandatory.
+For example:
 
-# Supported Output Formats
+~~~
+vd -f pandas data.parquet
+~~~
+
+loads a parquet file. When using the **pandas** loader, the `.fileformat` file extension is mandatory.
+
+# [Supported Output Formats](#output) {#output}
 
 These are the supported savers:
 
