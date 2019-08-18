@@ -14,7 +14,6 @@ Thanks also to the following people for their contributions, whether in code, pr
 [hyperlink]: https://www.octoberswimmer.com/
 [image]: /sponsors/october-swimmer.png
 
-
 |patron          |since      |
 |----------------+-----------|
 |Tara H\.        |2018\-11   |
@@ -23,7 +22,6 @@ Thanks also to the following people for their contributions, whether in code, pr
 |Paul M\.        |2018\-12   |
 |Michael T\.     |2018\-12   |
 |Walrus P\-H     |2019\-01   |
-|Mohit M\.       |2019\-01   |
 |Wouter v\.      |2019\-02   |
 |Tim T\.         |2019\-02   |
 |Sotiris F\.     |2019\-02   |
@@ -32,6 +30,8 @@ Thanks also to the following people for their contributions, whether in code, pr
 |EVEprosper      |2019\-02   |
 |Russell         |2019\-03   |
 |Christian W\.   |2019\-03   |
+|Nic Waller      |2019\-07   |
+|John Goldstone  |2019\-08   |
 
 :::
 
@@ -39,30 +39,30 @@ Thanks also to the following people for their contributions, whether in code, pr
 
 ## Contributors
 
-|author              |github              |contribution        |
-|--------------------+--------------------+--------------------|
-|Andrea Borruso      |aborruso            |italian tutorial    |
-|azjps               |azjps               |pandas improvements |
-|Chocolateboy        |chocolateboy        |clipboard           |
-|Daniel Einspanjer   |deinspanjer         |kblayout, favicon   |
-|David Branner       |databranner         |docs                |
-|Elias Dorneles      |eliasdorneles       |svg                 |
-|James Routley       |jamesroutley        |option name design  |
-|Jan Hermann         |azag0               |\-f filetype        |
-|Jeff Arn            |repjarms            |website             |
-|Jeremy Singer\-Vine |jsvine              |english tutorial    |
-|John Kiely          |jkiely              |yaml                |
-|Kate Murphy         |Katee               |search feel         |
-|Keith Hughitt       |khughitt            |\.gz support        |
-|Kovas Palunas       |kovasap             |sys clipboard paste |
-|Lucas Messenger     |layertwo            |pcapng              |
-|Paul O'Leary McCann |polm                |bugfix              |
-|Peter Grayson       |jpgrayson           |\.bz2 and \.xz      |
-|Rob Carrington      |robcarrington       |yaml                |
-|Stefan Siegel       |ssiegel             |bugfix              |
-|Trent Gill          |trentgill           |picked great colors |
-|Vivian Brown        |vbrown608           |various; pcap       |
-
+|author              |github           |contribution                            |
+|--------------------+-----------------+----------------------------------------|
+|Andrea Borruso      |aborruso         |italian tutorial                        |
+|azjps               |azjps            |pandas improvements                     |
+|Chocolateboy        |chocolateboy     |clipboard; list aggr; json sort keys    |
+|Daniel Einspanjer   |deinspanjer      |kblayout, favicon                       |
+|David Branner       |databranner      |docs                                    |
+|Elias Dorneles      |eliasdorneles    |svg                                     |
+|James Routley       |jamesroutley     |option name design                      |
+|Jan Hermann         |azag0            |\-f filetype                            |
+|Jeff Arn            |repjarms         |website                                 |
+|Jeremy Singer\-Vine |jsvine           |english tutorial                        |
+|John Kiely          |jkiely           |yaml                                    |
+|Kate Murphy         |Katee            |search feel                             |
+|Keith Hughitt       |khughitt         |\.gz support                            |
+|Kovas Palunas       |kovasap          |sys clipboard paste                     |
+|Lucas Messenger     |layertwo         |pcapng; \.jira; open \.tar              |
+|Paul O'Leary McCann |polm             |bugfix wide chars                       |
+|Peter Grayson       |jpgrayson        |\.bz2 and \.xz                          |
+|Rob Carrington      |robcarrington    |yaml                                    |
+|Rasmus Scholer      |scholer          |windows\-compatibility                  |
+|Stefan Siegel       |ssiegel          |bugfix                                  |
+|Trent Gill          |trentgill        |picked great colors                     |
+|Vivian Brown        |vbrown608        |various; pcap                           |
 
 :::
 
