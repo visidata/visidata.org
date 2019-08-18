@@ -1,7 +1,7 @@
 author	github	contribution
 Andrea Borruso	aborruso	italian tutorial
 azjps	azjps	pandas improvements
-Chocolateboy	chocolateboy	clipboard
+Chocolateboy	chocolateboy	clipboard; list aggr; json sort keys
 Daniel Einspanjer	deinspanjer	kblayout, favicon
 David Branner	databranner	docs
 Elias Dorneles	eliasdorneles	svg
@@ -13,10 +13,11 @@ John Kiely	jkiely	yaml
 Kate Murphy	Katee	search feel
 Keith Hughitt	khughitt	.gz support
 Kovas Palunas	kovasap	sys clipboard paste
-Lucas Messenger	layertwo	pcapng
-Paul O'Leary McCann	polm	bugfix
+Lucas Messenger	layertwo	pcapng; .jira; open .tar
+Paul O'Leary McCann	polm	bugfix wide chars
 Peter Grayson	jpgrayson	.bz2 and .xz
 Rob Carrington	robcarrington	yaml
+Rasmus Scholer	scholer	windows-compatibility
 Stefan Siegel	ssiegel	bugfix
 Trent Gill	trentgill	picked great colors
 Vivian Brown	vbrown608	various; pcap

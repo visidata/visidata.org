@@ -116,6 +116,13 @@ h6 {
    border-radius: 4px;
 }
 
+.announce {
+    background: #ffedcb;
+}
+
+.announce h2 {
+    padding-top: 0;
+}
 /* --- Code block ---- */
 pre {
     background: #ffedcb;
