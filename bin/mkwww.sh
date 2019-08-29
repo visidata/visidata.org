@@ -108,8 +108,3 @@ for ver in $VERSIONS ; do
     build_docs docs/$ver
 done
 
-#### At the end
-# add analytics to .html files
-for fn in `find $BUILDWWW -name '*.html'` ; do
-    sed -i -e "/<head>/I{r $WWWSRC/analytics.thtml" -e 'd}' $fn
-done
