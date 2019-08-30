@@ -1,3 +1,6 @@
+installdir=$(pwd)/install
+mkdir -p "$installdir"
+
 # setup visidata submodule
 git submodule update --init --recursive
 
@@ -5,8 +8,5 @@ git submodule update --init --recursive
 apt-get install -y aha
 
 # pandoc - for building all docs
-wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
-dpkg -i pandoc-2.7.3-1-amd64.deb
-
-# cleanup
-rm pandoc-2.7.3-1-amd64.deb
+wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb -O "$installdir"/pandoc-2.7.3.deb
+dpkg -i "$installdir"/pandoc-2.7.3.deb
