@@ -16,7 +16,7 @@ Enjoy!
 
 Tobias Macey
 0:00:14
-Hello, and welcome to podcast, the podcast about Python and the people who make it great. When you're ready to launch your next app or want to try a project you hear about on the show, you need somewhere to deploy it. So take a look at our friends over at winnowed. With 200 gigabit private networking, scalable shared block storage, node balancers, and a 40 gigabit public network all controlled by a brand new API, you get everything you need to scale up. And for your tasks that need fast computation, such as training machine learning models and running your continuous integration, they just launched dedicated CPU instances, go to Python podcast.com slash the node that's LINODE. Today to get a $20 credit and launch a new server and under a minute, and don't forget to thank them for their continued support of this show. And you listen to this show to learn and stay up to date with the ways that Python is being used, including the latest in machine learning and data analysis. For even more opportunities to meet listen and learn from your peers you don't want to miss out on this year's conference season. We have partnered with organizations such as O'Reilly Media Day diversity Caribbean global Intelligence Center data Council. Upcoming events include the O'Reilly AI conference, the strata data conference, the combined events of the data architecture, summit and graph forum and data Council in Barcelona. Go to Python podcast.com slash conferences today to learn more about these and other events and take advantage of our partner discounts when you register your host as usual as Tobias Macey and today I'm interviewing Saul ponson about visit data, a terminal oriented interactive multi tool for tabular data. So So can you start by introducing yourself?
+Hello, and welcome to podcast, the podcast about Python and the people who make it great. When you're ready to launch your next app or want to try a project you hear about on the show, you need somewhere to deploy it. So take a look at our friends over at winnowed. With 200 gigabit private networking, scalable shared block storage, node balancers, and a 40 gigabit public network all controlled by a brand new API, you get everything you need to scale up. And for your tasks that need fast computation, such as training machine learning models and running your continuous integration, they just launched dedicated CPU instances, go to Python podcast.com slash the node that's LINODE. Today to get a $20 credit and launch a new server and under a minute, and don't forget to thank them for their continued support of this show. And you listen to this show to learn and stay up to date with the ways that Python is being used, including the latest in machine learning and data analysis. For even more opportunities to meet listen and learn from your peers you don't want to miss out on this year's conference season. We have partnered with organizations such as O'Reilly Media Day diversity Caribbean global Intelligence Center data Council. Upcoming events include the O'Reilly AI conference, the strata data conference, the combined events of the data architecture, summit and graph forum and data Council in Barcelona. Go to Python podcast.com slash conferences today to learn more about these and other events and take advantage of our partner discounts when you register your host as usual as Tobias Macey and today I'm interviewing Saul Pwanson about VisiData, a terminal oriented interactive multi-tool for tabular data. So can you start by introducing yourself?
 
 Saul Pwanson
 0:01:47
@@ -217,42 +217,90 @@ Saul Pwanson
 0:38:24
 Yeah, that's interesting, you know,
 0:38:27
-I made a very simple adapter for pandas, Lou was, you know, at 20 lines of code at first, just because I wanted to use the pen to support a lot of different loaders to and you'll use those and build browse those super handy. But what's interesting is that pandas and VisiData don't actually play that well together, you know, to order to do some of the things like sorting, for instance, you know, VisiData a grabbed each value and source based on that, but you want to use pandas built in sort function or do it more efficiently. And there's just no good way to do that automatically. You have to kind of right all the commands in a way that was compatible with pandas for pandas, sheets. And that's totally doable, but it's a fair amount of work, and I haven't done it. And so somebody [did make a some modifications to make pandas more responsive](https://github.com/saulpw/visidata/pull/267), in certain cases make things work better. And that's totally doable. Like I said, it takes a fair amount of work. And it's not, doesn't happen naturally like that. And so you can't just use pandas, things like you'd think you can use some of the functions that pandas has,
-Tobias Macey
-0:39:30
-on panda sheets, and you know, non pendant sheets, if they're standalone functions. But to use a pen, this data frame, just naturally like you would you probably are better off using it in Jupyter by itself. And then in terms of the overall growth and adoption of VisiData seems that there's a decent community that's grown up around it. And I'm wondering how you approach the project governance and sustainability as a solo developer, and how you are looking to grow the community and incorporate more people into the future of VisiData.
+I made a very simple adapter for pandas, 20 lines of code at first, to support a lot of different loaders and browse dataframes.
+But what's interesting is that Pandas and VisiData don't actually play that well together.  Like sorting, VisiData computes each value and sorts based on that, but you want to use pandas built in sort function or do it more efficiently.
+And there's just no good way to do that automatically.
+You have write all the commands to be compatible with Pandas for Pandas sheets.
+It's totally doable, but it's a fair amount of work, and I haven't done it.
+And so somebody [did make a some modifications to make pandas more responsive](https://github.com/saulpw/visidata/pull/267), in certain cases to make things work better.
+But it doesn't happen naturally like that.
+You probably are better off using it in Jupyter by itself.
+
+Tobias
+Then in terms of the overall growth and adoption of VisiData seems that there's a decent community that's grown up around it. And I'm wondering how you approach the project governance and sustainability as a solo developer, and how you are looking to grow the community and incorporate more people into the future of VisiData.
 
 Saul Pwanson
 0:40:02
-Yeah. Well, you know, as as you're saying, I'm a solo developer, I've got a little bit of help. Now like I said, Anja has been instrumental in making me not being so alone with some of the decisions and discussions and stuff like that. There's also a #visidata channel on freenode that several of us are hanging out. And there's people talking about things, people ask questions, and is it possible to do this, etc, maybe you could add this kind of feature. That's, I would prefer personally, chat system like that. Because I find myself doing a lot better with chat. I mean, I've been on chat for over over 20 years now than I do with email and emails, a lot heavier requires more intention and attention and chat, I can just kind of like toss off an answer. It's just done. So I'm, of course, the decider on those things. But I have to be honest, it kind of feels like I'm discovering VisiData a more than creating it at this point. Like, it's like a chunk of marble to a sculptor, it kind of tells me what it wants to become. And some things I didn't even consider. And then I look at it like, oh, why didn't I think of that already, you know, like the the rowtype down in the lower left corner where it shows you, you know, whatever, lines or columns, or whatever the current data type is, for the longest time, almost 1.0, that just said, rows. And I didn't know why I even put the text there. If I was going to say the same thing every time. And yet I felt strongly that it should be there. And then once I realized that, that should just be the life, I was like, oh, like, I don't feel like that was my creation. That's that is just how it has to be. That makes sense. And so, so that, and then you mentioned about project sustainability. And the thing is, is that my energy is my most precious resource, my energy Blue Coat, I have a day job. And so I come home at night, and it's madness want to screw around the data. And there's, it's really hard to like some of the energy when I don't have like a very concrete use case for something that cares about something. And so I have the most energy when somebody is around, it is enthusiastic, and they have like a sample data set. And they're like, I just want to do this thing to it. It's like, Oh, right. And how can we do that? Is there like a, it's a kind of a little puzzle, you know, like, you kind of put together to kind of use existing commands to do this, you have to like a one liner that they put in their visidatarc, or does this require like a different core piece of functionality to that now, not just that case, but 10 other cases can be solved too. And those are the things I enjoy the most, and I can, I actually do really enjoy solving those puzzles. But then sometimes we'll have people who asked for a generic feature. And like, it doesn't feel like it's it's not very immediate, it's more abstract, or I have a concept for something that I've been wanting for a while, and because nobody actually really, really wants it, I'm less motivated, I just kind of decide to do something else, you know.
+Yeah. Well, as you say I'm a solo developer, but I've got a little bit of help.
+Anja has been instrumental in making me not so alone with some of the decisions and discussions.
+There's also a #visidata channel on freenode that several of us are hanging out on.
+
+So I'm, of course, the decider on those things.
+But I have to be honest, it kind of feels like I'm discovering VisiData more than creating it at this point.
+It's like a chunk of marble to a sculptor, it kind of tells me what it wants to become.
+And some things I didn't even consider, and then I look at it like, why didn't I think of that already?
+Like the the rowtype down in the lower left corner where it shows you, lines or columns or whatever the current data type is.
+For the longest time, almost 1.0, that just said, "rows".
+And I didn't know why I even put that text there, if it was going to say the same thing every time.
+And yet I felt strongly that it should be there.
+Once I realized that it should be changed for each sheet, I don't feel like that was my creation.
+That's that is just how it has to be.  That makes sense.
+
+You mentioned about project sustainability. The thing is, my energy to code is my most precious resource.
+I have a day job, and so I come home at night, and it's madness that I want to screw around with data.
+It's hard to have the energy when I don't have a very concrete use case.
+I have the most energy when somebody is enthusiastic, and they have a sample data set.
+And they're like, I just want to do this thing to it.
+How can we do that?
+It's a kind of a little puzzle, 
+you maybe can put together existing commands to do this, or here's a one-liner that to put in their visidatarc, or does this require like a different core piece of functionality so that not just that case, but 10 other cases can be solved too.
+I actually do really enjoy solving those puzzles.
+But then sometimes we'll have people who asked for a generic feature.
+And it's not very immediate, it's more abstract, and because nobody actually really, really wants it, I'm less motivated, I just kind of do something else.
 
 Tobias Macey
 0:42:51
-So what are some of the most interesting or unexpected or innovative ways that you've seen VisiData used,
+So what are some of the most interesting or unexpected or innovative ways that you've seen VisiData used?
 
 Saul Pwanson
 0:42:58
-I feel like there's we have a couple of superfans, people who like will use it for well, more than they really should. And one of them is a guy named [Christian Warden](https://www.octoberswimmer.com/salesforce-consulting/). And he does some, a lot of Salesforce consulting and stuff. And so he's got just buckets of data, and just wants to move through it quickly. And he built a duplicate row finder for some data set with Python expressions, and .vd script and VisiData is not made for internal computation, like you say, elements that compete within a row, no problem. But if you want to look at the previous row, it's, it's not really meant for that. I mean, I would like to edit at some point, but I haven't figured out the most, the really great way to do it yet. But he figured out how to pull it off. And it was an amazing piece. And it worked. That was amazing, actually exposed like a bug with computation. So that you know, was taking forever to run. But once he fixed that it actually was remarkable. It's like, Wow, you really have turned this into yet another Turing complete programming environment. So, so that has been kind of weird. And also, I'm not sure if you or your listeners have seen the [lightning talk](https://www.youtube.com/watch?v=N1CBDTgGtOU) that I gave a couple years ago, but I just kind of like, I had some data that had lat long coordinates. And I was just curious if I could plot those in my little canvas. And it turns out the plotting latitude longitude as x y coordinates, works really well for maps. And if you've got even like, a million points, you just there you go. And you can see the the distribution of things. And it's, it was surprising to me that it worked as well, it did be honest, like, I don't think this is built for, you know, geographic information at all, and you can kind of pull it off. So that's been both surprising and unexpected. And yeah, kind of pleasing to.
+
+We have a couple of superfans, people who will use it for more than they really should.
+One of them is a guy named [Christian Warden](https://www.octoberswimmer.com/salesforce-consulting/), who does a lot of Salesforce consulting.
+So he's got buckets of data, and just wants to move through it quickly.
+He built a duplicate row finder for some data set with Python expressions and .vd script, and VisiData is not made for internal computation.
+Elements that compute within a row, no problem, but if you want to look at the previous row, it's not really meant for that.
+But he figured out how to pull it off, it was an amazing piece, and it worked.
+It did expose a bug with computation, so it was taking forever to run.
+But once we fixed that, it actually was remarkable.
+He turned this into yet another Turing complete programming environment.
+
+Also, if you or your listeners have seen the [lightning talk](https://www.youtube.com/watch?v=N1CBDTgGtOU) that I gave a couple years ago.
+I had some data that had lat-long coordinates, and I was just curious if I could plot those in my little canvas.
+And it turns out the plotting latitude-longitude as x,y coordinates, works pretty well for maps, even if you've got a million points.
+You can see the distribution of things, and it was surprising to me that it worked as well as it did to be honest.  Like, I don't think this is built for geographic information at all, but you can kind of pull it off.
 
 Tobias Macey
 0:44:33
+
 Yeah, I did see that lightning talk. And that was one of the things that I was kind of blown away by as far as the visualization aspect of VisiData, given that it's a terminal environment. And so it's interesting to hear how you just mapped the lat long to x, y coordinates. And I'm sure that you just figured out what were the maximum bounds of the coordinates that you had to figure out? What were the what the overall plane coordinates needed to be in relation to each other. So that's pretty funny.
 
 Saul Pwanson
 0:44:59
-Yeah, thank you.
-0:45:00
-The other thing, one more thing, if I if you don't mind, that has been kind of surprising to me is how meta the thing goes. So editing VisiData's internals, using VisiData's own commands is something that's been kind of surprising for me, just
-0:45:16
-yesterday,
-0:45:18
+Thank you.
+
+Another thing that has been kind of surprising is how meta the thing goes, editing VisiData's internals, using VisiData's own commands.
+Just yesterday,
 a user asked [how they get another type column on the describe sheet](https://github.com/saulpw/visidata/issues/356).
-0:45:23
 And I thought about it and I was like,
-0:45:24
-you know you can do is you can go to the column sheet,
-0:45:27
-and you can copy it from there, and then you can paste it under the column sheet of the describe sheet. And it'll just work. And it's like, you couldn't possibly do that with excel you've got and similarly, if you've got 1000 columns, in whatever thing and you want to search, or select all the ones that begin with a certain thing and remove all those from the set, you can do that in VisiData. And that's no problem that just works just like anything else. I have no idea how you do that in almost any other tool. And so I feel like the metadata editing aspects of something has been really surprising for me, even though I put it in there. But the fact that it works as well, as it does, has been really kind of interesting.
+you know what you can do, is:
+you can go to the column sheet,
+and you can copy it from there, and then you can paste it into the Columns sheet of the Describe sheet.
+And it'll just work.
+You couldn't possibly do that with Excel.
+Similarly, if you've got 1000 columns, and you want search or select all the ones that begin with a certain thing and remove all those from the set, you can do that in VisiData. And it works just like anything else. 
+I have no idea how you do that in almost any other tool.
+So the metadata editing aspects have been really surprising for me, that it works as well as it does.
 
 Tobias Macey
 0:46:09
@@ -260,19 +308,49 @@ And looking forward, what are some of the features or improvements that you have
 
 Saul Pwanson
 0:46:16
-Well, so right now we're working on the 2.O release, which will be a couple months out, and the goal is to stabilize it. And the current version 1.5.2 is actually incredibly stable. And really tight, like we haven't found was just one bug I've seen, but that's fine. It's an edge case. But it's actually pretty stable. But the API is kind of all over the place. You know, it doesn't really it's not as coherent as the user interface. And so one of the things we want to do is make the API stable and produce some more coherent documentation about the internals, calling it the book of VisiData. And the point of that is we can let it rest and work on some other things. But then let other people go wild and share their own creations plugins or commands or whatever loaders, without destabilizing the core goodness, that is there. So I'm sure there will be like, you know, 2.1, whatever after that. But I'm really hoping that with 2.0, development can slow down, and I can move on to some other projects that I have in the queue. Okay, so one of the things that we've been talking about that's kind of taken a little got a little bit of traction is something I've been calling where in the data is Carmen San Mateo, which is a throwback, or a Yeah, references an old game from the 80s and 90s, which you've heard of called Where in the World is Carmen San Diego, I used to play it. Yep. Okay, yeah. So you're familiar. So the idea is that I want that kind of game, but with data and data sets. And so the low is for hardcore data nerds kind of an escape the room game, or a Choose Your Own Adventure kind of thing, where you're solving whatever crime, but you get the data sets to look at. And that's how you get the actual clues and solve the actual puzzles. And so I like to work on that. And that's my, my next project probably is in the queue. But I don't want to do that until we've got the 2.0 lockdown and feel like it's a stable place for everybody.
+
+Well, so right now we're working on the 2.0 release, which will be a couple months out [end of 2019], and the goal is to stabilize it.
+And the current version 1.5.2 is actually incredibly stable.  I've only seen one outright bug and that was an edge case. 
+But the API is kind of all over the place, it's not as coherent as the user interface.
+And so one of the things we want to do is make the API stable and produce some more coherent documentation about the internals; we've been calling it the "Book of VisiData".
+And the point of that is we can let it rest and work on some other things. But then let other people go wild and share their own creations, plugins or commands or loaders, without destabilizing the core goodness that is there.
+So I'm sure there will be v2.1, whatever after that.
+But I'm really hoping that with 2.0, development can slow down, and I can move on to some other projects that I have in the queue.
+Okay, so one of the things that we've been talking about that's kind of taken a little got a little bit of traction is something I've been calling where in the data is 
+Like "Where in the Data is Carmen San Mateo?", which references an old game from the 80s and 90s, which maybe you've heard of called "Where in the World is Carmen San Diego".
+
+Tobias Macey
+I used to play it.
+
+Saul Pwanson
+Okay, So you're familiar. I want that kind of game, but with data and data sets. Kind of an Escape Room game, or a Choose Your Own Adventure, where you're solving whatever crime, but you get the data sets to look at.
+And that's how you get the actual clues and solve the actual puzzles.
+And so my next project in the queue. But I don't want to do that until we've got v2.0 locked down and feel like it's a stable place for everybody.
 
 Tobias Macey
 0:48:09
-Are there any other aspects of VisiData or data exploration or any of the other accompanying projects that we didn't discuss it that we didn't discuss yet that you'd like to close out, that we didn't discuss yet that you'd like to cover before we close out the show?
+Are there any other aspects of VisiData or data exploration or any of the other accompanying projects that you'd like to cover before we close out the show?
 
 Saul Pwanson
 0:48:24
-Now, let's just quickly although I do want to say that I feel like we're in an age of kind of a terminal Renaissance, you know, that we went through the period of the probably the late 90s, and early 2000s, where it was more graphics all the time. And you're kind of that was the obvious way up and out. And the journalist been, you know, with us throughout, and I definitely didn't have never left it. But I feel like within the past, maybe 10 years or so with projects like oh, my ZSH and team up slash tmate, and many other ones that the terminal has been kind of getting a resurgence. And even now, when people think go to data, boot camps, data science, boot camps and stuff, they have to learn the terminal and get involved in there too, because you need to be able to do that kind of stuff in order to get anywhere serious, to dive deeply into data stuff.
-0:49:12
-And
+
+I feel like we're in an age of kind of a terminal Renaissance, that we went
+through the period of the late 90s, and early 2000s, where it was more graphics
+all the time.  And that was the obvious way up and out.  And the terminal has
+been with us throughout, and I have never left it.  But I feel like within the
+past, maybe 10 years or so with projects like ohmyzsh and tmux/tmate and many
+others, that the terminal has been kind of getting a resurgence.  And even now,
+when people go to data science boot camps and stuff, they have to learn the
+terminal and get involved in there too, because you need to be able to do that
+kind of stuff in order to get anywhere serious, to dive deeply into data stuff.
+
 0:49:14
-so I feel like this, this is part of that, you know, if this data is saying that Wait a second, you don't have to be in the web graphics world and RMB perfection, in fact, not being in that world makes it a lot easier for you, if you can just embrace the fact that you're going to be at the terminal and using a keyboard.
+
+[XXX] And so I feel like this is part of that, you know, if this data is saying
+that Wait a second, you don't have to be in the web graphics world and RMB
+perfection, in fact, not being in that world makes it a lot easier for you, if
+you can just embrace the fact that you're going to be at the terminal and using
+a keyboard.
 
 Tobias Macey
 0:49:29
@@ -280,15 +358,15 @@ Yeah, definitely appreciate the fact that there is a lot more focus being paid t
 
 Saul Pwanson
 0:50:04
-Yeah. And you know, to be honest, the versions of iOS and Windows are going to keep marching forward. And I have no doubt that I made an app for the current version of either of those things that in next three or four years, it wouldn't work with the next version. And I am actually pretty confident that if I don't touch VisiData, for the next four years that you'll be able to use it in the next version of Python on whatever thing, no problem at all. And I find that to be really motivating to do a good job now because I don't have to keep
+Yeah. And you know, to be honest, the versions of iOS and Windows are going to keep marching forward. And I have no doubt that if I made an app for the current version of either of those, that in the next three or four years, it wouldn't work with the next version. And I am actually pretty confident that if I don't touch VisiData, for the next four years, that you'll be able to use it in the next version of Python on whatever thing, no problem at all. And I find that to be really motivating to do a good job.
 
 Tobias Macey
 0:50:34
-writing I have to do it good once for anybody who wants to follow along with the work that you're doing or get in touch, I'll have you add your preferred contact information to the show notes. And so with that, I'm going to move us into the pics and this week I'm going to choose a newsletter that I actually found while I was doing some research for this conversation called data is plural that it's maintained by Jeremy singer vine he mentioned a few times it's a weekly newsletter with Justin interesting data sets that looks to have some fairly curious discoveries. So if you're looking for something to experiment with visit data, you might have some interesting finds in there. So with that, I'll pass it to you Saul, do you have any pics this week?
+Anybody who wants to follow along with the work that you're doing or get in touch, I'll have you add your preferred contact information to the show notes. And so with that, I'm going to move us into the picks and this week I'm going to choose a newsletter that I actually found while I was doing some research for this conversation called Data is Plural that it's maintained by Jeremy Singer-Vine mentioned a few times. It's a weekly newsletter with interesting data sets that looks to have some fairly curious discoveries. So if you're looking for something to experiment with VisiData, you might have some interesting finds in there. So with that, I'll pass it to you Saul, do you have any picks this week?
 
 Saul Pwanson
 0:51:15
-Um, I wanted to promote tmate I think I have during this episode already. So definitely give tmate a look, if you're a terminal user, when I have a multi user experience, there are a lot of other tools in that same vein like mash, I want to give a shout out to the mobile shell for you know, less than perfect network connections. And there's all kinds of good tools out there, but I'm not sure I can help anymore.
+Definitely give tmate a look, if you're a terminal user and want to have a multi-user experience; there are a lot of other tools in that same vein like mosh, the mobile shell for less than perfect network connections.
 
 Tobias Macey
 0:51:38
@@ -296,8 +374,8 @@ All right, well, thank you very much for taking the time today to join me and sh
 
 Saul Pwanson
 0:52:03
-Awesome. Thank you very much. I hope you are Have a great day too
+Awesome. Thank you very much. I hope you have a great day too.
 
 Tobias Macey
 0:52:08
-thank you for listening. Don't forget to check out our other show the data engineering podcast at data engineering podcast com for the latest on modern data management. And visit the site and Python podcasts. com to subscribe to the show, sign up for the mailing list and read the show notes. And if you've learned something or tried out a project from the show, then tell us about it. Email host at podcast in a.com with your story. To help other people find the show please leave a review on iTunes and tell your friends and co workers
+Thank you for listening. Don't forget to check out our other show the data engineering podcast at data engineering podcast com for the latest on modern data management. And visit the site and Python podcasts. com to subscribe to the show, sign up for the mailing list and read the show notes. And if you've learned something or tried out a project from the show, then tell us about it. Email host at podcast in a.com with your story. To help other people find the show please leave a review on iTunes and tell your friends and co workers
