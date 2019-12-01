@@ -1,4 +1,5 @@
 author	github	contribution
+AJ Kerrigan	ajkerrigan	improvements to plugin system; bugfix unit tests
 Andrea Borruso	aborruso	italian tutorial
 azjps	azjps	pandas improvements
 Chocolateboy	chocolateboy	clipboard; list aggr; json sort keys
@@ -13,11 +14,12 @@ John Kiely	jkiely	yaml
 Kate Murphy	Katee	search feel
 Keith Hughitt	khughitt	.gz support
 Kovas Palunas	kovasap	sys clipboard paste
-Lucas Messenger	layertwo	pcapng; .jira; open .tar
+Lucas Messenger	layertwo	pcapng; .jira; open .tar; sparkline
 Paul O'Leary McCann	polm	bugfix wide chars
 Peter Grayson	jpgrayson	.bz2 and .xz
 Rob Carrington	robcarrington	yaml
 Rasmus Scholer	scholer	windows-compatibility
 Stefan Siegel	ssiegel	bugfix
+Thomas Sibley	tsibley	options.encoding usage
 Trent Gill	trentgill	picked great colors
 Vivian Brown	vbrown608	various; pcap
