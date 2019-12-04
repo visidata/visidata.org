@@ -48,7 +48,7 @@ Thanks also to the following people for their contributions, whether in code, pr
 
 |author              |github              |contribution        |
 |--------------------|--------------------|--------------------|
-|AJ Kerrigan         |ajkerrigan          |improvements to plugin system; bugfix unit tests|
+|AJ Kerrigan         |ajkerrigan          |improvements to plugin system|
 |Andrea Borruso      |aborruso            |italian tutorial    |
 |azjps               |azjps               |pandas improvements |
 |Chocolateboy        |chocolateboy        |clipboard; list aggr; json sort keys|
