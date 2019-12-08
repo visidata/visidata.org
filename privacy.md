@@ -15,7 +15,7 @@ In both cases, we may automatically collect and store certain information in ser
   - User-agent string (Browser or Python version)
   - VisiData version
 
-This website does not use cookies.  We do use Google Analytics.
+This website does not use cookies.
 
 # Information we keep
 
@@ -35,4 +35,7 @@ If you have any questions regarding this Privacy Policy, please contact [vd+priv
 
 Our Privacy Policy may change from time to time. We will post the latest version of our privacy policy on this page.
 
-Last modified: 2018-09-26
+Last modified: 2019-12-05
+
+* 2018-09-26: initial public release of privacy policy
+* 2019-12-05: no longer use Google Analytics
