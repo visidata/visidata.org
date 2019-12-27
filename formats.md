@@ -3,8 +3,8 @@
 These are the currently supported sources:
 
 - **tsv** (tab-separated value)
-    - Plain and simple. VisiData writes tsv format by by default.
-    - See the `--delimiter` option.
+    - Plain and simple. VisiData writes tsv format by default.
+    - See the `--tsv-delimiter` option.
 
 - **csv** (comma-separated value)
     - .csv files are a scourge upon the earth, and still regrettably common.

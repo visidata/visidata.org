@@ -12,6 +12,7 @@ In the process, we will cover the following commands/features
 * `;` to match by regex capture group
 * `$` to type columns as "currency" (a dirty float)
 * `z+` to apply an aggregator statistic to the current column and show the result
+* adding custom functions to `~/.visidatarc`
 * `~` to type a column as a string
 * `=` to create a new column by Python expression
 
@@ -67,4 +68,25 @@ Here, we're going to use the `z+` command, which applies an aggregator to the cu
 
 ![sum](/videos/assets/case-study-1-11.png)
 
-This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, though, I went ahead and made a function called USD. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates.
+This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, though, I went ahead and made a function called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/snippets/usd.py). It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you add it to your `~/.visidatarc`, its functions will be added to your session's scope.
+
+https://github.com/fixerAPI/fixer#readme
+[screenshot of visidatarc with currency in it]
+
+To use it, let's convert our currencies back to strings. This will involve using the `~` command. It was so-chosen because it looks like a string to me. Pressing it will type the current column back to a string, like it originally was.
+
+![sum](/videos/assets/case-study-1-13.png)
+
+Now, we are going to use `=` to create a new column based on an input Python expression. With that, we are going to use the **USD** function on this **Value_re0** column.
+
+![sum](/videos/assets/case-study-1-14.png)
+
+I'm then going to convert this USD output into a float type. Now we can see that, for instance, this €50 is actually $61 in US money. Others that were already in US money just remain the same.
+
+[screenshot with float typed output]
+
+Now, we can do the same `z+` *sum* as we did before, and see the value in US dollars as of today's rates. That is about $1,470 worth of value: that's the total donations he got from people for his book. It's not quite the full total, because we're missing the ones with errors and such. We could do some more things to make that better, but this is a rough general calculation.
+
+[screenshot with z+ sum]
+
+Thanks very much for using VisiData, and I will see you next time!
