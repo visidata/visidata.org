@@ -10,8 +10,8 @@ SRC=`pwd`/visidata
 # WWWSRC is already cloned visidata.org repo, with desired branch to build checked out
 WWWSRC=`pwd`
 
-# BUILDWWW is output directory (corresponding to webroot)
-BUILDWWW=$WWWSRC/_build
+# BUILD is output directory (corresponding to webroot)
+BUILD=$WWWSRC/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
@@ -20,51 +20,41 @@ VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop"   # should be populated from ta
 ### internal env vars
 
 TMPDIR=`mktemp -d`
-BINDIR=$WWWSRC/bin
+BIN=$WWWSRC/bin
 export PYTHONPATH=$SRC:$SRC/visidata
 
-mkdir -p $BUILDWWW
+mkdir -p $BUILD
 
 # STATICFILES=404.html robots.txt main.css devotees.gpg.key vdlogo.png screenshot.png
-cp -R $WWWSRC/static/* $BUILDWWW/
+cp -R $WWWSRC/static/* $BUILD/
 
-function build_page () {
-    # $1 -> dest dir, relative to $BUILDWWW (webroot), without leading /
-    # $2 -> source md, full path
-    # $3 -> page title (quoted for shell to give as single arg)
-    mkdir -p $BUILDWWW/$1
-    fnbody=`mktemp`
-#    pandoc -r markdown -w html -o $fnbody $2
-    pandoc --from markdown_strict+table_captions+header_attributes+implicit_header_references+simple_tables+fenced_code_blocks+pipe_tables+fenced_divs -w html -o $fnbody $2
-    $BINDIR/strformat.py body=$fnbody title="$3" head="" < $WWWSRC/template.html > $BUILDWWW/$1/index.html
-    rm $fnbody
-}
+source "$BIN"/mkpage.sh
 
 function build_docs() {
-    # $1 -> dest dir, relative to $BUILDWWW (webroot), without leading /
-    docdir=$BUILDWWW/$1
+    # $1 -> dest dir, relative to $BUILD (webroot), without leading /
+    docdir=$BUILD/$1
 
     # build manpage
-    mkdir -p $BUILDWWW/man
+    mkdir -p $BUILD/man
     manhtml=$TMPDIR/vd-man-inc.html
     echo '<section><pre id="manpage">' > $manhtml
     # <pre> max-width in main.css should be half of COLUMNS=###
     MAN_KEEP_FORMATTING=1 COLUMNS=1000 man $SRC/visidata/man/vd.1 | ul | aha --no-header >> $manhtml
     echo '</pre></section>' >> $manhtml
-    $BINDIR/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $BUILDWWW/man/index.html
+    $BIN/strformat.py body=$manhtml title="VisiData Quick Reference" head="" < $WWWSRC/template.html > $BUILD/man/index.html
 
     # Create /man/#loaders
-    sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $BUILDWWW/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">SUPPORTED</span> <span style=\"font-weight:bold;\">SOURCES</span>#<span style=\"font-weight:bold;\"><a name=\"loaders\">SUPPORTED SOURCES</a></span>#g" $BUILD/man/index.html
     # Create /man#edit for editing commands
     sed -i -e "s#<span style=\"font-weight:bold;\">Editing</span> <span style=\"font-weight:bold;\">Rows</span> <span style=\"font-weight:bold;\">and</span> <span style=\"font-weight:bold;\">Cells</span>#<span style=\"font-weight:bold;\"><a name=\"edit\">Editing Rows and Cells</a></span>#g" $docdir/man/index.html
     # Create /man#options
-    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $BUILDWWW/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" $BUILD/man/index.html
     # Create /man#columns for columns sheet
-    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $BUILDWWW/man/index.html
+    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" $BUILD/man/index.html
 
     # build kblayout
     mkdir -p $docdir/kblayout
-    $BINDIR/mklayout.py $WWWSRC/template.html $SRC/visidata/commands.tsv > $docdir/kblayout/index.html
+    $BIN/mklayout.py $WWWSRC/template.html $SRC/visidata/commands.tsv > $docdir/kblayout/index.html
     cp $WWWSRC/static/kblayout.css $docdir/kblayout/
 
     # build index
