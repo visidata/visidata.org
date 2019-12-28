@@ -12,9 +12,7 @@ TMPDIR=$(mktemp -d)
 
 mkdir -p "$BUILD"
 
-for fn in 404.html favicon.ico robots.txt vdlogo.png main.css; do
-    cp -R "$WWWSRC"/static/"$fn" "$BUILD"/
-done
+cp -R "$WWWSRC"/static/* "$BUILD"/
 
 source "$BIN"/mkpage.sh
 
