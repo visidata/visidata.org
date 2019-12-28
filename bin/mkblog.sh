@@ -18,4 +18,17 @@ done
 
 source "$BIN"/mkpage.sh
 
-build_page . "$BLOG"/index.md "Blog"
+function build_blog() {
+    # build index
+    build_page . "$BLOG"/index.md "VisiData Blog"
+
+    for postpath in $(find "$BLOG" -name '*.md'); do
+        post=${postpath##$BLOG}
+        postname=${post%.md}
+        echo $postname
+        build_page "$postname" "$postpath" "$postname"
+    done
+}
+
+build_blog
+mv $BUILD/index/ /tmp

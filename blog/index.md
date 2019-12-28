@@ -1,1 +1,3 @@
 # VisiData Blog
+
+* [hi!](/hi)

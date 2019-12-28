@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function build_page () {
-    # $1 -> dest dir, relative to $BUILDWWW (webroot), without leading /
+    # $1 -> dest dir, relative to $BUILD (webroot), without leading /
     # $2 -> source md, full path
     # $3 -> page ittle (quoted for shell to give as single argument)
     mkdir -p "$BUILD"/"$1"
