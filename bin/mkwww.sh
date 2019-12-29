@@ -22,6 +22,7 @@ VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop"   # should be populated from ta
 
 TMPDIR=$(mktemp -d)
 BIN="$WWWSRC"/bin
+BLOG="$WWWSRC"/blog
 
 mkdir -p "$BUILD"
 
