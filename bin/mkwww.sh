@@ -73,6 +73,19 @@ function build_docs() {
     cp "$SRCDOCS"/casts/* "$docdir"/casts
 }
 
+function build_blog() {
+    # build index
+    mkdir -p "$BUILD"/blog
+
+    build_page blog "$BLOG"/index.md "vd log"
+
+    for postpath in $(find "$BLOG" -name '*.md'); do
+        post=${postpath##$BLOG}
+        postname=${post%.md}
+        build_page blog/"$postname" "$postpath" "$postname"
+    done
+}
+
 build_page . "$WWWSRC"/index.md "VisiData"
 build_page install "$WWWSRC"/install.md "Installation Instructions"
 build_page privacy "$WWWSRC"/privacy.md "Privacy Policy"
@@ -81,6 +94,7 @@ build_page credits "$WWWSRC"/credits.md "Credits and Contributions"
 build_page formats "$WWWSRC"/formats.md "Supported Sources and Formats"
 build_page v2.x "$WWWSRC"/v2.x.md "VisiData version 2.0"
 build_page podcast "$WWWSRC"/podcast-transcript.md "Podcast"
+build_blog
 
 
 set +e
