@@ -110,3 +110,5 @@ for ver in $VERSIONS ; do
     build_docs docs/"$ver"
 done
 
+# redirects
+cp redirects.tsv "$BUILD"/_redirects
