@@ -16,6 +16,17 @@ In the process, we will cover the following commands/features
 * `~` to type a column as a string
 * `=` to create a new column by Python expression
 
+Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py) that he uses at a later point of the video. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the full tutorial, to the correct final calculation at the very end, you will need to add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Ten its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
+
+Since the video's creation, [fixer.io](https://fixer.io/) has also added a user api key requirement. To take advantage of the usd plugin, you will also need to create an account, grab an api key, and then set  `options.fixer_key` in your `~/.visidatarc`.
+
+~/.visidatarc
+```
+options.fixer_key = 'insert_here'
+```
+
+## Transcript start
+
 I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
 
 ## note for anja: this is not a v. good screenshot
@@ -68,14 +79,14 @@ Here, we're going to use the `z+` command, which applies an aggregator to the cu
 
 ![sum](/videos/assets/case-study-1-11.png)
 
-This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, though, I went ahead and made a function called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/snippets/usd.py). It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you add it to your `~/.visidatarc`, its functions will be added to your session's scope.
+This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, though, I went ahead and made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py). It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md), its functions will be added to your session's scope.
 
 https://github.com/fixerAPI/fixer#readme
 [screenshot of visidatarc with currency in it]
 
 To use it, let's convert our currencies back to strings. This will involve using the `~` command. It was so-chosen because it looks like a string to me. Pressing it will type the current column back to a string, like it originally was.
 
-![sum](/videos/assets/case-study-1-13.png)
+![string](/videos/assets/case-study-1-13.png)
 
 Now, we are going to use `=` to create a new column based on an input Python expression. With that, we are going to use the **USD** function on this **Value_re0** column.
 
