@@ -16,7 +16,7 @@ In the process, we will cover the following commands/features
 * `~` to type a column as a string
 * `=` to create a new column by Python expression
 
-Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py) that he uses at a later point of the video. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the full tutorial, to the correct final calculation at the very end, you will need to add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Ten its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
+Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py) that he uses at a later point of the video. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the full tutorial, to the final calculation at the very end, you will need to add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Then its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
 
 Since the video's creation, [fixer.io](https://fixer.io/) has also added a user api key requirement. To take advantage of the usd plugin, you will also need to create an account, grab an api key, and then set  `options.fixer_key` in your `~/.visidatarc`.
 
@@ -92,10 +92,10 @@ Now, we are going to use `=` to create a new column based on an input Python exp
 
 I'm then going to convert this USD output into a float type. Now we can see that, for instance, this €50 is actually $61 in US money. Others that were already in US money just remain the same.
 
-[float](/videos/assets/case-study-1-15.png)
+![float](/videos/assets/case-study-1-15.png)
 
 Now, we can do the same `z+` *sum* as we did before, and see the value in US dollars as of today's rates. That is about $1,470 worth of value: that's the total donations he got from people for his book. It's not quite the full total, because we're missing the ones with errors and such. We could do some more things to make that better, but this is a rough general calculation.
 
-[final sum](/videos/assets/case-study-1-16.png)
+![final sum](/videos/assets/case-study-1-16.png)
 
 Thanks very much for using VisiData, and I will see you next time!
