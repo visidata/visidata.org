@@ -35,20 +35,6 @@ function build_docs() {
     # $1 -> dest dir, relative to $BUILD (webroot), without leading /
     docdir=$BUILD/$1
 
-    # build manpage
-    mkdir -p "$BUILD"/man
-    manhtml="$TMPDIR"/vd-man-inc.html
-    echo '<section><pre id="manpage">' > "$manhtml"
-    # <pre> max-width in main.css should be half of COLUMNS=###
-    MAN_KEEP_FORMATTING=1 COLUMNS=1000 man "$SRC"/visidata/man/vd.1 | ul | aha --no-header >> "$manhtml"
-    echo '</pre></section>' >> "$manhtml"
-    "$BIN"/strformat.py body="$manhtml" title="VisiData Quick Reference" head="" < "$WWWSRC"/template.html > "$BUILD"/man/index.html
-
-    # Create /man#options
-    sed -i -e "s#<span style=\"font-weight:bold;\">COMMANDLINE</span> <span style=\"font-weight:bold;\">OPTIONS</span>#<span style=\"font-weight:bold;\"><a name=\"options\">OPTIONS</a></span>#g" "$BUILD"/man/index.html
-    # Create /man#columns for columns sheet
-    sed -i -e "s#<span style=\"font-weight:bold;\">Columns</span> <span style=\"font-weight:bold;\">Sheet</span> <span style=\"font-weight:bold;\">(Shift-C)</span>#<span style=\"font-weight:bold;\"><a name=\"columns\">Columns Sheet (Shift-C)</a></span>#g" "$BUILD"/man/index.html
-
     # build kblayout
     mkdir -p "$docdir"/kblayout
     "$BIN"/mklayout.py "$WWWSRC"/template.html "$SRC"/visidata/commands.tsv > "$docdir"/kblayout/index.html
@@ -102,6 +88,10 @@ set +e
 
 # /docs itself is built from current $SRC checkout
 build_docs docs
+
+# add manpage
+mkdir -p $BUILD/man
+cp $WWWSRC/man/index.html $BUILD/man
 
 for ver in $VERSIONS ; do
     echo "Building /docs/$ver"
