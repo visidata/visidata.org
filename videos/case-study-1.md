@@ -29,7 +29,6 @@ options.fixer_key = 'insert_here'
 
 I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
 
-## note for anja: this is not a v. good screenshot
 ![beginners.re](/videos/assets/case-study-1-01.png)
 
 So you'll notice that this information here is in a single line. It's actually not that bad, but it's not in a form that we could easily do something with. So we're going to use VisiData to pick it apart, and try to do a sum of how much money was donated to him.
@@ -43,11 +42,13 @@ echo '2 * Oleg Vygovsky (50+100 UAH), Daniel Bilar ($50), James Truscott ($4.5),
 ![pipe](/videos/assets/case-study-1-02.png)
 
 Now VisiData has that as one of its rows.
+
 ![opening](/videos/assets/case-study-1-03.png)
 
 If we reduce this column to just a few characters here, you can see it's actually quite a long field. If you wanted to view the field and see all the contents of it, you can edit it (with `e`), and you can scroll across the whole thing.
 
 ![edit](/videos/assets/case-study-1-04.png)
+
 You can also press Ctrl+O to open a single editing cell. This works on any input line. It will open the contents of the cell in your own editor: in this case it's vim, in the terminal. With this, you can see the entire contents. You can also make edits and save them off; they'll be reflected back in the cell. For now, we are just going to quit out of this and cancel the edit.
 
 ![editor](/videos/assets/case-study-1-05.png)
@@ -64,25 +65,22 @@ So we're going to use a command in VisiData called 'melt': it's like an un-pivot
 
 ![melt](/videos/assets/case-study-1-08.png)
 
-We can move our cursor to the **value** column, and we're going to use another command. The `;` key extracts part of a column according to regex. We're going to pull out the donation amount from within the parentheses, by constructing a regex. This is the standard regex for extract everything from inside the parentheses: `\((.*)\)`. The inner set of parentheses `(.*)` is the capture group. Everything included in the capture group is going to be pulled into a new column.
+We can move our cursor to the **Value** column, and we're going to use another command. The `;` key extracts part of a column according to regex. We're going to pull out the donation amount from within the parentheses, by constructing a regex. This is the standard regex for extract everything from inside the parentheses: `\((.*)\)`. The inner set of parentheses `(.*)` is the capture group. Everything included in the capture group is going to be pulled into a new column.
 
 ![capture](/videos/assets/case-study-1-09.png)
 
 If we wanted to, we could just sum up this set of numbers. It wouldn't be very meaningful, because they're all in different currency units, but we could do it.
 
-There is a type, assigned to keystroke `$`, which I call a currency type. It's really just a dirty float: it takes the initial non-numeric characters and converst them into a float. The trailing non-numeric characters are stripped off. THe cells that have a symbol in the middle can't converted, so they will show up as errors. We will ignore those for now. And so now we can approach this as just a column of numbers.
+There is a type, assigned to keystroke `$`, which I call a currency type. It's really just a dirty float: it takes the initial non-numeric characters and converst them into a float. The trailing non-numeric characters are stripped off. The cells that have a symbol in the middle can't converted, so they will show up as errors. We will ignore those for now. And so now we can approach this as just a column of numbers.
 
 ![currency](/videos/assets/case-study-1-10.png)
 
-If you remember from last time, `+` is used to put an aggregator on a column, which then shows up in future sheets. (NOTE: Saul references a previous video, so this is not the first one. Maybe link to something)
+`+` is used to put an aggregator on a column, which then shows up in future sheets.
 Here, we're going to use the `z+` command, which applies an aggregator to the current column and shows the result immediately. And so if we want to sum up the current column, we type `z+` *sum* and there we go. 
 
 ![sum](/videos/assets/case-study-1-11.png)
 
-This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, though, I went ahead and made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py). It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md), its functions will be added to your session's scope.
-
-https://github.com/fixerAPI/fixer#readme
-[screenshot of visidatarc with currency in it]
+This is about 4,300 units of currency. Again, it's not very meaningful, because they're all in different currencies. Since they are in different currencies, here is where the [USD plugin](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py) comes into play. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates.
 
 To use it, let's convert our currencies back to strings. This will involve using the `~` command. It was so-chosen because it looks like a string to me. Pressing it will type the current column back to a string, like it originally was.
 
@@ -94,10 +92,10 @@ Now, we are going to use `=` to create a new column based on an input Python exp
 
 I'm then going to convert this USD output into a float type. Now we can see that, for instance, this €50 is actually $61 in US money. Others that were already in US money just remain the same.
 
-[screenshot with float typed output]
+[float](/videos/assets/case-study-1-15.png)
 
 Now, we can do the same `z+` *sum* as we did before, and see the value in US dollars as of today's rates. That is about $1,470 worth of value: that's the total donations he got from people for his book. It's not quite the full total, because we're missing the ones with errors and such. We could do some more things to make that better, but this is a rough general calculation.
 
-[screenshot with z+ sum]
+[final sum](/videos/assets/case-study-1-16.png)
 
 Thanks very much for using VisiData, and I will see you next time!
