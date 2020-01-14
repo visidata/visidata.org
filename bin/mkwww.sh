@@ -16,7 +16,7 @@ BUILD="$WWWSRC"/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
-VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop"   # should be populated from tags/releases
+VERSIONS="stable"   # should be populated from tags/releases
 
 ### internal env vars
 
@@ -103,4 +103,4 @@ for ver in $VERSIONS ; do
 done
 
 # redirects
-cp redirects.tsv "$BUILD"/_redirects
+cp "$WWWSRC"/redirects.tsv "$BUILD"/_redirects
