@@ -1,7 +1,7 @@
 # VisiData Case Study #1: Summing Donation Data From a Webpage
-This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g), that was published on 2018-04-01. The video was designed and recorded by Saul Pwanson with help from Tara Hoch.
+This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g), that was published on 2018-04-01. The video was designed and recorded by [Saul Pwanson](https://saul.pw) with help from [Tara Hoch](https://tarahoch.com).
 
-It was transcribed by E / @cel10e on 2019-12-11 and then updated and converted into a blog post by Anja Boskovic.
+It was transcribed by [E](https://twitter.com/cel10e) on 2019-12-11 and then updated and converted into a blog post by [Anja Boskovic](https://anja.kefala.info).
 
 This walkthrough will use VisiData to take a paragraph of donation information from a website ([beginners.re](https://web.archive.org/web/20180307091111/https://beginners.re/)), and then get it into a form that can be easily summed.
 
@@ -9,7 +9,7 @@ In the process, the following commands/features will be covered:
 
 * adding custom functions to `~/.visidatarc`
 * piping stdin into VisiData
-* `Ctrl+O` in any edit field to open it with own **$EDITOR**
+* `Ctrl+O` in any edit field to open it with a custom external editor (specified with **$EDITOR**)
 * `:` to split columns
 * `Shift+M` to melt (un-pivot)
 * `;` to match by regex capture group
@@ -20,16 +20,17 @@ In the process, the following commands/features will be covered:
 
 Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py). He uses the plugin's USD() function at the final step in the case study. USD() takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the final step of the tutorial, before you launch your VisiData session you will need to add the USD() code to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Then its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
 
-Since the video's creation, [fixer.io](https://fixer.io/) has also added a user api key requirement. To take advantage of the usd plugin, you will also need to create an account, grab an api key, and then set  `options.fixer_key` in your `~/.visidatarc`.
+Since the video's creation, [fixer.io](https://fixer.io/) has also added a user api key requirement. To take advantage of the usd plugin, you will also need to create an account, grab an api key, and then set  `options.fixer_key` in your `.visidatarc` in your $HOME directory.
 
-~/.visidatarc
+#### `.visidatarc`
+
 ```
 options.fixer_key = 'insert_here'
 ```
 
 ## Transcription of case study starts
 
-Saul Pwanson: I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
+**Saul**: I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
 
 ![beginners.re](/videos/assets/case-study-1-01.png)
 
@@ -49,7 +50,7 @@ If we reduce this column to just a few characters here, you can see it's actuall
 
 ![edit](/videos/assets/case-study-1-04.png)
 
-You can also press Ctrl+O to open a single editing cell. This works on any input line. It will open the contents of the cell in your own editor: in this case it's vim, in the terminal. With this, you can see the entire contents. You can also make edits and save them off; they'll be reflected back in the cell. For now, we are just going to quit out of this and cancel the edit.
+You can also press `Ctrl+O` to open any input line in your own editor: in this case it's vim, in the terminal. With this, you can see the entire contents. You can also make edits and save them off; they'll be reflected back in the cell. For now, we are just going to quit out of this and cancel the edit.
 
 ![editor](/videos/assets/case-study-1-05.png)
 
