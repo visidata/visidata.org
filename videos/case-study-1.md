@@ -1,10 +1,13 @@
 # VisiData Case Study #1: Summing Donation Data From a Webpage
-This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g). It was transcribed by E / @cel10e on 2019-12-11.
+This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g). The original video tutorial was designed and recorded by Saul Pwanson with help from Tara Hoch.
 
-This walkthrough uses VisiData to take a paragraph of donation information from a website ([beginners.re](https://web.archive.org/web/20180307091111/https://beginners.re/)), and getting it into a form that can be easily summed.
+It was transcribed by E / @cel10e on 2019-12-11 and then updated and converted into a blog post by Anja Boskovic.
 
-In the process, we will cover the following commands/features
+This walkthrough will use VisiData to take a paragraph of donation information from a website ([beginners.re](https://web.archive.org/web/20180307091111/https://beginners.re/)), and then get it into a form that can be easily summed.
 
+In the process, the following commands/features will be covered:
+
+* adding custom functions to `~/.visidatarc`
 * piping stdin into VisiData
 * `Ctrl+O` in any edit field to open it with own **$EDITOR**
 * `:` to split columns
@@ -12,11 +15,10 @@ In the process, we will cover the following commands/features
 * `;` to match by regex capture group
 * `$` to type columns as "currency" (a dirty float)
 * `z+` to apply an aggregator statistic to the current column and show the result
-* adding custom functions to `~/.visidatarc`
 * `~` to type a column as a string
 * `=` to create a new column by Python expression
 
-Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py) that he uses at a later point of the video. It takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the full tutorial, to the final calculation at the very end, you will need to add it to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Then its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
+Since the donations are all in different currencies, Saul made a plugin called [USD](https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/usd.py). He uses the plugin's USD() function at the final step in the case study. USD() takes a number and a currency code or currency symbol, and converts it into US dollars based on the current day's currency rates. If you want to follow along with the final step of the tutorial, before you launch your VisiData session you will need to add the USD() code to your `~/.visidatarc` or [install it as a plugin](https://github.com/saulpw/visidata/blob/develop/docs/plugins.md). Then its functions will be added to your session's scope. This is *completely optional*, and only comes to play at the end.
 
 Since the video's creation, [fixer.io](https://fixer.io/) has also added a user api key requirement. To take advantage of the usd plugin, you will also need to create an account, grab an api key, and then set  `options.fixer_key` in your `~/.visidatarc`.
 
@@ -25,9 +27,9 @@ Since the video's creation, [fixer.io](https://fixer.io/) has also added a user 
 options.fixer_key = 'insert_here'
 ```
 
-## Transcript start
+## Transcription of case study starts
 
-I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
+Saul Pwanson: I came across a book called "Reverse Engineering for Beginners," written by Dennis Yurichev. It seems like it's a pretty good book; he's got a bunch information about it, and he also lists the donors who have supported him. I actually really appreciate his transparency here, that he will share all this information on his website. It made me curious as to how much money had been donated to him overall.
 
 ![beginners.re](/videos/assets/case-study-1-01.png)
 
