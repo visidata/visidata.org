@@ -39,8 +39,6 @@ First we are going to cut and paste this text into our terminal window, and pipe
 echo '2 * Oleg Vygovsky (50+100 UAH), Daniel Bilar ($50), James Truscott ($4.5), Luis Rocha ($63), Joris van de Vis ($127), Richard S Shultz ($20), Jang Minchang ($20), Shade Atlas (5 AUD), Yao Xiao ($10), Pawel Szczur (40 CHF), Justin Simms ($20), Shawn the R0ck ($27), Ki Chan Ahn ($50), Triop AB (100 SEK), Ange Albertini (€10+50), Sergey Lukianov (300 RUR), Ludvig Gislason (200 SEK), Gérard Labadie (€40), Sergey Volchkov (10 AUD), Vankayala Vigneswararao ($50), Philippe Teuwen ($4), Martin Haeberli ($10), Victor Cazacov (€5), Tobias Sturzenegger (10 CHF), Sonny Thai ($15), Bayna AlZaabi ($75), Redfive B.V. (€25), Joona Oskari Heikkilä (€5), Marshall Bishop ($50), Nicolas Werner (€12), Jeremy Brown ($100), Alexandre Borges ($25), Vladimir Dikovski (€50), Jiarui Hong (100.00 SEK), Jim Di (500 RUR), Tan Vincent ($30), Sri Harsha Kandrakota (10 AUD), Pillay Harish (10 SGD), Timur Valiev (230 RUR), Carlos Garcia Prado (€10), Salikov Alexander (500 RUR), Oliver Whitehouse (30 GBP), Katy Moe ($14), Maxim Dyakonov ($3), Sebastian Aguilera (€20), Hans-Martin Münch (€15), Jarle Thorsen (100 NOK), Vitaly Osipov ($100), Yuri Romanov (1000 RUR), Aliaksandr Autayeu (€10), Tudor Azoitei ($40), Z0vsky (€10), Yu Dai ($10), Anonymous ($15), Vladislav Chelnokov ($25), Nenad Noveljic ($50), Ryan Smith ($25), Andreas Schommer (€5). ' | vd
 ```
 
-![pipe](/videos/assets/case-study-1-02.png)
-
 Now VisiData has that as one of its rows.
 
 ![opening](/videos/assets/case-study-1-03.png)
@@ -67,7 +65,8 @@ So we're going to use a command in VisiData called 'melt': it's like an un-pivot
 
 We can move our cursor to the **Value** column, and we're going to use another command. The `;` key extracts part of a column according to regex. We're going to pull out the donation amount from within the parentheses, by constructing a regex. This is the standard regex for extract everything from inside the parentheses: `\((.*)\)`. The inner set of parentheses `(.*)` is the capture group. Everything included in the capture group is going to be pulled into a new column.
 
-![capture](/videos/assets/case-study-1-09.png)
+![capture-input](/videos/assets/case-study-1-02.png)
+![capture-enter](/videos/assets/case-study-1-09.png)
 
 If we wanted to, we could just sum up this set of numbers. It wouldn't be very meaningful, because they're all in different currency units, but we could do it.
 
@@ -88,13 +87,13 @@ To use it, let's convert our currencies back to strings. This will involve using
 
 Now, we are going to use `=` to create a new column based on an input Python expression. With that, we are going to use the **USD** function on this **Value_re0** column.
 
-![sum](/videos/assets/case-study-1-14.png)
+![usd](/videos/assets/case-study-1-14.png)
 
-I'm then going to convert this USD output into a float type. Now we can see that, for instance, this €50 is actually $61 in US money. Others that were already in US money just remain the same.
+I'm then going to convert this USD output into a float type. Now we can see that, for instance, this €50 is actually ~$55 in US money. Others that were already in US money just remain the same.
 
 ![float](/videos/assets/case-study-1-15.png)
 
-Now, we can do the same `z+` *sum* as we did before, and see the value in US dollars as of today's rates. That is about $1,470 worth of value: that's the total donations he got from people for his book. It's not quite the full total, because we're missing the ones with errors and such. We could do some more things to make that better, but this is a rough general calculation.
+Now, we can do the same `z+` *sum* as we did before, and see the value in US dollars as of today's rates. That is about $1,431 worth of value: that's the total donations he got from people for his book. It's not quite the full total, because we're missing the ones with errors and such. We could do some more things to make that better, but this is a rough general calculation.
 
 ![final sum](/videos/assets/case-study-1-16.png)
 
