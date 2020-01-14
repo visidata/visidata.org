@@ -1,5 +1,5 @@
 # VisiData Case Study #1: Summing Donation Data From a Webpage
-This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g). The original video tutorial was designed and recorded by Saul Pwanson with help from Tara Hoch.
+This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g), that was published on 2018-04-01. The video was designed and recorded by Saul Pwanson with help from Tara Hoch.
 
 It was transcribed by E / @cel10e on 2019-12-11 and then updated and converted into a blog post by Anja Boskovic.
 
