@@ -89,6 +89,7 @@ build_blog
 set +e
 
 # /docs itself is built from current $SRC checkout
+cd $SRC && git checkout "stable"
 build_docs docs
 
 # add manpage
