@@ -66,7 +66,7 @@ function build_blog() {
     # build index
     mkdir -p "$BUILD"/blog
 
-    build_page blog "$BLOG"/index.md "vd log"
+    build_page blog "$BLOG"/index.md "Blog"
 
     for postpath in $(find "$BLOG" -name '*.md'); do
         post=${postpath##$BLOG}
