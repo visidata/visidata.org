@@ -2,7 +2,7 @@
 
 ## 2020
 
-* *2020-01-XX*: [Transcript of VisiData Case Study #1: Summing Donation Data From a Webpage](/2020/case-study-1)
+* *2020-01-XX*: [Transcript of VisiData Case Study #1: Summing Donation Data From a Webpage](2020/case-study-1)
 
 ## 2019
 
