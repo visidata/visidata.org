@@ -1,4 +1,4 @@
-#VisiData Log
+#VisiData Blog
 
 ## 2020
 
