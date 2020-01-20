@@ -154,14 +154,3 @@ Save the cmdlog to a .vd file with `Ctrl+D foo.vd`, then replay the saved .vd fi
 ### 10. see all the available options and commands
 
 There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see the [manpage](/man), or `z Ctrl+H` to see the full list of commands available on the current sheet.
-
----
-
-## About the Author
-
-My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg).  I live in Seattle but the terminal is my home.
-
-I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
-
-Share and enjoy!
-

@@ -1,7 +1,15 @@
+# About the Author
+
+My name is [Saul Pwanson](https://www.saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg). I live in Seattle but the terminal is my home.
+
+I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
+
+Share and enjoy!
+
 ## Maintainers
 
-- [Saul Pwanson](http://saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData.
-- [Anja Kefala](http://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) maintains the documentation and packages for all platforms.
+- [Saul Pwanson](https://www.saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData.
+- [Anja Kefala](https://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) maintains the documentation and packages for all platforms.
 
 Thanks also to the following people for their contributions, whether in code, prose, design, evangelism, community, or [cold hard cash](https://www.patreon.com/saulpw):
 
