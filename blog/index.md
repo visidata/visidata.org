@@ -20,9 +20,9 @@
 
 * *2018-07-23*: [I'll show you my .visidatarc if you show me yours](2018/tinyletter-14)
 
-* *2018-06-21*: [Case Study #6 (Big Melt); keyboard cheatsheet; the Great Renaming](2018/tinyletter-13) \[[video]\](https://youtu.be/9RndW_yC45U)
+* *2018-06-21*: [Case Study #6 (Big Melt); keyboard cheatsheet; the Great Renaming](2018/tinyletter-13) [\[video]\](https://youtu.be/9RndW_yC45U)
 
-* *2018-05-18*: [Case Study #5: scrape html table, reshape and tidy](2018/tinyletter-12) \[[video]\](https://www.youtube.com/watch?v=0iJ9F4uTkz8)
+* *2018-05-18*: [Case Study #5: scrape html table, reshape and tidy](2018/tinyletter-12) [\[video]\](https://www.youtube.com/watch?v=0iJ9F4uTkz8)
 * *2018-05-03*: [v1.2](2018/v1.2)
 * *2018-05-02*: [Case Study #4: DirSheet editing](2018/tinyletter-11) [\[video\]](https://www.youtube.com/watch?v=l2Bpmm0yAGw)
 * *2018-04-15*: [Case Study #3: graphing calculator](2018/tinyletter-10) [\[video\]](https://www.youtube.com/watch?v=yK3qgOIx4x0)
