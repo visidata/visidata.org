@@ -6,7 +6,7 @@
 
 ## 2019
 
-* *2019-10-30*: [Python.\_\_init\_\_ Episode 23 Transcript](/blog/2019/python-init)
+* *2019-10-30*: [Python.\_\_init\_\_ Episode 23 Transcript](/blog/2019/python-init) [\[podcast\]](https://www.pythonpodcast.com/visidata-exploratory-data-analysis-episode-230/)
 * *2019-01-12*: [v1.5.2](2019/v1.5.2)
 
 ## 2018
