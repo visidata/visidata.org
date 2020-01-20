@@ -86,7 +86,7 @@ Extensible with Python!
 
 ## Become a VisiData Wizard
 * read [An Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html), a tutorial by [Jeremy Singer-Vine](https://www.jsvine.com/).
-* leggendo [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso) (onData association).
+* leggendo [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso) (associated with onData).
 * browse [the quick reference manual](/man) (also available with `man vd` or with `Ctrl+H` from inside VisiData).
 * refer to [the VisiData documentation](/docs).
 * watch [the video case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
