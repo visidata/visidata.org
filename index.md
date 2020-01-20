@@ -15,7 +15,7 @@ VisiData is an interactive multitool for tabular data.  It combines the clarity 
 
 # [Install Now](/install)
 
-#### Latest Version: [1.5.2](/releases) (2019-01-12)
+#### Latest Version: [1.5.2](/blog/2019/v1.5.2/) (2019-01-12)
 
 <table>
 <tr>
