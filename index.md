@@ -15,7 +15,7 @@ VisiData is an interactive multitool for tabular data.  It combines the clarity 
 
 # [Install Now](/install)
 
-#### Latest Version: [1.5.2](/releases) (2019-01-12)
+#### Latest Version: [1.5.2](/blog/2019/v1.5.2/) (2019-01-12)
 
 <table>
 <tr>
@@ -86,7 +86,7 @@ Extensible with Python!
 
 ## Become a VisiData Wizard
 * read [An Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html), a tutorial by [Jeremy Singer-Vine](https://www.jsvine.com/).
-* leggendo [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso) (onData association).
+* leggendo [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso) (associated with onData).
 * browse [the quick reference manual](/man) (also available with `man vd` or with `Ctrl+H` from inside VisiData).
 * refer to [the VisiData documentation](/docs).
 * watch [the video case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
@@ -154,14 +154,3 @@ Save the cmdlog to a .vd file with `Ctrl+D foo.vd`, then replay the saved .vd fi
 ### 10. see all the available options and commands
 
 There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see the [manpage](/man), or `z Ctrl+H` to see the full list of commands available on the current sheet.
-
----
-
-## About the Author
-
-My name is [Saul Pwanson](http://saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg).  I live in Seattle but the terminal is my home.
-
-I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
-
-Share and enjoy!
-

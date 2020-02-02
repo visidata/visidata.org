@@ -1,0 +1,4 @@
+#path	url
+/motd-*	https://motd.visidata.org/motd-:splat
+/credits	/about
+/podcast	/blog/2019/python-init

@@ -1,0 +1,36 @@
+﻿"VisiData Case Study #2: save data for cities in certain counties as json"
+Transcribed by E / @cel10e on 01/10/20
+[Timestamp: 00:00]
+[Typing sounds.]
+Saul Pwanson: Hi, this is Saul. Today I'm going to show you a way that I used VisiData this week to make my life easier. So, my coworker Veronica asked me to put together a bubble map of population data for cities in four U.S. counties for comparison purposes. So I figured out how to do that with Google Maps, and I got one bubble working by hand. But then I needed to get the data for the other cities in there. So I found a .csv file that included the lat-long coordinates and population data — here it is. Let's just do, at first, a simple graph of the latitude and longitude coordinates so that we can see if this is sensible data in the first place.
+[Timestamp: 00:50: % to set column type to floating point number]
+So we'll convert each of these columns to a number, with % (percent sign); these are floating point numbers. 
+[Timestamp: 00:55: ! to set a key column (x-axis in the case of a graph)]
+And then we'll make the longitude be the x-axis. I'm making it a key column with ! (bang), the exclamation point, which means it's important. You can see it move over to the left there.
+[Timestamp: 1:05: . (dot) to plot the current column on the y-axis]
+And then we'll plot the latitude column with . (dot), the period key. And that produces this little graph. Now, we've got a couple of points on the right-hand side. Those are because the Earth wraps around, and these are past the International Date Line. So I'm just going to select these and get a cleaner view of this. 
+[Timestamp: 1:25: 'd' on the canvas deletes the underling rows on the source sheet]
+I selected those with the mouse, and now I can press 'd' to delete them, just like on the source sheet. This will also delete these points on the source sheet and then reload the canvas here.
+[Timestamp: 1:37: _ (underscore) on the canvas resizes it to fit the whole screen]
+And then, _ (underscore) will resize the canvas to fit all the data. Sure enough, that looks pretty much like the United States. That's all the cities in the United States. So, okay, that looks pretty sensible.I'll quit out of that sheet and go back to the main sheet here. Now, let's pull these counties out. The easiest way is probably to group by the county and state together. We can't just do only the county, because many counties have the same name in multiple states. So, if we group them together, then we'll have a row for each county and state. So I'll make the county be a key column, and the state be a key column also. 
+[Timestamp: 2:21: gF to get a frequency analysis of two key columns]
+This is because frequency analysis normally does the frequency on the current column, but to do multiple columns we're going to use a different version, which goes over all key columns. And so these, the county_name and state_id, are the key columns, and gF means use all the key columns. Here we go. Here's a list of all of those, grouped. And so each one of these bins refers to an underlying number of cities that are in that county. So, for instance, Allegheny, PA has the most cities of any county — it's got 157 cities. 
+[Timestamp: 2:55: / to search in the current column]
+But we're looking for Boone County, Missouri, to start, so I search with / (slash), just like in vim and other tools. 
+[Timestamp: 3:03: 'n' to move to the next search match]
+And 'n' for next, to go to the next one. I'm looking for Missouri … that's it. 
+[Timestamp: 3:10: 's' on the frequency analysis to select source rows]
+And so when we select a row on this sheet with 's', on the frequency analysis sheet, we're also going to also see the 11 rows on the source sheet selected. Which is what we want, so we can actually pull only those cities out, eventually. So that was Boone, and then I look for Charlotte, Florida … and select those. And then La Crosse, Wisconsin ... and select those. And then Clinton, Iowa … there actually are a bunch of Clintons in here, where are you Clinton, Iowa … There we go. And then select those. Now we've got the cities from four counties selected, and we can quit out of the frequency analysis sheet.
+[Timestamp: 3:47: { and } to move to the prev/next selected row]
+We can skip down and see all these selected rows, here, with the curly brace, and we can see that they're selected. That's great. 
+[Timestamp: 3:55: " to open a new sheet with only the selected rows]
+And if we pull these rows into their own sheet with " (double quote), then here are the 52 cities that are in those four counties. Which is just the data we need, and we only really want the latitude and longitude.
+[Timestamp: 4:07: 'gu' to unselect all rows]
+Let me unselect these just to get them back to the plain white color here. 
+[Timestamp: 4:15: - (minus) to hide columns]
+So I'm going to hide everything but the city name, the latitude and longitude, and population, with - (minus), minus hides a column.
+[Timestamp: 4:25: # to set column type to integer number]
+Population should be a number — actually it's an integer. So we'll use # (number sign) to convert that to a number, and remove the other columns. And now this is the data that we need.
+[Timestamp: 4:32: Ctrl-S to save; extension determines format]
+What we're going to do now is save it off as a .json file, with Ctrl-S, and changing the extension. As long as the extension is .json, it'll save in the .json format. There we go, now it's saved off. And if we quit out of this, and look at that .json file that we saved off, this is exactly the data that we need. I basically just took this, and pasted it into the HTML that I had, and it worked. 
+So that's how I did that workflow, it was pretty reasonable. Thanks for using VisiData, and I will see you next time.
