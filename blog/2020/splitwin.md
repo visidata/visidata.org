@@ -11,7 +11,7 @@ I've even caught myself lamenting a few times that, if we had split-screen, the 
 Deep down I also think it might open up a whole new dimension of user interface, where movement on the active window instantly updates the inactive window.
 
 So I've given it a few tries already; it's not that technically challenging to do, but the interface for it remained elusive
-After talking with @tsibley and @anjakefala and sitting with it for long enough, last week I finally put together a working prototype.
+After talking with [@tsibley](https://github.com/tsibley) and [@anjakefala](https://github.com/anjakefala) and sitting with it for long enough, last week I finally put together a working prototype.
 It's serviceable but not perfect, so hopefully it can serve as a launching pad for discussion about the finer points of split-screen workflow.
 
 ## `options.disp_splitwin_pct`
