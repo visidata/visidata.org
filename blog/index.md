@@ -2,11 +2,12 @@
 
 ## 2020
 
+* *2020-02-02*: [New Feature: Split Window](2020/splitwin)
 * *2020-01-15*: [Case Study #1 Transcript: summing data from a webpage](2020/case-study-1)
 
 ## 2019
 
-* *2019-10-30*: [Python.\_\_init\_\_ Episode 23 Transcript](/blog/2019/python-init) [\[podcast\]](https://www.pythonpodcast.com/visidata-exploratory-data-analysis-episode-230/)
+* *2019-10-30*: [Python.\_\_init\_\_ Episode 23 Transcript](2019/python-init) [\[podcast\]](https://www.pythonpodcast.com/visidata-exploratory-data-analysis-episode-230/)
 * *2019-01-12*: [v1.5.2](2019/v1.5.2)
 
 ## 2018

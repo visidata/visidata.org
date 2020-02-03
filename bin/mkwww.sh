@@ -64,7 +64,8 @@ function build_docs() {
 
 function build_blog() {
     # build index
-    mkdir -p "$BUILD"/blog
+    mkdir -p "$BUILD"/blog/assets/
+    cp -R "$WWWSRC"/blog/assets/* "$BUILD"/blog/assets/
 
     build_page blog "$BLOG"/index.md "Blog"
 
