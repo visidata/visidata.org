@@ -1,3 +1,4 @@
+# Unloaded sheets
 
 When you pass multiple files to vd on the command-line, if you go straight to the Sheets Sheet, you'll see that only the first one is loaded:
 
@@ -17,3 +18,5 @@ So if you have 100GB of .csv files in a directory and you do `vd *.csv` (which i
 Now, if you have a bunch of small sheets and go to the Sheets Sheet expecting to compare or join them straight away, you might be disappointed to find them unloaded and unusable.
 
 Fear not!  To load multiple sheets at the same time, go to the Sheets Sheet, select the sheets you want to load, and then `reload-selected` with `g Ctrl+R`.
+
+[written by Saul Pwanson 2020-02-10]
