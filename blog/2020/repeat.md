@@ -1,6 +1,6 @@
 # New Features: repeat-last and repeat-input
 
-On the `develop` branch, we have shipped two new commands: `repeat-last` and `repeat-input`.
+Onto the `develop` branch, we have pushed two new commands: `repeat-last` and `repeat-input`.
 
 These commands had been originally requested on the #visidata IRC channel. The design spec was then transcribed onto [issue #441](https://github.com/saulpw/visidata/issues/441).
 
