@@ -24,4 +24,5 @@ Fear not!  To load multiple sheets at the same time, go to the Sheets Sheet, sel
 Now you can go forth and jump around bundles of csvs to your heart's delight, secure in the knowledge that VisiData will only read into memory what you intentionally want to engage with.
 
 
-[written by Saul Pwanson 2020-02-10; edited by Anja Boskovic 2020-02-11]
+[written by Saul Pwanson 2020-02-10]
+[edited by Anja Boskovic 2020-02-11]
