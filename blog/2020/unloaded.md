@@ -25,4 +25,4 @@ Now you can go forth and jump around bundles of csvs to your heart's delight, se
 
 
 [written by Saul Pwanson 2020-02-10]
-[edited by Anja Boskovic 2020-02-11]
+[edited by Anja Kefala 2020-02-11]
