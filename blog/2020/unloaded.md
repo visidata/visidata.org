@@ -1,8 +1,8 @@
 # Unloaded sheets
 
-When you pass multiple files to vd on the command-line, if you go straight to the Sheets Sheet, you'll see that only the first one is loaded:
+If after you pass multiple files to vd on the command-line, you go straight to the Sheets Sheet, you'll see that only the first one is loaded:
 
-[screenshot]
+![unloaded](/blog/assets/2020-unloaded-screenshot-1.png)
 
 When a sheet is first created, it is considered "unloaded" (literally `sheet.rows == UNLOADED`).
 It can stay in this dormant state indefinitely, and is quite lightweight.
@@ -19,4 +19,9 @@ Now, if you have a bunch of small sheets and go to the Sheets Sheet expecting to
 
 Fear not!  To load multiple sheets at the same time, go to the Sheets Sheet, select the sheets you want to load, and then `reload-selected` with `g Ctrl+R`.
 
-[written by Saul Pwanson 2020-02-10]
+![loaded](/blog/assets/2020-unloaded-screenshot-2.png)
+
+Now you can go forth and jump around bundles of csvs to your heart's delight, secure in the knowledge that VisiData will only read into memory what you intentionally want to engage with.
+
+
+[written by Saul Pwanson 2020-02-10; edited by Anja Boskovic 2020-02-11]
