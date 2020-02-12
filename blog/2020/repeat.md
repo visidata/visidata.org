@@ -19,4 +19,4 @@ Sheet.bindkey('z.', 'repeat-last')
 
 As always, the features on `develop` are experimental. If you do use them, please let us know how you feel about them! [Post an issue on Github](https://github.com/saulpw/visidata/issues/new), [share a tweet](https://twitter.com/VisiData), or stop by for a [chat in freenode #visidata](https://webchat.freenode.net/).
 
-##
+[written by Anja Boskovic 2020-02-09]
