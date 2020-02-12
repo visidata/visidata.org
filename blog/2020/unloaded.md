@@ -19,7 +19,7 @@ Now, if you have a bunch of small sheets and go to the Sheets Sheet expecting to
 
 Fear not!  To load multiple sheets at the same time, go to the Sheets Sheet, select the sheets you want to load, and then `reload-selected` with `g Ctrl+R`.
 
-![loaded](/blog/assets/2020-unloaded-screenshot-2.png)
+![loaded](/blog/assets/2020-unloaded-screenshot-2.gif)
 
 Now you can go forth and jump around bundles of csvs to your heart's delight, secure in the knowledge that VisiData will only read into memory what you intentionally want to engage with.
 
