@@ -101,3 +101,5 @@ Now, we can do the same `z+` *sum* as we did before, and see the value in US dol
 ![final sum](/videos/assets/case-study-1-16.png)
 
 Thanks very much for using VisiData, and I will see you next time!
+
+[written by Anja Boskovic 2020-01-15]

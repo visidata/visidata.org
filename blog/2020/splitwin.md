@@ -46,4 +46,4 @@ Its full implementation could solve several issues (choosing jointype/aggregator
 
 This is still quite experimental so if you use this feature, let me know how you feel about it!  [Post an issue on Github](https://github.com/saulpw/visidata/issues/new), [share a tweet](https://twitter.com/VisiData) , or stop by for a [chat in freenode #visidata](https://webchat.freenode.net/).
 
-##
+[written by Saul Pwanson 2020-02-02]
