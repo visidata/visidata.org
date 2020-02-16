@@ -3,8 +3,8 @@
 ## 2020
 
 * *2020-02-11*: [Unloaded sheets](2020/unloaded)
-* *2020-02-09*: [New Features: repeat-last and repeat-input](2020/repeat)
-* *2020-02-02*: [New Feature: Split Window](2020/splitwin)
+* *2020-02-09*: [New Features in 2.-3dev: repeat-last and repeat-input](2020/repeat)
+* *2020-02-02*: [New Feature in 2.-3dev: Split Window](2020/splitwin)
 * *2020-01-15*: [Case Study #1 Transcript: summing data from a webpage](2020/case-study-1)
 
 ## 2019
