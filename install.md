@@ -66,6 +66,22 @@ wget https://raw.githubusercontent.com/saulpw/visidata/stable/requirements.txt
 pip3 install -r requirements.txt
 ~~~
 
+**Note:** The [pipx](https://pipxproject.github.io/pipx/) tool is an optional convenience layer on top of `pip`. It can help keep VisiData and its dependencies in an isolated environment, to avoid clashes with other Python packages on your system. With pipx [installed](https://pipxproject.github.io/pipx/installation/):
+
+~~~
+# Install VisiData
+pipx install visidata
+
+# Upgrade to the latest stable version
+pipx upgrade visidata
+
+# Add packages to VisiData's environment
+pipx inject visidata <package>
+
+# Install a specific version of VisiData
+pipx install git+https://github.com/saulpw/visidata@v2.-2.1
+~~~
+
 ## conda {#conda}
 
 Requires:
