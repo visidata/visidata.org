@@ -28,7 +28,8 @@ mkdir -p "$BUILD"
 
 # STATICFILES=404.html robots.txt main.css devotees.gpg.key vdlogo.png screenshot.png
 cp -R "$WWWSRC"/static/* "$BUILD"/
-cp plugins.tsv "$BUILD"/
+mkdir -p "$BUILD"/plugins/
+cp plugins.tsv bazaar.jsonl "$BUILD"/plugins/
 mkdir -p "$BUILD"/videos/assets
 cp -R "$WWWSRC"/videos/assets/* "$BUILD"/videos/assets
 
