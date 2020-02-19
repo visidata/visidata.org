@@ -10,11 +10,18 @@ The aim was to have something spiritually similar vim's `.` (dot) command.
 
 For the moment, they are unbound. To use any command with its longname, press `SPACE` followed by the *longname*. For example: `SPACE` *repeat-last*.
 
-To bind the commands to your preferential keystroke (these examples use `.`), add to your ~/.visidatarc`:
+To bind the commands to your preferential keystroke (the following example uses `.`), add to your ~/.visidatarc`:
 
 ~~~
 Sheet.bindkey('.', 'repeat-input')
 Sheet.bindkey('z.', 'repeat-last')
+~~~
+
+Or to take advantage of a currently unused keybinding:
+
+~~~
+Sheet.bindkey(ALT + 'r', 'repeat-input')
+Sheet.bindkey('z' + ALT + 'r', 'repeat-last')
 ~~~
 
 As always, the features on `develop` are experimental. If you do use them, please let us know how you feel about them! [Post an issue on Github](https://github.com/saulpw/visidata/issues/new), [share a tweet](https://twitter.com/VisiData), or stop by for a [chat in freenode #visidata](https://webchat.freenode.net/).

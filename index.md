@@ -135,7 +135,7 @@ Press `Ctrl+Q` to exit VisiData and save to the given output file.
 
 ### 7. explore any pandas DataFrame
 
-    >>> vd.view_pandas(df)
+    >>> visidata.view_pandas(df)
 
 ### 8. create an adhoc data pipeline
 
