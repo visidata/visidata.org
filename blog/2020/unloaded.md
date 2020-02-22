@@ -4,7 +4,7 @@ If after you pass multiple files to vd on the command-line, you go straight to t
 
 ![unloaded](/blog/assets/2020-unloaded-screenshot-1.png)
 
-When a sheet is first created, it is considered "unloaded" (literally `sheet.rows == UNLOADED`).
+When a sheet is first created, it is considered "unloaded" (literally `sheet.rows is UNLOADED`).
 It can stay in this dormant state indefinitely, and is quite lightweight.
 
 Then, as it's about to be drawn for the first time, the sheet starts its loading process (via `sheet.reload()`), to read the data into memory.
