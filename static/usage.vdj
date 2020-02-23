@@ -1,0 +1,10 @@
+{"sheet": "", "col": "", "row": "", "longname": "open-file", "input": "http://visidata.org/usage.tsv", "keystrokes": "o", "comment": ""}
+{"sheet": "usage", "col": "daily_users", "row": "", "longname": "type-int", "input": "", "keystrokes": "#", "comment": ""}
+{"sheet": "usage", "col": "date", "row": "", "longname": "type-date", "input": "", "keystrokes": "@", "comment": ""}
+{"sheet": "usage", "col": "daily_users", "row": "", "longname": "aggregate-col", "input": "sum", "keystrokes": "+", "comment": ""}
+{"sheet": "usage", "col": "date", "row": "", "longname": "freq-col", "input": "", "keystrokes": "F", "comment": ""}
+{"sheet": "usage_date_freq", "col": "date", "row": "", "longname": "addcol-expr", "input": "calendar.day_name[date.weekday()]", "keystrokes": "=", "comment": ""}
+{"sheet": "usage_date_freq", "col": "calendar.day_name[date.weekday()]", "row": "", "longname": "rename-col", "input": "dotw", "keystrokes": "^", "comment": ""}
+{"sheet": "usage_date_freq", "col": "dotw", "row": "", "longname": "addcol-expr", "input": "'Sat/Sun' if dotw in 'SaturdaySunday' else 'Mon-Fri'", "keystrokes": "=", "comment": ""}
+{"sheet": "usage_date_freq", "col": "'Sat/Sun' if dotw in 'SaturdaySunday' else 'Mon-Fri'", "row": "", "longname": "key-col", "input": "", "keystrokes": "!", "comment": ""}
+{"sheet": "usage_date_freq", "col": "daily_users_sum", "row": "", "longname": "plot-column", "input": "", "keystrokes": ".", "comment": ""}
