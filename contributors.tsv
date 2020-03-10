@@ -1,5 +1,5 @@
 author	github	contribution
-AJ Kerrigan	ajkerrigan	improvements to plugin system; bugfix unit tests
+AJ Kerrigan	ajkerrigan	improvements to various VisiData internals
 Andrea Borruso	aborruso	italian tutorial
 azjps	azjps	pandas improvements
 Chocolateboy	chocolateboy	clipboard; list aggr; json sort keys
@@ -12,7 +12,7 @@ Jeff Arn	repjarms	website
 Jeremy Singer-Vine	jsvine	english tutorial
 John Kiely	jkiely	yaml
 Kate Murphy	Katee	search feel
-Keith Hughitt	khughitt	.gz support
+Keith Hughitt	khughitt	.gz support; options.disp_float_fmt
 Kovas Palunas	kovasap	sys clipboard paste
 Lucas Messenger	layertwo	pcapng; .jira; open .tar; sparkline
 Paul O'Leary McCann	polm	bugfix wide chars
