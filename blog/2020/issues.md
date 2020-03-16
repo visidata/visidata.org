@@ -20,12 +20,12 @@ We are hoping that this process will help make the GitHub issues more of a place
 ## The Process
 
 [@saulpw](https://github.com/saulpw) decides what goes into the VisiData core.
-He has a strong preference that issues are only left open if they are part of the current ROADMAP.
+He has a strong preference that issues are only left open if they are part of the current Roadmap.
 This is so that our open issues are actually representative of the planned, confirmed work for VisiData.
 
-If the feature request ends up making it onto [@saulpw](https://github.com/saulpw)'s ROADMAP for the current release, he will mention that in a comment, and leave it open.
+If the feature request ends up making it onto [@saulpw](https://github.com/saulpw)'s Roadmap for the current release, he will mention that in a comment, and leave it open.
 
-If the feature request does not make it make it onto the ROADMAP, but the feature is welcome into VisiData, he will mark it as a [\[wishlist\]](https://github.com/saulpw/visidata/issues?q=is%3Aissue+%5Bwishlist%5D+) item, and close it. Anyone is welcome to submit a PR for it (including maybe us, down the line!).
+If the feature request does not make it make it onto the Roadmap, but the feature is welcome into VisiData, he will mark it as a [\[wishlist\]](https://github.com/saulpw/visidata/issues?q=is%3Aissue+%5Bwishlist%5D+) item, and close it. Anyone is welcome to submit a PR for it (including maybe us, down the line!).
 
 If the feature request is completed, [\[wishlist\]](https://github.com/saulpw/visidata/issues?q=is%3Aissue+%5Bwishlist%5D+) -> [done].
 
