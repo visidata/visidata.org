@@ -15,6 +15,7 @@ This guide will cover the steps for installing VisiData and provide troubleshoot
 |Windows    |[WSL](#wsl)    |Windows is not yet directly supported (use WSL)   | N/A |
 |all |[github](#git) |`pip3 install git+https://github.com/saulpw/visidata.git`| Base |
 |Linux (NixOS)|[nix](#nix) |`nix-env -i visidata`|Base, yaml, xls(x), hdf5, html, pandas, shp |
+|GNU/Linux (Guix)|[Guix](#guix) |`guix install visidata`|Base, http, html, xls(x), yaml, hdf5, pandas  |
 
 If the one-line install commands above do not work, see below for detailed instructions and troubleshooting.
 
@@ -267,4 +268,41 @@ To uninstall VisiData:
 
 ~~~
 $ nix-env -e visidata
+~~~
+
+## GNU Guix {#guix}
+
+This package is maintained by [Ryan Prior](https://github.com/ryanprior) and the
+[Guix project](https://guix.gnu.org/). For help, visit the [Guix help
+resources](https://guix.gnu.org/help/). Report bugs to [the bug-Guix mailing
+list](https://lists.gnu.org/mailman/listinfo/bug-guix) and/or the [maintainer's
+repo](https://github.com/ryanprior/guix-packages/issues/new).
+
+Requires:
+
+* A GNU/Linux system
+* [Guix](https://guix.gnu.org/download/)
+
+To install VisiData:
+
+~~~
+$ guix install visidata
+~~~
+
+To upgrade VisiData:
+
+~~~
+$ guix package -u visidata
+~~~
+
+To uninstall VisiData:
+
+~~~
+$ guix package -r visidata
+~~~
+
+To create a dev environment with all of VisiData's dependencies loaded:
+
+~~~
+$ guix environment visidata
 ~~~
