@@ -13,6 +13,65 @@
 
 VisiData is an interactive multitool for tabular data.  It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.
 
+If you have <select id="infmt">
+<option value="input.csv" selected="selected">comma-separated values (CSV)</option>
+<option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
+<option value="input.log">structured log file</option>
+<option value="input.tsv">tab-separated values (TSV)</option>
+<option value="input.txt -f fixed">fixed width text</option>
+<option value="input.xls">Excel 97 file (.xls)</option>
+<option value="input.xlsx">Excel 2013 file (.xlsx)</option>
+<option value="input.json">JSON</option>
+<option value="input.jsonl">newline-delimited JSON</option>
+<option value="input.html">HTML</option>
+<option value="input.yml">YAML</option>
+<option value="input.h5">HDF5</option>
+<option value="input.npy">NumPy (.npy/.npz)</option>
+<option value="visidata.view_pandas(df)">Pandas DataFrame</option>
+<option value="input.xpt">SAS (.xpt/sas7bdat)</option>
+<option value="input.sav">SPSS (.sav)</option>
+<option value="input.dta">Stata (.dta)</option>
+<option value="input.shp">Shapefile (.shp)</option>
+<option value="input.pcap">packet capture (.pcap)</option>
+<option value="input.db">Sqlite database (.db)</option>
+<option value="input.zip">.zip archive</option>
+<option value="vgit">git repository</option>
+<option value="">any kind of tabular data</option>
+</select>
+but you need
+<select id="outfmt">
+<option value="" selected="selected">a delightful terminal interface</option>
+<option value="">to explore it quickly</option>
+<option value=" 'Shift+F' on any column">to get some quick insights</option>
+<option value=" '=' to add Python column">to compute Python for each row</option>
+<option value="-b -o output.csv">tab-separated values (TSV)</option>
+<option value="-b -o output.csv">comma-separated values (CSV)</option>
+<option value="-b -o output.txt --save-filetype=fixed">fixed width text</option>
+<option value=" 'e' to edit">to clean up the data</option>
+<option value="-b -o output.txt">plain text</option>
+<option value="-b -o output.json">JSON</option>
+<option value="-b -o output.jsonl">JSON (newline-delimited)</option>
+<option value="-b -o output.geojson">GeoJSON</option>
+<option value="-b -o output.html">HTML &lt;table&gt;</option>
+<option value="-b -o output.sqlite">Sqlite database</option>
+<option value="-b -o output.md">Markdown</option>
+<option value="-b -o output.jira">Markdown (org-mode) </option>
+<option value="-b -o output.npy">Numpy (.npy) file</option>
+</select>, VisiData can help:
+
+<code id="cmdline">
+    vd -b input.csv
+</code>
+
+<script>
+    function display() {
+        var input = $("#infmt").val();
+        var output = $("#outfmt").val();
+        $("#cmdline").innerHTML = "vd" + input + output;
+    }
+    $("select").change(display);
+    display();
+<script>
 # [Install Now](/install)
 
 #### Latest Version: [1.5.2](/blog/2019/v1.5.2/) (2019-01-12)
