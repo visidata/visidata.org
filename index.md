@@ -13,7 +13,7 @@
 
 VisiData is an interactive multitool for tabular data.  It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.
 
-If you have <select id="infmt">
+When you have <select id="infmt">
 <option value="input.csv" selected="selected">comma-separated values (CSV)</option>
 <option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
 <option value="input.log">structured log file</option>
@@ -41,7 +41,7 @@ If you have <select id="infmt">
 but you need
 <select id="outfmt">
 <option value="" selected="selected">a delightful terminal interface</option>
-<option value="">to explore it quickly</option>
+<option value="">to explore the data quickly</option>
 <option value=" 'Shift+F' on any column">to get some quick insights</option>
 <option value=" '=' to add Python column">to compute Python for each row</option>
 <option value="-b -o output.csv">tab-separated values (TSV)</option>
@@ -57,21 +57,28 @@ but you need
 <option value="-b -o output.md">Markdown</option>
 <option value="-b -o output.jira">Markdown (org-mode) </option>
 <option value="-b -o output.npy">Numpy (.npy) file</option>
-</select>, VisiData can help:
+</select>.
 
 <code id="cmdline">
     vd -b input.csv
 </code>
 
-<script>
+<script type="text/javascript">
     function display() {
-        var input = $("#infmt").val();
-        var output = $("#outfmt").val();
-        $("#cmdline").innerHTML = "vd" + input + output;
+        var infmt = document.getElementById("infmt").value;
+        var outfmt = document.getElementById("outfmt").value;
+        document.getElementById("cmdline").innerHTML = "vd " + infmt + " " + outfmt;
+
     }
-    $("select").change(display);
+
+    var infmt = document.getElementById("infmt");
+    var outfmt = document.getElementById("outfmt");
+
+    infmt.addEventListener('change', display);
+    outfmt.addEventListener('change', display);
     display();
-<script>
+</script>
+
 # [Install Now](/install)
 
 #### Latest Version: [1.5.2](/blog/2019/v1.5.2/) (2019-01-12)
