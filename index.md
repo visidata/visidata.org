@@ -44,7 +44,7 @@ but you need
 <option value="">to explore the data quickly</option>
 <option value=" 'Shift+F' on any column">to get some quick insights</option>
 <option value=" '=' to add Python column">to compute Python for each row</option>
-<option value="-b -o output.csv">tab-separated values (TSV)</option>
+<option value="-b -o output.tsv">tab-separated values (TSV)</option>
 <option value="-b -o output.csv">comma-separated values (CSV)</option>
 <option value="-b -o output.txt --save-filetype=fixed">fixed width text</option>
 <option value=" 'e' to edit">to clean up the data</option>
