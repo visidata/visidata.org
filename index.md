@@ -42,8 +42,8 @@ but you need
 <select id="outfmt">
 <option value="" selected="selected">a delightful terminal interface</option>
 <option value="">to explore the data quickly</option>
-<option value=" 'Shift+F' on any column">to get some quick insights</option>
-<option value=" '=' to add Python column">to compute Python for each row</option>
+<option value=" # 'Shift+F' on any column">to get some quick insights</option>
+<option value=" # '=' to add a Python column">to compute Python for each row</option>
 <option value="-b -o output.tsv">tab-separated values (TSV)</option>
 <option value="-b -o output.csv">comma-separated values (CSV)</option>
 <option value="-b -o output.txt --save-filetype=fixed">fixed width text</option>
@@ -57,11 +57,13 @@ but you need
 <option value="-b -o output.md">Markdown</option>
 <option value="-b -o output.jira">Markdown (org-mode) </option>
 <option value="-b -o output.npy">Numpy (.npy) file</option>
-</select>.
+</select>:
 
+<p id="cmdouter">
 <code id="cmdline">
     vd -b input.csv
 </code>
+</p>
 
 <script type="text/javascript">
     function display() {
@@ -150,13 +152,17 @@ Extensible with Python!
 
 </table>
 
-## Become a VisiData Wizard
-* read [An Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html), a tutorial by [Jeremy Singer-Vine](https://www.jsvine.com/).
-* leggendo [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo), a tutorial in Italian by [Andrea Borruso](https://medium.com/@aborruso) (associated with onData).
-* browse [the quick reference manual](/man) (also available with `man vd` or with `Ctrl+H` from inside VisiData).
-* refer to [the VisiData documentation](/docs).
-* read [10 Ways to Use VisiData](/blog/2020/ten).
-* watch [the video case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
-* follow [`@VisiData`](https://twitter.com/visidata) on Twitter.
+## Tutorial: [English](https://jsvine.github.io/intro-to-visidata/index.html) | [Italiano](https://github.com/ondata/guidaVisiData/tree/master/testo)
 
----
+## [Quick Reference Guide](/man) (`Ctrl+H` from within VisiData)
+
+## [VisiData Documentation](/docs)
+
+## [Video Case studies](https://www.youtube.com/playlist?list=PLxu7QdBkC7drrAGfYzatPGVHIpv4Et46W)
+
+## [Lightning Demo](https://www.youtube.com/watch?v=N1CBDTgGtOU)
+
+## [10 Ways to Use VisiData](/blog/2020/ten)
+
+## Follow [`@VisiData`](https://twitter.com/visidata) on Twitter.
+

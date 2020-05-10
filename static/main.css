@@ -328,6 +328,18 @@ table div.cell.step, table td.step {
 
 /* --- specific pages --- */
 
+/* index page */
+h1.alternate {
+    display: hidden;
+}
+
+#cmdouter {
+    background: #ffedcb;
+    padding-left: 1em;
+    margin: 2em auto 2em;
+}
+
+/* man page */
 pre#manpage {
    font-size: 75%;
    /*width: 100%;*/
