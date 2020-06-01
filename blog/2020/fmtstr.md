@@ -1,7 +1,25 @@
 # fmtstr in VisiData
 
-You may have noticed the `fmtstr` column in the **Columns Sheet**.
+You may have noticed the `fmtstr` column in the **Columns Sheet**, and wondered what it did.
 
+[image of fmtstr]
+
+The `fmtstr` column defines the formatting of a Column's displayed values.
+This allows users to:
+* have control over how many digits are displayed for floating points
+* modify date types to include a section for time
+* separate every 3 digits with a comma (e.g. `1,000`)
+
+This is all very neat, but can be tricky to get started with. So, I wanted to go into the heart of this feature.
+
+This blogpost is going to cover:
+* setting of the fmtstr;
+* foundations of display and typing in VisiData;
+* what impact the fmtstr has on internal VisiData calculations and saved outputs.
+
+VisiData has a concept of core values, typed values, and displayed values.
+
+The core value is the fundamental undercurring value behind any given cell. It can be a string, a number, a list, `None`, a Python object, etc.
 
 
 - int has grouping by default
