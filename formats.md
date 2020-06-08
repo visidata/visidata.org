@@ -99,5 +99,9 @@ These are the supported savers:
 - **vd**
     - Command history log format for a VisiData session.
     - `^D` to save the current session's CommandLog.
+- **xls/x** (on develop)
+    - note: formatting and other metadata are not save-able
+    - this means that 'xls/x' is not round-trippable in VisiData
+        - you can't load up a .xlsx, change a single number, and save it back without losing all of the formatting
 
 Multisave is supported by **html**, **md**, and **txt**; `g^S` will save all sheets into a single output file.
