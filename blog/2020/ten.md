@@ -57,4 +57,5 @@ Save the cmdlog to a .vd file with `Ctrl+D foo.vd`, then replay the saved .vd fi
 ### 10. see all the available options and commands
 There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see the [manpage](/man), or `z Ctrl+H` to see the full list of commands available on the current sheet.
 
-[written by Saul Pwanson 2020-05-01]
+[written by Saul Pwanson 2019-03-24]
+[updated on 2020-05-01]
