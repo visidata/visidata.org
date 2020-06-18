@@ -9,7 +9,7 @@ The reason behind why this happens illuminates something significant behind Visi
 There are two main ways table data can be organized: **row-major** and **column-major**.
 Row-major keeps each row together, whereas column-major keeps each column together.
 SQL databases are an example of a row-major data analysis tool (if they support row-level locking).
-Python Pandas is an example of a column-major library.
+Python pandas is an example of a column-major library.
 
 Users might intuitively feel like VisiData is column-major, since it has so many [column-centric commands](/docs/columns), but architecturally it's actually row-major. 
 This is so we can use objects as rows, and also have heterogenous column values.
@@ -21,16 +21,16 @@ It does happen to work pretty well for most things, but it's trepidacious and ki
 
 This is the fundamental issue behind [#413](https://github.com/saulpw/visidata/issues/413) and why it can't be fixed.
 
-However, armed with this information, we can make cleaner choices within VisiData, and understand other implications this can have for different loaders and commands.
-
-For example, this is why working with the pandas loader (or any columnar store like raw parquet files) can be tricky.
+This is also why working with the pandas loader (or any columnar store like raw parquet files) can be tricky.
 You have the hammering of row-oriented semantics around a lower level functionality or storage layer that is fundamentally column-oriented.
 It's awkward and carries a stiff performance penalty.
 VisiData is designed for loading and filtering over aggregating and saving.
 
 In the future, perhaps pandas should be a completely different kind of **Sheet**.
 A **TableSheet** would actually be the row-oriented sheet, and there's another **ColumnSheet** that's column-oriented.
-Operations would be implemented differently, and maybe different ones are available.
+Operations would be implemented differently, and maybe different ones would be available.
+
+However, in the meanwhile, with this awareness we can make cleaner choices within VisiData, and understand other implications this can have for different loaders and commands.
 
 [Written by Saul Pwanson 2020-06-17]
 [Edited by Anja Boskovic 2020-06-17]
