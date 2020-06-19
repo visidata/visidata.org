@@ -2,6 +2,7 @@
 
 ## 2020
 
+* *2020-06-18*: [The implications of tabular data architecture](2020/row-major)
 * *2020-05-16*: [VisiData is like duct tape for your data, an interview with Saul](2020/changelog)
 * *2020-05-01*: [10 Ways to Use VisiData](2020/ten)
 * *2020-02-11*: [Unloaded sheets](2020/unloaded)
