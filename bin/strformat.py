@@ -7,7 +7,7 @@ kwargs = {}
 
 for arg in sys.argv[1:]:
     k, v = arg.split('=', maxsplit=1)
-    if os.path.exists(v):
+    if k == 'body' and os.path.isfile(v):
         v = open(v).read()
     kwargs[k] = v
 
