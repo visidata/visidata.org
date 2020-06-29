@@ -99,7 +99,7 @@ Open 1m+ rows in the blink of an eye!
 </td>
 
 <td>
-<a class="" href="/docs/freqtbl">
+<a class="" href="https://jsvine.github.io/intro-to-visidata/the-big-picture/visidata-in-60-seconds/">
 Instant histogram with Shift+F!
 <div class="screenshot">
 <a href="/freq-move-row.gif"><img src="/freq-move-row.gif" alt="Frequency Table loading, with cursor movement"/></a>
