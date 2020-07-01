@@ -1,7 +1,6 @@
 # Supported Sources
 
-
-These are the currently supported sources:
+These are the supported sources on [VisiData v1.5.2](https://github.com/saulpw/visidata/releases/tag/v1.5.2):
 
 - **tsv** (tab-separated value)
     - Plain and simple. VisiData writes tsv format by default.
@@ -15,8 +14,9 @@ These are the currently supported sources:
 - **fixed** (fixed width text)
     - Columns are autodetected from the first 1000 rows (adjustable with `--fixed-rows`).
 
-- **json** (single object) and **jsonl** (one object per line)
+- **json** (single object) and **jsonl**/**ndjson**/**ldjson** (one object per line)
     - Cells containing lists (e.g. `[3]`) or dicts (e.g. `{3}`) can be expanded into new columns with `(` and unexpanded with `)`.
+    - *In development: ndjson and ldjson will available be in the next release.*
 
 - **yaml**/**yml** (requires `PyYAML`)
 
@@ -26,6 +26,7 @@ These are the currently supported sources:
 
 - **npy** (requires `numpy`)
     - For NumPy explorers that are working in the terminal and yearn for visibility into their data.
+    - *In development: npy will be available in the next release.*
 
 - **pcap** (requires `xpkt`, `dnslib`)
     - View and investigate captured network traffic in a tabular format.
@@ -42,7 +43,8 @@ The following sources may include multiple tables. The initial sheet is the tabl
 
 - **sqlite**/**sqlite3**
     - supports saving for CREATE/INSERT (not wholesale updates)
-    - `^S` to commit any `add-row`/`edit-cell`/`delete-row`
+    - *In development: available in the next release*
+        - `z Ctrl+S` will commit any `add-row`/`edit-cell`/`delete-row`
 
 - **xls**/**xlsx**/**xlsb** (requires `openpyxl`)
 
@@ -91,13 +93,19 @@ These are the supported savers:
     - All expanded subcolumns must be closed (with `)`) to retain the same structure.
     - **.shp** files can be saved as **geoJSON**.
 - **txt**
-- **md** (org-mode compatible markdown table)
+- **md** (GitHub compatible markdown table)
+    - *In development: correct Markdown table available in next release.*
 - **htm**/**html** (requires `lxml`)
 - **png** (requires `pypng`)
 - **xml** (requires `lxml`)
 - **npy** (requires `numpy`)
+    - *In development: available in next release.*
 - **vd**
-    - Command history log format for a VisiData session.
-    - `^D` to save the current session's CommandLog.
+    - Command history log format for a VisiData session (tab-separated).
+    - `Ctrl+D` to save the current session's CommandLog.
+- **vdj**
+    - Command history log format for a VisiData session (jsonl-structure).
+    - `Ctrl+D` to save the current session's CommandLog.
+    - *In development: available in next release.*
 
 Multisave is supported by **html**, **md**, and **txt**; `g^S` will save all sheets into a single output file.
