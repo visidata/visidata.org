@@ -91,7 +91,7 @@ These are the supported savers:
     - All expanded subcolumns must be closed (with `)`) to retain the same structure.
     - **.shp** files can be saved as **geoJSON**.
 - **txt**
-- **md** (org-mode compatible markdown table)
+- **md** (markdown table)
 - **htm**/**html** (requires `lxml`)
 - **png** (requires `pypng`)
 - **xml** (requires `lxml`)
