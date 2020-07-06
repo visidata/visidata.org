@@ -39,6 +39,8 @@
 |tar                 |Unix Tape Archive   |2\.0             |                |2\.0           |         |                    |                    |
 |usv                 |Unicode\-Separated Value|2\.0             |displayed text  |2\.0           |1993     |Unicode             |                    |
 |xlsb                |Excel binary format |2\.0             |                |2\.0           |         |Microsoft           |xlrd                |
+|mysql         |              |MySQL               |2\.0             |                |1995     |MySQL AB            |https://github\.com/mysql/mysql\-server|MySQLdb             |
+
 
 # Extra notes about formats
 
