@@ -96,7 +96,7 @@
 - loader-specific requirements
     - working mysql / mariadb installation or at least the `libmysqlclient-dev` package (ubuntu; name might be different on other platforms)
     - `mysqlclient` python module in path or virtual environment (`pip install mysqlclient`)
-- `vd postgres://`*username*`:`*password*`@`*hostname*`:`*port*`/`*database* opens a connection to the given mysql / mariadb database.
+- `vd mysql://`*username*`:`*password*`@`*hostname*`:`*port*`/`*database* opens a connection to the given mysql / mariadb database.
 
 ## html {#html}
 - loader-specific options
