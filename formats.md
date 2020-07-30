@@ -39,7 +39,7 @@
 |tar                 |Unix Tape Archive   |2\.0             |                |2\.0           |         |                    |                    |
 |usv                 |Unicode\-Separated Value|2\.0             |displayed text  |2\.0           |1993     |Unicode             |                    |
 |xlsb                |Excel binary format |2\.0             |                |2\.0           |         |Microsoft           |xlrd                |
-|mysql               |MySQL               |2\.0             |                | |1995     |MySQL AB            |https://github\.com/mysql/mysql\-server|MySQLdb             |
+|[mysql](#mysql)     |MySQL               |2\.0             |                | |1995     |MySQL AB            |https://github\.com/mysql/mysql\-server|MySQLdb             |
 
 
 # Extra notes about formats
@@ -91,6 +91,12 @@
 ## sqlite {#sqlite}
 - supports saving for CREATE/INSERT (not wholesale updates)
 - `z Ctrl+S` to commit any `add-row`/`edit-cell`/`delete-row`
+
+## mysql {#mysql}
+- loader-specific requirements
+    - working mysql / mariadb installation or at least the `libmysqlclient-dev` package (ubuntu; name might be different on other platforms)
+    - `mysqlclient` python module in path or virtual environment (`pip install mysqlclient`)
+- `vd postgres://`*username*`:`*password*`@`*hostname*`:`*port*`/`*database* opens a connection to the given mysql / mariadb database.
 
 ## html {#html}
 - loader-specific options
