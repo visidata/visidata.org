@@ -2,6 +2,7 @@
 
 ## 2020
 
+* *2020-07-29*: [Organically Discovered Consequences of the Design](2020/limits)
 * *2020-07-07*: [Expansion of CLI Options](2020/options)
 * *2020-06-18*: [The implications of tabular data architecture](2020/row-major)
 * *2020-05-16*: [VisiData is like duct tape for your data, an interview with Saul](2020/changelog)
