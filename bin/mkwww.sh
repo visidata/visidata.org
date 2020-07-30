@@ -81,6 +81,7 @@ build_page releases "$WWWSRC"/releases.md "Release History"
 build_page about "$WWWSRC"/about.md "Credits and Contributions"
 build_page formats "$WWWSRC"/formats.md "Supported Formats"
 build_page v2.x "$WWWSRC"/v2.x.md "VisiData version 2.0"
+build_page limits "$WWWSRC"/limits.md "VisiData's Limits"
 build_blog
 
 
