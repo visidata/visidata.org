@@ -16,7 +16,7 @@ BUILD="$WWWSRC"/_build
 
 # VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
 #    /docs itself will be branch already checked out
-VERSIONS="stable"   # should be populated from tags/releases
+VERSIONS="develop stable"   # should be populated from tags/releases
 
 ### internal env vars
 
