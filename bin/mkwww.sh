@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e  # stop script on error
+set -x
 
 ### config env vars
 
@@ -85,10 +86,16 @@ build_page limits "$WWWSRC"/limits.md "VisiData's Limits"
 build_blog
 
 
+
+# build api pages. currently, built from develop, will be built from stable
+cd "$SRC" && git checkout develop
+mkdir -p "$BUILD"/docs/api
+sphinx-build -b html "$SRC"/docs/api "$BUILD"/docs/api
+
 set +e
 
 # /docs itself is built from current $SRC checkout
-cd $SRC && git checkout "stable"
+cd "$SRC" && git checkout stable
 build_docs docs
 
 # add manpage
