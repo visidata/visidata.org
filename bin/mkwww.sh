@@ -88,7 +88,6 @@ build_blog
 
 
 # build api pages. currently, built from develop, will be built from stable
-pip3 install -r "$SRC"/docs/api/requirements.txt
 cd "$SRC" && git checkout develop
 mkdir -p "$BUILD"/docs/api
 sphinx-build -b html "$SRC"/docs/api "$BUILD"/docs/api
