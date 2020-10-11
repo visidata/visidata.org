@@ -113,7 +113,7 @@ cp "$WWWSRC"/man/index.html "$BUILD"/man
 for ver in $VERSIONS ; do
     echo "Building /docs/$ver"
 
-    cd "$SRC" && git checkout "$ver"
+    cd "$SRC" && git checkout "$ver" && git pull
     build_docs docs/"$ver"
 
     build_api docs/"$ver"/api
