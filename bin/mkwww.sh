@@ -14,15 +14,14 @@ export PYTHONPATH=$SRC:$SRC/visidata
 # BUILD is output directory (corresponding to webroot)
 BUILD="$WWWSRC"/_build
 
-# VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/
-#    /docs itself will be branch already checked out
-VERSIONS="develop stable"   # should be populated from tags/releases
+# VERSIONS (visidata release tags) to generate /docs/vX.Y.Z/ and /docs/api/vX.Y.Z
+#    /docs itself will be stable branch
+VERSIONS="v1.0 v1.1 v1.2 v1.3 v1.4 v1.5 develop stable"   # should be populated from tags/releases
 
 ### internal env vars
 
 TMPDIR=$(mktemp -d)
 BIN="$WWWSRC"/bin
-BLOG="$WWWSRC"/blog
 
 mkdir -p "$BUILD"
 
@@ -62,12 +61,16 @@ function build_docs() {
 }
 
 function build_blog() {
-    # build index
+    BLOG="$WWWSRC"/blog
+
+    # setup assets
     mkdir -p "$BUILD"/blog/assets/
     cp -R "$WWWSRC"/blog/assets/* "$BUILD"/blog/assets/
 
+    # build index
     build_page blog "$BLOG"/index.md "Blog"
 
+    # build individual blog pages
     for postpath in $(find "$BLOG" -name '*.md'); do
         post=${postpath##$BLOG}
         postname=${post%.md}
@@ -104,8 +107,8 @@ build_docs docs
 build_api docs/api
 
 # add manpage
-mkdir -p $BUILD/man
-cp $WWWSRC/man/index.html $BUILD/man
+mkdir -p "$BUILD"/man
+cp "$WWWSRC"/man/index.html "$BUILD"/man
 
 for ver in $VERSIONS ; do
     echo "Building /docs/$ver"
