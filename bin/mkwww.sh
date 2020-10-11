@@ -50,6 +50,7 @@ function build_docs() {
         build_page "$1" "$SRC"/www/docs.md "VisiData Documentation"
     fi
 
+    # build all individual /docs pages
     for postpath in $(find $SRCDOCS -name '*.md'); do
         post=${postpath##$SRCDOCS}
         postname=${post%.md}
@@ -74,6 +75,16 @@ function build_blog() {
     done
 }
 
+function build_api() {
+    # up until v2.0, we did not have api docs
+    if [ -d "$SRC"/docs/api ]; then
+        docdir=$BUILD/$1
+        mkdir -p "$docdir"
+        # our api docs are built using sphinx
+        sphinx-build -b html "$SRC"/docs/api "$docdir"
+    fi
+}
+
 build_page . "$WWWSRC"/index.md "VisiData"
 build_page install "$WWWSRC"/install.md "Installation Instructions"
 build_page privacy "$WWWSRC"/privacy.md "Privacy Policy"
@@ -87,9 +98,10 @@ build_blog
 
 set +e
 
-# /docs itself is built from current $SRC checkout
-cd $SRC && git checkout "stable"
+# /docs and /docs/api themselves are built from stable
+cd "$SRC" && git checkout "stable"
 build_docs docs
+build_api docs/api
 
 # add manpage
 mkdir -p $BUILD/man
@@ -100,6 +112,8 @@ for ver in $VERSIONS ; do
 
     cd "$SRC" && git checkout "$ver"
     build_docs docs/"$ver"
+
+    build_api docs/"$ver"/api
 done
 
 # redirects
