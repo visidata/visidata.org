@@ -40,6 +40,10 @@
 |usv                 |Unicode\-Separated Value|2\.0             |displayed text  |2\.0           |1993     |Unicode             |                    |
 |xlsb                |Excel binary format |2\.0             |                |2\.0           |         |Microsoft           |xlrd                |
 |[mysql](#mysql)     |MySQL               |2\.0             |                | |1995     |MySQL AB            |https://github\.com/mysql/mysql\-server|MySQLdb             |
+|pdf           |              |Portable Document Format|2\.0             |                |1993     |Adobe               |https://en\.wikipedia\.org/wiki/PDF|pdfminer\.six       |
+|vcf           |              |Virtual Contact File \(vCard\)|2\.0             |                |1995     |Versit Consortium   |https://tools\.ietf\.org/html/rfc6350|                    |
+|rec           |              |recutils database file|2\.0             |displayed text  |2010     |Jose E\. Marchesi   |https://www\.gnu\.org/software/recutils/|                    |
+|eml           |              |Multipurpose Internet Mail Extensions \(MIME\)|2\.0             |                |1996     |Nathaniel Borenstein and Ned Freed|https://tools\.ietf\.org/html/rfc2045|                    |
 
 
 # Extra notes about formats
