@@ -1,9 +1,7 @@
 ::::: {.announce}
 
 ---
-# VisiData 2.0 is coming soon.
-
-## [Help us test the new features!](/v2.x)
+# [VisiData 2.0 has been released!](/blog/2020/v2.0)
 
 ---
 
@@ -83,7 +81,7 @@ but you need
 
 # [Install Now](/install)
 
-#### Latest Version: [1.5.2](/blog/2019/v1.5.2/) (2019-01-12)
+#### Latest Version: [2.0.1](/blog/2020/v2.0/) (2020-10-12)
 
 <table>
 <tr>
