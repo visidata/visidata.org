@@ -8,3 +8,4 @@
 /blog/rss.xml	https://node2.feed43.com/4421502731475787.xml
 /data/iana-ports.tsv	/plugins/pcap/iana-ports.tsv
 /data/wireshark-oui.tsv	/plugins/pcap/wireshark-oui.tsv
+/man	/docs/v2.0/man
