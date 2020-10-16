@@ -34,7 +34,7 @@ Press `Ctrl+Q` to exit VisiData and save to the given output file.
 
 ### 6. explore an object from the Python REPL
 
-    >>> visidata.view(obj)
+    >>> visidata.pyobj.view(obj)
 
 ### 7. explore any pandas DataFrame
 
@@ -58,4 +58,4 @@ Save the cmdlog to a .vd file with `Ctrl+D foo.vd`, then replay the saved .vd fi
 There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see the [manpage](/man), or `z Ctrl+H` to see the full list of commands available on the current sheet.
 
 [written by Saul Pwanson 2019-03-24]
-[updated on 2020-10-14]
+[updated on 2020-10-15]
