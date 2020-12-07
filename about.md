@@ -44,7 +44,17 @@ Thanks also to the following people for their contributions, whether in code, pr
 |AJ K\.              |2019\-10            |
 |Alex V\.            |2019\-11            |
 |Totò F\.            |2019\-12            |
-|Tiago T\.           |2020\-02\-01        |
+|Tiago T\.           |2020\-02            |
+|Gerard S\-G\.       |2020\-07            |
+|William P\.         |2020\-07            |
+|Kevin S\.           |2020\-08            |
+|Andrew C\.          |2020\-09            |
+|Stuart A\.          |2020\-09            |
+|Robert W\.          |2020\-10            |
+|Andre L\.           |2020\-10            |
+|Zack M\.            |2020\-10            |
+|Jeremy F\.          |2020\-10            |
+|Jingzhe H\.         |2020\-10            |
 
 :::
 
@@ -55,7 +65,9 @@ Thanks also to the following people for their contributions, whether in code, pr
 |author              |github              |contribution        |
 |--------------------|--------------------|--------------------|
 |AJ Kerrigan         |ajkerrigan          |improvements to various VisiData internals|
+|Anatoli Babenia     |abitrolly           |support running \`python \-m visidata\`|
 |Andrea Borruso      |aborruso            |italian tutorial    |
+|Andreas Motl        |amotl               |fixes to hdf5 dataset loading|
 |azjps               |azjps               |pandas improvements |
 |Chocolateboy        |chocolateboy        |clipboard; list aggr; json sort keys|
 |Daniel Einspanjer   |deinspanjer         |kblayout, favicon   |
@@ -75,9 +87,10 @@ Thanks also to the following people for their contributions, whether in code, pr
 |Rob Carrington      |robcarrington       |yaml                |
 |Rasmus Scholer      |scholer             |windows\-compatibility|
 |Stefan Siegel       |ssiegel             |bugfix              |
-|Thomas Sibley       |tsibley             |options\.encoding usage|
+|Thomas Sibley       |tsibley             |options\.encoding usage; polish to capture\-col|
 |Trent Gill          |trentgill           |picked great colors |
 |Vivian Brown        |vbrown608           |various; pcap       |
+
 
 :::
 
