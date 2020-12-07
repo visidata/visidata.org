@@ -1,10 +1,3 @@
-::::: {.announce}
-
----
-# [VisiData 2.0 has been released!](/blog/2020/v2.0)
-
----
-
 :::::
 
 # Data science without the drudgery
@@ -81,7 +74,7 @@ but you need
 
 # [Install Now](/install)
 
-#### Latest Version: [2.0.1](/blog/2020/v2.0/) (2020-10-12)
+#### Latest Version: [2.1](/blog/2020/v2.1/) (2020-12-06)
 
 <table>
 <tr>
