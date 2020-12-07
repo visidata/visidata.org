@@ -127,7 +127,7 @@ vd(1)                                                                           
       <span style="font-weight:bold;">z^</span>              set name of current column to combined contents of current cell in selected rows (or current row)
      <span style="font-weight:bold;">gz^</span>              set name of all visible columns to combined contents of current column for selected rows (or current row)
 
-       <span style="font-weight:bold;">=</span> <span style="text-decoration:underline;">expr</span>         create new column from Python <span style="text-decoration:underline;">expr</span>, with column names as variables
+       <span style="font-weight:bold;">=</span> <span style="text-decoration:underline;">expr</span>         create new column from Python <span style="text-decoration:underline;">expr</span>, with column names, and attributes, as variables
       <span style="font-weight:bold;">g=</span> <span style="text-decoration:underline;">expr</span>         set current column for selected rows to result of Python <span style="text-decoration:underline;">expr</span>
      <span style="font-weight:bold;">gz=</span> <span style="text-decoration:underline;">expr</span>         set current column for selected rows to the items in result of Python sequence <span style="text-decoration:underline;">expr</span>
       <span style="font-weight:bold;">z=</span> <span style="text-decoration:underline;">expr</span>         evaluate Python expression on current row and set current cell with result of Python <span style="text-decoration:underline;">expr</span>
@@ -161,8 +161,9 @@ vd(1)                                                                           
       <span style="font-weight:bold;">|</span>   <span style="font-weight:bold;">\</span> <span style="text-decoration:underline;">regex</span>     select/unselect rows matching <span style="text-decoration:underline;">regex</span> in current column
      <span style="font-weight:bold;">g|</span>  <span style="font-weight:bold;">g\</span> <span style="text-decoration:underline;">regex</span>     select/unselect rows matching <span style="text-decoration:underline;">regex</span> in any visible column
      <span style="font-weight:bold;">z|</span>  <span style="font-weight:bold;">z\</span> <span style="text-decoration:underline;">expr</span>      select/unselect rows matching Python <span style="text-decoration:underline;">expr</span> in any visible column
-      <span style="font-weight:bold;">,</span> (comma)       select rows matching current cell in current column
-     <span style="font-weight:bold;">g,</span>               select rows matching current row in all visible columns
+      <span style="font-weight:bold;">,</span> (comma)       select rows matching typed value of current cell in current column
+     <span style="font-weight:bold;">g,</span>               select rows matching typed value of current row in all visible columns
+     <span style="font-weight:bold;">z,</span> <span style="font-weight:bold;">gz,</span>           select rows matching display value of current cell/row in current column/all visible columns
 
    <span style="font-weight:bold;">Row</span> <span style="font-weight:bold;">Sorting/Filtering</span>
        <span style="font-weight:bold;">[</span>    <span style="font-weight:bold;">]</span>         sort ascending/descending by current column; replace any existing sort criteria
@@ -203,6 +204,7 @@ vd(1)                                                                           
         <span style="font-weight:bold;">Insert</span>           toggle insert mode
         <span style="font-weight:bold;">Up</span>  <span style="font-weight:bold;">Down</span>         set contents to previous/next in history
         <span style="font-weight:bold;">Tab</span>  <span style="font-weight:bold;">Shift+Tab</span>   autocomplete input (when available)
+        <span style="font-weight:bold;">Shift+Arrow</span>      move cursor in direction of <span style="font-weight:bold;">Arrow</span> and re-enter edit mode
 
    <span style="font-weight:bold;">Data</span> <span style="font-weight:bold;">Toolkit</span>
       <span style="font-weight:bold;">o</span> <span style="text-decoration:underline;">input</span>         open <span style="text-decoration:underline;">input</span> in <span style="font-weight:bold;">VisiData</span>
@@ -266,6 +268,8 @@ vd(1)                                                                           
       <span style="font-weight:bold;">^G</span>              show cursor position and bounds of current sheet on status line
       <span style="font-weight:bold;">^V</span>              show version and copyright information on status line
       <span style="font-weight:bold;">^P</span>              open <span style="font-weight:bold;">Status</span> <span style="font-weight:bold;">History</span>
+     m <span style="text-decoration:underline;">keystroke</span>      first, begin recording macro; second, prompt for <span style="text-decoration:underline;">keystroke</span> <span style="text-decoration:underline;">No,</span> <span style="text-decoration:underline;">and</span> <span style="text-decoration:underline;">complete</span> <span style="text-decoration:underline;">recording.</span> <span style="text-decoration:underline;">Macro</span> <span style="text-decoration:underline;">can</span> <span style="text-decoration:underline;">then</span> <span style="text-decoration:underline;">be</span> <span style="text-decoration:underline;">executed</span> <span style="text-decoration:underline;">everytime</span> <span style="text-decoration:underline;">provided</span> <span style="text-decoration:underline;">keystroke</span> <span style="text-decoration:underline;">is</span> <span style="text-decoration:underline;">used.</span> <span style="text-decoration:underline;">Will</span> <span style="text-decoration:underline;">override</span> <span style="text-decoration:underline;">existing</span> <span style="text-decoration:underline;">keybinding.</span> <span style="text-decoration:underline;">Macros</span> <span style="text-decoration:underline;">will</span> <span style="text-decoration:underline;">run</span> <span style="text-decoration:underline;">on</span> <span style="text-decoration:underline;">current</span> <span style="text-decoration:underline;">row,</span> <span style="text-decoration:underline;">column,</span> <span style="text-decoration:underline;">sheet.</span>
+     gm               open an index of all existing macros. Can be directly viewed with <span style="font-weight:bold;">Enter</span>, and then modified with <span style="font-weight:bold;">^S</span>.
 
       <span style="font-weight:bold;">^Y</span>  <span style="font-weight:bold;">z^Y</span>  <span style="font-weight:bold;">g^Y</span>    open current row/cell/sheet as Python object
       <span style="font-weight:bold;">^X</span> <span style="text-decoration:underline;">expr</span>         evaluate Python <span style="text-decoration:underline;">expr</span> and opens result as Python object
@@ -326,8 +330,8 @@ vd(1)                                                                           
         <span style="font-weight:bold;">g!</span> <span style="font-weight:bold;">gz!</span>           toggle/unset selected columns as key columns on source sheet
         <span style="font-weight:bold;">g+</span> <span style="text-decoration:underline;">aggregator</span>    add Ar aggregator No to selected source columns
         <span style="font-weight:bold;">g-</span> (hyphen)      hide selected columns on source sheet
-        <span style="font-weight:bold;">g~</span> <span style="font-weight:bold;">g#</span> <span style="font-weight:bold;">g%</span> <span style="font-weight:bold;">g$</span> <span style="font-weight:bold;">g@</span>  <span style="font-weight:bold;">gz#</span>
-                         set type of selected columns on source sheet to str/int/float/currency/date/len
+        <span style="font-weight:bold;">g~</span> <span style="font-weight:bold;">g#</span> <span style="font-weight:bold;">g%</span> <span style="font-weight:bold;">g$</span> <span style="font-weight:bold;">g@</span> <span style="font-weight:bold;">gz#</span> <span style="font-weight:bold;">z%</span>
+                         set type of selected columns on source sheet to str/int/float/currency/date/len/floatsi
          <span style="font-weight:bold;">Enter</span>           open a <span style="font-weight:bold;">Frequency</span> <span style="font-weight:bold;">Table</span> sheet grouped by column referenced in current row
 
    <span style="font-weight:bold;">Sheets</span> <span style="font-weight:bold;">Sheet</span> <span style="font-weight:bold;">(Shift+S)</span>
@@ -342,6 +346,7 @@ vd(1)                                                                           
         <span style="font-weight:bold;">gC</span>  <span style="font-weight:bold;">gI</span>           open <span style="font-weight:bold;">Columns</span> <span style="font-weight:bold;">Sheet</span>/<span style="font-weight:bold;">Describe</span> <span style="font-weight:bold;">Sheet</span> with all visible columns from selected sheets
         <span style="font-weight:bold;">g^R</span>              reload all selected sheets
         <span style="font-weight:bold;">z^C</span>  <span style="font-weight:bold;">gz^C</span>        abort async threads for current/selected sheets(s)
+        <span style="font-weight:bold;">g^S</span>              save selected or all sheets
          <span style="font-weight:bold;">&amp;</span> <span style="text-decoration:underline;">jointype</span>      merge selected sheets with visible columns from all, keeping rows according to <span style="text-decoration:underline;">jointype</span>:
                          <span style="font-weight:bold;">.</span>  <span style="font-weight:bold;">inner</span>  keep only rows which match keys on all sheets
                          <span style="font-weight:bold;">.</span>  <span style="font-weight:bold;">outer</span>  keep all rows from first selected sheet
@@ -358,6 +363,7 @@ vd(1)                                                                           
         <span style="font-weight:bold;">gO</span>               open <span style="font-weight:bold;">options.config</span> as <span style="font-weight:bold;">TextSheet</span>
      (sheet-specific commands)
         <span style="font-weight:bold;">Enter</span>  <span style="font-weight:bold;">e</span>         edit option at current row
+        <span style="font-weight:bold;">d</span>                remove option override for this context
 
    <span style="font-weight:bold;">CommandLog</span> <span style="font-weight:bold;">(Shift+D)</span>
      (global commands)
@@ -420,7 +426,6 @@ vd(1)                                                                           
      <span style="font-weight:bold;">--default-width</span>=<span style="text-decoration:underline;">int</span>          20                 default column width
      <span style="font-weight:bold;">--default-height</span>=<span style="text-decoration:underline;">int</span>         10                 default column height
      <span style="font-weight:bold;">--textwrap-cells</span>=<span style="text-decoration:underline;">bool</span>        True               wordwrap text for multiline rows
-     <span style="font-weight:bold;">--cmd-after-edit</span>=<span style="text-decoration:underline;">str</span>         go-down            command longname to execute after successful edit
      <span style="font-weight:bold;">--quitguard</span>                  False              confirm before quitting last sheet
      <span style="font-weight:bold;">--debug</span>                      False              exit on error and display stacktrace
      <span style="font-weight:bold;">--skip</span>=<span style="text-decoration:underline;">int</span>                   0                  skip N rows before header
@@ -441,6 +446,7 @@ vd(1)                                                                           
      <span style="font-weight:bold;">--encoding</span>=<span style="text-decoration:underline;">str</span>               utf-8              encoding passed to codecs.open
      <span style="font-weight:bold;">--encoding-errors</span>=<span style="text-decoration:underline;">str</span>        surrogateescape    encoding_errors passed to codecs.open
      <span style="font-weight:bold;">--bulk-select-clear</span>          False              clear selected rows before new bulk selections
+     <span style="font-weight:bold;">--some-selected-rows</span>         False              if no rows selected, if True, someSelectedRows returns all rows; if False, fails
      <span style="font-weight:bold;">--delimiter</span>=<span style="text-decoration:underline;">str</span>                                 field delimiter to use for tsv/usv filetype
      <span style="font-weight:bold;">--row-delimiter</span>=<span style="text-decoration:underline;">str</span>                             &quot; row delimiter to use for tsv/usv filetype
      <span style="font-weight:bold;">--tsv-safe-newline</span>=<span style="text-decoration:underline;">str</span>                          replacement for newline character when saving to tsv
@@ -458,7 +464,7 @@ vd(1)                                                                           
      <span style="font-weight:bold;">--fancy-chooser</span>=<span style="text-decoration:underline;">bool</span>         True               a nicer selection interface for aggregators and jointype
      <span style="font-weight:bold;">--describe-aggrs</span>=<span style="text-decoration:underline;">str</span>         mean stdev         numeric aggregators to calculate on Describe sheet
      <span style="font-weight:bold;">--histogram-bins</span>=<span style="text-decoration:underline;">int</span>         0                  number of bins for histogram of numeric columns
-     <span style="font-weight:bold;">--numeric-binning</span>=<span style="text-decoration:underline;">bool</span>       True               bin numeric columns into ranges
+     <span style="font-weight:bold;">--numeric-binning</span>            False              bin numeric columns into ranges
      <span style="font-weight:bold;">--replay-wait</span>=<span style="text-decoration:underline;">float</span>          0.0                time to wait between replayed commands, in seconds
      <span style="font-weight:bold;">--replay-movement</span>            False              insert movements during replay
      <span style="font-weight:bold;">--visidata-dir</span>=<span style="text-decoration:underline;">str</span>           ~/.visidata/       directory to load and store additional files
@@ -494,6 +500,7 @@ vd(1)                                                                           
                                                      table header when saving to html
      <span style="font-weight:bold;">--pcap-internet</span>=<span style="text-decoration:underline;">str</span>          n                  (y/s/n) if save_dot includes all internet hosts separately (y), combined (s), or does not include the internet (n)
      <span style="font-weight:bold;">--graphviz-edge-labels</span>=<span style="text-decoration:underline;">bool</span>  True               whether to include edge labels on graphviz diagrams
+     <span style="font-weight:bold;">--pdf-tables</span>                 False              parse PDF for tables instead of pages of text
      <span style="font-weight:bold;">--plugins-url</span>=<span style="text-decoration:underline;">str</span>            https://visidata.org/plugins/plugins.jsonl
                                                      source of plugins sheet
 
@@ -528,7 +535,9 @@ vd(1)                                                                           
      <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">endtop</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">sep</span>     ║
      <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">endmid</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">sep</span>     ║
      <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">endbot</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">sep</span>     ║
-     <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">selected</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">note</span>  ·
+     <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">selected</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">note</span>  •
+     <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">sort</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">asc</span>       ↑↟⇞⇡⇧⇑              characters for ascending sort
+     <span style="font-weight:bold;">disp</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">sort</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">desc</span>      ↓↡⇟⇣⇩⇓              characters for descending sort
      <span style="font-weight:bold;">color</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">default</span>       normal              the default color
      <span style="font-weight:bold;">color</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">default</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">hdr</span>   bold                color of the column headers
      <span style="font-weight:bold;">color</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">bottom</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">hdr</span>    underline           color of the bottom header row
@@ -617,7 +626,7 @@ vd(1)                                                                           
      Functions defined in .visidatarc are available in python expressions (e.g. in derived columns).
 
 <span style="font-weight:bold;">SUPPORTED</span> <span style="font-weight:bold;">SOURCES</span>
-     These are the supported sources:
+     Core VisiData includes these sources:
 
         <span style="font-weight:bold;">tsv</span> (tab-separated value)
            Plain and simple. <span style="font-weight:bold;">VisiData</span> writes tsv format by default. See the <span style="font-weight:bold;">--tsv-delimiter</span> option.
@@ -633,42 +642,15 @@ vd(1)                                                                           
         <span style="font-weight:bold;">json</span> (single object) and <span style="font-weight:bold;">jsonl</span>/<span style="font-weight:bold;">ndjson</span>/<span style="font-weight:bold;">ldjson</span> (one object per line).
            Cells containing lists (e.g. <span style="font-weight:bold;">[3]</span>) or dicts (<span style="font-weight:bold;">{3}</span>) can be expanded into new columns with <span style="font-weight:bold;">(</span> and unexpanded with <span style="font-weight:bold;">)</span>.
 
-        <span style="font-weight:bold;">yaml</span>/<span style="font-weight:bold;">yml</span> (requires <span style="font-weight:bold;">PyYAML</span>)
-           Uses the safe YAML loader, which supports the most common uses of YAML.
-
-        <span style="font-weight:bold;">pcap</span> (requires <span style="font-weight:bold;">dpkt</span>, <span style="font-weight:bold;">dnslib</span>)
-           View and investigate captured network traffic in a tabular format.
-
-        <span style="font-weight:bold;">png</span> (requires <span style="font-weight:bold;">pypng</span>)
-           Pixels can be edited and saved in data form. Images can be plotted with <span style="font-weight:bold;">.</span> (dot).
-
-     The following URL schemes are supported:
-        <span style="font-weight:bold;">http</span> (requires <span style="font-weight:bold;">requests</span>); can be used as transport for with another filetype
-        <span style="font-weight:bold;">postgres</span> (requires <span style="font-weight:bold;">psycopg2</span>)
-
-     The following sources may include multiple tables. The initial sheet is the table directory; <span style="font-weight:bold;">Enter</span> loads the entire table into memory.
-
         <span style="font-weight:bold;">sqlite</span>
-        <span style="font-weight:bold;">xlsx</span> (requires <span style="font-weight:bold;">openpyxl</span>)
-        <span style="font-weight:bold;">xls</span> (requires <span style="font-weight:bold;">xlrd</span>)
-        <span style="font-weight:bold;">hdf5</span> (requires <span style="font-weight:bold;">h5py</span>)
-        <span style="font-weight:bold;">ttf</span>/<span style="font-weight:bold;">otf</span> (requires <span style="font-weight:bold;">fonttools</span>)
-        <span style="font-weight:bold;">mbtiles</span> (requires <span style="font-weight:bold;">mapbox-vector-tile</span>)
-        <span style="font-weight:bold;">htm</span>/<span style="font-weight:bold;">html</span> (requires <span style="font-weight:bold;">lxml</span>)
-        <span style="font-weight:bold;">xml</span> (requires <span style="font-weight:bold;">lxml</span>)
-            <span style="font-weight:bold;">v</span>    show only columns in current row attributes
-           <span style="font-weight:bold;">za</span>    add column for xml attribute
-        <span style="font-weight:bold;">xpt</span> (SAS; requires <span style="font-weight:bold;">xport</span>)
-        <span style="font-weight:bold;">sas7bdat</span> (SAS; requires <span style="font-weight:bold;">sas7bdat</span>)
-        <span style="font-weight:bold;">sav</span> (SPSS; requires <span style="font-weight:bold;">savReaderWriter</span>)
-        <span style="font-weight:bold;">dta</span> (Stata; requires <span style="font-weight:bold;">pandas</span>)
-        <span style="font-weight:bold;">shp</span> (requires <span style="font-weight:bold;">pyshp</span>)
+           May include multiple tables. The initial sheet is the table directory; <span style="font-weight:bold;">Enter</span> loaders the entrie table into memory. <span style="font-weight:bold;">z^S</span> saves modifications to source.
+
+     URL schemes are also supported:
+        <span style="font-weight:bold;">http</span> (requires <span style="font-weight:bold;">requests</span>); can be used as transport for with another filetype
+
+     For a list of all remaining formats supported by VisiData, see https://visidata.org/formats.
 
      In addition, <span style="font-weight:bold;">.zip</span>, <span style="font-weight:bold;">.gz</span>, <span style="font-weight:bold;">.bz2</span>, and <span style="font-weight:bold;">.xz</span> files are decompressed on the fly.
-
-     VisiData has an adapter for <span style="font-weight:bold;">pandas</span>. To load a file format which is supported by <span style="font-weight:bold;">pandas</span>, pass <span style="font-weight:bold;">-f</span> <span style="font-weight:bold;">pandas</span> <span style="font-weight:bold;">data.foo</span>. This will call <span style="font-weight:bold;">pandas.read</span><span style="text-decoration:underline;">_</span><span style="font-weight:bold;">foo()</span>.
-
-     For example, <span style="font-weight:bold;">vd</span> <span style="font-weight:bold;">-f</span> <span style="font-weight:bold;">pandas</span> <span style="font-weight:bold;">data.parquet</span> loads a parquet file. Note that when using the <span style="font-weight:bold;">pandas</span> loader, the <span style="font-weight:bold;">.fileformat</span> file extension is mandatory
 
 <span style="font-weight:bold;">SUPPORTED</span> <span style="font-weight:bold;">OUTPUT</span> <span style="font-weight:bold;">FORMATS</span>
      These are the supported savers:
@@ -677,19 +659,14 @@ vd(1)                                                                           
         <span style="font-weight:bold;">csv</span> (comma-separated value)
         <span style="font-weight:bold;">json</span> (one object with all rows)
         <span style="font-weight:bold;">jsonl</span>/<span style="font-weight:bold;">ndjson</span>/<span style="font-weight:bold;">ldjson</span> (one object per line/row)
-        <span style="font-weight:bold;">sqlite</span> (multisave capable)
            All expanded subcolumns must be closed (with <span style="font-weight:bold;">)</span>) to retain the same structure.
-           <span style="font-weight:bold;">.shp</span> files can be saved as <span style="font-weight:bold;">geoJSON</span>.
-        <span style="font-weight:bold;">md</span> (org-mode compatible markdown table)
-        <span style="font-weight:bold;">htm</span>/<span style="font-weight:bold;">html</span> (requires <span style="font-weight:bold;">lxml</span>)
-        <span style="font-weight:bold;">png</span> (requires <span style="font-weight:bold;">pypng</span>)
-
-     Multisave is supported by <span style="font-weight:bold;">html</span>, <span style="font-weight:bold;">md</span>, and <span style="font-weight:bold;">txt</span>; <span style="font-weight:bold;">g^S</span> will save all sheets into a single output file.
+        <span style="font-weight:bold;">sqlite</span> (save to source with <span style="font-weight:bold;">z^S</span>)
+        <span style="font-weight:bold;">md</span> (markdown table)
 
 <span style="font-weight:bold;">AUTHOR</span>
      <span style="font-weight:bold;">VisiData</span> was made by Saul Pwanson &lt;<span style="text-decoration:underline;">vd@saul.pw</span>&gt;.
 
-Linux/MacOS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Oct 13, 2020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Linux/MacOS
+Linux/MacOS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Dec 5, 2020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Linux/MacOS
 </pre></section>
 
      </section>
