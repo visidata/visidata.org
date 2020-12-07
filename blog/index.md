@@ -1,6 +1,7 @@
 
 ## 2020
 
+* *2020-12-06*: [v2.1](2020/v2.1)
 * *2020-10-14*: [VisiData v2.0](2020/v2.0)
 * *2020-07-29*: [Organically Discovered Consequences of the Design](2020/limits)
 * *2020-07-07*: [Expansion of CLI Options](2020/options)
