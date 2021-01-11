@@ -1,5 +1,6 @@
 ## 2021
 * *2021-01-03*: [v2.1.1](2021/v2.1.1)
+* *2021-01-10*: [New feature: persistent input history](2021/input-history)
 
 
 ## 2020
