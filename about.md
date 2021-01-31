@@ -62,34 +62,36 @@ Thanks also to the following people for their contributions, whether in code, pr
 
 ## Contributors
 
-|author              |github              |contribution        |
-|--------------------|--------------------|--------------------|
-|AJ Kerrigan         |ajkerrigan          |improvements to various VisiData internals|
-|Anatoli Babenia     |abitrolly           |support running \`python \-m visidata\`|
-|Andrea Borruso      |aborruso            |italian tutorial    |
-|Andreas Motl        |amotl               |fixes to hdf5 dataset loading|
-|azjps               |azjps               |pandas improvements |
-|Chocolateboy        |chocolateboy        |clipboard; list aggr; json sort keys|
-|Daniel Einspanjer   |deinspanjer         |kblayout, favicon   |
-|David Branner       |databranner         |docs                |
-|Elias Dorneles      |eliasdorneles       |svg                 |
-|James Routley       |jamesroutley        |option name design  |
-|Jan Hermann         |azag0               |\-f filetype        |
-|Jeff Arn            |repjarms            |website             |
-|Jeremy Singer\-Vine |jsvine              |english tutorial    |
-|John Kiely          |jkiely              |yaml                |
-|Kate Murphy         |Katee               |search feel         |
-|Keith Hughitt       |khughitt            |\.gz support; options\.disp\_float\_fmt|
-|Kovas Palunas       |kovasap             |sys clipboard paste |
-|Lucas Messenger     |layertwo            |pcapng; \.jira; open \.tar; sparkline|
-|Paul O'Leary McCann |polm                |bugfix wide chars   |
-|Peter Grayson       |jpgrayson           |\.bz2 and \.xz      |
-|Rob Carrington      |robcarrington       |yaml                |
-|Rasmus Scholer      |scholer             |windows\-compatibility|
-|Stefan Siegel       |ssiegel             |bugfix              |
-|Thomas Sibley       |tsibley             |options\.encoding usage; polish to capture\-col|
-|Trent Gill          |trentgill           |picked great colors |
-|Vivian Brown        |vbrown608           |various; pcap       |
+|author              |github         |contribution                                   |
+|--------------------|---------------|-----------------------------------------------|
+|AJ Kerrigan         |ajkerrigan     |improvements to various VisiData internals     |
+|Anatoli Babenia     |abitrolly      |support running \`python \-m visidata\`        |
+|Andrea Borruso      |aborruso       |italian tutorial                               |
+|Andreas Motl        |amotl          |fixes to hdf5 dataset loading                  |
+|Chocolateboy        |chocolateboy   |clipboard; list aggr; json sort keys           |
+|Daniel Einspanjer   |deinspanjer    |kblayout, favicon                              |
+|David Branner       |databranner    |docs                                           |
+|Elias Dorneles      |eliasdorneles  |svg                                            |
+|James Routley       |jamesroutley   |option name design                             |
+|Jan Hermann         |azag0          |\-f filetype                                   |
+|Jeff Arn            |repjarms       |website                                        |
+|Jeremy Singer\-Vine |jsvine         |english tutorial                               |
+|John Kiely          |jkiely         |yaml                                           |
+|Kate Murphy         |Katee          |search feel                                    |
+|Keith Hughitt       |khughitt       |\.gz support; options\.disp\_float\_fmt        |
+|Kovas Palunas       |kovasap        |sys clipboard paste                            |
+|Lucas Messenger     |layertwo       |pcapng; \.jira; open \.tar; sparkline          |
+|M Somerville        |dracos         |geojson                                        |
+|Paul O'Leary McCann |polm           |bugfix wide chars                              |
+|Peter Grayson       |jpgrayson      |\.bz2 and \.xz                                 |
+|Rasmus Scholer      |scholer        |windows\-compatibility                         |
+|Rob Carrington      |robcarrington  |yaml                                           |
+|Stefan Siegel       |ssiegel        |bugfix                                         |
+|Thomas Sibley       |tsibley        |options\.encoding usage; polish to capture\-col|
+|Trent Gill          |trentgill      |picked great colors                            |
+|Vivian Brown        |vbrown608      |various; pcap                                  |
+|azjps               |azjps          |pandas improvements                            |
+|                    |SuRaMoN        |improvements to mysql                          |
 
 
 :::

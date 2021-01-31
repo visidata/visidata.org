@@ -13,6 +13,7 @@
 |[fixed](#fixed)|fixed width text    |0\.97            |                |0\.97          |         |                    |                    |
 |[postgres](#postgres)|PostgreSQL database |0\.97            |                |0\.97          |1996     |                    |                    |
 |[vd](#vd)      |VisiData command log|0\.97            |                |0\.97          |2017     |VisiData            |                    |
+|vds           |              |VisiData Sheet      |2\.2             |yes                 |2021     |VisiData            |                    |                    |
 |[mbtiles](#mbtiles)|MapBox Tileset      |0\.98            |                |0\.98          |2011     |MapBox              |mapbox\-vector\-tile|
 |pbf                 |Protocolbuffer Binary Format|0\.98            |                |0\.98          |2011     |OpenStreetMap       |                    |
 |[shp](#shp)    |Shapefile geographic data|0\.98            |                |0\.98          |1993     |ESRI                |pyshp               |
@@ -22,7 +23,7 @@
 |[ttf](#ttf)    |TrueType Font       |1\.1             |                |1\.1           |1991     |Apple               |fonttools           |
 |[dot](#pcap)   |Graphviz diagram    |                 |from pcap       |1\.2           |1991     |                    |                    |
 |dta                 |Stata               |1\.2             |                |1\.2           |1985     |StataCorp           |pandas              |
-|[geojson](#shp)|Geographic JSON     |                 |from shp        |1\.2           |2008     |                    |                    |
+|[geojson](#shp)       |Geographic JSON     |2\.2             |yes \(from shp and geojson\)|2008     |                    |http://geojson\.org/|                    |
 |sas7bdat            |Statistical Analysis System \(SAS\)|1\.2             |                |1\.2           |1976     |SAS Institute       |sas7bdat            |
 |sav                 |SPSS statistics     |1\.2             |                |1\.2           |1968     |SPSS Inc            |                    |
 |spss                |SPSS statistics     |1\.2             |                |1\.2           |1968     |SPSS Inc            |savReaderWriter     |

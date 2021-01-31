@@ -3,7 +3,6 @@ AJ Kerrigan	ajkerrigan	improvements to various VisiData internals
 Anatoli Babenia	abitrolly	support running `python -m visidata`
 Andrea Borruso	aborruso	italian tutorial
 Andreas Motl	amotl	fixes to hdf5 dataset loading
-azjps	azjps	pandas improvements
 Chocolateboy	chocolateboy	clipboard; list aggr; json sort keys
 Daniel Einspanjer	deinspanjer	kblayout, favicon
 David Branner	databranner	docs
@@ -17,11 +16,14 @@ Kate Murphy	Katee	search feel
 Keith Hughitt	khughitt	.gz support; options.disp_float_fmt
 Kovas Palunas	kovasap	sys clipboard paste
 Lucas Messenger	layertwo	pcapng; .jira; open .tar; sparkline
+M Somerville	dracos	geojson
 Paul O'Leary McCann	polm	bugfix wide chars
 Peter Grayson	jpgrayson	.bz2 and .xz
-Rob Carrington	robcarrington	yaml
 Rasmus Scholer	scholer	windows-compatibility
+Rob Carrington	robcarrington	yaml
 Stefan Siegel	ssiegel	bugfix
 Thomas Sibley	tsibley	options.encoding usage; polish to capture-col
 Trent Gill	trentgill	picked great colors
 Vivian Brown	vbrown608	various; pcap
+azjps	azjps	pandas improvements
+	SuRaMoN	improvements to mysql
