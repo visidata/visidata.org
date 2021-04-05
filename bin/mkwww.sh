@@ -96,6 +96,7 @@ build_page about "$WWWSRC"/about.md "Credits and Contributions"
 build_page formats "$WWWSRC"/formats.md "Supported Formats"
 build_page v2.x "$WWWSRC"/v2.x.md "VisiData version 2.0"
 build_page limits "$WWWSRC"/limits.md "VisiData's Limits"
+build_page scrolling "WWWSRC"/scrolling.md "Scrolling Philosophy"
 build_blog
 
 
@@ -107,7 +108,7 @@ build_docs docs
 build_api docs/api
 
 # add manpage
-for ver in v1.5.2 v2.0 ; do
+for ver in v1.5.2 v2.3 ; do
     mkdir -p "$BUILD"/docs/"$ver"/man
     cp "$WWWSRC"/man/"$ver"/index.html "$BUILD"/docs/"$ver"/man
 done
