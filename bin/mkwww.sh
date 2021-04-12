@@ -108,7 +108,7 @@ build_docs docs
 build_api docs/api
 
 # add manpage
-for ver in v1.5.2 v2.3 ; do
+for ver in v1.5.2 v2.0 v2.4 ; do
     mkdir -p "$BUILD"/docs/"$ver"/man
     cp "$WWWSRC"/man/"$ver"/index.html "$BUILD"/docs/"$ver"/man
 done
