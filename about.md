@@ -1,98 +1,37 @@
-# About the Author
+# Creator
 
-My name is [Saul Pwanson](https://www.saul.pw) and I'm a [software architect](https://cionic.com/) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg). I live in Seattle but the terminal is my home.
+My name is [Saul Pwanson](https://www.saul.pw) and I'm a [software engineer](https://saul.pw/resume) and [amateur data sleuth](https://www.youtube.com/watch?v=9aHfK8EUIzg). I live in Seattle but the terminal is my home.
 
-I am building an ecosystem of textpunk powertools. If you love the design of VisiData, [send me an email](mailto:vd@saul.pw); or you can [support me on Patreon](https://www.patreon.com/saulpw) directly.
+<a href="https://www.patreon.com/bePatron?u=13873753" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
-Share and enjoy!
+I am building an [ecosystem of textpunk powertools](https://bluebird.sh). If you love the design of VisiData, [send me an email](mailto:vd@saul.pw) or become a patron with the link above!
 
-## Maintainers
+## Other Maintainers
 
-- [Saul Pwanson](https://www.saul.pw) ([@saulpw](https://github.com/saulpw)) conceived and developed VisiData.
-- [Anja Kefala](https://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) maintains the documentation and packages for all platforms.
+- [Anja Kefala](https://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) fixes the bugs, maintains the documentation, and maintains packages for several distributions.
 
-Thanks also to the following people for their contributions, whether in code, prose, design, evangelism, community, or [cold hard cash](https://www.patreon.com/saulpw):
+## Tutorial Authors
 
-::: {.left .patrons}
+- [Jeremy Singer-Vine]() wrote the [Introduction to VisiData]() (English tutorial)
+- [Andrea Borruso]() wrote the [Italian Tutorial]()
 
-## Patrons
+## Package Maintainers
+
+- [Ryan Prior]() maintains the [guix]() package.
+- The folks at [nixpkgs](https://github.com/NixOS/nixpkgs/issues/48852) maintain the [nix]() package.
+
+## Special Thanks
+
+- [AJ Kerrigan]()
+- [Thomas Sibley]()
+- [Chocolateboy]()
+- and to the people who contribute and maintain [plugins]()
+
+## Corporate Sponsor
 
 [![alt text][image]][hyperlink]
 
 [hyperlink]: https://www.octoberswimmer.com/
 [image]: /sponsors/october-swimmer.png
 
-|patron              |since               |
-|--------------------|--------------------|
-|Mike E\.            |2018\-10            |
-|Tara H\.            |2018\-11            |
-|Andrea B\.          |2018\-12            |
-|Michael T\.         |2018\-12            |
-|Paul M\.            |2018\-12            |
-|Walrus P\-H         |2019\-01            |
-|Mojit M\.           |2019\-01            |
-|Sotiris F\.         |2019\-02            |
-|Lucas M\.           |2019\-02            |
-|James R\.           |2019\-02            |
-|Tim T\.             |2019\-02            |
-|Wouter v\.          |2019\-02            |
-|Russell             |2019\-03            |
-|Christian W\.       |2019\-03            |
-|Nic W\.             |2019\-08            |
-|John G\.            |2019\-09            |
-|Anja K\.            |2019\-09            |
-|AJ K\.              |2019\-10            |
-|Alex V\.            |2019\-11            |
-|Totò F\.            |2019\-12            |
-|Tiago T\.           |2020\-02            |
-|Gerard S\-G\.       |2020\-07            |
-|William P\.         |2020\-07            |
-|Kevin S\.           |2020\-08            |
-|Andrew C\.          |2020\-09            |
-|Stuart A\.          |2020\-09            |
-|Robert W\.          |2020\-10            |
-|Andre L\.           |2020\-10            |
-|Zack M\.            |2020\-10            |
-|Jeremy F\.          |2020\-10            |
-|Jingzhe H\.         |2020\-10            |
-
-:::
-
-::: clear
-
-## Contributors
-
-|author              |github         |contribution                                   |
-|--------------------|---------------|-----------------------------------------------|
-|AJ Kerrigan         |ajkerrigan     |improvements to various VisiData internals     |
-|Anatoli Babenia     |abitrolly      |support running \`python \-m visidata\`        |
-|Andrea Borruso      |aborruso       |italian tutorial                               |
-|Andreas Motl        |amotl          |fixes to hdf5 dataset loading                  |
-|Chocolateboy        |chocolateboy   |clipboard; list aggr; json sort keys           |
-|Daniel Einspanjer   |deinspanjer    |kblayout, favicon                              |
-|David Branner       |databranner    |docs                                           |
-|Elias Dorneles      |eliasdorneles  |svg                                            |
-|James Routley       |jamesroutley   |option name design                             |
-|Jan Hermann         |azag0          |\-f filetype                                   |
-|Jeff Arn            |repjarms       |website                                        |
-|Jeremy Singer\-Vine |jsvine         |english tutorial                               |
-|John Kiely          |jkiely         |yaml                                           |
-|Kate Murphy         |Katee          |search feel                                    |
-|Keith Hughitt       |khughitt       |\.gz support; options\.disp\_float\_fmt        |
-|Kovas Palunas       |kovasap        |sys clipboard paste                            |
-|Lucas Messenger     |layertwo       |pcapng; \.jira; open \.tar; sparkline          |
-|M Somerville        |dracos         |geojson                                        |
-|Paul O'Leary McCann |polm           |bugfix wide chars                              |
-|Peter Grayson       |jpgrayson      |\.bz2 and \.xz                                 |
-|Rasmus Scholer      |scholer        |windows\-compatibility                         |
-|Rob Carrington      |robcarrington  |yaml                                           |
-|Stefan Siegel       |ssiegel        |bugfix                                         |
-|Thomas Sibley       |tsibley        |options\.encoding usage; polish to capture\-col|
-|Trent Gill          |trentgill      |picked great colors                            |
-|Vivian Brown        |vbrown608      |various; pcap                                  |
-|azjps               |azjps          |pandas improvements                            |
-|                    |SuRaMoN        |improvements to mysql                          |
-
-
-:::
-
+Many thanks to Christian Warden and October Swimmer for their ongoing support and sponsorship.

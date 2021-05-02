@@ -1,5 +1,12 @@
 # Release History
 
+* [v2.4](/blog/2021/v2.4) (2021-04-11)
+* [v2.3](/blog/2021/v2.3) (2021-04-04)
+* [v2.2](/blog/2021/v2.2) (2021-01-30)
+* [v2.1.1](/blog/2021/v2.1.1) (2021-01-03)
+* [v2.1](/blog/2020/v2.1) (2020-12-06)
+* [v2.0](/blog/2020/v2.0) (2020-10-14)
+
 * [v1.5.2](https://github.com/saulpw/visidata/releases/tag/v1.5.2) (2019-01-12)
 * [v1.5.1](https://github.com/saulpw/visidata/releases/tag/v1.5.1) (2018-12-17)
 * [v1.5](https://github.com/saulpw/visidata/releases/tag/v1.5) (2018-11-02)
