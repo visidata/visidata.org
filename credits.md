@@ -12,19 +12,19 @@ I am building an [ecosystem of textpunk powertools](https://bluebird.sh). If you
 
 ## Tutorial Authors
 
-- [Jeremy Singer-Vine]() wrote the [Introduction to VisiData]() (English tutorial)
-- [Andrea Borruso]() wrote the [Italian Tutorial]()
+- [Jeremy Singer-Vine](https://www.jsvine.com/) wrote the [Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html) (English tutorial)
+- [Andrea Borruso](https://github.com/aborruso) wrote the [Italian Tutorial](https://github.com/ondata/guidaVisiData/tree/master/testo)
 
 ## Package Maintainers
 
-- [Ryan Prior]() maintains the [guix]() package.
-- The folks at [nixpkgs](https://github.com/NixOS/nixpkgs/issues/48852) maintain the [nix]() package.
+- [Ryan Prior](https://www.ryanprior.com/) maintains the [Guix](https://guix.gnu.org/packages/visidata-2.4/) package.
+- The folks at [nixpkgs](https://github.com/NixOS/nixpkgs/issues/48852) maintain the [NixOS](https://nixos.org/) package.
 
 ## Special Thanks
 
-- [AJ Kerrigan]()
-- [Thomas Sibley]()
-- [Chocolateboy]()
+- [AJ Kerrigan](https://github.com/ajkerrigan)
+- [Thomas Sibley](https://tsibley.net/)
+- [Chocolateboy](https://github.com/chocolateboy)
 - and to the people who contribute and maintain [plugins]()
 
 ## Corporate Sponsor
