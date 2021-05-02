@@ -2,13 +2,13 @@ These packages all support csv, tsv, fixed-width text, json, and sqlite, at mini
 
 # Windows
 
-[Download Windows 64-bit .exe](/install/VisiData-v2.4.exe) (8MB)
+<!-- [Download Windows 64-bit .exe](/install/VisiData-v2.4.exe) (8MB)
 
 Put this file on your desktop, and drop a .csv (or any other supported file format) onto it.
 
-If you use VisiData a lot, you may want to buy [VisiData Max]() which can load Excel (xls) spreadsheets and Google Sheets and many other formats.
+If you use VisiData a lot, you may want to buy [VisiData Max]() which can load Excel (xls) spreadsheets and Google Sheets and many other formats. -->
 
-Or you can use [Windows Subsystem for Linux]() (WSL) and use the Conda or Python methods below.
+You can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or use the Conda or Python methods below.
 
 # MacOS
 
