@@ -1,6 +1,6 @@
 #path	url
 /motd-*	https://motd.visidata.org/motd-:splat
-/credits	/about
+/about	/credits
 /podcast	/blog/2019/python-init
 /usage.tsv	https://motd.visidata.org/usage.tsv
 /usage-monthly.tsv	https://motd.visidata.org/usage-monthly.tsv
