@@ -1,0 +1,40 @@
+{
+    "name": "VisiData",
+    "slogan": "",
+    "url": "",
+    "author":
+    {
+        "name": "Luke",
+        "email": "hire@luke.work",
+        "handle": "@lkhrs",
+        "avatar": "/images/blog/author.jpg"
+    },
+    "images":
+    {
+        "logo": "/images/svg/logo.svg",
+        "favicon": "/images/favicon.ico",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links":
+    {
+        "facebook": "https://www.facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+    "address":
+    {
+        "street": "123 Fake Street",
+        "street_2": "Fake Road",
+        "city": "Corpus Christi",
+        "state": "Texas",
+        "zipcode": "123456",
+        "country": "USA"
+    },
+    "contact":
+    {
+        "phone": "123 456 789",
+        "mobile": "",
+        "email": "example@example.com"
+    }
+}

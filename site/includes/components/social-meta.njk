@@ -1,0 +1,19 @@
+{# Open Graph #}
+<meta property="og:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
+<meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+<meta property="og:image" content="{% if coverImage %}{{ site.url }}{{ page.url }}images/{{ coverImage }}{% else %}{{ site.url }}{{ site.images.og }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+{# Google Schema #}
+<meta itemprop="name" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
+<meta itemprop="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+<meta itemprop="image" content="{% if coverImage %}{{ site.url }}{{ page.url }}images/{{ coverImage }}{% else %}{{ site.url }}{{ site.images.og }}{% endif %}">
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}">
+<meta name="twitter:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+<meta name="twitter:site" content="{{ site.author.handle }}">
+<meta name="twitter:creator" content="{{ site.author.handle }}">
+<meta name="twitter:image:src" content="{% if coverImage %}{{ site.url }}{{ page.url }}images/{{ coverImage }}{% else %}{{ site.url }}{{ site.images.twitter }}{% endif %}">
