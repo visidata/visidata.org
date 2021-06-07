@@ -1,3 +1,7 @@
+## Preview
+
+[visidata.pages.dev](https://visidata.pages.dev)
+
 ## Building and Running 
 
 **Install**
@@ -10,4 +14,4 @@ Run `npm run dev`
 
 **Production:**
 
-Run `npm run build` 
+Run `npm run build`
