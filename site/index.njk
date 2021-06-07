@@ -3,38 +3,9 @@ layout: default
 meta_description: This is a functional template built on 11ty and TailwindCSS
 body_class: home
 eleventyComputed:
-  title: "Welcome to {{ site.name }}!"
+title: "Welcome to {{ site.name }}!"
 ---
-
-<main id="main" class="flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
-
-    <section id="container" class="flex-1" aria-label="Summary and features">
-
-        <h1 class="page-title">{{ title }}</h1>
-
-        <div class="content">
-
-            <h2>A boilerplate template built with <a href="https://www.11ty.dev/docs/">Eleventy</a> and <a href="https://tailwindcss.com">TailwindCSS</a>.</h2>
-            <p>Based on <a href="https://github.com/josephdyer/skeleventy" target="_blank">Skeleventy</a>, I wanted a simple boilerplate that included the latest version of Tailwind and was easy to update. </p>
-            
-            <h2>Features</h2>
-            <ul>
-                <li>A vanilla TailwindCSS setup with PostCSS and purge</li>
-                <li><a href="https://github.com/liamfiddler/eleventy-plugin-lazyimages">eleventy-plugin-lazyimages</a> for nice lazy image loading</li>
-                <li>Logo configurable in <code>eleventy.config.js</code>, will show text if logo.svg is removed from config</li>
-                <li>Site title configurable in <code>eleventy.config.js</code></li>
-                <li>Nav configurable in <code>site/globals/navigation.json</code></li>
-                <li>Use of <code>@apply</code> in <code>styles/tailwind.css</code> for sane defaults.</li>
-                <li>Alpine.js</li>
-                <li>Optimized lazy-loaded images webp first with a jpeg fallback (throw in a 10mb file and don't worry about it!)</li>
-                <li>And ~ Responsive Images ~ in 2 sizes. Huge difference in file sizes on mobile compared to desktop.</li>
-            </ul>
-        </div>
-        <div class="">
-            {% image "./images/test.jpg", "alt text" %}
-        </div>
+<main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
+    <section class="" aria-label="Hero">
     </section>
-
 </main>
-
-
