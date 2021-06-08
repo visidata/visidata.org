@@ -2,7 +2,7 @@
     <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
         {% for item in navigation.main %}
         <li class="level-1 mb-4 md:mr-4 md:mb-0">
-            <a href="{{ item.url | safe }}" class="link font-bold hover:text-gray-500 active:text-gray-500 {% if page.url == item.url %}active text-gray-500{% endif %}
+            <a href="{{ item.url | safe }}" class="link p-2 font-bold hover:text-brand-primary active:text-brand-primary {% if page.url == item.url %}active text-brand-primary{% endif %}
             " {% if page.url==item.url %} aria-current="page" {% endif %} {{ item.attr }}>{{ item.label }}</a>
         </li>
         {% endfor %}
