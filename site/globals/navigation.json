@@ -1,20 +1,24 @@
 {
     "main": [
-        {
-            "label": "Home",
-            "url": "/"
-        },
-        {
-            "label": "About",
-            "url": "/about/"
-        },
-        {
-            "label": "Blog",
-            "url": "/blog/"
-        },
-        {
-            "label": "Contact",
-            "url": "/contact/"
-        }
-    ]
+    {
+        "label": "Docs",
+        "url": "/docs/"
+    },
+    {
+        "label": "Releases",
+        "url": "/releases/"
+    },
+    {
+        "label": "Credits",
+        "url": "/credits/"
+    },
+    {
+        "label": "Blog",
+        "url": "/blog/"
+    },
+    {
+        "label": "GitHub",
+        "url": "https://github.com/saulpw/visidata",
+        "attr": "target='_blank' rel='noopener'"
+    }]
 }
