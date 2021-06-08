@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const eleventyGoogleFonts = require("eleventy-google-fonts");
 
 module.exports = function(eleventyConfig) {
     // // Set Browsersync options
@@ -71,6 +72,8 @@ module.exports = function(eleventyConfig) {
         "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
     });
     // Plugins
+
+    eleventyConfig.addPlugin(eleventyGoogleFonts);
 
     // Eleventy-img config
 
