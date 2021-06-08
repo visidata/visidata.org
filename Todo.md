@@ -7,8 +7,6 @@
 		+ Need better design
 	- CTA for Patreon - Small full-width banner with button?
 	- Info columns
-		+ Releases
-		+ Blog posts
 		+ Getting started
 			* Docs
 			* Quick Reference
@@ -16,10 +14,11 @@
 			* Video case studies
 			* Lightning Demo
 			* 10 Ways to Use VisiData
+		+ Releases
+		+ Blog posts
 * VisiData+ landing page
 * Docs pages
 	- Quick reference(s)
-	- 
 * Releases and posts page
 * Credits page
 * Blog and posts
