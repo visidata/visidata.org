@@ -21,8 +21,9 @@ h1 {
 h2 {
   @apply text-2xl;
 }
-h1, h2 {
-  @apply font-bold;
+h1, h2, h3 {
+  @apply font-black;
+  font-family: "Inconsolata", sans-serif;
 }
 h1, h2, p {
   @apply mb-4;
@@ -39,11 +40,21 @@ code {
 a {
   @apply transition duration-300 ease-in-out;
 }
+.nav a, .mobile-nav a {
+  font-family: "Inconsolata", sans-serif;
+}
 #container {
  @apply max-w-4xl px-4 mx-auto;
 }
 #container-wide {
   @apply max-w-6xl px-4 mx-auto;
+}
+.button {
+  @apply border-none mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-110 text-white transition duration-300 ease-in-out transform hover:shadow-md;
+  font-family: "Inconsolata", sans-serif;
+}
+.button-outline {
+  @apply bg-white border-4 border-solid border-brand-primary text-brand-primary py-2;
 }
 
 .google-maps {
@@ -63,7 +74,4 @@ a {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  }
-  .button {
-    @apply border-none mt-5 md:mt-0 inline-block rounded-full py-3 px-6 font-bold bg-gray-500 hover:bg-gray-400 hover:scale-110 text-white transition duration-300 ease-in-out transform hover:shadow-md;
   }
