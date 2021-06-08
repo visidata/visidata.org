@@ -6,6 +6,13 @@ eleventyComputed:
 title: "Welcome to VisiData!"
 ---
 <main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
-    <section class="" aria-label="Hero">
+    <section id="container-wide" class="py-10 md:py-20 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center" aria-label="Hero">
+        <div>
+            <h1>Data exploration at your fingertips.</h1>
+            <p>VisiData is an interactive multitool for tabular data. It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.</p>
+        </div>
+        <div class="rounded-2xl bg-gray-100 p-10">
+            {% image "images/map-colours.png", "Screenshot of a map in VisiData" %}
+        </div>
     </section>
 </main>
