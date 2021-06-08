@@ -1,8 +1,3 @@
 <a class="block font-bold text-2xl md:text-3xl hover:text-gray-500" href="/" title="{{ site.name}} home">
-    {% if 'logo.svg' in site.images.logo %}
-        <img class="h-24 w-24" src="{{ site.images.logo }}"
-            alt="{{site.name}} logo">
-        {% else %}
-        {{ site.name }}
-    {% endif %}
+    <figure class="w-72">{% image "images/vdlogo.png", "VisiData logo" %}</figure>
 </a>
