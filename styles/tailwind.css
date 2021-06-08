@@ -43,6 +43,9 @@ a {
 .nav a, .mobile-nav a {
   font-family: "Inconsolata", sans-serif;
 }
+.font-brand {
+  font-family: "Inconsolata", sans-serif;
+}
 #container {
  @apply max-w-4xl px-4 mx-auto;
 }
