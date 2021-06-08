@@ -1,7 +1,7 @@
 {
     "name": "VisiData",
     "slogan": "",
-    "url": "",
+    "url": "https://visidata.org",
     "author":
     {
         "name": "Luke",
@@ -11,8 +11,8 @@
     },
     "images":
     {
-        "logo": "/images/svg/logo.svg",
-        "favicon": "/images/favicon.ico",
+        "logo": "/images/vdlogo.png",
+        "favicon": "/images/icons/favicon.ico",
         "twitter": "/images/meta/twitter.jpg",
         "og": "/images/meta/og.jpg"
     },
