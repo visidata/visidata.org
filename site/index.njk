@@ -2,7 +2,7 @@
 layout: default
 meta_description: Command-line interactive multitool for tabular data.
 body_class: home
-title: "Home"
+title: "Tabular data multitool"
 ---
 <main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
     <section id="container-wide" class="py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center" aria-label="Hero">
@@ -18,7 +18,9 @@ title: "Home"
     </section>
     <section id="container" class="py-10 px-4" aria-label="Command Demo">
         <div class="rounded-2xl bg-gray-100 p-10">
-            <noscript><p class="font-bold text-center">This demo requires JavaScript to be enabled.</p></noscript>
+            <noscript>
+                <p class="font-bold text-center">This demo requires JavaScript to be enabled.</p>
+            </noscript>
             When you have <select class="rounded bg-gray-50 border-0" id="infmt">
                 <option value="input.csv" selected="selected">comma-separated values (CSV)</option>
                 <option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
@@ -85,6 +87,22 @@ title: "Home"
             outfmt.addEventListener('change', display);
             display();
             </script>
+        </div>
+    </section>
+    <section id="container-wide" class="py-10 px-4" aria-label="Command Demo">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="p-5 rounded-2xl bg-gray-100">
+                {% image "images/basic-screenshot.png", "" %}
+            </div>
+            <div class="p-5 rounded-2xl bg-gray-100">
+                {% image "images/freq-move-row.gif", "" %}
+            </div>
+            <div class="p-5 rounded-2xl bg-gray-100">
+                {% image "images/map-colours.png", "" %}
+            </div>
+            <div class="p-5 rounded-2xl bg-gray-100">
+                {% image "images/scatterplot-usage.png", "" %}
+            </div>
         </div>
     </section>
 </main>
