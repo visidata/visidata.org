@@ -4,9 +4,9 @@
     "url": "https://visidata.org",
     "author":
     {
-        "name": "Luke",
-        "email": "hire@luke.work",
-        "handle": "@lkhrs",
+        "name": "Saul",
+        "email": "",
+        "handle": "@VisiData",
         "avatar": "/images/blog/author.jpg"
     },
     "images":
@@ -18,9 +18,8 @@
     },
     "social_links":
     {
-        "facebook": "https://www.facebook.com",
-        "twitter": "https://twitter.com",
-        "linkedin": "https://www.linkedin.com"
+        "twitter": "https://twitter.com/visidata",
+        "github": "https://github.com/visidata"
     },
     "address":
     {
