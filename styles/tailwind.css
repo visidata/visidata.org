@@ -7,7 +7,7 @@
 /* Colors */
 
 p a {
-  @apply border-gray-300;
+  @apply border-brand-primary;
 }
 code {
   @apply bg-gray-300 px-1;
