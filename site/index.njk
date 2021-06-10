@@ -18,7 +18,7 @@ title: "Home"
     </section>
     <section id="container" class="py-10 px-4" aria-label="Command Demo">
         <div class="rounded-2xl bg-gray-100 p-10">
-            When you have <select id="infmt">
+            When you have <select class="rounded bg-gray-50 border-0" id="infmt">
                 <option value="input.csv" selected="selected">comma-separated values (CSV)</option>
                 <option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
                 <option value="input.log">structured log file</option>
@@ -44,7 +44,7 @@ title: "Home"
                 <option value="">any kind of tabular data</option>
             </select>
             but you need
-            <select id="outfmt">
+            <select class="rounded bg-gray-50 border-0" id="outfmt">
                 <option value="" selected="selected">a delightful terminal interface</option>
                 <option value="">to explore the data quickly</option>
                 <option value=" # 'Shift+F' on any column">to get some quick insights</option>
@@ -62,9 +62,10 @@ title: "Home"
                 <option value="-b -o output.md">Markdown</option>
                 <option value="-b -o output.jira">Markdown (org-mode) </option>
                 <option value="-b -o output.npy">Numpy (.npy) file</option>
-            </select>:
-            <p id="cmdouter">
-                <code id="cmdline">
+            </select>
+            <p id="cmdouter" class="mt-5 block w-full p-5 text-xl rounded-2xl bg-brand-dark text-white">
+                <span class="select-none font-mono">$</span>
+                <code id="cmdline" class="bg-transparent">
                     vd -b input.csv
                 </code>
             </p>
