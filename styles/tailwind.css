@@ -10,7 +10,7 @@ p a {
   @apply border-gray-300;
 }
 code {
-  @apply bg-gray-300;
+  @apply bg-gray-300 px-1;
 }
 
 /* Some defaults for styling.  */
