@@ -16,8 +16,8 @@ title: "Open-source data multitool"
             {% image "images/map-colours.png", "Screenshot of a map in VisiData" %}
         </div>
     </section>
-    <section id="container" class="py-10 px-4" aria-label="Command Demo">
-        <div class="rounded-2xl bg-gray-100 p-5">
+    <section id="container-wide" class="py-10 grid grid-cols-1 md:grid-cols-4 gap-5" aria-label="Command Demo">
+        <div class="rounded-2xl bg-gray-100 p-5 md:col-span-3">
             <noscript>
                 <p class="font-bold text-center">This demo requires JavaScript to be enabled.</p>
             </noscript>
@@ -88,6 +88,10 @@ title: "Open-source data multitool"
             display();
             </script>
         </div>
+        <div class="col-span-1 rounded-2xl bg-gray-100 p-5">
+            <h2>Support us on Patreon</h2>
+            <p><a class="button" href="https://www.patreon.com/bePatron?u=13873753" target="_blank" rel="noopener">Become a Patron →</a></p>
+        </div>
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Command Demo">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -127,7 +131,7 @@ title: "Open-source data multitool"
                     {% image "images/scatterplot-usage.png", "" %}
                 </div>
             </div>
-            <div class="p-5 rounded-2xl bg-gradient-to-br from-brand-primary via-purple-800 to-purple-900 text-white flex flex-col items-start font-bold gap-2">
+            <div class="row-span-2 p-5 rounded-2xl bg-gradient-to-br from-brand-primary via-purple-800 to-purple-900 text-white flex flex-col items-start font-bold gap-2">
                 <h2>Get started with VisiData</h2>
                 <a href="/install/">Install →</a>
                 <a href="/man/">Quick Reference Guide →</a>
