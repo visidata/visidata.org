@@ -2,12 +2,12 @@
 
 * Home page
 	- ~~Hero~~
-	- Command demo dropdowns
-	- Screenshots of features
-		+ Need better design
-	- CTA for Patreon - Small full-width banner with button?
+	- ~~Command demo dropdowns~~
+	- ~~Screenshots of features~~
+		+ ~~Need better design~~
+	- ~~CTA for Patreon - Small full-width banner with button?~~
 	- Info columns
-		+ Getting started
+		+ ~~Getting started~~
 			* Docs
 			* Quick Reference
 			* jsvine tutorial
