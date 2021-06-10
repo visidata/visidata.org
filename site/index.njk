@@ -6,18 +6,18 @@ title: "Tabular data multitool"
 ---
 <main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
     <section id="container-wide" class="py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center" aria-label="Hero">
-        <div>
+        <div class="p-5">
             <h1 class="md:text-5xl">Data exploration at your fingertips.</h1>
             <p>VisiData is an interactive multitool for tabular data. It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.</p>
             {% include 'components/ctabutton.njk' %}
             <a href="/docs/" class="button button-outline ml-5">Docs</a>
         </div>
-        <div class="rounded-2xl bg-gray-100 p-10">
+        <div class="rounded-2xl bg-gray-100 p-5">
             {% image "images/map-colours.png", "Screenshot of a map in VisiData" %}
         </div>
     </section>
     <section id="container" class="py-10 px-4" aria-label="Command Demo">
-        <div class="rounded-2xl bg-gray-100 p-10">
+        <div class="rounded-2xl bg-gray-100 p-5">
             <noscript>
                 <p class="font-bold text-center">This demo requires JavaScript to be enabled.</p>
             </noscript>
@@ -90,18 +90,42 @@ title: "Tabular data multitool"
         </div>
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Command Demo">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="p-5 rounded-2xl bg-gray-100">
-                {% image "images/basic-screenshot.png", "" %}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="p-5 rounded-2xl bg-gray-100 flex flex-col">
+                <div class="flex-grow">
+                    <h2>Any data format</h2>
+                    <p>Open 1m+ rows in the blink of an eye.</p>
+                </div>
+                <div class="flex-grow-0">
+                    {% image "images/basic-screenshot.png", "" %}
+                </div>
             </div>
             <div class="p-5 rounded-2xl bg-gray-100">
-                {% image "images/freq-move-row.gif", "" %}
+                <div class="flex-grow">
+                    <h2>Instant histogram with <code class="break-normal">Shift + F</code></h2>
+                    <p>Press <code>Enter</code> to dive in.</p>
+                </div>
+                <div class="flex-grow-0">
+                    {% image "images/freq-move-row.gif", "" %}
+                </div>
             </div>
             <div class="p-5 rounded-2xl bg-gray-100">
-                {% image "images/map-colours.png", "" %}
+                <div class="flex-grow">
+                    <h2>Scatterplots in the terminal</h2>
+                    <p>8-color maps.</p>
+                </div>
+                <div class="flex-grow-0">
+                    {% image "images/map-colours.png", "" %}
+                </div>
             </div>
             <div class="p-5 rounded-2xl bg-gray-100">
-                {% image "images/scatterplot-usage.png", "" %}
+                <div class="flex-grow">
+                    <h2>Save sessions for replay later</h2>
+                    <p>Adhoc data pipelines in batch mode.</p>
+                </div>
+                <div class="flex-grow-0">
+                    {% image "images/scatterplot-usage.png", "" %}
+                </div>
             </div>
         </div>
     </section>
