@@ -16,6 +16,10 @@
 			* 10 Ways to Use VisiData
 		+ Releases
 		+ Blog posts
+	- Fix demo breakpoints on mobile
+	- Add asciinema videos instead of screenshots?
+	- Change screenshot boxes to 2x2 grid?
+	- Move "Getting Started" box to Blog/Releases row?
 * VisiData+ landing page
 * Docs pages
 	- Quick reference(s)
@@ -23,11 +27,15 @@
 * Credits page
 * Blog and posts
 * Install page
-* General layout
+* General layout and design
 	- Nav
 		+ Search, potentially powered by Algolia
 		+ Hover effects for nav items
+		+ No-JS mobile menu
 	- Footer
 		+ Sponsor logos above footer
 		+ Footer navigation links
 		+ Social icon(s) - Twitter, GitHub
+	- Styling
+		- Change button hover effect
+		- Change primary color?
