@@ -59,6 +59,9 @@ a {
 .button-outline {
   @apply bg-white border-4 border-solid border-brand-primary text-brand-primary py-2;
 }
+.patreon {
+  background-color: #ff424d;
+}
 
 .google-maps {
   position: relative;
