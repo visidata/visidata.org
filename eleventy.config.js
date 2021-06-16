@@ -41,25 +41,43 @@ module.exports = function(eleventyConfig) {
     // Collections
     eleventyConfig.addCollection('blog', collection => {
 
-        const blogs = collection.getFilteredByTag('blog')
+            const blogs = collection.getFilteredByTag('blog')
 
-        for (let i = 0; i < blogs.length; i++) {
+            for (let i = 0; i < blogs.length; i++) {
 
-            const prevPost = blogs[i - 1]
-            const nextPost = blogs[i + 1]
+                const prevPost = blogs[i - 1]
+                const nextPost = blogs[i + 1]
 
-            blogs[i].data["prevPost"] = prevPost
-            blogs[i].data["nextPost"] = nextPost
+                blogs[i].data["prevPost"] = prevPost
+                blogs[i].data["nextPost"] = nextPost
 
-        }
+            }
 
-        return blogs.reverse()
+            return blogs.reverse()
 
-    })
+        }),
+        eleventyConfig.addCollection('docs', collection => {
+
+            const docs = collection.getFilteredByTag('docs')
+
+            for (let i = 0; i < docs.length; i++) {
+
+                const prevPost = docs[i - 1]
+                const nextPost = docs[i + 1]
+
+                docs[i].data["prevPost"] = prevPost
+                docs[i].data["nextPost"] = nextPost
+
+            }
+
+            return docs.reverse()
+
+        })
 
     // Layout aliases
     eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+    eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy("js")
