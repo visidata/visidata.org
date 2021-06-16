@@ -53,7 +53,7 @@ a {
   @apply max-w-6xl px-4 mx-auto;
 }
 .button {
-  @apply border-none mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-110 text-white transition duration-300 ease-in-out transform hover:shadow-md;
+  @apply border-none mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 text-white transition duration-150 ease-in-out transform hover:shadow;
   font-family: "Inconsolata", sans-serif;
 }
 .button-outline {
