@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="/style.css" />
     {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap' %}
     {# include scripts #}
-    <script src="/js/alpine.js" defer></script>
     {# include social meta tags #}
     {% include "components/social-meta.njk" %}
     {# include static assets e.g. favicon, fonts etc #}
@@ -29,8 +28,6 @@
     <div id="wrapper" class="flex flex-col relative min-h-screen">
         {# include header #}
         {% include "components/header.njk" %}
-        {# include mobile nav #}
-        {% include "components/mobile-nav.njk" %}
         {# include content #}
         {{ content | safe }}
         {# include footer #}
