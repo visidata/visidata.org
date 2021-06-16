@@ -16,7 +16,7 @@
 			* 10 Ways to Use VisiData
 		+ Releases
 		+ Blog posts
-	- Fix demo breakpoints on mobile
+	- ~~Fix demo breakpoints on mobile~~
 	- Add asciinema videos instead of screenshots?
 	- Change screenshot boxes to 2x2 grid?
 	- Move "Getting Started" box to Blog/Releases row?
