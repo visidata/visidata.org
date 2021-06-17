@@ -23,9 +23,10 @@
 * VisiData+ landing page
 * Docs pages
 	- Quick reference(s)
-* Releases and posts page
-* Credits page
-* Blog and posts
+* Blog posts page
+* Releases post page
+* ~~Credits page~~
+* ~~Blog posts~~
 * Install page
 * General layout and design
 	- Nav
@@ -33,9 +34,9 @@
 		+ Hover effects for nav items
 		+ No-JS mobile menu
 	- Footer
-		+ Sponsor logos above footer
+		+ ~~Sponsor logos above footer~~
 		+ Footer navigation links
-		+ Social icon(s) - Twitter, GitHub
+		+ ~~Social icon(s) - Twitter, GitHub~~
 	- Styling
 		- Change button hover effect
 		- Change primary color?
