@@ -6,8 +6,8 @@
 
 /* Colors */
 
-p a {
-  @apply border-brand-primary;
+p a, article a {
+  @apply border-brand-primary border-b-2;
 }
 code {
   @apply bg-gray-300 px-1;
