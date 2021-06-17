@@ -23,7 +23,7 @@ h2 {
 }
 h1, h2, h3 {
   @apply font-black;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 h1, h2, p {
   @apply mb-4;
@@ -41,10 +41,10 @@ a {
   @apply transition duration-300 ease-in-out;
 }
 .nav a, .mobile-nav a {
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 .font-brand {
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 #container {
  @apply max-w-4xl px-4 mx-auto;
@@ -54,7 +54,7 @@ a {
 }
 .button {
   @apply border-none mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 text-white transition duration-150 ease-in-out transform hover:shadow;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 .button-outline {
   @apply bg-white border-4 border-solid border-brand-primary text-brand-primary py-2;
