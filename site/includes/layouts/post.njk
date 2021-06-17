@@ -46,9 +46,9 @@ layout: default
             {% endif %}
         </div>
         <div class="mt-16 md:px-16">
-            <div class="flex justify-between mt-16 border-t border-gray-200 pt-12">
-                {% if prevPost %}<p class="text-gray-700 text-sm"><span>Previous:</span> <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></p>{% endif %}
-                {% if nextPost %}<p class="text-gray-700 text-sm"><span>Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+            <div class="flex justify-between flex-col md:flex-row text-center gap-5 mt-16 border-t border-gray-200 pt-12">
+                {% if prevPost %}<p class="text-sm w-full md:text-left"><a class="border-b-2" href="{{ prevPost.url }}">← {{ prevPost.data.title }}</a></p>{% endif %}
+                {% if nextPost %}<p class="text-sm w-full md:text-right"><a class="border-b-2" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a></p>{% endif %}
             </div>
         </div>
     </article>
