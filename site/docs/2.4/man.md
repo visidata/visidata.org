@@ -1,5 +1,6 @@
 ---
-title: Install VisiData
+title: Quick Reference Guide
+permalink: /man/
 ---
 <pre id="manpage" class="break-words">
 vd(1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Quick Reference Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        vd(1)
