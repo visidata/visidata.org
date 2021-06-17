@@ -1,6 +1,11 @@
+---
+title: "Version 1.2 released; video #4 describes a major new feature"
+date: 2018-05-03
+tags:
+    - blog
+---
 [originally published as TinyLetter #11]
 
-# Version 1.2 released; video #4 describes a major new feature
 
 Hello VisiDaters!
 

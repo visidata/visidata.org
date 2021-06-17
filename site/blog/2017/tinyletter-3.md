@@ -1,6 +1,11 @@
+---
+title: "VisiData v0.98 preview: Graphs"
+date: 2017-11-06
+tags:
+    - blog
+---
 [originally published as TinyLetter #3]
 
-# VisiData v0.98 preview: Graphs
 
 Hello VisiDaters,
 

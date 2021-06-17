@@ -1,6 +1,10 @@
+---
+title: The very last VisiData TinyLetter!
+date: 2018-12-26
+tags:
+    - blog
+---
 [originally published as TinyLetter #16]
-
-# The very last VisiData TinyLetter!
 
 Hello VisiData enthusiast,
 

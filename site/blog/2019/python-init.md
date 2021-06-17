@@ -1,6 +1,8 @@
 ﻿---
 title: Exploratory Data Analysis Made Easy At The Command Line - Episode 230
 date: 2019-10-30
+tags:
+	- blog
 ---
 
 This is an edited transcript of an interview about VisiData in this [episode of Python.\_\_init\_\_](https://www.pythonpodcast.com/visidata-exploratory-data-analysis-episode-230/).

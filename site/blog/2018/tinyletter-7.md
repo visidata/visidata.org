@@ -1,6 +1,10 @@
+---
+title: "VisiData 1.1 released: menus and more"
+date: 2018-03-06
+tags:
+    - blog
+---
 [originally written as TinyLetter #7]
-
-# VisiData 1.1 released: menus and more
 
 Hello fellow textpunks,
 

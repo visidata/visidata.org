@@ -1,6 +1,11 @@
+---
+title: "VisiData Case Study #1 released on Youtube"
+date: 2018-04-02
+tags:
+    - blog
+    - Case Study
+---
 [originally published as TinyLetter #8]
-
-# VisiData Case Study #1 released on Youtube
 
 Hello everyone,
 

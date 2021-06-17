@@ -1,6 +1,10 @@
+---
+title: "Version 1.3.1 released; is this the last TinyLetter?"
+date: 2018-08-31
+tags:
+    - blog
+---
 [originally published as TinyLetter #15]
-
-# Version 1.3.1 released; is this the last TinyLetter?
 
 Hello VisiDaters!
 

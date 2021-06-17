@@ -1,6 +1,11 @@
+---
+title: "VisiData v0.98 has been released!"
+date: 2017-11-24
+tags:
+    - blog
+---
 [originally published as TinyLetter #4]
 
-# VisiData v0.98 has been released!
 
 Hello all,
 

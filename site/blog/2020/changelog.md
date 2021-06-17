@@ -1,4 +1,10 @@
-# "VisiData is like duct tape for your data", an interview with Saul
+---
+title: "'VisiData is like duct tape for your data', an interview with Saul"
+date: 2020-05-16
+author: Anja Boskovic
+tags:
+    - blog
+---
 
 Saul was recently interviewed on [The Changelog](https://changelog.com) podcast!
 
@@ -13,5 +19,3 @@ Next, he talked about our collaboration in creating the [biograph framework](htt
 In the second half, he talks about the side-effects of offering VisiData as a gift to the world. Open-sourcing software involves much more than just posting your code to a GitHub repository. There are insecurities, cultural practices, and responsibilities that come with it.
 
 I hope you enjoy the interview! I really did.
-
-[written by Anja Boskovic 2020-05-16]

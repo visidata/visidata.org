@@ -1,6 +1,11 @@
+---
+title: "PyCon2018 and Video #5"
+date: 2018-05-19
+tags:
+    - blog
+---
 [originally published as TinyLetter #12]
 
-# PyCon2018 and Video #5
 
 Greetings VisiDaters!
 

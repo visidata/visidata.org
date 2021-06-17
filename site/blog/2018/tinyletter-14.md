@@ -1,6 +1,12 @@
+---
+title: I'll show you my .visidatarc if you show me yours
+date: 2018-07-24
+tags:
+    - blog
+---
+
 [originally published as TinyLetter #14]
 
-# I'll show you my .visidatarc if you show me yours
 
 Yo VisiDaters,
 

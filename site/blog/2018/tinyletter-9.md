@@ -1,6 +1,12 @@
-[originally published as TinyLetter #9]
+---
+title: "VisiData Case Study #2: save selected cities from a csv in json format"
+date: 2018-04-09
+tags:
+    - blog
+    - Case Study
+---
 
-# VisiData Case Study #2: save selected cities from a csv in json format
+[originally published as TinyLetter #9]
 
 Hello,
 

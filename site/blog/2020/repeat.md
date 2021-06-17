@@ -1,4 +1,9 @@
-# New Features: repeat-last and repeat-input
+---
+title: "New Features in 2.-3: repeat-last and repeat-input"
+date: 2020-02-09
+tags:
+    - blog
+---
 
 Onto the `develop` branch, we have pushed two new commands: `repeat-last` and `repeat-input`.
 

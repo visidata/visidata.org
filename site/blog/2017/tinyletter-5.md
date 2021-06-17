@@ -1,6 +1,11 @@
+---
+title: "VisiData v0.99 released; last stop before 1.0"
+date: 2017-12-26
+tags:
+    - blog
+---
 [originally published as TinyLetter #5]
 
-# VisiData v0.99 released; last stop before 1.0 
 
 Hello fellow VisiDataists,
 

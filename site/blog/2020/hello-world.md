@@ -1,4 +1,9 @@
-# Hello world!
+---
+title: Hello World!
+date: 2020-01-19
+tags:
+    - blog
+---
 
 I have always wanted a home for longform conversations on VisiData.
 

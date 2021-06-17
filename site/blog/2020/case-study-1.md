@@ -1,4 +1,11 @@
-# VisiData Case Study #1 Transcript: summing donation data from a webpage
+---
+title: "VisiData Case Study #1 Transcript: summing donation data from a webpage"
+date: 2020-01-15
+author: Anja Boskovic
+tags:
+    - blog
+---
+
 This case study was originally a [video](https://www.youtube.com/watch?v=yhunJc8Nu4g), that was published on 2018-04-01. The video was designed and recorded by [Saul Pwanson](https://saul.pw) with help from [Tara Hoch](https://tarahoch.com).
 
 It was transcribed by [E](https://twitter.com/cel10e) on 2019-12-11 and then updated and converted into a blog post by [Anja Boskovic](https://anja.kefala.info).
@@ -101,5 +108,3 @@ Now, we can do the same `z+` *sum* as we did before, and see the value in US dol
 ![final sum](/videos/assets/case-study-1-16.png)
 
 Thanks very much for using VisiData, and I will see you next time!
-
-[written by Anja Boskovic 2020-01-15]

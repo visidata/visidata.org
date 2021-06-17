@@ -1,6 +1,11 @@
+---
+title: "VisiData: Video #6 (Big Melt); keyboard cheatsheet; the Great Renaming"
+date: 2018-06-21
+tags:
+    - blog
+---
 [originally published as TinyLetter #13]
 
-# VisiData: Video #6 (Big Melt); keyboard cheatsheet; the Great Renaming
 
 Been awhile since I rapped at ya!  I started a job last week, so I'm going to keep this short, but I wanted to let you know about a few things:
 

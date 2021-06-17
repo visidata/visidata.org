@@ -1,6 +1,11 @@
+---
+title: "VisiData Case Study #3: graphing calculator"
+date: 2018-04-16
+tags:
+    - blog
+---
 [originally published as TinyLetter #10]
 
-# VisiData Case Study #3: graphing calculator
 
 Hello fellow VisiDaters!
 

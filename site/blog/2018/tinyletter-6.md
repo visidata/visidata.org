@@ -1,6 +1,10 @@
+---
+title: VisiData 1.0 official release!
+date: 2018-01-26
+tags:
+    - blog
+---
 [originally published as TinyLetter #6]
-
-# VisiData 1.0 official release!
 
 Hello again VisiData enthusiasts,
 
