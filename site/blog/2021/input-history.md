@@ -1,6 +1,7 @@
 ---
 title: "New feature: Persistent input history"
 date: 2021-01-10
+author: Anja Boskovic
 tags:
 	- blog
 ---
