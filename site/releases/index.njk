@@ -1,0 +1,7 @@
+---
+title: Releases
+eleventyExcludeFromCollections: true
+---
+{% for releases in collections.releases %}
+<a href="{{ releases.url }}">{{ releases.data.title }}</a>
+{% endfor %}

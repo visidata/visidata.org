@@ -72,6 +72,23 @@ module.exports = function(eleventyConfig) {
 
             return docs.reverse()
 
+        }),
+        eleventyConfig.addCollection('releases', collection => {
+
+            const releases = collection.getFilteredByTag('releases')
+
+            for (let i = 0; i < releases.length; i++) {
+
+                const prevPost = releases[i - 1]
+                const nextPost = releases[i + 1]
+
+                releases[i].data["prevPost"] = prevPost
+                releases[i].data["nextPost"] = nextPost
+
+            }
+
+            return releases.reverse()
+
         })
 
     // Layout aliases
