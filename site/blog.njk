@@ -12,24 +12,14 @@ pagination:
 ---
 <main id="main" class="main inner flex flex-1 flex-col py-10 focus:outline-none" tabindex="-1">
     <section id="container" class="column centre flex-1" aria-label="Blogs">
-        <h1 class="page-title text-3xl lowercase text-center md:text-5xl max-w-6xl mx-auto font-black mb-16">{{ title }}
+        <h1 class="page-title text-3xl text-center md:text-5xl max-w-6xl mx-auto font-black mb-16">{{ title }}
         </h1>
-        <div class="posts grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="posts grid grid-cols-1 lg:grid-cols-2 gap-5">
             {%- for post in posts -%}
-            <article class="article-card bg-yellow-50 overflow-hidden rounded-lg shadow-lg">
+            <article class=" overflow-hidden rounded-lg bg-gray-100">
                 {# featured post image & category #}
                 {% if post.data.coverImage %}
                 <a class="featured-image-link block relative overflow-hidden border-b-0" href="{{ post.url }}">
-                    {# category link #}
-                    {# <ul class="absolute bottom-0 left-0 flex p-8 z-10">
-                        {%- for item in post.data.tags -%}
-                        {%- if item != "posts" -%}
-                        <li class="mr-2">
-                            <span class="inline-block bg-gray-500 px-4 py-2 text-white text-xs font-bold rounded">{{ item | capitalize }}</span>
-                        </li>
-                        {%- endif -%}
-                        {% endfor %}
-                    </ul>#}
                     <figure>
                         {# It's stupid but it works. Basically using frontmatter as a database for the image URLs and then passing them through 11ty-img. Alt had to be escaped to give img the quote marks it expects. #}
                         <div class="block w-full h-64 coverimage">
@@ -46,7 +36,7 @@ pagination:
                 {%- endif -%}
                 <div class="p-8">
                     <h2 class="text-2xl mb-6">
-                        <a class="block border-none no-underline" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <a class="inline-block border-0 no-underline text-brand-primary" href="{{ post.url }}">{{ post.data.title }}</a>
                     </h2>
                     <div class="text-sm md:flex mb-4">
                         <time datetime="{{ post.date }}">
@@ -61,14 +51,14 @@ pagination:
             <div class="grid grid-cols-1 md:grid-cols-2 w-full mt-8 mb-20">
                 {% if pagination.href.previous %}
                 <div class="place-self-start">
-                    <a class="bg-yellow-50 p-5 rounded-lg shadow hover:shadow-lg border-none active:shadow-inner block mb-5 md:mb-0" href="{{ pagination.href.previous }}">← Previous</a>
+                    <a class="block mb-5 md:mb-0 border-brand-primary" href="{{ pagination.href.previous }}">← Previous</a>
                 </div>
                 {% else %}
                 <div></div>
                 {% endif %}
                 {% if pagination.href.next %}
                 <div class="place-self-end">
-                    <a class="bg-yellow-50 p-5 rounded-lg shadow hover:shadow-lg border-none active:shadow-inner block text-right" href="{{ pagination.href.next }}">Next →</a>
+                    <a class="block text-right border-brand-primary" href="{{ pagination.href.next }}">Next →</a>
                 </div>
                 {% endif %}
             </div>
