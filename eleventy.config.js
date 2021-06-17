@@ -1,5 +1,12 @@
 const Image = require("@11ty/eleventy-img");
 const eleventyGoogleFonts = require("eleventy-google-fonts");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
+const markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+}
 
 module.exports = function(eleventyConfig) {
     // // Set Browsersync options
@@ -103,12 +110,14 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images/svg")
     // Pass through our icons
     eleventyConfig.addPassthroughCopy("images/icons")
+    eleventyConfig.addPassthroughCopy("videos")
     eleventyConfig.addPassthroughCopy({
         "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
     });
     // Plugins
 
     eleventyConfig.addPlugin(eleventyGoogleFonts);
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     // Eleventy-img config
 
