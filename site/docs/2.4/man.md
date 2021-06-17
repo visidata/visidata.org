@@ -1,6 +1,5 @@
 ---
 title: Install VisiData
-tags: docs
 ---
 <pre id="manpage" class="break-words">
 vd(1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Quick Reference Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        vd(1)

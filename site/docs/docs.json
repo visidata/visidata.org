@@ -1,3 +1,4 @@
 {
-    "layout": "layouts/page"
+    "layout": "layouts/page",
+    "tags": "docs"
 }
