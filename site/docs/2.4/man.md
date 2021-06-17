@@ -2,7 +2,7 @@
 title: Quick Reference Guide
 permalink: /man/
 ---
-<pre id="manpage" class="break-words">
+<pre id="manpage" class="whitespace-pre-wrap text-xs">
 vd(1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Quick Reference Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        vd(1)
 
 <span style="font-weight:bold;">NAME</span>
