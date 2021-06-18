@@ -18,7 +18,6 @@ module.exports = function(eleventyConfig) {
     // });
     eleventyConfig.addWatchTarget("./_site/style.css");
 
-    // eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./site/blog": "./blog" });
 
     eleventyConfig.addShortcode("version", function() {
