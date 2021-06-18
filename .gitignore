@@ -77,3 +77,6 @@ package-lock.json
 
 # Wrangler
 dist/
+
+# VisiData repo
+visidata/
