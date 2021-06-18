@@ -1,6 +1,26 @@
 const Image = require("@11ty/eleventy-img");
 const eleventyGoogleFonts = require("eleventy-google-fonts");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
+let markdownLibrary = markdownIt({
+  html: true,
+}).use(markdownItAnchor, {
+  permalink: true,
+  permalinkClass: "tdbc-anchor",
+  permalinkSymbol: "#",
+  permalinkSpace: true,
+  permalinkBefore: false,
+  level: [1, 2],
+  slugify: (s) =>
+    s
+      .trim()
+      .toLowerCase()
+      .replace(/[\s+~\/]/g, "-")
+      .replace(/[().`,%·'"!?¿:@*]/g, ""),
+});
+
 
 const markdownItOptions = {
     html: true,
@@ -144,6 +164,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+    // Use library for Markdown for anchored headings
+    eleventyConfig.setLibrary("md", markdownLibrary);
 
     // Template formats
     return {
