@@ -12,31 +12,16 @@ pagination:
 ---
 <main id="main" class="main inner flex flex-1 flex-col py-10 focus:outline-none" tabindex="-1">
     <section id="container" class="column centre flex-1" aria-label="Blogs">
-        <h1 class="page-title text-3xl text-center md:text-5xl max-w-6xl mx-auto font-black mb-16">{{ title }}
+        <h1 class="page-title text-3xl md:text-5xl text-center max-w-6xl mx-auto font-black mb-16">{{ title }}
         </h1>
-        <div class="posts grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div class="posts">
             {%- for post in posts -%}
-            <article class=" overflow-hidden rounded-lg bg-gray-100">
-                {# featured post image & category #}
-                {% if post.data.coverImage %}
-                <a class="featured-image-link block relative overflow-hidden border-b-0" href="{{ post.url }}">
-                    <figure>
-                        {# It's stupid but it works. Basically using frontmatter as a database for the image URLs and then passing them through 11ty-img. Alt had to be escaped to give img the quote marks it expects. #}
-                        <div class="block w-full h-64 coverimage">
-                            {% set img = "site/" + post.url + "images/" + post.data.coverImage %}
-                            {% if post.data.image_caption %}
-                            {% set alt = post.data.image_caption | escape %}
-                            {% else %}
-                            {% set alt = "Cover image" %}
-                            {% endif %}
-                            {% image img, alt %}
-                        </div>
-                    </figure>
-                </a>
-                {%- endif -%}
+            <article class=" overflow-hidden">
+                
+             
                 <div class="p-8">
                     <h2 class="text-2xl mb-6">
-                        <a class="inline-block border-0 no-underline text-brand-primary" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <a class="inline-block no-underline border-b-2" href="{{ post.url }}">{{ post.data.title }}</a>
                     </h2>
                     <div class="text-sm md:flex mb-4">
                         <time datetime="{{ post.date }}">
