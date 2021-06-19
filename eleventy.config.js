@@ -8,7 +8,7 @@ let markdownLibrary = markdownIt({
   html: true,
 }).use(markdownItAnchor, {
   permalink: true,
-  permalinkClass: "tdbc-anchor",
+  permalinkClass: "heading-anchor",
   permalinkSymbol: "#",
   permalinkSpace: true,
   permalinkBefore: false,
