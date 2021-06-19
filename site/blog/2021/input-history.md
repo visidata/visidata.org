@@ -3,8 +3,9 @@ title: "New feature: Persistent input history"
 date: 2021-01-10
 author: Anja Boskovic
 tags:
-	- blog
+- blog
 ---
+
 Like most tools, VisiData keeps a history of your responses to its prompts, so you can scroll through them in subsequent prompts using the Up and Down arrows.
 
 Up until now, these histories would only be available until the end of the VisiData session.

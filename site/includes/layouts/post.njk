@@ -37,8 +37,8 @@ layout: default
             <ul class="flex pt-4">
                 {% for item in tags %}
                 {%- if item != "blog" -%}
-                <li class="mr-2">
-                    <a class="inline-block px-3 py-2 text-white bg-purple-900 text-xs font-semibold rounded hover:text-white hover:bg-pink-500" href="/category/{{ item }}">{{ item | capitalize }}</a>
+                <li class="mr-2 list-none">
+                    <span class="">#</span><a class="inline-block lowercase" href="/category/{{ item }}">{{ item | capitalize }}</a>
                 </li>
                 {%- endif -%}
                 {% endfor %}
