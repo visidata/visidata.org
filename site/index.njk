@@ -146,27 +146,28 @@ title: "Open-source data multitool"
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div class="p-5 rounded-2xl bg-gray-100">
                 <h2>Releases</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor, sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                </ul>
+                {% for releases in collections.releases | limit(4) %}
+                <div>
+                    <h2 class="mb-6 text-2xl inline-block"><a class="border-b-2 border-brand-primary inline-block" href="{{ releases.url }}">{{ releases.data.title }}</a>
+                    </h2>
+                    <span class="ml-3"><time datetime="{{ blog.date }}">
+                            {{ releases.date | dateDisplay }}
+                        </time></span>
+                </div>
+                {% endfor %}
             </div>
             <div class="p-5 rounded-2xl bg-gray-100">
                 <h2>Blog</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum, dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur.</li>
-                    <li>Lorem, ipsum dolor sit amet consectetur.</li>
-                </ul>
+                {% for blog in collections.blog | limit(3) %}
+                <h2>
+                    <a class="inline-block no-underline border-b-2 border-brand-primary" href="{{ blog.url }}">{{ blog.data.title }}</a>
+                </h2>
+                <div class="text-sm md:flex mb-4">
+                    <time datetime="{{ blog.date }}">
+                        {{ blog.date | dateDisplay }}
+                    </time>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

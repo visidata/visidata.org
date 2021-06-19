@@ -3,5 +3,12 @@ title: Releases
 eleventyExcludeFromCollections: true
 ---
 <div class="mt-10">{% for releases in collections.releases %}
-<div class="flex"><h2 class="mb-6 text-2xl"><a class="border-b-2 border-brand-primary inline-block" href="{{ releases.url }}">{{ releases.data.title }}</a></h2></div>
-{% endfor %}</div>
+    <div>
+        <h2 class="mb-6 text-2xl inline-block"><a class="border-b-2 border-brand-primary inline-block" href="{{ releases.url }}">{{ releases.data.title }}</a>
+        </h2>
+        <span class="ml-3"><time datetime="{{ blog.date }}">
+                {{ releases.date | dateDisplay }}
+            </time>
+        </span>
+    </div>
+    {% endfor %}</div>
