@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cp -r visidata/docs site/docs && eleventy --serve --config=eleventy.config.js & NODE_ENV=development postcss styles/tailwind.css --o _site/style.css --watch",
-    "build": "cp -r visidata/docs site/docs && eleventy --config=eleventy.config.js & NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
+    "dev": "eleventy --serve --config=eleventy.config.js & NODE_ENV=development postcss styles/tailwind.css --o _site/style.css --watch",
+    "build": "eleventy --config=eleventy.config.js & NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
   },
   "keywords": [],
   "author": "",
