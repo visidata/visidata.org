@@ -5,20 +5,20 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 let markdownLibrary = markdownIt({
-  html: true,
+    html: true,
 }).use(markdownItAnchor, {
-  permalink: true,
-  permalinkClass: "heading-anchor",
-  permalinkSymbol: "#",
-  permalinkSpace: true,
-  permalinkBefore: false,
-  level: [1, 2],
-  slugify: (s) =>
-    s
-      .trim()
-      .toLowerCase()
-      .replace(/[\s+~\/]/g, "-")
-      .replace(/[().`,%·'"!?¿:@*]/g, ""),
+    permalink: true,
+    permalinkClass: "heading-anchor",
+    permalinkSymbol: "#",
+    permalinkSpace: true,
+    permalinkBefore: true,
+    level: [1, 2],
+    slugify: (s) =>
+        s
+        .trim()
+        .toLowerCase()
+        .replace(/[\s+~\/]/g, "-")
+        .replace(/[().`,%·'"!?¿:@*]/g, ""),
 });
 
 
