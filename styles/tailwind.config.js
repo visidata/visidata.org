@@ -15,8 +15,8 @@ module.exports = {
             colors: {
                 change: "transparent",
                 brand: {
-                    primary: "#A300FF",
-                    dark: "#2C0044"
+                    primary: "#5fd7ff",
+                    dark: "#003a4d"
                 }
             },
             animation: {
@@ -32,7 +32,7 @@ module.exports = {
     },
     variants: {},
     plugins: [
-    require('@tailwindcss/forms')
+        require('@tailwindcss/forms')
     ],
     darkMode: 'media',
 }
