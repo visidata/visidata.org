@@ -36,6 +36,10 @@ module.exports = function(eleventyConfig) {
     //   notify: false,
     //   reloadDelay: 0
     // });
+
+    // Use .eleventyignore as single source of truth for files to process.
+    eleventyConfig.setUseGitIgnore(false);
+
     eleventyConfig.addWatchTarget("./_site/style.css");
 
     eleventyConfig.addPassthroughCopy({ "./site/blog": "./blog" });

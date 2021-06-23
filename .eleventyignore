@@ -1,2 +1,7 @@
 visidata/docs/api/
 site/docs/api/
+node_modules/
+visidata/
+_site/
+_tmp/
+dist/
