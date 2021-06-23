@@ -1,5 +1,10 @@
 ## Todo
 
+Docs page is the current challenge. Pipes through pandoc. 
+Options:
+.md -> pandoc/retext -> Sphinx?
+.md -> pandoc/html -> 11ty?
+
 * Home page
 	- ~~Hero~~
 	- ~~Command demo dropdowns~~
