@@ -3,6 +3,8 @@ title: Docs
 layout: page
 eleventyExcludeFromCollections: true
 ---
-{% for docs in collections.docs %}
-<a href="{{ docs.url }}">{{ docs.data.title }}</a>
-{% endfor %}
+<div class="flex flex-col">
+    {% for docs in collections.docs %}
+    <a href="{{ docs.url }}">{{ docs.data.title }}</a>
+    {% endfor %}
+</div>
