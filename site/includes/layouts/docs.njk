@@ -2,6 +2,13 @@
 layout: default
 ---
 <div id="container" class="py-10">
-    <h1 class="text-3xl md:text-5xl text-center">{{ title }}</h1>
-    {{ content | safe }}
+    <div>
+        <aside>
+            {% include 'components/sidebar.njk' %}
+        </aside>
+        <article>
+            <h1 class="text-3xl md:text-5xl text-center">{{ title }}</h1>
+            {{ content | safe }}
+        </article>
+    </div>
 </div>
