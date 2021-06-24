@@ -41,6 +41,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addWatchTarget("./styles/tailwind.css");
+    eleventyConfig.addWatchTarget("./_site/style.css");
 
     eleventyConfig.addPassthroughCopy({ "./site/blog": "./blog" });
 
