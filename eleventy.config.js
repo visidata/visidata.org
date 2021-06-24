@@ -68,6 +68,12 @@ module.exports = function(eleventyConfig) {
     // Year filter
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+    // Sort by page order - used for ordering docs
+    function sortByPageOrder(values) {
+        return values.slice().sort((a, b) => a.data.order - b.data.order);
+    }
+    eleventyConfig.addFilter("sortByPageOrder", sortByPageOrder);
+
     // Collections
     eleventyConfig.addCollection('blog', collection => {
 
