@@ -1,4 +1,5 @@
 site/docs/api/
+site/docs/*.md
 node_modules/
 visidata/
 _site/
