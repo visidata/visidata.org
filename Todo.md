@@ -27,6 +27,7 @@ Options:
 * VisiData+ landing page
 * Docs pages
 	- Quick reference(s)
+	- Ordering system for pages
 * Blog posts page
 * ~~Releases post page~~
 * ~~Credits page~~
