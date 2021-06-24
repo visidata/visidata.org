@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve --config=eleventy.config.js && postcss styles/tailwind.css --o _site/style.css --watch",
-    "build": "eleventy --config=eleventy.config.js && postcss styles/tailwind.css --o _site/style.css"
+    "dev": "./lukeall.sh && eleventy --serve --config=eleventy.config.js && postcss styles/tailwind.css --o _site/style.css --watch",
+    "build": "./lukeall.sh && eleventy --config=eleventy.config.js && postcss styles/tailwind.css --o _site/style.css"
   },
   "keywords": [],
   "author": "",
