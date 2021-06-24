@@ -17,13 +17,11 @@ pagination:
         <div class="posts">
             {%- for post in posts -%}
             <article class=" overflow-hidden">
-                
-             
-                <div class="p-8">
-                    <h2 class="text-2xl mb-6">
+                <div class="py-2">
+                    <h2 class="text-2xl">
                         <a class="inline-block no-underline border-b-2" href="{{ post.url }}">{{ post.data.title }}</a>
                     </h2>
-                    <div class="text-sm md:flex mb-4">
+                    <div class="text-sm md:flex">
                         <time datetime="{{ post.date }}">
                             {{ post.date | dateDisplay }}
                         </time>
