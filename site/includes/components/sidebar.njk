@@ -1,3 +1,3 @@
-{% for docs in collections.docs %}
-<a href="{{ docs.url }}">{{ docs.data.title }}</a>
-{% endfor %}
+{%- for docs in collections.docs | sortByPageOrder -%}
+<a class="p-2 border-2 {% if page.url != docs.url %} border-pink-400 {% endif %} {% if page.url == docs.url %} border-brand-primary rounded {% endif %}" href="{{ docs.url }}">{{ docs.data.title }}</a>
+{%- endfor -%}
