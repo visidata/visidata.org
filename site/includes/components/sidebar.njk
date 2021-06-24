@@ -1,4 +1,3 @@
-<p class="bg-pink-100 p-5">test</p>
-{%- for docs in collections.docs | sortByPageOrder -%}
-<a class="p-2 border-2 {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary rounded {% endif %}" href="{{ docs.url }}">{{ docs.data.title }}</a>
-{%- endfor -%}
+{% for docs in collections.docs | sortByPageOrder %}
+<a class="mb-1 p-2 border-2 rounded {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary {% endif %} hover:border-brand-primary" href="{{ docs.url }}">{{ docs.data.title }}</a>
+{% endfor %}
