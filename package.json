@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./lukeall.sh && eleventy --watch --serve && postcss styles/tailwind.css --o _site/style.css",
+    "dev": "./lukeall.sh && eleventy --serve --watch && postcss styles/tailwind.css --o _site/style.css",
     "build": "./lukeall.sh && eleventy && postcss styles/tailwind.css --o _site/style.css"
   },
   "keywords": [],
