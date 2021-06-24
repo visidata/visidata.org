@@ -40,7 +40,7 @@ module.exports = function(eleventyConfig) {
     // Use .eleventyignore as single source of truth for files to process.
     eleventyConfig.setUseGitIgnore(false);
 
-    eleventyConfig.addWatchTarget("./_site/style.css");
+    eleventyConfig.addWatchTarget("./styles/tailwind.css");
 
     eleventyConfig.addPassthroughCopy({ "./site/blog": "./blog" });
 
