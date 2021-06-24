@@ -1,4 +1,4 @@
 {
-	"layout": "layouts/post",
-	"tags": "docs"
+    "layout": "layouts/docs",
+    "tags": "docs"
 }
