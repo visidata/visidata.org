@@ -1,3 +1,4 @@
+<p class="bg-pink-100 p-5">test</p>
 {%- for docs in collections.docs | sortByPageOrder -%}
-<a class="p-2 border-2 {% if page.url != docs.url %} border-pink-400 {% endif %} {% if page.url == docs.url %} border-brand-primary rounded {% endif %}" href="{{ docs.url }}">{{ docs.data.title }}</a>
+<a class="p-2 border-2 {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary rounded {% endif %}" href="{{ docs.url }}">{{ docs.data.title }}</a>
 {%- endfor -%}
