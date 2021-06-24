@@ -56,15 +56,17 @@ a {
   @apply max-w-6xl px-4 mx-auto;
 }
 .button {
-  @apply border-none mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow;
+  @apply mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow border-2;
   font-family: "Inconsolata", sans-serif;
+  border-color: #00BFFF;
 }
 .button-outline {
-  @apply bg-white border-4 border-solid border-brand-primary py-2;
+  @apply bg-white border-2 border-solid border-brand-primary py-2;
 }
 .patreon {
   background-color: #ff424d;
   color: white;
+  border-color: #d5343e;
 }
 .heading-anchor {
   @apply opacity-50 hover:opacity-100;
