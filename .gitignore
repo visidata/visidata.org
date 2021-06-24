@@ -79,4 +79,3 @@ package-lock.json
 dist/
 
 # VisiData.org specific
-site/docs/
