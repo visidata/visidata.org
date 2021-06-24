@@ -3,7 +3,7 @@
 Docs page is the current challenge. Pipes through pandoc. 
 Options:
 .md -> pandoc/retext -> Sphinx?
-.md -> pandoc/html -> 11ty?
+~~.md -> pandoc/html -> 11ty?~~
 
 * Home page
 	- ~~Hero~~
@@ -19,8 +19,8 @@ Options:
 			* Video case studies
 			* Lightning Demo
 			* 10 Ways to Use VisiData
-		+ Releases
-		+ Blog posts
+		+ ~~Releases~~
+		+ ~~Blog posts~~
 	- ~~Fix demo breakpoints on mobile~~
 	- Add asciinema videos instead of screenshots?
 	- ~~Change screenshot boxes to 2x2 grid?~~
