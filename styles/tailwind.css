@@ -10,7 +10,7 @@ p a, article a {
   @apply border-brand-primary border-b-2;
 }
 code {
-  @apply bg-gray-300 px-1;
+  @apply bg-gray-200 px-1 rounded whitespace-pre-line break-all;
 }
 
 /* Some defaults for styling.  */
@@ -36,9 +36,6 @@ section a, footer p a {
 }
 main ul {
   @apply mb-8 list-disc pl-5;
-}
-code {
-  @apply rounded whitespace-pre-line break-all;
 }
 a {
   @apply transition duration-300 ease-in-out;
