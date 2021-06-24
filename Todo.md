@@ -28,11 +28,13 @@ Options:
 * Docs pages
 	- ~~Quick reference(s)~~
 	- ~~Ordering system for pages~~
-* Blog posts page
+	- Order for docs
+	- Docs index
+* ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
 * ~~Blog posts~~
-* Install page
+* ~~Install page~~
 * Formats page
 * Privacy policy page
 * General layout and design
