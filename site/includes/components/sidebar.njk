@@ -1,3 +1,8 @@
 {% for docs in collections.docs | sortByPageOrder %}
-<a class="mb-1 p-2 border-2 rounded {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary {% endif %} hover:border-brand-primary" href="{{ docs.url }}">{{ docs.data.title }}</a>
+<a class="mb-1 p-2 border-2 rounded {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary {% endif %} hover:border-brand-primary" href="{{ docs.url }}">{{ docs.data.key }}</a>
 {% endfor %}
+
+{# {{ collections.docs | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+{% set navPages = collections.docs | eleventyNavigation %}
+{{ navPages | dump | safe }} #}
