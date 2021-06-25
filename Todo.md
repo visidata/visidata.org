@@ -29,6 +29,7 @@ Options:
 	- ~~Quick reference(s)~~
 	- ~~Ordering system for pages~~
 	- Order for docs
+		- Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/
 	- Docs index
 * ~~Blog posts page~~
 * ~~Releases post page~~
