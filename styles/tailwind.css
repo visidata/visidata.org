@@ -73,7 +73,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
 /* Table styling */
 table {
-  @apply border-separate mx-auto border-2 rounded mb-5;
+  @apply border-separate mx-auto border-2 rounded mb-5 overflow-x-auto;
 }
 td {
   @apply rounded;
