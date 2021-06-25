@@ -3,6 +3,7 @@ const eleventyGoogleFonts = require("eleventy-google-fonts");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 let markdownLibrary = markdownIt({
     html: true,
@@ -149,6 +150,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyGoogleFonts);
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     // Eleventy-img config
 
@@ -182,7 +184,7 @@ module.exports = function(eleventyConfig) {
 
     // Template formats
     return {
-        templateFormats: ["md", "njk"],
+        templateFormats: ["md", "njk", "html"],
         markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,
