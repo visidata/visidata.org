@@ -3,8 +3,10 @@ module.exports = {
     purge: {
         content: [
             "site/**/*.html",
-            "site/**/*.njk",
-            "site/**/*.md"
+            "site/*.njk",
+            "site/includes/**/*.njk",
+            "site/docs/*.njk",
+            "site/blog/*.md"
         ],
         options: {
             whitelist: [],
