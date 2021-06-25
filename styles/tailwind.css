@@ -58,7 +58,7 @@ a {
   border-color: #00BFFF;
 }
 .button-outline {
-  @apply bg-white border-2 border-solid border-brand-primary py-2;
+  @apply bg-white border-2 border-solid border-brand-primary ;
 }
 .patreon {
   background-color: #ff424d;
