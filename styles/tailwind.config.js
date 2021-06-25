@@ -6,6 +6,8 @@ module.exports = {
             "site/*.njk",
             "site/includes/**/*.njk",
             "site/docs/*.njk",
+            "site/releases/*.md",
+            "site/releases/*.njk",
             "site/blog/*.md"
         ],
         options: {
