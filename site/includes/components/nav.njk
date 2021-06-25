@@ -1,5 +1,5 @@
-<nav id="nav" class="nav flex mt-5">
-    <ul class="menu flex flex-wrap items-center justify-center list-reset gap-x-2 gap-y-5">
+<nav id="nav" class="nav flex mt-5 md:mt-0">
+    <ul class="menu flex items-center flex-wrap justify-center list-reset gap-x-2 gap-y-5">
         {% for item in navigation.main %}
         <li class="level-1 md:mr-4 mb-0">
             <a href="{{ item.url | safe }}" class="link py-2 px-4 rounded-lg border-2 font-bold  hover:border-brand-primary active:text-brand-primary {% if page.url == item.url %}active border-brand-primary{% endif %}
