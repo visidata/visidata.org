@@ -79,5 +79,5 @@ package-lock.json
 dist/
 
 # VisiData.org specific
-site/docs/*.njk
+site/docs/*.html
 site/docs/*.md
