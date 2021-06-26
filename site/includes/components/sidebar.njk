@@ -1,13 +1,15 @@
-{# {{ collections.docs | eleventyNavigation | eleventyNavigationToHtml | safe }}
+{{ collections.docs | eleventyNavigation | eleventyNavigationToHtml | safe }}
 
+{#
 {% set navPages = collections.docs | eleventyNavigation %}
 {{ navPages | dump | safe }}
 
 {% set docpages = collections.docs | eleventyNavigation %}
 {%- for docs in docpages -%}
 <a class="mb-1 p-2 border-2 rounded {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary {% endif %} hover:border-brand-primary" href="{{ docs.url }}">{{ docs.key }}</a>
-{%- endfor -%} #}
+{%- endfor -%} 
+#}
 
-{% for docs in collections.docs | sortByPageOrder %}
+{# {% for docs in collections.docs | sortByPageOrder %}
 <a class="mb-1 p-2 border-2 rounded {% if page.url != docs.url %} border-transparent {% endif %} {% if page.url == docs.url %} border-brand-primary {% endif %} hover:border-brand-primary" href="{{ docs.url }}">{{ docs.data.key }}</a>
-{% endfor %}
+{% endfor %} #}
