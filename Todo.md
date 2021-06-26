@@ -36,8 +36,8 @@ Options:
 * ~~Credits page~~
 * ~~Blog posts~~
 * ~~Install page~~
-* Formats page
-* Privacy policy page
+* ~~Formats page~~
+* ~~Privacy policy page~~
 * General layout and design
 	- Nav
 		+ Search, potentially powered by Algolia
