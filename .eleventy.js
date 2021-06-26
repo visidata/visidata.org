@@ -94,23 +94,6 @@ module.exports = function(eleventyConfig) {
             return blogs.reverse()
 
         }),
-        eleventyConfig.addCollection('docs', collection => {
-
-            const docs = collection.getFilteredByTag('docs')
-
-            for (let i = 0; i < docs.length; i++) {
-
-                const prevPost = docs[i - 1]
-                const nextPost = docs[i + 1]
-
-                docs[i].data["prevPost"] = prevPost
-                docs[i].data["nextPost"] = nextPost
-
-            }
-
-            return docs.reverse()
-
-        }),
         eleventyConfig.addCollection('releases', collection => {
 
             const releases = collection.getFilteredByTag('releases')
