@@ -8,7 +8,7 @@
     "docs": "./lukeall.sh",
     "dev:11ty": "eleventy --serve --watch",
     "dev:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css -w",
-    "build": "docs && eleventy && postcss styles/tailwind.css --o _site/style.css"
+    "build": "npm run docs && eleventy && postcss styles/tailwind.css --o _site/style.css"
   },
   "keywords": [],
   "author": "",
