@@ -13,7 +13,7 @@ with open(outfront, 'w') as fpfront:
     outfp = fpfront
     print('---', file=fpfront)
     for line in lines[1:]:
-        line = line.strip()
+        line = line.strip('\n')
         print(line, file=outfp)
         if line == '---': outfp = fprest
 
