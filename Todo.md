@@ -52,5 +52,5 @@ Options:
 	- Styling
 		- ~~Change button hover effect~~
 		- ~~Change primary color?~~
-		- Add dark mode
-		- Make white logo for dark mode
+		- ~~Add dark mode~~
+		- ~~Make white logo for dark mode~~
