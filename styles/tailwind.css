@@ -31,6 +31,9 @@ h1, h2 {
 p {
   @apply mb-4;
 }
+article ul {
+  @apply list-disc;
+}
 section a, footer p a {
   @apply border-b-2;
 }
@@ -80,4 +83,7 @@ td {
 }
 .odd {
   @apply bg-gray-200;
+}
+.docsidebar {
+  
 }
