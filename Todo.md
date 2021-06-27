@@ -28,9 +28,10 @@ Options:
 * Docs pages
 	- ~~Quick reference(s)~~
 	- ~~Ordering system for pages~~
-	- Order for docs
+	- ~~Order for docs~~
 		- Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/
-	- Docs index
+	- ~~Docs index~~
+	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
 * ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
