@@ -6,69 +6,72 @@ title: "Open-source data multitool"
 ---
 <main id="main" class="flex flex-1 flex-col focus:outline-none" tabindex="-1">
     <section id="container-wide" class="md:py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center" aria-label="Hero">
-        <div class="p-5">
+        <div class="p-4">
             <h1 class="md:text-5xl">Data exploration at your fingertips.</h1>
             <p>VisiData is an interactive multitool for tabular data. It combines the clarity of a spreadsheet, the efficiency of the terminal, and the power of Python, into a lightweight utility which can handle millions of rows with ease.</p>
             {% include 'components/ctabutton.njk' %}
             <a href="/docs/" class="button button-outline ml-5">Docs</a>
         </div>
-        <div class="rounded-2xl bg-gray-100 p-5">
+        <div class="rounded-2xl bg-gray-100 dark:bg-gray-700 p-4">
             {% image "images/map-colours.png", "Screenshot of a map in VisiData" %}
         </div>
     </section>
-    <section id="container-wide" class="py-10 grid grid-cols-1 md:grid-cols-4 gap-5" aria-label="Command Demo">
-        <div class="rounded-2xl bg-gray-100 p-5 md:col-span-3">
+    <section id="container-wide" class="py-10 flex flex-col md:flex-row gap-4" aria-label="Command Demo">
+        <div class="rounded-2xl bg-gray-100 dark:bg-gray-700 p-4">
             <noscript>
                 <p class="font-bold text-center">This demo requires JavaScript to be enabled.</p>
             </noscript>
-            <p class="inline-block my-2">When you have</p> <select class="rounded bg-white border-0" id="infmt">
-                <option value="input.csv" selected="selected">comma-separated values (CSV)</option>
-                <option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
-                <option value="input.log">structured log file</option>
-                <option value="input.tsv">tab-separated values (TSV)</option>
-                <option value="input.txt -f fixed">fixed width text</option>
-                <option value="input.xls">Excel 97 file (.xls)</option>
-                <option value="input.xlsx">Excel 2013 file (.xlsx)</option>
-                <option value="input.json">JSON</option>
-                <option value="input.jsonl">newline-delimited JSON</option>
-                <option value="input.html">HTML</option>
-                <option value="input.yml">YAML</option>
-                <option value="input.h5">HDF5</option>
-                <option value="input.npy">NumPy (.npy/.npz)</option>
-                <option value="visidata.view_pandas(df)">Pandas DataFrame</option>
-                <option value="input.xpt">SAS (.xpt/sas7bdat)</option>
-                <option value="input.sav">SPSS (.sav)</option>
-                <option value="input.dta">Stata (.dta)</option>
-                <option value="input.shp">Shapefile (.shp)</option>
-                <option value="input.pcap">packet capture (.pcap)</option>
-                <option value="input.db">Sqlite database (.db)</option>
-                <option value="input.zip">.zip archive</option>
-                <option value="vgit">git repository</option>
-                <option value="">any kind of tabular data</option>
-            </select>
-            <p class="inline-block my-2">but you need</p>
-            <select class="rounded bg-white border-0" id="outfmt">
-                <option value="" selected="selected">a delightful terminal interface</option>
-                <option value="">to explore the data quickly</option>
-                <option value=" # 'Shift+F' on any column">to get some quick insights</option>
-                <option value=" # '=' to add a Python column">to compute Python for each row</option>
-                <option value="-b -o output.tsv">tab-separated values (TSV)</option>
-                <option value="-b -o output.csv">comma-separated values (CSV)</option>
-                <option value="-b -o output.txt --save-filetype=fixed">fixed width text</option>
-                <option value=" 'e' to edit">to clean up the data</option>
-                <option value="-b -o output.txt">plain text</option>
-                <option value="-b -o output.json">JSON</option>
-                <option value="-b -o output.jsonl">JSON (newline-delimited)</option>
-                <option value="-b -o output.geojson">GeoJSON</option>
-                <option value="-b -o output.html">HTML &lt;table&gt;</option>
-                <option value="-b -o output.sqlite">Sqlite database</option>
-                <option value="-b -o output.md">Markdown</option>
-                <option value="-b -o output.jira">Markdown (org-mode) </option>
-                <option value="-b -o output.npy">Numpy (.npy) file</option>
-            </select>
-            <p id="cmdouter" class="mt-5 block w-full p-5 text-xl rounded-2xl bg-brand-dark text-white">
+            <div class="flex flex-col lg:flex-row flex-wrap gap-2">
+                <p class="my-1 inline-block my-2">When you have</p>
+                <select class="my-1 rounded bg-white dark:bg-gray-900 border-0" id="infmt">
+                    <option value="input.csv" selected="selected">comma-separated values (CSV)</option>
+                    <option value="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">wikipedia table</option>
+                    <option value="input.log">structured log file</option>
+                    <option value="input.tsv">tab-separated values (TSV)</option>
+                    <option value="input.txt -f fixed">fixed width text</option>
+                    <option value="input.xls">Excel 97 file (.xls)</option>
+                    <option value="input.xlsx">Excel 2013 file (.xlsx)</option>
+                    <option value="input.json">JSON</option>
+                    <option value="input.jsonl">newline-delimited JSON</option>
+                    <option value="input.html">HTML</option>
+                    <option value="input.yml">YAML</option>
+                    <option value="input.h5">HDF5</option>
+                    <option value="input.npy">NumPy (.npy/.npz)</option>
+                    <option value="visidata.view_pandas(df)">Pandas DataFrame</option>
+                    <option value="input.xpt">SAS (.xpt/sas7bdat)</option>
+                    <option value="input.sav">SPSS (.sav)</option>
+                    <option value="input.dta">Stata (.dta)</option>
+                    <option value="input.shp">Shapefile (.shp)</option>
+                    <option value="input.pcap">packet capture (.pcap)</option>
+                    <option value="input.db">Sqlite database (.db)</option>
+                    <option value="input.zip">.zip archive</option>
+                    <option value="vgit">git repository</option>
+                    <option value="">any kind of tabular data</option>
+                </select>
+                <p class="my-1 inline-block my-2">but you need</p>
+                <select class="my-1 rounded bg-white dark:bg-gray-900 border-0" id="outfmt">
+                    <option value="" selected="selected">a delightful terminal interface</option>
+                    <option value="">to explore the data quickly</option>
+                    <option value=" # 'Shift+F' on any column">to get some quick insights</option>
+                    <option value=" # '=' to add a Python column">to compute Python for each row</option>
+                    <option value="-b -o output.tsv">tab-separated values (TSV)</option>
+                    <option value="-b -o output.csv">comma-separated values (CSV)</option>
+                    <option value="-b -o output.txt --save-filetype=fixed">fixed width text</option>
+                    <option value=" 'e' to edit">to clean up the data</option>
+                    <option value="-b -o output.txt">plain text</option>
+                    <option value="-b -o output.json">JSON</option>
+                    <option value="-b -o output.jsonl">JSON (newline-delimited)</option>
+                    <option value="-b -o output.geojson">GeoJSON</option>
+                    <option value="-b -o output.html">HTML &lt;table&gt;</option>
+                    <option value="-b -o output.sqlite">Sqlite database</option>
+                    <option value="-b -o output.md">Markdown</option>
+                    <option value="-b -o output.jira">Markdown (org-mode) </option>
+                    <option value="-b -o output.npy">Numpy (.npy) file</option>
+                </select>
+            </div>
+            <p id="cmdouter" class="mt-5 block w-full p-4 text-xl rounded-2xl bg-brand-dark text-white">
                 <span class="select-none font-mono">$</span>
-                <code id="cmdline" class="bg-transparent">vd -b input.csv</code>
+                <code id="cmdline" class="bg-transparent dark:text-gray-100">vd -b input.csv</code>
             </p>
             <script type="text/javascript">
             function display() {
@@ -86,14 +89,16 @@ title: "Open-source data multitool"
             display();
             </script>
         </div>
-        <div class="col-span-1 rounded-2xl bg-gray-100 p-5">
+    </section>
+    <section id="container">
+        <div class="flex flex-col md:flex-row items-center gap-x-5">
             <h2>Support us on Patreon</h2>
-            <p><a class="button patreon" href="https://www.patreon.com/bePatron?u=13873753" target="_blank" rel="noopener">Become a Patron →</a></p>
+            <a class="button patreon" href="https://www.patreon.com/bePatron?u=13873753" target="_blank" rel="noopener">Become a Patron →</a>
         </div>
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Screenshots and features">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="p-5 rounded-2xl bg-gray-100 flex flex-col">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700 flex flex-col">
                 <div class="flex-grow">
                     <h2>Any data format</h2>
                     <p>Open 1m+ rows in the blink of an eye.</p>
@@ -102,16 +107,16 @@ title: "Open-source data multitool"
                     {% image "images/basic-screenshot.png", "" %}
                 </div>
             </div>
-            <div class="p-5 rounded-2xl bg-gray-100">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <div class="flex-grow">
-                    <h2>Instant histogram with <code class="break-normal">Shift + F</code></h2>
+                    <h2>Instant histogram with <code class="inline-block">Shift + F</code></h2>
                     <p>Press <code>Enter</code> to dive in.</p>
                 </div>
                 <div class="flex-grow-0 place-self-end">
                     {% image "images/freq-move-row.gif", "" %}
                 </div>
             </div>
-            <div class="p-5 rounded-2xl bg-gray-100">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <div class="flex-grow">
                     <h2>Scatterplots in the terminal</h2>
                     <p>8-color maps.</p>
@@ -120,7 +125,7 @@ title: "Open-source data multitool"
                     {% image "images/map-colours.png", "" %}
                 </div>
             </div>
-            <div class="p-5 rounded-2xl bg-gray-100">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <div class="flex-grow">
                     <h2>Save sessions for replay later</h2>
                     <p>Adhoc data pipelines in batch mode.</p>
@@ -129,7 +134,7 @@ title: "Open-source data multitool"
                     {% image "images/scatterplot-usage.png", "" %}
                 </div>
             </div>
-            <div class="p-5 rounded-2xl bg-gradient-to-br from-brand-primary via-blue-400 to-blue-500 text-white font-bold gap-2 md:col-span-2 grid-cols-1 md:grid-cols-2 grid items-center md:justify-items-center">
+            <div class="p-4 rounded-2xl bg-gradient-to-br from-brand-primary via-blue-400 to-blue-500 text-white font-bold gap-2 md:col-span-2 grid-cols-1 md:grid-cols-2 grid items-center md:justify-items-center">
                 <h2 class="md:text-5xl md:pl-5">Get started with VisiData</h2>
                 <div class="flex flex-col items-start gap-2">
                     <a href="/install/">Install →</a>
@@ -143,8 +148,8 @@ title: "Open-source data multitool"
         </div>
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Releases and blog posts">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div class="p-5 rounded-2xl bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <h2>Releases</h2>
                 {% for releases in collections.releases | limit(4) %}
                 <div>
@@ -156,7 +161,7 @@ title: "Open-source data multitool"
                 </div>
                 {% endfor %}
             </div>
-            <div class="p-5 rounded-2xl bg-gray-100">
+            <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <h2>Blog</h2>
                 {% for blog in collections.blog | limit(3) %}
                 <h2>

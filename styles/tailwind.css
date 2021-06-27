@@ -10,7 +10,7 @@ p a, article a {
   @apply border-brand-primary border-b-2;
 }
 code {
-  @apply bg-gray-200 px-1 rounded whitespace-pre-line break-all;
+  @apply bg-gray-200 dark:text-gray-900 px-1 rounded whitespace-pre-line break-all;
 }
 
 /* Some defaults for styling.  */
@@ -53,15 +53,15 @@ a {
  @apply max-w-4xl px-4 mx-auto;
 }
 #container-wide {
-  @apply max-w-6xl px-4 mx-auto;
+  @apply max-w-7xl px-2 mx-auto;
 }
 .button {
-  @apply mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow border-2;
+  @apply dark:text-gray-900 mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow border-2;
   font-family: "Inconsolata", sans-serif;
   border-color: #00BFFF;
 }
 .button-outline {
-  @apply bg-white border-2 border-solid border-brand-primary ;
+  @apply bg-transparent border-2 border-solid border-brand-primary dark:text-white;
 }
 .patreon {
   background-color: #ff424d;
@@ -82,7 +82,7 @@ td {
   @apply rounded;
 }
 .odd {
-  @apply bg-gray-200;
+  @apply bg-gray-200 dark:text-gray-900;
 }
 .docsidebar {
   
