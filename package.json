@@ -23,9 +23,10 @@
     "tailwindcss": "^2.2.4"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tailwindcss/forms": "^0.3.3",
+    "asciinema-player": "^2.6.1",
     "dotenv": "^10.0.0",
     "eleventy-google-fonts": "^0.0.5",
     "markdown-it-anchor": "^8.0.3",
