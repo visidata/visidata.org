@@ -29,9 +29,10 @@ Options:
 	- ~~Quick reference(s)~~
 	- ~~Ordering system for pages~~
 	- ~~Order for docs~~
-		- Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/
+		- ~~Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/~~
 	- ~~Docs index~~
 	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
+	- Add asciinema CSS/JS
 * ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
@@ -46,7 +47,7 @@ Options:
 		+ ~~No-JS mobile menu~~
 	- Footer
 		+ ~~Sponsor logos above footer~~
-			- JSON file to make adding/removing sponsors easier
+			- ~~JSON file to make adding/removing sponsors easier~~
 		+ Footer navigation links
 		+ ~~Social icon(s) - Twitter, GitHub~~
 	- Styling
