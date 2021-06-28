@@ -4,13 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}</title>
+    <title>{% if meta_title %}{{ meta_title }}{% elif title %}{{ title }}{% elif eleventyNavigation.key %}{{ eleventyNavigation.key }} | Documentation{% endif %} | {{ site.name }}</title>
     <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
-    {% if page.fileSlug === 'blog' %}
-    <meta name="robots" content="noindex,follow" />
-    {% else %}
     <meta name="robots" content="index,follow" />
-    {% endif %}
     {# include CSS #}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="/style.css" />

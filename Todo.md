@@ -33,7 +33,7 @@ Options:
 	- ~~Docs index~~
 	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
 	- Add asciinema CSS/JS
-	- Fix <title>
+	- ~~Fix <title>~~
 * ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
