@@ -10,7 +10,7 @@ p a, article a {
   @apply border-brand-primary border-b-2;
 }
 code {
-  @apply bg-gray-200 dark:text-gray-900 px-1 rounded whitespace-pre-line break-all;
+  @apply bg-gray-200 dark:text-gray-900 px-1 rounded whitespace-pre-line break-all select-all;
 }
 
 /* Some defaults for styling.  */
