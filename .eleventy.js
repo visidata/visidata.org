@@ -44,8 +44,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./styles/tailwind.css");
     eleventyConfig.addWatchTarget("./_site/style.css");
 
-    eleventyConfig.addPassthroughCopy({ "./site/blog": "./blog" });
-
     eleventyConfig.addShortcode("version", function() {
         return String(Date.now());
     });
@@ -121,14 +119,12 @@ module.exports = function(eleventyConfig) {
     // Include our static assets
     eleventyConfig.addPassthroughCopy("js")
     eleventyConfig.addPassthroughCopy("robots.txt")
-    // Pass through our SVGs
     eleventyConfig.addPassthroughCopy("images/svg")
-    // Pass through our icons
     eleventyConfig.addPassthroughCopy("images/icons")
     eleventyConfig.addPassthroughCopy("videos")
-    eleventyConfig.addPassthroughCopy({
-        "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
-    });
+    eleventyConfig.addPassthroughCopy({ "./site/blog/assets": "./blog/assets" });
+    eleventyConfig.addPassthroughCopy({ "./visidata/docs/assets": "./docs/assets" });
+    eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
     // Plugins
 
     eleventyConfig.addPlugin(eleventyGoogleFonts);
