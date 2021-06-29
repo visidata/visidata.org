@@ -32,8 +32,9 @@ Options:
 		- ~~Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/~~
 	- ~~Docs index~~
 	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
-	- Add asciinema CSS/JS
+	- ~~Add asciinema CSS/JS~~
 	- ~~Fix <title>~~
+	- API build on 11ty build
 * ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
