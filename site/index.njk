@@ -147,6 +147,15 @@ title: "Open-source data multitool"
             </div>
         </div>
     </section>
+    <section id="container-wide" class="py-10 px-4" aria-label="Testimonials">
+        <h2 class="text-center">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+            <quote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nostrum accusamus reiciendis ab, et non eveniet, harum tempora nisi placeat dolore ex voluptatem. Suscipit, a non cupiditate optio. Maxime, nesciunt.</quote>
+            <quote>Sit beatae placeat veniam ducimus ipsa, voluptates illum tempora, natus officiis quasi voluptatibus impedit, esse in, minus harum aut cupiditate mollitia. Perferendis, ipsam adipisci quisquam fuga recusandae in perspiciatis amet.</quote>
+            <quote>Dolore, iure, ex! Voluptatem ab quas explicabo est, ut quia, laborum dolorum! Voluptatum repellat consequatur similique corrupti accusamus, sint quibusdam quia blanditiis odio. Mollitia expedita vel saepe, vero, quae molestias?</quote>
+            <quote>Pariatur ea molestiae debitis ex rem dolorum eos. Tempore maiores distinctio labore recusandae repudiandae dolorem natus ducimus ratione, odio eveniet mollitia voluptatem. Laboriosam dignissimos aut sed consequatur dolores exercitationem corrupti.</quote>
+        </div>
+    </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Releases and blog posts">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
@@ -164,7 +173,7 @@ title: "Open-source data multitool"
             <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">
                 <h2>Blog</h2>
                 {% for blog in collections.blog | limit(3) %}
-                <h2>
+                <h2 class="text-2xl">
                     <a class="inline-block no-underline border-b-2 border-brand-primary" href="{{ blog.url }}">{{ blog.data.title }}</a>
                 </h2>
                 <div class="text-sm md:flex mb-4">
