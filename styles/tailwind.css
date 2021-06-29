@@ -84,6 +84,3 @@ td {
 .odd {
   @apply bg-gray-200 dark:text-gray-900;
 }
-.docsidebar {
-  
-}

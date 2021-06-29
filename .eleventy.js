@@ -125,6 +125,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./site/blog/assets": "./blog/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/assets": "./docs/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
+    eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/js/asciinema-player.js": "./asciinema-player.js" });
+    eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/css/asciinema-player.css": "./asciinema-player.css" });
     // Plugins
 
     eleventyConfig.addPlugin(eleventyGoogleFonts);
