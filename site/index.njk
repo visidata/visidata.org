@@ -149,11 +149,12 @@ title: "Open-source data multitool"
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Testimonials">
         <h2 class="text-center">Testimonials</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
-            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nostrum accusamus reiciendis ab, et non eveniet, harum tempora nisi placeat dolore ex voluptatem. Suscipit, a non cupiditate optio. Maxime, nesciunt.</q>
-            <q>Sit beatae placeat veniam ducimus ipsa, voluptates illum tempora, natus officiis quasi voluptatibus impedit, esse in, minus harum aut cupiditate mollitia. Perferendis, ipsam adipisci quisquam fuga recusandae in perspiciatis amet.</q>
-            <q>Dolore, iure, ex! Voluptatem ab quas explicabo est, ut quia, laborum dolorum! Voluptatum repellat consequatur similique corrupti accusamus, sint quibusdam quia blanditiis odio. Mollitia expedita vel saepe, vero, quae molestias?</q>
-            <q>Pariatur ea molestiae debitis ex rem dolorum eos. Tempore maiores distinctio labore recusandae repudiandae dolorem natus ducimus ratione, odio eveniet mollitia voluptatem. Laboriosam dignissimos aut sed consequatur dolores exercitationem corrupti.</q>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {% for item in testimonials.main %}
+              <q class="text-xl p-4 rounded-2xl bg-gray-100 dark:bg-gray-700 text-center">
+                  {{ item.quote }}
+              </q>
+            {% endfor %}
         </div>
     </section>
     <section id="container-wide" class="py-10 px-4" aria-label="Releases and blog posts">

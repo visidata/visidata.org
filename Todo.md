@@ -24,9 +24,9 @@ Options:
 	- ~~Fix demo breakpoints on mobile~~
 	- Add asciinema videos instead of screenshots?
 	- ~~Change screenshot boxes to 2x2 grid?~~
-	- Testimonials
-		- 3, 5, 6
-		- JSON file + template code
+	- ~~Testimonials~~
+		- ~~3, 5, 6~~
+		- ~~JSON file + template code~~
 * VisiData+ landing page
 * Docs pages
 	- ~~Quick reference(s)~~
