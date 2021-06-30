@@ -6,4 +6,4 @@ A quote
 5 "a remarkably powerful and well-designed tool."
 6 "the tool I reach for first when I encounter a new dataset."
 
-1, 2, 3, 6
+3, 5, 6
