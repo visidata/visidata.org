@@ -53,7 +53,6 @@ Options:
 	- Footer
 		+ ~~Sponsor logos above footer~~
 			- ~~JSON file to make adding/removing sponsors easier~~
-		+ Footer navigation links
 		+ ~~Social icon(s) - Twitter, GitHub~~
 	- Styling
 		- ~~Change button hover effect~~
