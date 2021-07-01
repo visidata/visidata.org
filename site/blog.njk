@@ -12,8 +12,9 @@ pagination:
 ---
 <main id="main" class="main inner flex flex-1 flex-col py-10 focus:outline-none" tabindex="-1">
     <section id="container" class="column centre flex-1" aria-label="Blogs">
-        <h1 class="page-title text-3xl md:text-5xl text-center max-w-6xl mx-auto font-black mb-16">{{ title }}
+        <h1 class="page-title text-3xl md:text-5xl text-center max-w-6xl mx-auto font-black">{{ title }}
         </h1>
+        <p class="text-center mb-10"><a href="/feed.xml">RSS Feed</a></p>
         <div class="posts">
             {%- for post in posts -%}
             <article class=" overflow-hidden">
