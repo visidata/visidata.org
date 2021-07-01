@@ -4,6 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 let markdownLibrary = markdownIt({
     html: true,
@@ -30,13 +31,6 @@ const markdownItOptions = {
 }
 
 module.exports = function(eleventyConfig) {
-    // // Set Browsersync options
-    //   eleventyConfig.setWatchThrottleWaitTime(0); // in milliseconds
-    //   // BrowserSync options
-    // eleventyConfig.setBrowserSyncConfig({
-    //   notify: false,
-    //   reloadDelay: 0
-    // });
 
     // Use .eleventyignore as single source of truth for files to process.
     eleventyConfig.setUseGitIgnore(false);
@@ -127,11 +121,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/js/asciinema-player.js": "./asciinema-player.js" });
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/css/asciinema-player.css": "./asciinema-player.css" });
+    
     // Plugins
-
     eleventyConfig.addPlugin(eleventyGoogleFonts);
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(pluginRss);
 
     // Eleventy-img config
 
