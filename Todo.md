@@ -60,4 +60,4 @@ Options:
 		- ~~Add dark mode~~
 		- ~~Make white logo for dark mode~~
 	- Features
-		- RSS
+		- ~~RSS~~
