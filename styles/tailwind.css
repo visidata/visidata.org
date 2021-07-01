@@ -84,3 +84,12 @@ td {
 .odd {
   @apply bg-gray-200 dark:text-gray-900;
 }
+.social_links a {
+  @apply p-2 bg-white border-none block rounded my-3;
+}
+.social_links a:hover {
+  @apply bg-brand-primary;
+}
+.social_links p {
+  margin-bottom: 0;
+}
