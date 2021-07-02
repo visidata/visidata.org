@@ -1,0 +1,14 @@
+---
+permalink: '/searchindex.json'
+---
+{
+  "posts": [
+    {% for item in collections.docs | eleventyNavigation %}
+      {
+        "title": "{{ item.title }}",
+        "url": "{{ item.url }}",
+        "content": {{ content | safe }}
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
