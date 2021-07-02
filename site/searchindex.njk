@@ -5,9 +5,9 @@ permalink: '/searchindex.json'
   "docs": [
     {% for item in collections.docs %}
       {
+        "id": "{{ item.url }}",
         "title": "{{ item.data.eleventyNavigation.key }}",
-        "url": "{{ item.url }}",
-        "content": "{{ item.templateContent | safe }}"
+        "body": "{{ item.templateContent | safe }}"
       }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
