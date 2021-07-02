@@ -2,12 +2,12 @@
 permalink: '/searchindex.json'
 ---
 {
-  "docs": [
+  "search": [
     {% for item in collections.docs %}
       {
         "title": "{{ item.data.eleventyNavigation.key }}",
         "url": "{{ item.url }}",
-        "body": "{{ item.templateContent | safe }}"
+        "text": "{{ item.templateContent | safe }}"
       }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]

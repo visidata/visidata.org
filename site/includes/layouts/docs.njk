@@ -1,9 +1,88 @@
 ---
 layout: default
 ---
+<script type="text/javascript">
+    function btnHandler(e,t){var n=document.querySelector(e);n&&n.addEventListener("click",function(e){e.preventDefault(),t()},!1)}function flagIfEmpty(e){e.value.length<1&&e.classList.add("needs-content")}btnHandler("#btn-opt-in",function(){var e=new Date,t=e.getTime()+31536e6;e.setTime(t),document.cookie="nf_ab=oh-so-orange; expires="+e.toUTCString(),window.location.reload(!0)}),btnHandler("#btn-opt-out",function(){document.cookie="nf_ab=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",window.location.reload(!0)}),function(){var e=document.querySelectorAll("form");if(0!=e.length)for(var t=0;t<e.length;t++)e[t].addEventListener("submit",function(e){e.preventDefault();for(var t=e.target,n=t.querySelectorAll(".needs-content"),r=0;r<n.length;r++)n[r].classList.remove("needs-content");for(var o=t.querySelectorAll("input"),l=0;l<o.length;l++)flagIfEmpty(o[l]);for(var i=t.querySelectorAll("textarea"),c=0;c<i.length;c++)flagIfEmpty(i[c]);if(1<(n=t.querySelectorAll(".needs-content")).length)return!1;t.submit()},!1)}(),function(){var l=null,e=document.querySelector(".search-ui"),i=document.querySelector(".search-results"),n=document.querySelector("#search-str"),c=document.querySelector("footer"),a=function(){for(;i.firstChild;)i.removeChild(i.firstChild);c.classList.remove("invisible")};btnHandler("#search-link",function(){fetch("/search.json").then(function(e){return e.json()}).then(function(e){l=e.search}),e.classList.toggle("invisible"),n.focus(),n.addEventListener("keyup",function(e){var t=n.value;2<t.length?function(e){e=e.toLowerCase();var t=[];for(var n in l)-1!=l[n].text.indexOf(e)&&t.push(l[n]);for(var n in a(),c.classList.add("invisible"),t){var r=document.createElement("li"),o=document.createElement("a");o.textContent=t[n].title,o.setAttribute("href",t[n].url),r.appendChild(o),i.appendChild(r)}}(t):a()})})}();
+   (function(){
+
+  var searchIndex = null;
+  var searchUI = document.querySelector('.search-ui');
+  var resultsUI = document.querySelector('.search-results');
+  var searchInput = document.querySelector('#search-str');
+  var footer = document.querySelector('footer');
+
+  // clear the current results
+  var clearResults = function(){
+    while (resultsUI.firstChild) {
+      resultsUI.removeChild(resultsUI.firstChild);
+    }
+    // unhide the footer again
+    footer.classList.remove('invisible');
+
+  }
+
+  // search and display
+  var find = function(str) {
+
+    str = str.toLowerCase();
+
+    // look for matches in the search JSON
+    var results = [];
+    for(var item in searchIndex ) {
+      var found = searchIndex[item].text.indexOf(str);
+      if(found != -1 ) {
+        results.push(searchIndex[item])
+      }
+    }
+
+    // build and insert the new result entries
+    clearResults();
+    footer.classList.add('invisible');
+    for(var item in results) {
+      var listItem = document.createElement('li');
+      var link = document.createElement('a');
+      link.textContent = results[item].title;
+      link.setAttribute('href', results[item].url);
+      listItem.appendChild(link);
+      resultsUI.appendChild(listItem);
+    }
+  }
+
+  // add an event listener for a click on the search link
+  btnHandler('#search-link', function(){
+
+    // get the data
+    fetch('/searchindex.json').then(function(response) {
+      return response.json();
+    }).then(function(response) {
+      searchIndex = response.search;
+    });
+
+    searchUI.classList.toggle('invisible');
+    searchInput.focus();
+
+    // listen for input changes
+    searchInput.addEventListener('keyup', function(event) {
+      var str = searchInput.value
+      if(str.length > 2) {
+        find(str);
+      } else {
+        clearResults();
+      }
+    });
+
+  });
+
+})();
+</script>
 <div id="container-wide" class="py-10 w-full">
     <div class="flex flex-col md:flex-row justify-between gap-10">
         <aside class="docsidebar flex flex-col h-full inset-0 w-72 order-last md:order-first p-2 border-2 rounded-xl">
+            <a href="/search" id="search-link">search</a>
+            <div class="search-ui invisible">
+  <input type="text" id="search-str" class="search-str"/>
+  <ol class="search-results"><ol>
+</div>
             {% set navPages = collections.docs | eleventyNavigation %}
             {% macro renderNavListItem(entry) -%}
             <li class="p-2 border-b-2 last:border-0 {% if entry.url==page.url %}border-brand-primary{% endif %}">
