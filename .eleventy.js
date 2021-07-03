@@ -68,6 +68,13 @@ module.exports = function(eleventyConfig) {
     }
     eleventyConfig.addFilter("sortByPageOrder", sortByPageOrder);
 
+    // {{ variable | jsonify }}
+    eleventyConfig.addFilter('jsonify', function(variable) {
+        return JSON.stringify(variable);
+    });
+
+    eleventyConfig.addFilter("squash", require("./filters/squash.js") );
+
     // Collections
     eleventyConfig.addCollection('blog', collection => {
 
@@ -121,7 +128,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/js/asciinema-player.js": "./asciinema-player.js" });
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/css/asciinema-player.css": "./asciinema-player.css" });
-    
+
     // Plugins
     eleventyConfig.addPlugin(eleventyGoogleFonts);
     eleventyConfig.addPlugin(syntaxHighlight);
