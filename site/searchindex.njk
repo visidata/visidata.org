@@ -1,14 +1,12 @@
 ---
-permalink: '/searchindex.json'
+permalink: '/index.json'
 ---
-{
-  "search": [
+[
     {% for item in collections.docs %}
       {
         "title": "{{ item.data.eleventyNavigation.key }}",
         "url": "{{ item.url }}",
-        "text": "{{ item.templateContent | safe }}"
+        "content": "{{ item.templateContent | squash }}"
       }{% if not loop.last %},{% endif %}
     {% endfor %}
-  ]
-}
+]
