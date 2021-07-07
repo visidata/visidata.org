@@ -1,12 +1,8 @@
 ---
-layout: page
+layout: docs
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<form class="text-center" action="/search/" method="GET">
-        <input class="dark:bg-brand-dark dark:text-white rounded w-full max-w-xl" placeholder="Search..." required type="search" name="q" />
-</form>
-
+<h1>Search results for "<span id="searchterm"></span>"</h1>
 <ol id="search-results"></ol>
 <script>
     window.pages = {
@@ -65,7 +61,8 @@ if (resultPages.length) {
         document.querySelector("#search-results").innerHTML = resultsString;
     }
     else {
-        document.querySelector("#search-results").innerHTML = "<p class='text-center mt-20 text-3xl'>Sorry, no results</p>";
+        document.querySelector("#search-results").innerHTML = "<p class='text-center mt-20 text-3xl'>Sorry, no results.</p>";
     }
+document.querySelector("#searchterm").innerHTML = searchTerm;
 })();
 </script>
