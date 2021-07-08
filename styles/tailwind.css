@@ -50,6 +50,9 @@ h2 a::before {
   content: "#";
   @apply mr-2 opacity-50;
 }
+h2 a:nth-last-child(2n) {
+  display: none;
+}
 .nav a, .mobile-nav a {
   font-family: "Inconsolata", monospace;
 }
