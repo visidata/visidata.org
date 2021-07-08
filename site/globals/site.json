@@ -20,20 +20,5 @@
     {
         "twitter": "https://twitter.com/visidata",
         "github": "https://github.com/saulpw/visidata"
-    },
-    "address":
-    {
-        "street": "123 Fake Street",
-        "street_2": "Fake Road",
-        "city": "Corpus Christi",
-        "state": "Texas",
-        "zipcode": "123456",
-        "country": "USA"
-    },
-    "contact":
-    {
-        "phone": "123 456 789",
-        "mobile": "",
-        "email": "example@example.com"
     }
 }
