@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
-    "docs": "./lukeall.sh",
     "dev:11ty": "eleventy --serve --watch",
     "dev:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css -w",
-    "build": "npm run docs && eleventy && postcss styles/tailwind.css --o _site/style.css"
+    "build": "npm-run-all build:*",
+    "api": "sphinx-build -b html visidata/docs/api site/docs/api",
+    "build:docs": "./lukeall.sh",
+    "build:11ty": "eleventy",
+    "build:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css"
   },
   "keywords": [],
   "author": "",
