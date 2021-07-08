@@ -6,15 +6,17 @@
 
 **Install**
 
+`pip install -r requirements.txt`
+
 `npm install`
 
 **Live dev environment:**
 
-Run `npm run dev`
+`npm run dev`
 
 **Production:**
 
-Run `npm run build`
+`npm run build`
 
 ## Writing content
 
