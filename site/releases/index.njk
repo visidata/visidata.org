@@ -3,7 +3,7 @@ title: Releases
 eleventyExcludeFromCollections: true
 ---
 <p class="text-center"><a href="/releases.xml">RSS Feed</a></p>
-<div class="mt-10">{% for releases in collections.releases %}
+<div class="mt-10 max-w-xs mx-auto">{% for releases in collections.releases %}
     <div>
         <h2 class="mb-6 text-2xl inline-block"><a class="border-b-2 border-brand-primary inline-block" href="{{ releases.url }}">{{ releases.data.title }}</a>
         </h2>
