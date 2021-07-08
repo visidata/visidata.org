@@ -37,7 +37,7 @@ Options:
 	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
 	- ~~Add asciinema CSS/JS~~
 	- ~~Fix <title>~~
-	- API build on 11ty build
+	- ~~API build on 11ty build~~
 * ~~Blog posts page~~
 * ~~Releases post page~~
 * ~~Credits page~~
