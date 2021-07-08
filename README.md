@@ -20,7 +20,7 @@ Run `npm run build`
 
 For both blog posts and releases, all MarkDown files will be stored in `site/blog/<year>/`.
 
-If you need to store assets such as image files, these go in `site/blog/assets`.
+If you need to store assets such as image files, these go in `site/blog/assets/`.
 
 **Important notes:**
 
