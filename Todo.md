@@ -22,7 +22,7 @@ Options:
 		+ ~~Releases~~
 		+ ~~Blog posts~~
 	- ~~Fix demo breakpoints on mobile~~
-	- Add asciinema videos instead of screenshots?
+	- Add asciinema videos instead of screenshots to homepage? Extra page weight if we do + needs JS
 	- ~~Change screenshot boxes to 2x2 grid?~~
 	- ~~Testimonials~~
 		- ~~3, 5, 6~~
@@ -34,7 +34,7 @@ Options:
 	- ~~Order for docs~~
 		- ~~Hierarchical ordering? https://www.11ty.dev/docs/plugins/navigation/~~
 	- ~~Docs index~~
-	- Heading anchors - re-add old manual anchors? see if pandoc can do it?
+	- ~~Heading anchors - re-add old manual anchors? see if pandoc can do it?~~
 	- ~~Add asciinema CSS/JS~~
 	- ~~Fix <title>~~
 	- ~~API build on 11ty build~~
@@ -61,3 +61,4 @@ Options:
 		- ~~Make white logo for dark mode~~
 	- Features
 		- ~~RSS~~
+* Meta images
