@@ -8,7 +8,7 @@
     "dev:11ty": "eleventy --serve --watch",
     "dev:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css -w",
     "build": "npm-run-all build:*",
-    "build:api": "export PYTHONPATH=visidata && sphinx-build -b html visidata/docs/api site/docs/api",
+    "build:api": "export PYTHONPATH=visidata/visidata && sphinx-build -b html visidata/docs/api site/docs/api",
     "build:docs": "./lukeall.sh",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css"
