@@ -47,7 +47,7 @@ Options:
 * ~~Privacy policy page~~
 * General layout and design
 	- Nav
-		+ Search, potentially powered by Algolia
+		+ ~~Search, potentially powered by Algolia~~
 		+ ~~Hover effects for nav items~~
 		+ ~~No-JS mobile menu~~
 	- Footer
