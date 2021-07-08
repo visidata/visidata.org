@@ -11,8 +11,8 @@ let markdownLibrary = markdownIt({
 }).use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "heading-anchor",
-    permalinkSymbol: "#",
-    permalinkSpace: true,
+    permalinkSymbol: "",
+    permalinkSpace: false,
     permalinkBefore: true,
     level: [1, 2],
     slugify: (s) =>
