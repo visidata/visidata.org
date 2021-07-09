@@ -43,12 +43,15 @@ main ul {
 a {
   @apply transition duration-300 ease-in-out;
 }
-h1 a, h2 a, h3 a {
+.docs h2 a {
   @apply border-none;
 }
 h2 a::before {
   content: "#";
   @apply mr-2 opacity-50;
+}
+.heading-anchor {
+  @apply border-none;
 }
 h2 a:nth-last-child(2n) {
   display: none;
