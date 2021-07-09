@@ -1,5 +1,11 @@
 # Release History
 
+## Most Recent Version
+
+* [v2.5](/blog/2021/v2.5) (2021-07-08)
+
+## Past Versions
+
 * [v2.4](/blog/2021/v2.4) (2021-04-11)
 * [v2.3](/blog/2021/v2.3) (2021-04-04)
 * [v2.2](/blog/2021/v2.2) (2021-01-30)

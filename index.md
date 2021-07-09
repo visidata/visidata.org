@@ -72,7 +72,7 @@ but you need
 
 # [Install Now](/install)
 
-#### Latest Version: [2.4](/blog/2021/v2.4/) (2021-04-11)
+#### Latest Version: [2.5](/blog/2021/v2.5/) (2021-07-08)
 
 <table>
 <tr>
