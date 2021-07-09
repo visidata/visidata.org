@@ -46,6 +46,9 @@ a {
 .docs h2 a {
   @apply border-none;
 }
+h2 a {
+  @apply border-b-2 border-brand-primary;
+}
 h2 a::before {
   content: "#";
   @apply mr-2 opacity-50;
