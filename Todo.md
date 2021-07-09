@@ -61,4 +61,4 @@ Options:
 		- ~~Make white logo for dark mode~~
 	- Features
 		- ~~RSS~~
-* Meta images
+* ~~Meta images~~

@@ -120,8 +120,7 @@ module.exports = function(eleventyConfig) {
     // Include our static assets
     eleventyConfig.addPassthroughCopy("js")
     eleventyConfig.addPassthroughCopy("robots.txt")
-    eleventyConfig.addPassthroughCopy("images/svg")
-    eleventyConfig.addPassthroughCopy("images/icons")
+    eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("videos")
     eleventyConfig.addPassthroughCopy({ "./site/blog/assets": "./blog/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/assets": "./docs/assets" });

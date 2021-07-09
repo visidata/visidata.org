@@ -13,7 +13,7 @@
     {
         "logo": "/images/vdlogo.png",
         "favicon": "/images/icons/favicon.ico",
-        "twitter": "/images/meta/twitter.jpg",
+        "twitter": "/images/meta/og.jpg",
         "og": "/images/meta/og.jpg"
     },
     "social_links":
