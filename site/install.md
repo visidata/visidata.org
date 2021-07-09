@@ -30,11 +30,11 @@ Install [brew](https://brew.sh) if necessary, and then run:
 
     nix-env -i visidata
 
-## Linux - [GNU Guix]()
+## Linux - GNU Guix
 
     guix install visidata
 
-## [Conda]()
+## Conda
 
     conda install --channel conda-forge visidata
 
