@@ -4,16 +4,34 @@ meta_title: VD+
 meta_description: VisiData+
 title: VD+
 ---
-<main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
-    <section id="container-wide" class="md:py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center" aria-label="Hero">
-        <div class="p-4">
-            <h1 class="md:text-5xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam sapiente aut soluta! Unde voluptate eveniet, commodi id dolorum cumque amet nesciunt deserunt, quidem, voluptates, illo fuga ex enim molestiae accusantium.</p>
-            {% include 'components/ctabutton.njk' %}
-            <a href="/docs/" class="button button-outline ml-5">Docs</a>
+<main id="main" class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
+    <section class="w-full md:py-20" aria-label="Hero" style="background-image: url(/images/basic-screenshot.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="md:px-2 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+            <div class="p-4 flex flex-col bg-gray-900 bg-opacity-50 backdrop-blur text-gray-100 border-gray-100 md:border-2">
+                <h1 class="md:text-5xl">Introducing VisiData Plus</h1>
+                <h3 class="order-first text-brand-border">Make your data work easy.</h3>
+                <p>Built on the mindblowing open-source supertool VisiData, VisiData Plus includes integrations for the most common data sources you'll come across in your daily work.</p>
+                <a href="" class="button mx-auto md:ml-0 text-gray-900">View Plans</a>
+            </div>
         </div>
-        <div class="rounded-2xl bg-gray-100 dark:bg-gray-700 p-4">
-            {% image "images/vdlogo.png", "Screenshot of a map in VisiData" %}
+    </section>
+    <section id="container-wide" class="py-10">
+        <div class="max-w-2xl mx-auto mb-14 text-xl">
+            <p>VisiData makes it ridiculously easy to explore, transform, and convert data from many different file formats.</p>
+            <p>VisiData Plus expands that power to many online data sources, with new sources being added all the time.</p>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center place-items-stretch">
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Extract, Transform, and Load (ETL) has never been easier.</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">When you just need to see your data, VisiData will show it to you.</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Google Sheets</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Load an existing sheet and save a new sheet.</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Google Drive</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Browse files, delete files, and load files into VisiData.</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Airtable</p>
+            <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Load an existing table from a base and edit or add records.</p>
+        </div>
+    </section>
+    <section id="container-wide" class="py-10">
+        {# Pricing table #}
     </section>
 </main>

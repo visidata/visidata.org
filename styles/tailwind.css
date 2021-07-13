@@ -21,6 +21,9 @@ h1 {
 h2 {
   @apply text-3xl;
 }
+h3 {
+  @apply text-2xl;
+}
 h1, h2, h3 {
   @apply font-black;
   font-family: "Inconsolata", monospace;
@@ -72,9 +75,8 @@ h2 a:nth-last-child(2n) {
   @apply max-w-7xl px-2 mx-auto;
 }
 .button {
-  @apply dark:text-gray-900 mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow border-2;
+  @apply dark:text-gray-900 mt-5 md:mt-0 inline-block rounded-xl py-3 px-8 font-bold bg-brand-primary hover:scale-105 transition duration-150 ease-in-out hover:shadow border-2 border-brand-border;
   font-family: "Inconsolata", sans-serif;
-  border-color: #00BFFF;
 }
 .button-outline {
   @apply bg-transparent border-2 border-solid border-brand-primary dark:text-white;

@@ -1,3 +1,4 @@
+{% if page.url != "/plus/" %}
 <div class="my-10 mx-auto text-center px-2">
     <h2>Our Sponsors</h2>
     {# Edit these in site/globals/sponsors.json #}
@@ -12,6 +13,7 @@
         {% endfor %}
     </div>
 </div>
+{% endif %}
 <footer id="footer" class="footer bg-gray-100 dark:bg-gray-700 text-center md:text-left">
     <div class="footer-inner container m-auto flex flex-col md:flex-row justify-between items-center px-6 py-2">
         <div class="order-last md:order-first">
@@ -43,7 +45,6 @@
                     </span>
                     VisiData Subreddit</a></p>
             <p><a href="irc://irc.libera.chat/visidata">
-                    
                     #visidata on irc.libera.chat</a></p>
         </div>
     </div>

@@ -20,6 +20,7 @@ module.exports = {
                 change: "transparent",
                 brand: {
                     primary: "#5fd7ff",
+                    border: "#00BFFF",
                     dark: "#003a4d"
                 }
             },
