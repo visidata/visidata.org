@@ -1,5 +1,0 @@
-sheet	col	row	longname	input	keystrokes	comment
-			open-file	contributors.tsv	o	
-			open-file	patrons.tsv	o	
-patrons			save-sheet	patrons.md	^S	
-contributors			save-sheet	contributors.md	^S	

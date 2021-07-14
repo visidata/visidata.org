@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{# a post layout #}
+<main id="main" class="main inner flex flex-1 flex-col py-10 focus:outline-none" tabindex="-1">
+    <article id="container" class="column centre flex-1">
+        <div class="mb-12">
+            <header>
+                <h1 class="page-title text-3xl md:text-center md:text-5xl lg:text-6xl">{{ title }}</h1>
+            </header>
+            <div class="text-sm md:text-base flex justify-center">
+                <p class="author">By {% if author %}
+                    {{ author }}
+                    {% else %}
+                    {{ site.author.name }}
+                    {% endif %}
+                </p>
+                <p class="px-2">—</p>
+                <time datetime="{{ date }}">
+                    {{ date | dateDisplay }}
+                </time>
+            </div>
+            {# featured post image #}
+            {% if featured_image %}
+            <figure class="mt-10 md:mt-20">
+                <img data-lazy="{{ featured_image }}" alt="{{ image_caption }}">
+                {% if image_caption %}
+                <figcaption class="text-center text-sm italic text-gray-600 mt-4">{{ image_caption }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endif %}
+        </div>
+        <div class="content post md:px-16">
+            {{ content | safe }}
+            {# category links list #}
+            {% if tags %}
+            <ul class="flex pt-4">
+                {% for item in tags %}
+                {%- if item != "blog" -%}
+                <li class="mr-2 list-none">
+                    <span class="">#</span><a class="inline-block lowercase" href="/category/{{ item }}">{{ item | capitalize }}</a>
+                </li>
+                {%- endif -%}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="mt-16 md:px-16">
+            <div class="flex justify-between flex-col md:flex-row text-center gap-5 mt-16 border-t border-gray-200 pt-12">
+                {% if prevPost %}<p class="text-sm w-full md:text-left"><a class="border-b-2" href="{{ prevPost.url }}">← {{ prevPost.data.title }}</a></p>{% endif %}
+                {% if nextPost %}<p class="text-sm w-full md:text-right"><a class="border-b-2" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a></p>{% endif %}
+            </div>
+        </div>
+    </article>
+</main>

@@ -1,0 +1,24 @@
+{
+    "name": "VisiData",
+    "slogan": "",
+    "url": "https://visidata.org",
+    "author":
+    {
+        "name": "Saul Pwanson",
+        "email": "",
+        "handle": "@VisiData",
+        "avatar": "/images/blog/author.jpg"
+    },
+    "images":
+    {
+        "logo": "/images/vdlogo.png",
+        "favicon": "/images/icons/favicon.ico",
+        "twitter": "/images/meta/og.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links":
+    {
+        "twitter": "https://twitter.com/visidata",
+        "github": "https://github.com/saulpw/visidata"
+    }
+}

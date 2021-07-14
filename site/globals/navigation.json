@@ -1,0 +1,24 @@
+{
+    "main": [
+    {
+        "label": "Docs",
+        "url": "/docs/"
+    },
+    {
+        "label": "Releases",
+        "url": "/releases/"
+    },
+    {
+        "label": "Credits",
+        "url": "/credits/"
+    },
+    {
+        "label": "Blog",
+        "url": "/blog/"
+    },
+    {
+        "label": "GitHub",
+        "url": "https://github.com/saulpw/visidata",
+        "attr": "target='_blank' rel='noopener'"
+    }]
+}

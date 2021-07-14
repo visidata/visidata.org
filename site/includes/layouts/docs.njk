@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div id="container-wide" class="py-10 w-full docs">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+        <aside class="docsidebar flex flex-col h-full inset-0 w-72 order-last md:order-first p-2 border-2 rounded-xl">
+            <form action="/search/" method="GET">
+                <input class="dark:bg-brand-dark dark:text-white rounded w-full border-2 border-gray-200 focus:border-brand-primary" required placeholder="Search..." type="search" name="q" />
+            </form>
+            {% set navPages = collections.docs | eleventyNavigation %}
+            {% macro renderNavListItem(entry) -%}
+            <li class="p-2 border-b-2 last:border-0 {% if entry.url==page.url %}border-brand-primary{% endif %}">
+                <a class="{% if entry.url==page.url %}font-bold{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a>
+                {%- if entry.children.length -%}
+                <ul>
+                    {%- for child in entry.children %}
+                    {{ renderNavListItem(child) }}
+                    {% endfor -%}
+                </ul>
+                {%- endif -%}
+            </li>
+            {%- endmacro %}
+            <ul>
+                {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+            </ul>
+            <a class="button text-center" href="/docs/api/">API Docs →</a>
+        </aside>
+        <article class="w-full flex-auto min-w-0">
+            <h1 class="text-3xl md:text-5xl text-center">{{ eleventyNavigation.key }}</h1>
+            {{ content | safe }}
+        </article>
+    </div>
+</div>

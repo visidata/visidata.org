@@ -1,0 +1,19 @@
+{
+    "main": [
+    {
+        "quote": "I wonder if @visidata can.... Yes, yes it can. I love this tool.",
+        "author": "Luke Plant",
+        "url": "https://twitter.com/spookylukey/status/1299314579282026498"
+    },
+    {
+        "quote": "A remarkably powerful and well-designed tool.",
+        "author": "Yoz Grahame",
+        "url": "https://twitter.com/yoz/status/1130668037663731712"
+    },
+    {
+        "quote": "The tool I reach for first when I encounter a new dataset.",
+        "author": "Jeremy Singer-Vine",
+        "url": "https://jsvine.github.io/intro-to-visidata/index.html"
+    }
+    ]
+}
