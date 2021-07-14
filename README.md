@@ -38,7 +38,7 @@ This site includes Eleventy Image. This makes it easy to serve responsive, optim
 Eleventy Image will automatically convert any jpeg, png, webp, gif, tiff, or avif to optimized webp and jpeg. Thanks to the HTML `<picture>` element, WebP is served first with a JPEG fallback for browsers that don't support WebP. [All the major browsers support WebP](https://caniuse.com/?search=webp). 
 
 If you need to add an image to a template file (.njk), use the Eleventy Image shortcode instead of the `<img>` element:
-`{% image "images/image.jpg", "alt text goes here"}`
+`{% image "images/image.jpg", "alt text goes here" %}`
 
 **Important note:** Be sure to include alt text or Eleventy will throw a warning (this is good!).
 
