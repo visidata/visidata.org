@@ -44,6 +44,11 @@ If you need to add an image to a template file (.njk), use the Eleventy Image sh
 
 Store your template images in `/images`.
 
+### Animated GIFs
+These can be extremely heavy - I recommend converting them to MP4 instead and adding them using the HTML5 `<video>` element. An example can be seen on the index page.
+
+**Eleventy Image will not output these in an animated format.**
+
 ## Updatable site elements
 
 You can always edit the HTML, but some elements are rendered from a JSON list.
