@@ -152,11 +152,11 @@ title: "Open-source data multitool"
     <section id="container-wide" class="py-10 px-4" aria-label="Testimonials">
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-20">
             {% for item in testimonials.main %}
-            <div>
+            <div class="p-4 rounded-2xl border-2 border-solid">
                 <q class="text-xl">
                     {{ item.quote }}
                 </q>
-                <p class="text-right mt-2">-<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.author }}</a></p>
+                <p class="text-right mt-2 mb-0">-<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.author }}</a></p>
             </div>
             {% endfor %}
         </div>
