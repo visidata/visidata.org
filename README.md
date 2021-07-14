@@ -47,7 +47,7 @@ Store your template images in `/images`.
 ### Animated GIFs
 These can be extremely heavy - I recommend converting them to MP4 instead and adding them using the HTML5 `<video>` element. Browsers will then defer loading the video until the play button is clicked. An example can be seen on the index page.
 
-**Eleventy Image will not output these in an animated format.**
+**Eleventy Image will not output GIFs in an animated format.**
 
 ## Updatable site elements
 
