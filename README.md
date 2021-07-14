@@ -29,7 +29,7 @@ If you need to store assets such as image files, these go in `site/blog/assets/`
 
 **Important notes:**
 
-* **All posts must include the appropriate frontmatter** or they will not show up on the site. Check previous posts for examples. Copy-paste is the easiest method to ensure your frontmatter is correct.
+* **All posts must include the appropriate frontmatter** or they will not show up on the site. Check previous posts for examples.
 * **No H1 headings in posts.** There should only be one H1 element on each page, and that's the title, which is automatically added from the frontmatter. Use H2s instead. This helps search engines not get confused.
 
 ## Images
