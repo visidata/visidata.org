@@ -27,7 +27,7 @@ Options:
 	- ~~Testimonials~~
 		- ~~3, 5, 6~~
 		- ~~JSON file + template code~~
-* VisiData+ landing page
+* ~~VisiData+ landing page~~
 * Docs pages
 	- ~~Quick reference(s)~~
 	- ~~Ordering system for pages~~
