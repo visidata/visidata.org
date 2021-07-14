@@ -1,8 +1,8 @@
 ---
 layout: default
-meta_title: VD+
-meta_description: VisiData+
-title: VD+
+meta_title: Visidata Plus
+meta_description: Details on VisiData Plus
+title: Plus
 ---
 <main id="main" class="main inner flex flex-1 flex-col focus:outline-none" tabindex="-1">
     <section class="w-full md:py-20" aria-label="Hero" style="background-image: url(/images/basic-screenshot.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
@@ -11,11 +11,11 @@ title: VD+
                 <h1 class="md:text-5xl">Introducing VisiData Plus</h1>
                 <h3 class="order-first text-brand-border">Make your data work easy.</h3>
                 <p>Built on the mindblowing open-source supertool VisiData, VisiData Plus includes integrations for the most common data sources you'll come across in your daily work.</p>
-                <a href="" class="button mx-auto md:ml-0 text-gray-900">View Plans</a>
+                <a href="#plans" class="button mx-auto md:ml-0 text-gray-900">View Plans</a>
             </div>
         </div>
     </section>
-    <section id="container-wide" class="py-10">
+    <section id="container-wide" class="py-10" aria-label="Features table">
         <div class="max-w-2xl mx-auto mb-14 text-xl">
             <p>VisiData makes it ridiculously easy to explore, transform, and convert data from many different file formats.</p>
             <p>VisiData Plus expands that power to many online data sources, with new sources being added all the time.</p>
@@ -31,7 +31,35 @@ title: VD+
             <p class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700">Load an existing table from a base and edit or add records.</p>
         </div>
     </section>
-    <section id="container-wide" class="py-10">
-        {# Pricing table #}
+    <section id="container" class="py-10 pb-20" aria-label="Pricing table">
+        <div id="plans" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="border-2 p-5 rounded-lg text-center flex flex-col">
+                <div class="flex-grow">
+                    <h2 class="mb-1">Open Source</h2>
+                    <h2 class="text-5xl text-brand-border">Free</h2>
+                    <h3 class="font-normal mb-5">Forever</h3>
+                    <p>VisiData is Free and Open-Source and always will be.</p>
+                </div>
+                    <a href="/install/" class="button mb-5 flex-shrink" rel="noopener">Install →</a>
+            </div>
+            <div class="border-2 p-5 rounded-lg text-center flex flex-col">
+                <div class="flex-grow">
+                    <h2 class="mb-1">Professional</h2>
+                    <h2 class="text-5xl text-brand-border">$20</h2>
+                    <h3 class="font-normal mb-5">USD / Month</h3>
+                    <p>Use VisiData to connect with other online data sources.</p>
+                </div>
+                    <a href="" class="button mb-5 flex-shrink" rel="noopener">Subscribe →</a>
+            </div>
+            <div class="border-2 p-5 rounded-lg text-center flex flex-col">
+                <div class="flex-grow">
+                    <h2 class="mb-1">Enterprise</h2>
+                    <h2 class="text-5xl text-brand-border">$50</h2>
+                    <h3 class="font-normal mb-5">USD / Month</h3>
+                    <p>For maximal convenience; including pre-configured API keys (when possible) and priority support.</p>
+                </div>
+                    <a href="" class="button mb-5 flex-shrink" rel="noopener">Subscribe →</a>
+            </div>
+        </div>
     </section>
 </main>
