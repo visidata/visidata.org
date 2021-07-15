@@ -10,7 +10,7 @@ p a, article a {
   @apply border-brand-primary border-b-2;
 }
 
-ul a, article a {
+article a {
   @apply border-brand-primary border-b-2;
 }
 code {
