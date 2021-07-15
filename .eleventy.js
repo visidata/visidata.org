@@ -128,6 +128,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/js/asciinema-player.js": "./asciinema-player.js" });
     eleventyConfig.addPassthroughCopy({ "./node_modules/asciinema-player/resources/public/css/asciinema-player.css": "./asciinema-player.css" });
 
+    // Pass through the redirects
+    eleventyConfig.addPassthroughCopy({ "./redirects.tsv": "./_redirects" });
+
     // Plugins
     eleventyConfig.addPlugin(eleventyGoogleFonts);
     eleventyConfig.addPlugin(syntaxHighlight);
