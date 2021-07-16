@@ -49,6 +49,10 @@ These can be extremely heavy - I recommend converting them to MP4 instead and ad
 
 **Eleventy Image will not output GIFs in an animated format.**
 
+## Manpage
+
+Build the manpage html for the current `vd.1` in visidata.org/visidata, by running `mkmanhtml.sh`. Move the bult manpage to its appropriate version in site/docs/man/VERSIONID/index.html.
+
 ## Updatable site elements
 
 You can always edit the HTML, but some elements are rendered from a JSON list.
