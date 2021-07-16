@@ -1,0 +1,41 @@
+---
+layout: default
+meta_title: Contact
+meta_description: Contact page description
+body_class: contact
+title: Contact Us
+---
+
+<main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none" tabindex="-1">
+
+    <article id="container" class="column centre flex-1">
+
+        <header>
+            <h1 class="text-4xl pb-5">{{ title }}</h1>
+        </header>
+
+        <div class="">
+
+            <p>Tell us how great we are in the form below.</p>
+            <!-- All this form needs is an action URL. -->
+            <form action="" class="pageclip-form grid gap-6 w-full md:w-auto" method="post">
+                <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input class="border-2 rounded-xl p-2 inline-grid" type="text" name="firstname" placeholder="First Name" required />
+                    <input class="border-2 rounded-xl p-2 inline-grid" type="text" name="lastname" placeholder="Last Name" required />
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <input class="border-2 rounded-xl p-2" type="email" name="email" placeholder="Your Email" required />
+                    <input type="hidden" name="email-2" />
+                    <input class="border-2 rounded-xl p-2" type="tel" name="phone" placeholder="Your Phone Number" required />
+                </div>
+                <textarea class="border-2 rounded-xl p-2" name="body" placeholder="Write your message..."></textarea>
+              
+                <button type="submit" class="pageclip-form__submit button">
+                  <span>Send</span>
+                </button>
+              </form>
+    </article>
+
+</main>
+

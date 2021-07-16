@@ -1,0 +1,69 @@
+---
+layout: docs
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<noscript><p>Sorry, this page requires JavaScript. Try running your search on <a href="https://duckduckgo.com/?q=site%3Avisidata.org" rel="noopener">DuckDuckGo</a> instead.</p></noscript>
+<h1>Search results for "<span id="searchterm"></span>"</h1>
+<ol id="search-results"></ol>
+<script>
+    window.pages = {
+        {% for item in collections.docs %}
+      "{{ item.url }}": {
+        "title": "{{ item.data.eleventyNavigation.key }}",
+        "content": "{{ item.templateContent | striptags  }}",
+        "url": "{{ item.url }}",
+        "path": "{{ item.url }}"
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    };
+</script>
+<script type="text/javascript">
+(function search() {
+	var searchIndex = lunr(function() {
+    this.ref("id");
+    this.field("title", { boost: 10 });
+    this.field("content");
+    for (var key in window.pages) {
+        this.add({
+            "id": key,
+            "title": pages[key].title,
+            "content": pages[key].content
+        });
+    }
+});
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] === variable) {
+          return decodeURIComponent(pair[1].replace(/\+/g, "%20"));
+      }
+  }
+}
+
+var searchTerm = getQueryVariable("q");
+// creation of searchIndex from earlier example
+var results = searchIndex.search(searchTerm);
+var resultPages = results.map(function (match) {
+  return pages[match.ref];
+});
+// resultPages from previous example
+
+resultsString = "";
+resultPages.forEach(function (r) {
+    resultsString += "<li class='my-5'>";
+    resultsString +=   "<a class='result' href='" + r.url + "'><h3>" + r.title + "</h3>";
+    resultsString +=   "<p class='snippet'>" + r.content.substring(0, 200) + "</p></a>";
+    resultsString += "</li>"
+});
+document.querySelector("#search-results").innerHTML = resultsString;
+if (resultPages.length) {
+        document.querySelector("#search-results").innerHTML = resultsString;
+    }
+    else {
+        document.querySelector("#search-results").innerHTML = "<p class='text-center mt-20 text-3xl'>Sorry, no results.</p>";
+    }
+document.querySelector("#searchterm").innerHTML = searchTerm;
+})();
+</script>
