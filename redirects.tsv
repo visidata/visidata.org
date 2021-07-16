@@ -10,3 +10,5 @@
 /data/iana-ports.tsv	/plugins/pcap/iana-ports.tsv
 /data/wireshark-oui.tsv	/plugins/pcap/wireshark-oui.tsv
 /man	/docs/v2.5/man
+/formats    /docs/formats
+/format /docs/formats
