@@ -10,7 +10,7 @@ p a, article a {
   @apply border-brand-primary border-b-2;
 }
 
-ul a, article a {
+article a {
   @apply border-brand-primary border-b-2;
 }
 code {
@@ -40,6 +40,13 @@ p {
 }
 article ul {
   @apply list-disc;
+}
+li ul {
+  @apply list-inside;
+  list-style-type: circle;
+}
+aside ul {
+  list-style-type: none;
 }
 section a, footer p a {
   @apply border-b-2;
