@@ -9,4 +9,4 @@
 /blog/rss.xml	/feed.xml
 /data/iana-ports.tsv	/plugins/pcap/iana-ports.tsv
 /data/wireshark-oui.tsv	/plugins/pcap/wireshark-oui.tsv
-/man	/docs/v2.4/man
+/man	/docs/v2.5/man
