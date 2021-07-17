@@ -10,6 +10,5 @@
 /data/iana-ports.tsv	/plugins/pcap/iana-ports.tsv
 /data/wireshark-oui.tsv	/plugins/pcap/wireshark-oui.tsv
 /man	/docs/man/
-/formats    /docs/formats
 /formats	/docs/formats
 /plugins/plugins.jsonl	https://raw.githubusercontent.com/saulpw/visidata/stable/plugins/plugins.jsonl
