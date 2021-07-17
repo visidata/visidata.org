@@ -130,6 +130,8 @@ module.exports = function(eleventyConfig) {
 
     // Pass through the redirects
     eleventyConfig.addPassthroughCopy({ "./redirects.tsv": "./_redirects" });
+    // Pass through plugins
+    eleventyConfig.addPassthroughCopy({ "./plugins": "./plugins" });
 
     // Plugins
     eleventyConfig.addPlugin(eleventyGoogleFonts);
