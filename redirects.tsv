@@ -11,3 +11,5 @@
 /data/wireshark-oui.tsv	/plugins/pcap/wireshark-oui.tsv
 /man	/docs/man/
 /formats    /docs/formats
+/formats	/docs/formats
+/plugins/plugins.jsonl	https://raw.githubusercontent.com/saulpw/visidata/stable/plugins/plugins.jsonl
