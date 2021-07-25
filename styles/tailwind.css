@@ -104,6 +104,19 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 table {
   @apply border-separate mx-auto border-2 rounded mb-5 overflow-x-auto;
 }
+
+pre {
+    margin: 3em;
+}
+
+pre code {
+    padding: 1em;
+}
+
+.content p {
+    margin-left: 2em;
+}
+
 td {
   @apply rounded;
 }
