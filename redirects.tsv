@@ -15,3 +15,4 @@
 /plugins/plugins.jsonl	https://raw.githubusercontent.com/saulpw/visidata/stable/plugins/plugins.jsonl
 /plugins/pcap/wireshark-oui.tsv	https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/pcap/wireshark-oui.tsv
 /plugins/pcap/iana-ports.tsv	https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/pcap/iana-ports.tsv
+/rss	/feed.xml
