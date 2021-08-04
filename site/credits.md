@@ -33,7 +33,3 @@ If you like what we're doing, [send me an email](mailto:vd@saul.pw) or subscribe
 - [Thomas Sibley](https://tsibley.net/)
 - [Chocolateboy](https://github.com/chocolateboy)
 - and a big thanks to the people who create and maintain various plugins.
-
-## Sponsor
-
-Many thanks to Christian Warden and October Swimmer for their ongoing patronage and support.
