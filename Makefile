@@ -1,8 +1,12 @@
 
 build:
-	npm install
 	npm run build
 
-server:
-	cd _site ; python3 -m http.server
+build-docs:
+	npm run build:docs
 
+setup:
+	npm install
+
+server: build-docs build
+	npm run dev
