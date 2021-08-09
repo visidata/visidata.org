@@ -122,7 +122,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("robots.txt")
     eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("videos")
-    eleventyConfig.addPassthroughCopy({"videos/freq-move-row.gif": "./freq-move-row.gif"});
+    eleventyConfig.addPassthroughCopy({"./videos/freq-move-row.gif": "./freq-move-row.gif"});
     eleventyConfig.addPassthroughCopy({ "./site/blog/assets": "./blog/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/assets": "./docs/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
