@@ -1,5 +1,5 @@
 ---
-title: "VisiData.org Redesign for 2021"
+title: "VisiData.org Redesign"
 date: 2021-08-13
 author: Luke Harris
 tags:
