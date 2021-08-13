@@ -39,6 +39,9 @@ p {
 article ul {
   @apply list-disc;
 }
+ul {
+  @apply list-inside;
+}
 li ul {
   @apply list-inside;
   list-style-type: circle;
