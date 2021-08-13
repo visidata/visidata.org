@@ -13,9 +13,6 @@ p a, article a {
 article a {
   @apply border-brand-primary border-b-2;
 }
-code {
-  @apply bg-gray-200 dark:text-gray-900 px-1 rounded whitespace-pre-line break-all select-all;
-}
 
 /* Some defaults for styling.  */
 
@@ -106,18 +103,18 @@ table {
   @apply border-separate mx-auto border-2 rounded mb-5 overflow-x-auto;
 }
 
-pre {
-    @apply md:m-10;
+code {
+  @apply p-1 rounded whitespace-pre select-all;
 }
-
-pre code {
-    padding: 1em;
+pre  {
+  @apply rounded p-5 my-5 overflow-x-scroll max-w-min;
 }
-
-.content p {
+pre, code {
+   @apply bg-gray-200 dark:text-gray-900;
+}
+.content p, pre {
     @apply md:ml-6;
 }
-
 td {
   @apply rounded;
 }
