@@ -112,7 +112,7 @@ pre code {
 }
 
 .content p {
-    margin-left: 2em;
+    @apply md:ml-6;
 }
 
 td {
