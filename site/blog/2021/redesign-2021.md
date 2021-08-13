@@ -6,6 +6,8 @@ tags:
 - blog
 ---
 
+Hello! My name is Luke Harris, and [I'm a web designer](https://luke.work). I recently completed the new site design for VisiData.org, and wanted to outline the goals and challenges. Let's dive in.
+
 ![VisiData homepage](/blog/assets/redesign/screenshot1.jpg)
 
 
@@ -23,7 +25,7 @@ tags:
 
 This website was originally built with a custom-made static site generator (SSG) and is a mix of regular Markdown files and reStructuredText parsed by [pandoc](https://pandoc.org).
 
-This site is now statically generated with [11ty](https://www.11ty.dev), and uses [TailwindCSS](https://tailwindcss.com) for styling. 
+This site is now statically generated with [11ty](https://www.11ty.dev), and uses [TailwindCSS](https://tailwindcss.com) for styling.
 
 ## Challenges overcome
 
@@ -72,3 +74,9 @@ It's important to quickly be able to catch up on what's new with an open-source 
 ### After:
 
 ![new VisiData site](/blog/assets/redesign/screenshot1.jpg)
+
+## Issues
+
+If you come across any bugs or issues with the new design, let us know by [opening an issue on the repo](https://github.com/visidata/visidata.org/issues).
+
+[Originally posted on luke.work](https://luke.work/blog/2021/08/visidata-redesign/)
