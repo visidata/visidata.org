@@ -44,5 +44,10 @@ Install [brew](https://brew.sh) if necessary, and then run:
 
 ## Unreleased Bleeding Edge
 
+Using Pip:
+
     pip3 install git+https://github.com/saulpw/visidata.git@develop
 
+Using Guix:
+
+    guix install --without-tests=visidata --with-git-url=visidata=https://github.com/saulpw/visidata.git --with-branch=visidata=develop visidata
