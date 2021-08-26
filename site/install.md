@@ -4,7 +4,7 @@ permalink: /install/
 title: Install VisiData
 ---
 
-These packages all support csv, tsv, fixed-width text, json, and sqlite, at minimum.  Packages often support additional formats.
+These packages all support csv, tsv, fixed-width text, json, and sqlite, at minimum.  Packages often support additional formats. Some formats will require [additional dependencies](/docs/formats/).
 
 ## Windows
 
