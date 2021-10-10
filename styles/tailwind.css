@@ -107,7 +107,7 @@ code {
   @apply p-1 rounded whitespace-pre select-all;
 }
 pre  {
-  @apply rounded p-5 my-5 overflow-x-scroll max-w-min;
+  @apply rounded p-5 my-5 overflow-x-scroll;
 }
 pre, code {
    @apply bg-gray-200 dark:text-gray-900;
