@@ -16,8 +16,8 @@ layout: default
                     {% endif %}
                 </p>
                 <p class="px-2">—</p>
-                <time datetime="{{ date }}">
-                    {{ date | dateDisplay }}
+                <time datetime="{{ page.date | dateDisplay }}">
+                    {{ page.date | dateDisplay }}
                 </time>
             </div>
             {# featured post image #}
