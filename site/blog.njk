@@ -23,7 +23,7 @@ pagination:
                         <a class="inline-block no-underline border-b-2" href="{{ post.url }}">{{ post.data.title }}</a>
                     </h2>
                     <div class="text-sm md:flex">
-                        <time datetime="{{ post.date }}">
+                        <time datetime="{{ post.date | dateDisplay }}">
                             {{ post.date | dateDisplay }}
                         </time>
                     </div>

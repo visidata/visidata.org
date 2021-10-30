@@ -5,6 +5,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { DateTime } = require("luxon");
 
 let markdownLibrary = markdownIt({
     html: true,
@@ -42,12 +43,10 @@ module.exports = function(eleventyConfig) {
         return String(Date.now());
     });
     // Filters
-    // Add a readable date formatter filter to Nunjucks
-    eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
-
-    // Add a HTML timestamp formatter filter to Nunjucks
-    eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
-
+    // Date filter to fix UTC issues
+    eleventyConfig.addFilter("dateDisplay", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toUTC().toLocaleString(DateTime.DATE_MED);
+    });
     // Add a limit function to limit the amount of items output by an array. https://11ty.rocks/eleventyjs/data-arrays/#limit-filter
     eleventyConfig.addFilter("limit", function(arr, limit) {
         return arr.slice(0, limit);
@@ -73,7 +72,7 @@ module.exports = function(eleventyConfig) {
         return JSON.stringify(variable);
     });
 
-    eleventyConfig.addFilter("squash", require("./filters/squash.js") );
+    eleventyConfig.addFilter("squash", require("./filters/squash.js"));
 
     // Collections
     eleventyConfig.addCollection('blog', collection => {
@@ -122,7 +121,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("robots.txt")
     eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("videos")
-    eleventyConfig.addPassthroughCopy({"./videos/freq-move-row.gif": "./freq-move-row.gif"});
+    eleventyConfig.addPassthroughCopy({ "./videos/freq-move-row.gif": "./freq-move-row.gif" });
     eleventyConfig.addPassthroughCopy({ "./site/blog/assets": "./blog/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/assets": "./docs/assets" });
     eleventyConfig.addPassthroughCopy({ "./visidata/docs/casts": "./docs/casts" });
