@@ -104,7 +104,7 @@ What will VisiData usage look like in 5 years?   If it continues to double every
 
 Like many powertools, VisiData has so much functionality that it can be offputting to new users.  Even though a handful of commands would already provide a large amount of power and flexibility, new users often bounce off of it because it just seems overwhelming.
 
-So a major and ongoing effort, is to make VisiData even easier to use, while not degrading the experience for power users, and in fact guiding new users into becoming power users without a lot of effort.  The new menu system in [v2.6](https://www.visidata.org/blog/2021/v2.6/) is a big step towards better discoverability.  Next on the list will be a sidebar for "wizard" commands like join, group, plot, with combined 
+So a major and ongoing effort, is to make VisiData even easier to use, while not degrading the experience for power users, and in fact guiding new users into becoming power users without a lot of effort.  The new menu system in [v2.6](https://www.visidata.org/blog/2021/v2.6/) is a big step towards better discoverability.  Next on the list will be a sidebar for "wizard" commands like join, group, and plot; a more holistic and guided fancy chooser.
 
 
 ## Bigger Data
