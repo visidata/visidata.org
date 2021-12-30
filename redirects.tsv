@@ -12,7 +12,7 @@
 /man	/docs/man/
 /formats	/docs/formats
 /format	/docs/formats
-/plugins/plugins.jsonl	https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/plugins.jsonl
+/plugins/plugins.jsonl	https://raw.githubusercontent.com/visidata/dlc/stable/plugins.jsonl
 /plugins/pcap/wireshark-oui.tsv	https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/pcap/wireshark-oui.tsv
 /plugins/pcap/iana-ports.tsv	https://raw.githubusercontent.com/saulpw/visidata/develop/plugins/pcap/iana-ports.tsv
 /rss	/feed.xml
