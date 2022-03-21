@@ -53,7 +53,7 @@ Use `;` with a regex with capture groups like `(\d+)`.
 
 ## 7. Explore any pandas DataFrame
 
-    >>> visidata.view_pandas(df)
+    >>> visidata.vd.view_pandas(df)
 
 ## 8. Create an adhoc data pipeline
 
@@ -87,3 +87,4 @@ There are many other ways to use VisiData!  To learn more, press `Ctrl+H` to see
 - [written by Saul Pwanson 2019-03-24]
 - [updated on 2020-10-15]
 - [updated on 2021-07-24]
+- [updated on 2022-03-21]
