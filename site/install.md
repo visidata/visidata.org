@@ -22,6 +22,10 @@ Install [brew](https://brew.sh) if necessary, and then run:
 
     brew install saulpw/vd/visidata
 
+## Linux - [Arch Linux](https://archlinux.org/packages/community/any/visidata)
+
+    pacman -S visidata
+
 ## Linux - Debian/Ubuntu
 
     apt install visidata
