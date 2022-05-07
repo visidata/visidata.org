@@ -34,6 +34,10 @@ Install [brew](https://brew.sh) if necessary, and then run:
 
     guix install visidata
 
+## Linux - [Arch Linux](https://archlinux.org/packages/community/any/visidata)
+
+    pacman -S visidata
+
 ## Conda
 
     conda install --channel conda-forge visidata
