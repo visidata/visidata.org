@@ -61,15 +61,14 @@ a {
 h2 a {
   @apply border-b-2 border-brand-primary;
 }
-h2 a::before {
+/* Add a fancy marker for heading anchors, but only on 
+Markdown auto anchors and the first link in an H2 heading. */
+.heading-anchor::before, h2 a:first-of-type::before {
   content: "#";
-  @apply mr-2 opacity-50;
+  @apply mr-2 opacity-50 no-underline;
 }
 .heading-anchor {
   @apply border-none;
-}
-h2 a:nth-last-child(2n) {
-  display: none;
 }
 .nav a, .mobile-nav a {
   font-family: "Inconsolata", monospace;
