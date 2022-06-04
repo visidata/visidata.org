@@ -149,7 +149,9 @@ tbody tr:nth-child(odd):hover {
   background: #1e1e1e;
   color: white;
 }
-
+tr:hover code {
+  @apply text-gray-800;
+}
 
 td:hover,
 th:hover {
