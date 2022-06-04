@@ -122,6 +122,7 @@ th {
 td:last-child,
 th:last-child {
   box-shadow: none;
+  border-right: 3px double #bfbfbf;
 }
 
 th {
@@ -153,6 +154,7 @@ tbody tr:nth-child(odd):hover {
 td:hover,
 th:hover {
   font-weight: bold;
+  border-color: #1e1e1e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -174,6 +176,7 @@ th:hover {
   tr:hover th {
     box-shadow: 1px 0 0 #bfbfbf,
       2px 0 0 #1e1e1e;
+    border-color: #1e1e1e;
   }
 
   td,
