@@ -99,14 +99,14 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
 /* Table styling */
 table {
-  font-family: monospace;
   border-collapse: separate;
   border-spacing: 3px;
   border: solid #87afd7;
   border-width: 3px;
   overflow-x: scroll;
-  width: 100%;
-  display: block;
+  max-width: 100%;
+  display: inline-block;
+  @apply font-mono;
 }
 
 td,
@@ -115,7 +115,7 @@ th {
   padding-right: 15px;
   box-shadow: 1px 0 0 white,
     2px 0 0 #1e1e1e;
-  line-height: 0.8;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -184,10 +184,11 @@ th:hover {
 }
 
 code {
-  @apply p-1 rounded whitespace-pre select-all;
+  padding: 1px 2px;
+  @apply rounded-sm whitespace-pre select-all;
 }
 pre  {
-  @apply rounded p-5 my-5 overflow-x-scroll;
+  @apply rounded p-3 my-5 overflow-x-scroll;
 }
 pre, code {
    @apply bg-gray-200 dark:text-gray-900;
