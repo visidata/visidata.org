@@ -104,7 +104,7 @@ table {
   border: solid #87afd7;
   border-width: 3px;
   overflow-x: scroll;
-  max-width: 100%;
+  width: 100%;
   display: inline-block;
   @apply font-mono;
 }
@@ -123,6 +123,7 @@ td:last-child,
 th:last-child {
   box-shadow: none;
   border-right: 3px double #bfbfbf;
+  width: 100%;
 }
 
 th {
