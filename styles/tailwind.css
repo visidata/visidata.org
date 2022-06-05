@@ -99,26 +99,108 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
 /* Table styling */
 table {
-  @apply border-separate mx-auto border-2 rounded mb-5 overflow-x-auto;
+  border-collapse: separate;
+  border-spacing: 3px;
+  border: solid #87afd7;
+  border-width: 3px;
+  overflow-x: scroll;
+  width: 100%;
+  display: inline-block;
+  @apply font-mono;
+}
+
+td,
+th {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 1px 0 0 white,
+    2px 0 0 #1e1e1e;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+td:last-child,
+th:last-child {
+  box-shadow: none;
+  border-right: 3px double #bfbfbf;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid;
+  padding-top: 5px;
+}
+
+td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+td a {
+  border-bottom: 1px solid;
+  @apply border-brand-primary;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tr:hover,
+tbody tr:nth-child(odd):hover {
+  background: #1e1e1e;
+  color: white;
+}
+tr:hover code {
+  @apply text-gray-800;
+}
+
+td:hover,
+th:hover {
+  font-weight: bold;
+  border-color: #1e1e1e;
+}
+
+@media (prefers-color-scheme: dark) {
+  table {
+    color: #bfbfbf;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #303030;
+  }
+
+  tr:hover,
+  tbody tr:nth-child(odd):hover {
+    background: #bfbfbf;
+    color: #1e1e1e;
+  }
+
+  tr:hover td,
+  tr:hover th {
+    box-shadow: 1px 0 0 #bfbfbf,
+      2px 0 0 #1e1e1e;
+    border-color: #1e1e1e;
+  }
+
+  td,
+  th {
+    box-shadow: 1px 0 0 #1e1e1e,
+      2px 0 0 #bfbfbf;
+  }
 }
 
 code {
-  @apply p-1 rounded whitespace-pre select-all;
+  padding: 1px 2px;
+  @apply rounded-sm whitespace-pre select-all;
 }
 pre  {
-  @apply rounded p-5 my-5 overflow-x-scroll;
+  @apply rounded p-3 my-5 overflow-x-scroll;
 }
 pre, code {
    @apply bg-gray-200 dark:text-gray-900;
 }
 .content p, pre {
     @apply md:ml-6;
-}
-td {
-  @apply rounded;
-}
-.odd {
-  @apply bg-gray-200 dark:text-gray-900;
 }
 .social_links a {
   @apply p-2 bg-white dark:bg-gray-900 border-none block rounded-lg my-3;
