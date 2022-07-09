@@ -14,7 +14,14 @@ It's the ultimate tool for dealing with tabular data: exploring, cleaning, analy
 VisiData is not a spreadsheet, where cells are the first-class elements.  However, it *can* load and interact with data in spreadsheet format, and many other formats too, even some things you might not think of at first: like filesystem metadata and API results and packet captures.
 Because **everything is data**.
 
-# History
+## Where are we now?
+
+As of October 2021, 5 years after its conception in October 2016, VisiData now has ~15k lines of Python code, some thousands of regular users, and is frequently mentioned wherever people talk about tabular data tools and/or the terminal.
+Its architecture for working with row/column data is powerful, and the interface is remarkably flexible and ergonomic for experienced users.
+VisiData has been called "delightful", ["amazing"](https://www.reddit.com/r/vim/comments/kf4wgb/visidata_a_cool_vimlike_tool_for_examining_and/), and say they ["love"](https://twitter.com/AlexNetoGeo/status/1451327794860941319) it.
+My favorite response (as for most of my work) is ["holy shit"](https://twitter.com/hillelogram/status/1252827658745860096).
+
+# How did we get here?
 
 I've been working on VisiData since October 2016, and in the beginning, there was only one user (me).
 
@@ -44,10 +51,6 @@ Jeremy Singer-Vine, who had discovered VisiData the year before, wrote the excel
 
 At the end of 2018 I took a [full-time job](https://cionic.com), so in January of 2019 we [released a "final" v1.5.2](https://www.visidata.org/blog/2019/v1.5.2/) which was very reliable, and it was the last official release for almost 2 years.
 
-Here's what VisiData usage looked like for the first 2.5 years of its existence: from 40 daily M-F users in early 2018, to almost 100 in mid-2019.
-
-  ![graph of usage from 2016-10-29 2019-04-29, y=0-125](/blog/assets/vd-usage-2.5y-125.png)
-
 During 2019 I worked full-time, but still added functionality to VisiData on the side, or as I needed features for my paid work.  These stayed in the develop branch, and only used by a handful of dedicated users.
 
 ## 2020: pre-v2 era
@@ -61,44 +64,16 @@ Anja and I put a bunch of effort into cleaning up the API, and we [released v2.0
 ## 2021: v2 era
 
 In 2021, we've continued to put out new releases every few months.
-The [Devottys](https://github.com/devottys/) and I released the [xdplayer](https://github.com/devottys/xdplayer) terminal crossword player and [DarkDraw](https://github.com/devottys/darkdraw) (a Unicode drawing tool).
-I reorganized most of my VisiData addons into [VisiData Plus](https://github.com/visidata/vdplus).
+In September, v2.6 introduced the menu system.
 
-Here's what the usage graph looks like now:
+Earlier in the year, the [Devottys](https://github.com/devottys/) and I released the [xdplayer](https://github.com/devottys/xdplayer) terminal crossword player and [DarkDraw](https://github.com/devottys/darkdraw) (a Unicode drawing tool).
 
-  ![graph of usage from 2016-10-29 2021-10-29, y=0-500](/blog/assets/vd-usage-5y.png)
-
-This [usage data](https://visidata.org/usage.tsv) gives us some good information about the [open source contributor funnel](https://mikemcquaid.com/2018/08/14/the-open-source-contributor-funnel-why-people-dont-contribute-to-your-open-source-project/).  In VisiData's case, it breaks down this way:
-
-- ~3000 monthly users
-- ~300 daily users
-- ~30 community members
-- ~3 regular contributors
-
-## tl;dr: the present
-
-In short, VisiData now has some ~15k lines of code, some thousands of regular users, and is frequently mentioned wherever people talk about tabular data tools and/or the terminal.
-Its architecture for working with row/column data is powerful, and the interface is remarkably flexible and ergonomic for experienced users.
-Users regularly call VisiData "delightful", ["amazing"](https://www.reddit.com/r/vim/comments/kf4wgb/visidata_a_cool_vimlike_tool_for_examining_and/), and say they ["love"](https://twitter.com/AlexNetoGeo/status/1451327794860941319) it.  My favorite response (as for most of my work) is ["holy shit"](https://twitter.com/hillelogram/status/1252827658745860096).
+I also reorganized most of my VisiData addons into [VisiData Plus](https://github.com/visidata/vdplus).
 
 # The Future of VisiData
 
 According to [Lindy's Law](https://en.wikipedia.org/wiki/Lindy_effect), the life expectancy of software is proportional to its age.
 So now that VisiData has been around for 5 years, we can look forward to and plan for another 5 years.
-
-## Usage Growth
-
-The second graph has 4x daily users on the Y axis.  Let's extrapolate this graph another 4x and another 5 years:
-
-  ![graph of usage from 2016-10-29 2026-10-29, y=0-2000](/blog/assets/vd-usage-10y-2000.png)
-
-This graph makes even a "modest" 4x usage growth seem unlikely.  But consider this next graph, which is the view in 2019 (2.5 years old and 2.5 years ago), until today), with the axes expanded to what they are today:
-
-  ![graph of usage from 2016-10-29 2019-04-29, y=0-500](/blog/assets/vd-usage-2.5y-500.png)
-
-Its growth to today would have seemed as unlikely then, and yet here we are.
-
-What will VisiData usage look like in 5 years?   If it continues to double every year, then in 5 years that would be 32x; possibly exceeding 10,000 daily users!  That seems a little excessive.  But with millions of terminal users and millions of Python users and millions of data professionals who could benefit from a quick dive into a new dataset and whip it into shape, it's not impossible.
 
 ## More Usability and Teachability
 
