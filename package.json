@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "napa",
     "dev": "npm-run-all --parallel dev:*",
     "dev:11ty": "eleventy --serve --watch",
     "dev:css": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css -w",
@@ -26,6 +27,9 @@
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.4"
   },
+  "napa": {
+    "visidata": "https://github.com/saulpw/visidata#e71d9243701cd10f770d0d19b70cc1a05e95a073"
+  },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
     "@fullhuman/postcss-purgecss": "^4.0.3",
@@ -36,6 +40,7 @@
     "luxon": "^2.0.2",
     "markdown-it-anchor": "^8.0.3",
     "npm-run-all": "^4.1.5",
+    "napa": "^3.0.0",
     "postcss": "^8.3.5"
   }
 }
