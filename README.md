@@ -10,6 +10,10 @@
 
 `npm install`
 
+Or use docker:
+
+`docker build . -t visidata.org && docker run -it visidata.org`
+
 **Live dev environment:**
 
 `npm run build:docs`
