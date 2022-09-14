@@ -1,0 +1,27 @@
+# Visidata v2.10.1 Released
+
+Hi, data friends!
+
+It’s time for a new patch release with some important fixes and a few minor improvements.
+
+## Fixes
+
+- Macros weren’t working; now they are!
+- Repeat commands were broken, and now are fixed.
+- The Guix build is now working again.
+
+## Improvements
+
+- Added a new command `zo` (`open-cell`) to open a file or URL from a path in the current cell.
+- Added a new command `guard-sheet-off` to unguard sheets. (Thanks to [Janek Schleicher](https://github.com/hanfried) for [that PR](https://github.com/saulpw/visidata/pull/1517)!)
+- Added an option to disable histograms with `disp_histlen` (if `0`) or `disp_histogram` (if empty string).
+- Added new decorators `@Extensible.before` and `@Extensible.after` to simplify extending existing functions.
+- Fixed other bugs (see the [CHANGELOG](https://github.com/saulpw/visidata/blob/develop/CHANGELOG.md#v2101-2022-09-12) for a complete list).
+
+## More Contributors
+
+I am happy to see more individuals contributing to VisiData over time. In this release, fewer than 50% of commits (13/28) in this release were authored by me (Saul)!
+
+For a complete list of changes, see the [CHANGELOG](https://github.com/saulpw/visidata/blob/develop/CHANGELOG.md#v2101-2022-09-12).
+
+**[Learn how to update your VisiData installation here.](https://www.visidata.org/install/)**
