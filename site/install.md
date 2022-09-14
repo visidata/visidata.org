@@ -51,7 +51,7 @@ The `visidata` package is available in the package managers for these distributi
     - [Arch Linux](https://archlinux.org/packages/community/any/visidata) (pacman)
 
 
-# Update VisiData {#update} from an existing installation
+# Update VisiData from an existing installation
 
 Run this command to upgrade to the latest release:
 
