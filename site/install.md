@@ -12,24 +12,27 @@ Some formats will require [additional dependencies](/docs/formats/).
 
 ## All platforms - [Python](https://www.python.org/downloads/) v3.6 and above
 
-1. Install [Python](https://www.python.org/downloads/) if necessary
+Run this command (install [Python](https://www.python.org/downloads/) first if necessary):
 
-2. Run this command:
-
+```
     pip3 install visidata
-
+```
 
 ## MacOS
 
-1. Install [brew](https://brew.sh) if necessary.
+Run this command (install [brew](https://brew.sh) first if necessary):
 
-2. Run this command:
-
+```
     brew install saulpw/vd/visidata
+```
 
 ## Conda
 
+Run this command (install [Anaconda](https://www.anaconda.com/products/distribution) first if necessary):
+
+```
     conda install --channel conda-forge visidata
+```
 
 ## Windows
 
@@ -39,7 +42,7 @@ Put this file on your desktop, and drop a .csv (or any other supported file form
 
 If you use VisiData a lot, you may want to buy [VisiData Max]() which can load Excel (xls) spreadsheets and Google Sheets and many other formats. -->
 
-You can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or use the Conda or Python method above.
+Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or install via the Conda or Python method above.
 
 ## Linux
 
