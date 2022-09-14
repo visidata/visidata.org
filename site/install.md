@@ -4,7 +4,32 @@ permalink: /install/
 title: Install VisiData
 ---
 
-These packages all support csv, tsv, fixed-width text, json, and sqlite, at minimum.  Packages often support additional formats. Some formats will require [additional dependencies](/docs/formats/).
+# Install VisiData
+
+These packages at minimum support csv, tsv, fixed-width text, json, and sqlite.
+Some packages support additional formats.
+Some formats will require [additional dependencies](/docs/formats/).
+
+## All platforms - [Python](https://www.python.org/downloads/) v3.6 and above
+
+1. Install [Python](https://www.python.org/downloads/) if necessary
+
+2. Run this command:
+
+    pip3 install visidata
+
+
+## MacOS
+
+1. Install [brew](https://brew.sh) if necessary.
+
+2. Run this command:
+
+    brew install saulpw/vd/visidata
+
+## Conda
+
+    conda install --channel conda-forge visidata
 
 ## Windows
 
@@ -14,44 +39,24 @@ Put this file on your desktop, and drop a .csv (or any other supported file form
 
 If you use VisiData a lot, you may want to buy [VisiData Max]() which can load Excel (xls) spreadsheets and Google Sheets and many other formats. -->
 
-You can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or use the Conda or Python methods below.
+You can use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or use the Conda or Python method above.
 
-## MacOS
+## Linux
 
-Install [brew](https://brew.sh) if necessary, and then run:
+The `visidata` package is available in the package managers for these distributions:
 
-    brew install saulpw/vd/visidata
+    - Debian (apt)
+    - [NixOS](https://github.com/NixOS/nixpkgs/issues/48852) (nix-env)
+    - GNU Guix
+    - [Arch Linux](https://archlinux.org/packages/community/any/visidata) (pacman)
 
-## Linux - Debian/Ubuntu
 
-    apt install visidata
+# Update VisiData {#update} from an existing installation
 
-## Linux - [NixOS](https://github.com/NixOS/nixpkgs/issues/48852)
+Run this command to upgrade to the latest release:
 
-    nix-env -i visidata
+    pip install --upgrade visidata
 
-## Linux - GNU Guix
+Or, run this command to upgrade to the latest commit on the develop branch (may have intermittent issues; please file any bugs you find!):
 
-    guix install visidata
-
-## Linux - [Arch Linux](https://archlinux.org/packages/community/any/visidata)
-
-    pacman -S visidata
-
-## Conda
-
-    conda install --channel conda-forge visidata
-
-## [Python](https://www.python.org/downloads/) v3.6+
-
-    pip3 install visidata
-
-## Unreleased Bleeding Edge
-
-Using Pip:
-
-    pip3 install git+https://github.com/saulpw/visidata.git@develop
-
-Using Guix:
-
-    guix install --without-tests=visidata --with-git-url=visidata=https://github.com/saulpw/visidata.git --with-branch=visidata=develop visidata
+    pip install git+https://github.com/saulpw/visidata.git
