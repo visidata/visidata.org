@@ -9,7 +9,7 @@ I have some big news today.
 
 If you’ve used VisiData, you know it’s a super powerful tool for loading, parsing, and exploring tabular data.
 
-Well, today we’re introducing **vdsql**, a fork of VisiData that you can connect *directly to your live databases* — pretty much any database that speaks SQL!
+Well, today we’re introducing **vdsql**, a plugin for VisiData that you can connect *directly to your live databases* — pretty much any database that speaks SQL!
 
 - BigQuery
 - ClickHouse
@@ -80,7 +80,7 @@ vdsql <file_or_url>
 
 …where `file_or_url` is any connection string supported by `ibis.connect()` or any of the filetypes and options that VisiData itself supports.
 
-### Super SQL-ly Sidebar
+## Super SQL-ly Sidebar
 
 ![vdsql screenshot](/blog/assets/2022-vdsql-screenshot.png)
 
