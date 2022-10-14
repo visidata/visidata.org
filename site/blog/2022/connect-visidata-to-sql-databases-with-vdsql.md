@@ -5,8 +5,6 @@ tags:
     - blog
 ---
 
-
-
 I have some big news today.
 
 If you’ve used VisiData, you know it’s a super powerful tool for loading, parsing, and exploring tabular data.
@@ -24,7 +22,7 @@ You use VisiData in almost exactly the same way as before — the same commands,
 
 Yes, this means you can explore your live databases — leveraging VisiData’s powerful transformations and aggregations — *without writing a line of SQL yourself.*
 
-### Bigger Data, Faster
+## Bigger Data, Faster
 
 Since vdsql’s queries run server-side, you can work with much larger data sets — like your entire data warehouse.
 
@@ -32,15 +30,15 @@ There’s no longer any need to first export an extract for local analysis; just
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3voGFX359I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Output
+## Output
 
 Once connected to your database, explore tables using the normal VisiData interface. When you’re done, you can save out the resulting queries as SQL (and eventually as Substrait or Python).
 
-### Requirements
+## Requirements
 
 To run vdsql, you’ll first need to install Python 3.8 and `pip` (the Python package manager).  vdsql also depends on recent versions of VisiData and Ibis, but these will be installed automatically when you install vdsql.
 
-### Installation
+## Installation
 
 The short answer is:
 
@@ -54,7 +52,7 @@ Once installed, you can use `vdsql` instead of `vd` whenever you want to query a
 
 Find all the details in the [CHANGELOG](https://github.com/visidata/vdsql/blob/develop/CHANGELOG.md).
 
-### Why two different tools?
+## Why two different tools?
 
 Why are we introducing vdsql (`vdsql`) as a separate tool from VisiData (`vd`)? Why not integrate this new, fancy, whiz-bang SQL connectivity directly into VisiData?
 
@@ -66,7 +64,7 @@ So, for now, vdsql is its own tool, separate from VisiData, and you have to inst
 
 As we continue to develop vdsql, it may become part of the VisiData core, at some point.
 
-### Usage
+## Usage
 
 Open a database like…
 
@@ -84,7 +82,7 @@ vdsql <file_or_url>
 
 ### Super SQL-ly Sidebar
 
-![vdsql screenshot](/blog/2022/assets/vdsql-screenshot-2022.jpg)
+![vdsql screenshot](/blog/2022/assets/vdsql-screenshot-2022.png)
 
 `vdsql` uses the VisiData sidebar (introduced in v2.9) to show the SQL query for the current view.
 
