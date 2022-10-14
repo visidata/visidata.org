@@ -30,7 +30,7 @@ Since vdsql’s queries run server-side, you can work with much larger data sets
 
 There’s no longer any need to first export an extract for local analysis; just have vdsql to talk *directly* to your database, like so:
 
-[EMBED TEASER VIDEO]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y3voGFX359I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Output
 
