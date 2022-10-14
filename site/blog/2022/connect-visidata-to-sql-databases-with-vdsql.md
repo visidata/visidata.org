@@ -82,7 +82,7 @@ vdsql <file_or_url>
 
 ### Super SQL-ly Sidebar
 
-![vdsql screenshot](/blog/2022/assets/vdsql-screenshot-2022.png)
+![vdsql screenshot](/blog/assets/2022-vdsql-screenshot.png)
 
 `vdsql` uses the VisiData sidebar (introduced in v2.9) to show the SQL query for the current view.
 
