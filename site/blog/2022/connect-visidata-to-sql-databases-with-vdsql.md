@@ -34,7 +34,7 @@ There’s no longer any need to first export an extract for local analysis; just
 
 ### Output
 
-Once connected to your database, explore tables using the normal VisiData interface. When you’re done, you can save out the resulting queries as SQL, Substrait, or Python.
+Once connected to your database, explore tables using the normal VisiData interface. When you’re done, you can save out the resulting queries as SQL (and eventually as Substrait or Python).
 
 ### Requirements
 
