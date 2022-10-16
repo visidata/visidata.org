@@ -211,3 +211,7 @@ pre, code {
 .social_links p {
   margin-bottom: 0;
 }
+
+main iframe {
+  margin: auto auto;
+}
