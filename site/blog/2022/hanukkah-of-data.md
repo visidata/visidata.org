@@ -19,3 +19,5 @@ This is your chance to explore a fictional dataset with SQL or [VisiData](https:
 Thanks to @frosencrantz for creating [this well-timed discussion comment](https://github.com/saulpw/visidata/discussions/1221#discussioncomment-4013685) that inspired us.
 
 Happy holidays from Saul and the rest of the devottys!
+
+![Hanukkah of Data screenshot](/blog/assets/2022-hod-teaser.png)
