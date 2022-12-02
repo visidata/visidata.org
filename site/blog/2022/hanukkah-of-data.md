@@ -20,4 +20,4 @@ Thanks to @frosencrantz for creating [this well-timed discussion comment](https:
 
 Happy holidays from Saul and the rest of the devottys!
 
-![Hanukkah of Data screenshot](/blog/assets/2022-hod-teaser.png)
+![Hanukkah of Data screenshot](/blog/assets/2022-hod.png)
