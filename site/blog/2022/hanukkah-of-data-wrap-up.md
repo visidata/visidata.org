@@ -41,7 +41,7 @@ If you haven't solved them all yet, don't worry, you can take your time.
 ## What’s next?
 
 Since the holiday and event are now over, new players won't have to wait for each puzzle to be released: once the shamash is lit, all puzzles are immediately available.
-We intend to continue hosting these puzzles for the foreseeable future, so you can keep trying to solve them and reveal Noah's the beautiful tapestry.
+We intend to continue hosting these puzzles for the foreseeable future, so you can keep trying to solve them and reveal Noah's beautiful tapestry.
 
 So you can invite your friends, classmates, students, coworkers, parents, etc to solve them alongside you.
 
