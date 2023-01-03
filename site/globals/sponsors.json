@@ -1,10 +1,5 @@
 {
     "main": [
-    {
-        "name": "October Swimmer",
-        "url": "https://www.octoberswimmer.com/",
-        "image": "october-swimmer.png"
-    },
     { "name": "GenUI", "url": "https://www.genui.com/", "image": "genui.png" }
     ]
 }
