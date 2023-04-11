@@ -3,7 +3,9 @@
 /about	/credits
 /podcast	/blog/2019/python-init
 /usage.tsv	https://motd.visidata.org/usage.tsv
+/usage.jsonl	https://motd.visidata.org/usage.jsonl
 /usage-monthly.tsv	https://motd.visidata.org/usage-monthly.tsv
+/usage-monthly.jsonl	https://motd.visidata.org/usage-monthly.jsonl
 /insight	https://app.netlify.com/teams/saulpw/builds/insights
 /insights	https://app.netlify.com/teams/saulpw/builds/insights
 /blog/rss.xml	/feed.xml
