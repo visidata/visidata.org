@@ -71,8 +71,6 @@ yarn-error.log
 # Eleventy
 _site/
 _tmp/
-.DS_Store
-node_modules/
 
 # Wrangler
 dist/
@@ -81,3 +79,9 @@ dist/
 site/docs/*.html
 site/docs/*.md
 site/docs/api/
+visidata/
+
+# Python
+venv/
+# Local Netlify folder
+.netlify

@@ -1,0 +1,8 @@
+visidata
+_site
+site/docs/api
+site/docs/*.html
+!site/docs/man/index.html
+site/docs/*.md
+node_modules
+venv

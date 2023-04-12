@@ -1,6 +1,7 @@
 site/docs/api/
 site/docs/*.md
 node_modules/
+.venv/
 visidata/
 _site/
 _tmp/
