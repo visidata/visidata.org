@@ -2,27 +2,31 @@
 
 [visidata.netlify.app](https://visidata.netlify.app)
 
-## Building and Running 
+## Requirements
 
-**Install**
+- Node.js 14+
+- Python 3.6+
+- pandoc
 
-`pip install -r requirements.txt`
+## Building and Running
 
-`npm install`
+**Install and run:**
 
-Or use docker:
+`make install dev`
 
-`docker build . -t visidata.org && docker run -it visidata.org`
+Or use Docker:
+
+`make docker-image docker-run`
+
+Use `ctrl+p ctrl+q` to detach from the container.
 
 **Live dev environment:**
 
-`npm run build:docs`
-
-`npm run dev`
+`make dev`
 
 **Production:**
 
-`npm run build`
+`make`
 
 ## Writing content
 
