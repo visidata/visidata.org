@@ -13,9 +13,9 @@
   publish = "_site/"
 
   # Default build command.
-  command = "npm run build"
+  command = "make install build"
 
-  environment = { NODE_VERSION = "15.6.0" }
+  environment = { NODE_VERSION = "18.15.0" }
 
 [build.processing]
   skip_processing = false
