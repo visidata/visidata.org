@@ -7,7 +7,7 @@ VIRTUALENV := venv/bin/activate
 all: build
 
 # Dependencies
-.PHONY: install
+.PHONY: install pip
 install: venv pip node_modules visidata
 venv: requirements.txt
 	@echo "[make] Creating virtual environment in venv"
@@ -27,7 +27,7 @@ visidata:
 	git clone --depth=1 https://github.com/saulpw/visidata.git
 
 # Targets
-.PHONY: build dev debug docs docker
+.PHONY: build dev debug docs docker-image docker-run
 build: docs
 	@echo "[make] Building site"
 	npx @11ty/eleventy --quiet
