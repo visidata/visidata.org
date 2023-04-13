@@ -13,7 +13,7 @@
   publish = "_site/"
 
   # Default build command.
-  command = "make install build"
+  command = "make visidata build"
 
   environment = { NODE_VERSION = "18.15.0" }
 

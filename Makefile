@@ -13,9 +13,13 @@ install: venv pip node_modules visidata
 venv: requirements.txt
 	@echo "[make] Creating virtual environment in venv"
 	python3 -m venv venv
-pip: venv
+pip:
 	@echo "[make] Installing Python dependencies"
-	. $(VIRTUALENV); pip install -r requirements.txt
+	@if [ -f $(VIRTUALENV) ]; then \
+		. $(VIRTUALENV) && pip install -r requirements.txt; \
+	else \
+		python3 -m pip install -r requirements.txt; \
+	fi
 node_modules: package.json package-lock.json
 	@echo "[make] Installing node dependencies"
 	npm install
@@ -37,12 +41,16 @@ debug: docs
 	DEBUG=Eleventy*	npx @11ty/eleventy --serve & \
 	npx tailwindcss ${TAILWIND_ARGS} -w
 docs: site/docs/*.html _site/docs/api
-site/docs/*.html: venv
+site/docs/*.html:
 	@echo "[make] Building docs"
-	. $(VIRTUALENV); ./mkdocs.sh
-_site/docs/api: venv
+	./mkdocs.sh
+_site/docs/api:
 	@echo "[make] Building API docs"
-	. $(VIRTUALENV); sphinx-build -b html visidata/docs/api _site/docs/api
+	@if [ -f $(VIRTUALENV) ]; then \
+	. $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/docs/api; \
+	else \
+	sphinx-build -b html visidata/docs/api _site/docs/api; \
+	fi
 docker-image:
 	docker build -t visidata.org .
 docker-run:
