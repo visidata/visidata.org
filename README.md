@@ -2,27 +2,51 @@
 
 [visidata.netlify.app](https://visidata.netlify.app)
 
-## Building and Running 
+## Requirements
 
-**Install**
+- Node.js 14+
+- Python 3.6+
+- pandoc
 
-`pip install -r requirements.txt`
+## Building and Running
 
-`npm install`
+**Install and run:**
 
-Or use docker:
+Using `venv` to set up a virtual Python environment:
 
-`docker build . -t visidata.org && docker run -it visidata.org`
+`make venv install dev`
+
+Without setting up a virtual environment:
+
+`make install dev`
+
+Or use Docker:
+
+`make docker-image docker-run`
+
+Use `ctrl+p ctrl+q` to detach from the container.
 
 **Live dev environment:**
 
-`npm run build:docs`
-
-`npm run dev`
+`make dev`
 
 **Production:**
 
-`npm run build`
+`make`
+
+**Clean:**
+
+To remove build files, Node modules, the VisiData repo, and the virtual environment (if used), run:
+
+`make clean`
+
+Specific commands:
+
+`make clean-pip` - remove `venv` if used
+`make clean-npm` - remove `node_modules`
+`make clean-vd` - remove `visidata` repo
+`make clean-docs` - remove generated docs
+`make clean-build` - remove 11ty build files
 
 ## Writing content
 

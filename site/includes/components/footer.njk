@@ -3,7 +3,7 @@
     <h2>Corporate Sponsors</h2>
     {# Edit these in site/globals/sponsors.json #}
     {# Add images to images/sponsors/ #}
-    <div class="flex flex-col md:flex-row flex-wrap gap-5">
+    <div class="flex flex-col md:flex-row flex-wrap gap-5 mb-5">
         {% for item in sponsors.main %}
         <a class="max-w-sm inline-block mx-auto dark:bg-gray-200 rounded-xl p-3" href="{{ item.url }}" target="_blank" rel="noopener">
             {% set img = "images/sponsors/" + item.image %}
@@ -12,7 +12,7 @@
         </a>
         {% endfor %}
     </div>
-    <a class="button mt-5" aria-label="Sponsor @saulpw" target="_blank" rel="noopener" href="https://github.com/sponsors/saulpw?o=esb">
+    <a class="button" aria-label="Sponsor @saulpw" target="_blank" rel="noopener" href="https://github.com/sponsors/saulpw?o=esb">
 <span>Sponsor saulpw on Github</span>
 </a>
 </div>

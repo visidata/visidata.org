@@ -1,19 +1,14 @@
 module.exports = {
     mode: 'jit',
-    purge: {
-        content: [
-            "site/**/*.html",
-            "site/*.njk",
-            "site/includes/**/*.njk",
-            "site/docs/*.njk",
-            "site/releases/*.md",
-            "site/releases/*.njk",
-            "site/blog/*.md"
-        ],
-        options: {
-            whitelist: [],
-        },
-    },
+    content: [
+        "site/**/*.html",
+        "site/*.njk",
+        "site/includes/**/*.njk",
+        "site/docs/*.njk",
+        "site/releases/*.md",
+        "site/releases/*.njk",
+        "site/blog/*.md"
+    ],
     theme: {
         extend: {
             colors: {

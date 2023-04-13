@@ -8,10 +8,9 @@
     <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
     <meta name="robots" content="index,follow" />
     {# include CSS #}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="/style.css" />
-    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap' %}
-    <link rel="stylesheet" type="text/css" href="/asciinema-player.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?={% version %}">
+    <link rel="stylesheet" type="text/css" href="/css/inconsolata.css?={% version %}">
+    <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css?={% version %}">
     {# include scripts #}
     <script data-goatcounter="https://visidata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     {# include social meta tags #}
@@ -20,8 +19,8 @@
     <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
     {# canonical #}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="alternate" type="application/rss+xml" title="VisiData Blog Feed" href="https://visidata.org/feed.xml">
-    <link rel="alternate" type="application/rss+xml" title="VisiData Releases Feed" href="https://visidata.org/releases.xml">
+    <link rel="alternate" type="application/rss+xml" title="VisiData Blog Feed" href="{{ site.url }}/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="VisiData Releases Feed" href="{{ site.url }}/releases.xml">
 </head>
 
 <body {% if body_class %} id="{{ body_class }}" {% endif %} class="text-gray-800 dark:bg-gray-900 dark:text-gray-100">

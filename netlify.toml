@@ -13,15 +13,15 @@
   publish = "_site/"
 
   # Default build command.
-  command = "npm run build"
+  command = "make visidata build"
 
-  environment = { NODE_VERSION = "15.6.0" }
+  environment = { NODE_VERSION = "18.15.0" }
 
 [build.processing]
   skip_processing = false
 [build.processing.css]
   bundle = true
-  minify = true
+  minify = false
 [build.processing.js]
   bundle = false
   minify = true
