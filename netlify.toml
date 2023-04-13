@@ -21,7 +21,7 @@
   skip_processing = false
 [build.processing.css]
   bundle = true
-  minify = true
+  minify = false
 [build.processing.js]
   bundle = false
   minify = true
