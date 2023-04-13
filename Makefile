@@ -1,6 +1,7 @@
 #!/usr/bin/make
 TAILWIND_ARGS := -i styles/tailwind.css -c styles/tailwind.config.js -o _site/css/style.css
 VIRTUALENV := venv/bin/activate
+VD_COMMIT := 20e855d7ce5fcccf30d79d2c5fe0fb112670cbaa
 
 # Default target
 .PHONY: all
@@ -24,7 +25,8 @@ node_modules: package.json package-lock.json
 	npm install
 visidata:
 	@echo "[make] Cloning VisiData for docs"
-	git clone --depth=1 https://github.com/saulpw/visidata.git
+	git clone https://github.com/saulpw/visidata.git
+	cd visidata && git checkout ${VD_COMMIT}
 
 # Targets
 .PHONY: build dev debug docs docker-image docker-run
