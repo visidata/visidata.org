@@ -12,6 +12,12 @@
 
 **Install and run:**
 
+Using `venv` to set up a virtual Python environment:
+
+`make venv install dev`
+
+Without setting up a virtual environment:
+
 `make install dev`
 
 Or use Docker:
@@ -27,6 +33,20 @@ Use `ctrl+p ctrl+q` to detach from the container.
 **Production:**
 
 `make`
+
+**Clean:**
+
+To remove build files, Node modules, the VisiData repo, and the virtual environment (if used), run:
+
+`make clean`
+
+Specific commands:
+
+`make clean-pip` - remove `venv` if used
+`make clean-npm` - remove `node_modules`
+`make clean-vd` - remove `visidata` repo
+`make clean-docs` - remove generated docs
+`make clean-build` - remove 11ty build files
 
 ## Writing content
 
