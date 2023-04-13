@@ -9,7 +9,7 @@ all: build
 
 # Dependencies
 .PHONY: install pip
-install: venv pip node_modules visidata
+install: pip node_modules visidata
 venv: requirements.txt
 	@echo "[make] Creating virtual environment in venv"
 	python3 -m venv venv
