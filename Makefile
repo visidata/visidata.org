@@ -1,7 +1,6 @@
 #!/usr/bin/make
 TAILWIND_ARGS := -i styles/tailwind.css -c styles/tailwind.config.js -o _site/css/style.css
 VIRTUALENV := venv/bin/activate
-DOCKER_TAG := $(shell date +%Y%m%d)
 
 # Default target
 .PHONY: all
