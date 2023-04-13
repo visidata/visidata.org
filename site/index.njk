@@ -160,7 +160,7 @@ title: "Open-source data multitool"
             <div class="p-4 rounded-2xl bg-gray-100 dark:bg-gray-700 flex flex-col">
                 <div class="grow">
                     <h2 class="mb-0">Releases</h2>
-                    {% for releases in collections.releases | limit(4) %}
+                    {% for releases in collections.releases | reverse | limit(4) %}
                     <div>
                         <h2 class="text-2xl inline-block"><a class="border-b-2 border-brand-primary inline-block" href="{{ releases.url }}">{{ releases.data.title }}</a>
                         </h2>
