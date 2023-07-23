@@ -36,10 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   @apply mb-4;
 }
-article ul {
-  @apply list-disc;
-}
-ul {
+ul, ol {
   @apply list-inside;
 }
 li ul {
@@ -52,8 +49,17 @@ aside ul {
 section a, footer p a {
   @apply border-b-2;
 }
-main ul {
-  @apply mb-8 list-disc pl-5;
+:where(article, main) :is(ul, ol) {
+  @apply mb-4 ml-4;
+}
+:where(article, main) ul {
+  @apply list-disc;
+}
+:where(article, main) ol {
+  @apply list-decimal;
+}
+:where(article, main) li {
+  @apply my-2 ml-2;
 }
 a {
   @apply transition duration-300 ease-in-out;
