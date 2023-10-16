@@ -1,7 +1,6 @@
 #!/usr/bin/make
 TAILWIND_ARGS := -i styles/tailwind.css -c styles/tailwind.config.js -o _site/css/style.css
 VIRTUALENV := venv/bin/activate
-VD_COMMIT := 20e855d7ce5fcccf30d79d2c5fe0fb112670cbaa
 
 # Default target
 .PHONY: all
@@ -26,7 +25,7 @@ node_modules: package.json package-lock.json
 visidata:
 	@echo "[make] Cloning VisiData for docs"
 	git clone https://github.com/saulpw/visidata.git
-	cd visidata && git checkout ${VD_COMMIT}
+	cd visidata && git checkout stable
 
 # Targets
 .PHONY: build dev debug docs docker-image docker-run
@@ -41,17 +40,35 @@ dev: docs
 debug: docs
 	DEBUG=Eleventy*	npx @11ty/eleventy --serve & \
 	npx tailwindcss ${TAILWIND_ARGS} -w
-docs: site/docs/*.html _site/docs/api
+docs: site/docs/*.html _site/docs/api _site/develop/docs/api site/develop/docs/*.html
 site/docs/*.html:
 	@echo "[make] Building docs"
+	cd visidata && git checkout stable && git pull && cd ..
 	./mkdocs.sh
+	rm -rf site/develop/docs/*.html-rest.md
 _site/docs/api:
 	@echo "[make] Building API docs"
+	cd visidata && git checkout stable && git pull && cd ..
 	@if [ -f $(VIRTUALENV) ]; then \
 	. $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/docs/api; \
 	else \
 	sphinx-build -b html visidata/docs/api _site/docs/api; \
 	fi
+site/develop/docs/*.html:
+	@echo "[make] Building develop docs"
+	cd visidata && git checkout develop && git pull  && cd ..
+	mkdir -p site/develop/docs
+	OUTDIR="site/develop/docs" ./mkdocs.sh
+	rm -rf site/develop/docs/*.html-rest.md
+_site/develop/docs/api:
+	@echo "[make] Building develop API docs"
+	cd visidata && git checkout develop && git pull && cd ..
+	@if [ -f $(VIRTUALENV) ]; then \
+   . $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/develop/docs/api; \
+	else \
+	sphinx-build -b html visidata/docs/api _site/develop/docs/api; \
+	fi
+
 docker-image:
 	docker build -t visidata.org .
 docker-run:
@@ -67,6 +84,7 @@ clean-npm:
 clean-vd:
 	rm -rf visidata
 clean-docs:
-	rm -rf site/docs/{*.html,*.md,api} _site/docs
+	rm -rf site/docs/*.html site/docs/*.md site/docs/api _site/docs
+	rm -rf site/develop/docs/*.html site/develop/docs/*.md site/develop/docs/api _site/develop/docs
 clean-build:
 	rm -rf _site
