@@ -79,6 +79,9 @@ dist/
 site/docs/*.html
 site/docs/*.md
 site/docs/api/
+site/develop/docs/*.html
+site/develop/docs/*.md
+site/develop/docs/api/
 visidata/
 
 # Python
