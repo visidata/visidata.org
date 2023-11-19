@@ -10,7 +10,7 @@ The only information we collect is from website access logs.  This data comes fr
 1. Direct access of the website.  When you use a browser to look at a page on the website, each access is logged.
 
 2. VisiData fetching the list of startup messages.  The first time each day that VisiData is used, it downloads a single small file.  This access is also logged by the website.
-This network request can be turned off by adding `options.motd_url=None` to your `~/.visidatarc`.
+This network request can be turned off by adding `options.motd_url=''` to your `~/.visidatarc`.
 
 In both cases, we may automatically collect and store certain information in server logs. This may include:
 
@@ -42,3 +42,4 @@ Last modified: 2019-12-05
 
 * 2018-09-26: initial public release of privacy policy
 * 2019-12-05: no longer use Google Analytics
+* 2023-11-18: update recommended method to turn off motd
