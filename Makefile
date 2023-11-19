@@ -40,12 +40,12 @@ dev: docs
 debug: docs
 	DEBUG=Eleventy*	npx @11ty/eleventy --serve & \
 	npx tailwindcss ${TAILWIND_ARGS} -w
-docs: site/docs/*.html _site/docs/api _site/develop/docs/api site/develop/docs/*.html
+docs: site/docs/*.html _site/docs/api
 site/docs/*.html:
 	@echo "[make] Building docs"
 	cd visidata && git checkout stable && git pull && cd ..
 	./mkdocs.sh
-	rm -rf site/develop/docs/*.html-rest.md
+	rm -rf site/docs/*.html-rest.md
 _site/docs/api:
 	@echo "[make] Building API docs"
 	cd visidata && git checkout stable && git pull && cd ..
@@ -53,20 +53,6 @@ _site/docs/api:
 	. $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/docs/api; \
 	else \
 	sphinx-build -b html visidata/docs/api _site/docs/api; \
-	fi
-site/develop/docs/*.html:
-	@echo "[make] Building develop docs"
-	cd visidata && git checkout develop && git pull  && cd ..
-	mkdir -p site/develop/docs
-	OUTDIR="site/develop/docs" ./mkdocs.sh
-	rm -rf site/develop/docs/*.html-rest.md
-_site/develop/docs/api:
-	@echo "[make] Building develop API docs"
-	cd visidata && git checkout develop && git pull && cd ..
-	@if [ -f $(VIRTUALENV) ]; then \
-   . $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/develop/docs/api; \
-	else \
-	sphinx-build -b html visidata/docs/api _site/develop/docs/api; \
 	fi
 
 docker-image:
@@ -85,6 +71,5 @@ clean-vd:
 	rm -rf visidata
 clean-docs:
 	rm -rf site/docs/*.html site/docs/*.md site/docs/api _site/docs
-	rm -rf site/develop/docs/*.html site/develop/docs/*.md site/develop/docs/api _site/develop/docs
 clean-build:
 	rm -rf _site
