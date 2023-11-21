@@ -51,7 +51,7 @@ The `visidata` package is available in the package managers for these distributi
 - Debian (apt)
 - [NixOS](https://github.com/NixOS/nixpkgs/issues/48852) (nix-env)
 - GNU Guix
-- [Arch Linux](https://archlinux.org/packages/community/any/visidata) (pacman)
+- [Arch Linux](https://archlinux.org/packages/extra/any/visidata) (pacman)
 
 ## Update VisiData from an existing installation
 
