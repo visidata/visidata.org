@@ -25,7 +25,7 @@ node_modules: package.json package-lock.json
 visidata:
 	@echo "[make] Cloning VisiData for docs"
 	git clone https://github.com/saulpw/visidata.git
-	cd visidata && git checkout stable
+	cd visidata && git checkout develop
 
 # Targets
 .PHONY: build dev debug docs docker-image docker-run
@@ -43,12 +43,12 @@ debug: docs
 docs: site/docs/*.html _site/docs/api
 site/docs/*.html:
 	@echo "[make] Building docs"
-	cd visidata && git checkout stable && git pull && cd ..
+	cd visidata && git checkout develop && git pull && cd ..
 	./mkdocs.sh
 	rm -rf site/docs/*.html-rest.md
 _site/docs/api:
 	@echo "[make] Building API docs"
-	cd visidata && git checkout stable && git pull && cd ..
+	cd visidata && git checkout develop && git pull && cd ..
 	@if [ -f $(VIRTUALENV) ]; then \
 	. $(VIRTUALENV) && sphinx-build -b html visidata/docs/api _site/docs/api; \
 	else \
