@@ -40,17 +40,19 @@ To run vdsql, you’ll first need to install Python 3.8 and `pip` (the Python pa
 
 ## Installation
 
-The short answer is:
+The cutting edge of vdsql development is currently in the [VisiData repo](https://github.com/saulpw/visidata/tree/develop/visidata/apps/vdsql). There does exist a PyPI package, but it is very outdated.
 
-`pip install vdsql`
+    git clone git@github.com:saulpw/visidata.git
+    cd visidata/visidata/apps/vdsql
+    pip3 install .
 
-**[Learn a bit more about how to install vdsql here.](https://github.com/visidata/vdsql/blob/develop/README.md#install-latest-release)** Note that only the SQLite and Clickhouse backends are installed by default; to connect to any of the other backends listed above, you’ll need to install the Ibis dependencies for each one separately, using (e.g. for MySQL):
+Note that only the SQLite and Clickhouse backends are installed by default; to connect to any of the other backends listed above, you’ll need to [install the Ibis dependencies](https://ibis-project.org/install) for each one separately, using (e.g. for MySQL):
 
 `pip install ibis-framework[mysql]`
 
 Once installed, you can use `vdsql` instead of `vd` whenever you want to query a database directly, instead of loading the database tables into memory first (as `vd` does with flat files).  Remember, `vdsql` to use a SQL connection; `vd` for in-memory processing.
 
-Find all the details in the [CHANGELOG](https://github.com/visidata/vdsql/blob/develop/CHANGELOG.md).
+Find all the details in the [CHANGELOG](https://github.com/saulpw/visidata/blob/develop/visidata/apps/vdsql/CHANGELOG.md).
 
 ## Why two different tools?
 
@@ -94,13 +96,13 @@ In this way you can compose a SQL expression using VisiData commands, open the S
 
 ## What’s next for you?
 
-- Share feedback with the team by [logging a GitHub issue](https://github.com/visidata/vdsql/issues)
+- Share feedback with the team by [logging a GitHub issue](https://github.com/saulpw/visidata/issues)
 - [Subscribe to the blog RSS feed](https://www.visidata.org/feed.xml) for updates
 - [Become a patron](https://www.patreon.com/bePatron?u=13873753) to support this development work
 
 ## What’s next for vdsql?
 
-First and foremost: We want to know what *you* want! [Submit a feature request on GitHub](https://github.com/visidata/vdsql/issues).
+First and foremost: We want to know what *you* want! [Submit a feature request on GitHub](https://github.com/saulpw/visidata/issues).
 
 That said, here’s what *we* think are some important next steps:
 
