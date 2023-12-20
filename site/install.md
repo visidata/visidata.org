@@ -42,7 +42,7 @@ Put this file on your desktop, and drop a .csv (or any other supported file form
 
 If you use VisiData a lot, you may want to buy [VisiData Max]() which can load Excel (xls) spreadsheets and Google Sheets and many other formats. -->
 
-Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL) or install via the Conda or Python method above.
+Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL).
 
 ### Linux
 
