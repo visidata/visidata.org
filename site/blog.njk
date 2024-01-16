@@ -9,6 +9,7 @@ pagination:
     size: 10
     reverse: false
     alias: posts
+permalink: "/blog{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber }}{% endif %}/index.html"
 ---
 <main id="main" class="main inner flex flex-1 flex-col py-10 focus:outline-none" tabindex="-1">
     <section id="container" class="column centre flex-1" aria-label="Blogs">
