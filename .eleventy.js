@@ -2,6 +2,7 @@ const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItFootnote = require("markdown-it-footnote");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
@@ -137,7 +138,7 @@ module.exports = function (eleventyConfig) {
                     .replace(/[\s+~\/]/g, "-")
                     .replace(/[().`,%·'"!?¿:@*]/g, ""),
         })
-    });
+    }).use(markdownItFootnote);
     eleventyConfig.setLibrary("md", markdownLibrary);
 
     // Template formats
