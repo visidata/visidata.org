@@ -7,5 +7,5 @@ excerpt: Test post
 tags:
     - blog
     - test
-eleventyExcludeFromCollections: true
+draft: true
 ---

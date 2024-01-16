@@ -87,6 +87,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
 
     // Eleventy-img config
     async function imageShortcode (src, alt, sizes = "40vw, 60vw, 100vw") {
