@@ -1,7 +1,7 @@
 ---
 title: Help improve VisiData documentation!
 date: 2024-01-08
-eleventyExcludeFromCollections: true
+draft: true
 tags:
     - docs
 ---

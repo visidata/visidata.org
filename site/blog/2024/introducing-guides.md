@@ -1,7 +1,6 @@
 ---
 title: Introducing Guides in VisiData 3.0
 date: 2024-01-08
-draft: true
 tags:
     - docs
 ---
