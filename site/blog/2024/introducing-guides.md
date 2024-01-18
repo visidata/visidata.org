@@ -7,9 +7,9 @@ tags:
 
 # Introducing Guides in VisiData 3.0
 
-VisiData is an incredibly powerful tool for data exploration, often hailed as 'world-class' and 'the gold standard'.
+VisiData is an incredibly powerful tool, often hailed as [world-class and the gold standard for data exploration](https://news.ycombinator.com/item?id=38894276).
 
-However, these accolades usually come with a caveat: it has "a steep learning curve".
+However, these accolades usually come with a caveat: it has [a steep learning curve](https://news.ycombinator.com/item?id=38893850).
 
 Over the years, as we've invested in ease of use, we've amassed a wide range of documentation sources [^1]:
 
