@@ -33,6 +33,12 @@
         {# include footer #}
         {% include "components/footer.njk" %}
     </div>
+    <script src="https://unpkg.com/medium-zoom@1"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mediumZoom('.post img');
+        });
+    </script>
 </body>
 
 </html>
