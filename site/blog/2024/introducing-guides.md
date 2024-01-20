@@ -52,9 +52,9 @@ White text indicates a written guide; press `Enter` on them to take a look! Gray
 
 We think that most of VisiData's 300+ commands and 150 options can be represented in ~30 guides. So not only will the guides cover a breadth of features in more depth, they will also act as a structured command reference. These guides will eventually supplant the existing web content and existing manpage--both should be composable from the guides.
 
-## Stay tuned for something
+## That sounds great, but who's going to write all of these?
 
-For v3.1, we are planning to host a doc-drive, encouraging contributions from the community. If you are interesting in helping out, explore which topics you would like to write guides for, and keep an eye out for a future blogpost. For now, you can check out this [tutorial on adding a guide](https://www.visidata.org/docs/api/guides).
+This is where you can come in! For v3.1, we are planning to host a doc-drive, encouraging contributions from the community. If you are interested in helping out, check out the **Guide Index** and consider which topics you would like to write guides for. We have a [tutorial up on adding a guide](https://www.visidata.org/docs/api/guides) and are welcoming PRs. A future blogpost will be out soon with more info.
 
 [^1]: There are also several 'nonsources', including the GitHub wiki, Twitter @VisiData, r/visidata subreddit, StackOverflow, and an ancient fork on readthedocs.
     These are deprecated, neither maintained nor monitored, and will be removed if possible once any content has been preserved in a more active documentation form.
