@@ -46,15 +46,15 @@ A few of these guides have already been written! To explore the existing guides,
 
 ![vd3.0-ToC.png](/blog/assets/vd3.0-ToC.png)
 
-White text indicates a written guide; press `Enter` on them to take a look! Gray guides haven't been written, yet. Particularly exciting is that Saul implemented [support for basic markdown and designed VisiData's own display attribute syntax](https://www.visidata.org/docs/api/guides#some-stylings-of-note), which is how the colour in the guides were added. We can even add links!
+White text indicates a written guide; press `Enter` on them to take a look! Gray guides haven't been written, yet. Particularly exciting is the [support for basic markdown VisiData's own display attribute syntax](https://www.visidata.org/docs/api/guides#some-stylings-of-note). This is how the color in the guides were added. We can even add links!
 
 ![vd3.0-guideExample.png](/blog/assets/vd3.0-guideExample.png)
 
 We think that most of VisiData's 300+ commands and 150 options can be represented in ~30 guides. So not only will the guides cover a breadth of features in more depth, they will also act as a structured command reference. These guides will eventually supplant the existing web content and existing manpage--both should be composable from the guides.
 
-## That sounds great, but who's going to write all of these?
+## When will more guides be published?
 
-This is where you can come in! For v3.1, we are planning to host a doc-drive, encouraging contributions from the community. If you are interested in helping out, check out the **Guide Index** and consider which topics you would like to write guides for. We have a [tutorial up on adding a guide](https://www.visidata.org/docs/api/guides) and are welcoming PRs. A future blogpost will be out soon with more info.
+This is where you can come in! For v3.1, we are planning to host a doc-drive, encouraging contributions from the community. If you are interested in helping out, check out the **Guide Index** and consider which topics you would like to write guides for. We have a [tutorial up on adding a guide](https://www.visidata.org/docs/api/guides) and are welcoming PRs. Another blogpost will be out soon with more info.
 
 [^1]: There are also several 'nonsources', including the GitHub wiki, Twitter @VisiData, r/visidata subreddit, StackOverflow, and an ancient fork on readthedocs.
     These are deprecated, neither maintained nor monitored, and will be removed if possible once any content has been preserved in a more active documentation form.
