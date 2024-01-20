@@ -1,13 +1,14 @@
 ---
 title: Introducing Guides
+author: Saul Pwanson and Anja Kefala
 date: 2024-01-19
 tags:
     - docs
 ---
 
-VisiData is an incredibly powerful tool, often hailed as [world-class and the gold standard for data exploration](https://news.ycombinator.com/item?id=38894276).
+VisiData is an incredibly powerful tool, often hailed as "world-class" and ["the gold standard"](https://news.ycombinator.com/item?id=38894276) for data exploration.
 
-However, these accolades usually come with a caveat: it has [a steep learning curve](https://news.ycombinator.com/item?id=38893850).
+However, these accolades usually come with a caveat: it has "a steep learning curve".
 
 Over the years, as we've invested in ease of use, we've amassed a wide range of documentation sources [^1]:
 
@@ -26,7 +27,7 @@ We also have some non-documentation sources, like:
 
 - [Mastodon](https://fosstodon.org/@saulpw) for bonus tips and trivia and related projects.
 - [Patreon](https://patreon.com/saulpw) for updates and data games and text art, with various support tiers.
-- [Saulville](https://visidata.org/chat) (Discord server) and Saul's occasional office hours, for community interaction.
+- [Saulville](https://visidata.org/chat) (Discord server) and occasional office hours, for community interaction.
 
 ## Whew, that's a lot!
 

@@ -346,3 +346,7 @@ main iframe {
         margin-bottom: 3em;
     }
 }
+
+hr.footnotes-sep {
+    border-top-width: .4em;
+}
