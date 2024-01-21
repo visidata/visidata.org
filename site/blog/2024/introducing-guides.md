@@ -33,9 +33,9 @@ We also have some non-documentation sources, like:
 
 And we know that quantity sometimes makes it harder to know where to find what's relevant to you.  So we've been steadily shifting our approach to usability, to make it easier to find what you need within VisiData itself.  For example:
 
-- (added in 2.6) a [menu system](https://youtu.be/QixtGeSbSLU?si=2Cd5TuZUiIGEfTwO) so you can browse for a command.
+- (added in 2.6) a [menu system](https://youtu.be/QixtGeSbSLU?si=2Cd5TuZUiIGEfTwO) so you can browse for commands.
 - (added in 3.0) a [command palette](https://github.com/saulpw/visidata/pull/2059) so you can fuzzy search for commands.
-- (added in 3.0) [sidebar help](https://github.com/saulpw/visidata/discussions/1733) so you can get more context-aware information about the current sheet or input.
+- (added in 3.0) [sidebar help](https://github.com/saulpw/visidata/discussions/1733) so you can get more context-aware information.
 
 Finally, building on the sidebar context-sensitive help that's been added in 3.0, we're starting to add **Guides**.
 
@@ -51,7 +51,7 @@ White text indicates a written guide; gray guides haven't been written, yet. Pre
 
 ![vd3.0-guideExample.png](/blog/assets/vd3.0-guideExample.png)
 
-Particularly exciting is the [support for basic markdown VisiData's own display attribute syntax](https://www.visidata.org/docs/api/guides#some-stylings-of-note). This is how the color in the guides were added.
+Particularly exciting is the [support for basic markdown VisiData's own display attribute syntax](https://www.visidata.org/docs/api/guides#some-stylings-of-note). This is how the colors in the guides were added.
 
 ![vd3.0-errors.png](/blog/assets/vd3.0-errors.png)
 
