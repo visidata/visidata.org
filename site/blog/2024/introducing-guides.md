@@ -19,9 +19,9 @@ Over the years, as we've invested in ease of use, we've amassed a wide range of 
 - [UNIX manpage](https://visidata.org/man).
 - [Blog posts here on visidata.org](https://visidata.org/blog).
 - Github [Issues](https://github.com/saulpw/visidata/issues) and [Discussions](https://github.com/saulpw/visidata/discussions) on the [main repository](https://github.com/saulpw/visidata/).
-- [Saul's YouTube channel](https://youtube.com/saulpw).
+- [Saul's YouTube channel](https://youtube.com/@saulpw).
 - External resources like [Andrea Borruso's tutorial](https://ondata.github.io/guidaVisiData/) and [Jeremy Singer-Vine's cheatsheet](https://jsvine.github.io/visidata-cheat-sheet/en/).
-- [Development team documentation at /dev](https://github.com/saulpw/visidata/develop/dev).
+- [Development team documentation at /dev](https://github.com/saulpw/visidata/tree/develop/dev).
 
 We also have some non-documentation sources, like:
 
