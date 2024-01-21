@@ -337,3 +337,16 @@ pre, code {
 main iframe {
   margin: auto auto;
 }
+
+@layer components {
+    .post img {
+        width: 90%;
+        margin: auto;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+}
+
+hr.footnotes-sep {
+    border-top-width: .4em;
+}
