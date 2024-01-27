@@ -2,4 +2,4 @@ recommonmark
 sphinx
 sphinx-markdown-tables
 sphinx-argparse
-visidata
+git+https://github.com/saulpw/visidata.git@develop
