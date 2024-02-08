@@ -28,7 +28,7 @@ The server logs, which have information about individual website accesses, are k
 
 We do not share private information with any companies, organizations, or individuals outside of the core development team.
 
-We share aggregated, non-personally identifiable information publicly, to show trends about the general use of VisiData.  This information is posted nightly to [usage.tsv](https://visidata.org/usage.tsv).
+We share aggregated, non-personally identifiable information publicly, to show trends about the general use of VisiData.  This information is posted nightly to [usage.jsonl](https://visidata.org/usage.jsonl).
 
 ## Contact
 
