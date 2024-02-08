@@ -43,3 +43,4 @@ Last modified: 2019-12-05
 * 2018-09-26: initial public release of privacy policy
 * 2019-12-05: no longer use Google Analytics
 * 2023-11-18: update recommended method to turn off motd
+* 2024-02-08: update mention of usage.tsv to usage.jsonl
