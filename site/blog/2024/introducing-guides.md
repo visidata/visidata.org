@@ -63,7 +63,7 @@ We think that most of VisiData's 300+ commands and 150 options can be represente
 
 ## When will more guides be published?
 
-This is where you can come in! For v3.1, we are planning to host a documentation drive, encouraging contributions from the community. If you are interested in helping out, check out the **Guide Index** and consider which topics you would like to write guides for. We have a [tutorial up on adding a guide](https://www.visidata.org/docs/api/guides) and are welcoming PRs. Another blogpost will be out soon with more info.
+This is where you can come in! For v3.1, we are [hosting a documentation drive](/blog/2024/help-with-docs), encouraging contributions from the community. If you are interested in helping out, check out the **Guide Index** and consider which topics you would like to write guides for. We have a [tutorial up on adding a guide](https://www.visidata.org/docs/api/guides) and are [welcoming PRs](/blog/2024/help-with-docs).
 
 [^1]: There are also several 'nonsources', including the GitHub wiki, Twitter @VisiData, r/visidata subreddit, StackOverflow, and an ancient fork on readthedocs.
     These are deprecated, neither maintained nor monitored, and will be removed if possible once any content has been preserved in a more active documentation form.
