@@ -61,6 +61,10 @@ section a, footer p a {
 :where(article, main) li {
   @apply my-2 ml-2;
 }
+:where(article, main) ol > li > p {
+  display: inline;
+  @apply ml-0 !important;
+}
 a {
   @apply transition duration-300 ease-in-out;
 }
@@ -321,7 +325,7 @@ pre  {
 pre, code {
    @apply bg-gray-200 dark:text-gray-900;
 }
-.content p, .content pre {
+.content p, .content pre, ol.footnotes-list {
     @apply md:ml-6;
 }
 .social_links a {
