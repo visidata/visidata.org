@@ -11,6 +11,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            listStylePosition: {
+                outside: 'outside',
+            },
             colors: {
                 change: "transparent",
                 brand: {

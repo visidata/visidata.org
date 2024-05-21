@@ -58,12 +58,12 @@ section a, footer p a {
 :where(article, main) ol {
   @apply list-decimal;
 }
+:where(article,main) :is(ul, ol) {
+  @apply list-outside;
+}
+
 :where(article, main) li {
   @apply my-2 ml-2;
-}
-:where(article, main) ol > li > p {
-  display: inline;
-  @apply ml-0 !important;
 }
 a {
   @apply transition duration-300 ease-in-out;
