@@ -11,14 +11,14 @@ If you love VisiData, please [subscribe to my Patreon](https://www.patreon.com/b
 
 ## Maintainers
 
-- [Anja Kefala](https://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) is a major contributor of bug reports and bug fixes and documentation.  She is also a founding member of the Devottys.
+- [Anja Kefala](https://anja.kefala.info) ([@anjakefala](https://github.com/anjakefala)) is a major contributor of bug reports, bug fixes, and documentation.
 
-## Tutorials
+### Tutorials
 
 - [Jeremy Singer-Vine](https://www.jsvine.com/) maintains [Introduction to VisiData](https://jsvine.github.io/intro-to-visidata/index.html) (English)
 - [Andrea Borruso](https://github.com/aborruso) maintains [VisiData: il coltellino svizzero per i dati, che probabilmente non conosci](https://github.com/ondata/guidaVisiData/tree/master/testo) (Italiano)
 
-## Package Maintainers
+### Packages
 
 - [Anja Kefala](https://anja.kefala.info/) maintains the PyPi, Debian, brew, and conda packages.
 - [Ryan Prior](https://www.ryanprior.com/) maintains the [Guix](https://guix.gnu.org/packages/visidata-2.4/) package.
