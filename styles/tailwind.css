@@ -354,3 +354,9 @@ main iframe {
 hr.footnotes-sep {
     border-top-width: .4em;
 }
+
+ul.widelist {
+  column-count: 3; /* Adjust the number of columns as needed */
+  column-gap: 20px; /* Adjust the gap between columns as desired */
+  list-style-position: inside;
+}

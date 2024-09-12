@@ -2,6 +2,7 @@ const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -126,7 +127,7 @@ module.exports = function (eleventyConfig) {
         breaks: true,
         linkify: true
     };
-    let markdownLibrary = markdownIt(markdownItOptions).use(markdownItAnchor, {
+    let markdownLibrary = markdownIt(markdownItOptions).use(markdownItAttrs).use(markdownItAnchor, {
         permalink: markdownItAnchor.permalink.ariaHidden({
             class: "heading-anchor",
             symbol: "",
