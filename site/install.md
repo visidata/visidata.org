@@ -49,7 +49,8 @@ Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/)
 The `visidata` package is available in the package managers for these distributions:
 
 - Debian (apt)
-- [NixOS](https://github.com/NixOS/nixpkgs/issues/48852) (nix-env)
+- [Fedora](https://packages.fedoraproject.org/pkgs/visidata/visidata/) (dnf)
+- [NixOS](https://search.nixos.org/packages?type=packages&query=visidata) (nix-env)
 - GNU Guix
 - [Arch Linux](https://archlinux.org/packages/extra/any/visidata) (pacman)
 
