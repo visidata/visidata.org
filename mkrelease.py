@@ -11,6 +11,7 @@ post = blog_tmpl.format(date=time.strftime('%Y-%m-%d'),
 
 year = time.strftime('%Y')
 blogpath = Path(f'site/blog/{year}/v{ver}.md')
+blogpath.parent.mkdir(parents=True, exist_ok=True)
 fp = sys.stdout
 if not blogpath.exists():
     fp = blogpath.open(mode='w')
