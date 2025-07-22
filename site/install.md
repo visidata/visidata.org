@@ -23,7 +23,14 @@ pip3 install visidata
 Run this command (install [brew](https://brew.sh) first if necessary):
 
 ```shell
-brew install saulpw/vd/visidata
+brew install visidata
+```
+
+or
+
+```shell
+pipx install visidata
+pipx inject visidata dependency
 ```
 
 ### Conda
