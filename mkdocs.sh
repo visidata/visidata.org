@@ -4,6 +4,7 @@ SRCDOCS=./visidata/docs/
 OUTDIR="${OUTDIR:=site/docs}"
 
 for fn in $SRCDOCS*.md ; do
+[[ $(basename "$fn") == "README.md" ]] && continue
 post=${fn##$SRCDOCS}
 postname=${post%.md}
 OUTFN=$OUTDIR/$postname.html
