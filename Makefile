@@ -31,7 +31,7 @@ visidata:
 	cd visidata && git checkout develop
 
 # Targets
-.PHONY: build dev debug docs docker-image docker-run
+.PHONY: build dev debug docs man docker-image docker-run
 build: docs
 	@echo "[make] Building site"
 	npx @11ty/eleventy --quiet
@@ -46,10 +46,15 @@ debug: docs
 	DEBUG=Eleventy*	npx @11ty/eleventy --serve & \
 	npx tailwindcss ${TAILWIND_ARGS} -w
 
-docs: visidata docs-api
+docs: visidata docs-api man
 	@echo "[make] Building docs"
 	./mkdocs.sh
 	rm -f site/docs/*.html-rest.md
+
+# man.md is generated at release time and attached to the GitHub release (visidata#3176)
+man: visidata
+	@echo "[make] Fetching man page from latest release"
+	curl -fsSL https://github.com/saulpw/visidata/releases/latest/download/man.md -o visidata/docs/man.md
 
 docs-api: visidata
 	@echo "[make] Building API docs"
