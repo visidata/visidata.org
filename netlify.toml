@@ -15,7 +15,7 @@
   # Default build command.
   command = "make visidata build"
 
-  environment = { NODE_VERSION = "18.15.0" }
+  environment = { NODE_VERSION = "22" }
 
 [build.processing]
   skip_processing = false
