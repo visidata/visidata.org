@@ -31,7 +31,7 @@ visidata:
 	cd visidata && git checkout develop
 
 # Targets
-.PHONY: build dev debug docs man docker-image docker-run
+.PHONY: build dev debug docs man docker-image docker-run release
 build: docs
 	@echo "[make] Building site"
 	npx @11ty/eleventy --quiet
@@ -63,6 +63,10 @@ docs-api: visidata
 	else \
 	sphinx-build -b html visidata/docs/api _site/docs/api; \
 	fi
+
+release:
+	@test -n "$(VER)" || { echo 'usage: make release VER=3.5'; exit 1; }
+	./mkrelease.py $(VER)
 
 docker-image:
 	docker build -t visidata.org .

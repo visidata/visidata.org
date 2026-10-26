@@ -52,6 +52,8 @@ Specific commands:
 
 For both blog posts and releases, all MarkDown files will be stored in `site/blog/<year>/`.
 
+For a release post, `make release VER=3.5` creates `site/blog/<year>/v3.5.md` from `blog-release-tmpl.md` (or prints it, if that file exists).
+
 If you need to store assets such as image files, these go in `site/blog/assets/`.
 300kb or less is recommended for image file sizes. 
 
