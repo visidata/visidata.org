@@ -38,7 +38,7 @@ module.exports = eleventyConfig => {
 
 	let logged = false;
 	eleventyConfig.on("eleventy.before", ({runMode}) => {
-		let text = "Excluding";
+		let text = process.env.BUILD_DRAFTS ? "Including" : "Excluding";
 		// Only show drafts in serve/watch modes
 		if(runMode === "serve" || runMode === "watch") {
 			process.env.BUILD_DRAFTS = true;
