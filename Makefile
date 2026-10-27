@@ -31,7 +31,7 @@ visidata:
 	cd visidata && git checkout develop
 
 # Targets
-.PHONY: build dev debug docs man docker-image docker-run release
+.PHONY: build dev blog serve debug docs man docker-image docker-run release
 build: docs
 	@echo "[make] Building site"
 	npx @11ty/eleventy --quiet
@@ -41,6 +41,14 @@ build: docs
 dev: docs
 	npx @11ty/eleventy --serve --incremental --quiet & \
 	npx tailwindcss ${TAILWIND_ARGS} -w
+
+# build site and blog (drafts included) without docs; then `make serve`
+blog: node_modules
+	BUILD_DRAFTS=1 npx @11ty/eleventy --quiet
+	npx tailwindcss ${TAILWIND_ARGS} --minify
+
+serve:
+	npx @11ty/eleventy --serve --incremental --quiet
 
 debug: docs
 	DEBUG=Eleventy*	npx @11ty/eleventy --serve & \

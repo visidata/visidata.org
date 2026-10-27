@@ -30,6 +30,10 @@ Use `ctrl+p ctrl+q` to detach from the container.
 
 `make dev`
 
+**Preview blog posts (drafts included, no docs build):**
+
+`make blog serve`
+
 **Production:**
 
 `make`
